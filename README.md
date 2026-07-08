@@ -168,8 +168,11 @@ Allow up to a few hours for DNS + certificate propagation on first setup.
   genuine **prosocial / common-good** purpose — are reflected in the copy and
   in the non-profit structure. The page states these as principle, not as a
   published tariff or a guaranteed outcome.
-- **Legal-status wording.** The page says Captain.Food "a vocation à être créé
-  comme une structure à but non lucratif et d'intérêt général, avec une visée
-  d'utilité publique" — phrased as an intention, not a granted status.
-  "Reconnaissance d'utilité publique" (RUP) is a demanding French status; keep
-  the wording aspirational until it is actually obtained.
+- **Legal-status wording.** Captain.Food launches as a **SASU with ESUS
+  accreditation** (Entreprise Solidaire d'Utilité Sociale) and aims to become a
+  **SCIC** (Société Coopérative d'Intérêt Collectif) — a multi-stakeholder
+  cooperative where restaurateurs, riders and citizens hold governance rights.
+  The engagement band states the SCIC step as a goal ("avec pour cap de devenir
+  une SCIC"), not a done deal. Keep it phrased as a trajectory until the
+  conversion actually happens; ESUS is an accreditation to hold, not a claim to
+  make loosely.
