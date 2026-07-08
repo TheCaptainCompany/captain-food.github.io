@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Captain.Food — Reprenons les commandes | Pilote à Tours</title>
+  <meta
+    name="description"
+    content="La livraison de repas sans commission. Le restaurant garde 100 % de sa vente, le client ne paie pas plus, les livreurs sont payés correctement. Pilote local à Tours."
+  />
+  <meta name="theme-color" content="#0047AB" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Captain.Food — Reprenons les commandes" />
+  <meta
+    property="og:description"
+    content="La livraison de repas sans commission qui saigne les restaurants. Pilote local à Tours."
+  />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://captain.food/" />
+
+  <!-- Fonts: Inter + Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--
+    TODO ANALYTICS (cookieless, no cookie banner needed). Pick ONE and uncomment.
+    See README.md for setup.
+
+    Plausible:
+    <script defer data-domain="captain.food" src="https://plausible.io/js/script.js"></script>
+
+    Cloudflare Web Analytics:
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "PLACEHOLDER_TOKEN"}'></script>
+  -->
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="Captain.Food, accueil">
+        <!-- TODO: replace assets/logo.svg with the real logo (see README) -->
+        <img src="assets/logo.svg" alt="" width="32" height="32" class="brand-mark" />
+        <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#probleme">Le problème</a>
+        <a href="#comparaison">La comparaison</a>
+        <a href="#principe">Le principe</a>
+        <a href="#rejoindre">Rejoindre</a>
+      </nav>
+
+      <a class="btn btn-primary btn-sm nav-cta" href="#rejoindre">Rejoindre le pilote</a>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Pilote local — Tours</p>
+        <h1 class="hero-title">Reprenons les commandes.</h1>
+        <p class="hero-sub">
+          La livraison de repas sans commission qui saigne les restaurants.
+          Vous gardez <strong>100 % de votre vente</strong>. Le client ne paie
+          pas plus. Les livreurs sont payés correctement.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#rejoindre">Rejoindre le pilote à Tours</a>
+          <a class="btn btn-ghost" href="#comparaison">Voir où part l'argent ↓</a>
+        </div>
+        <p class="hero-reassure">
+          Sans engagement · Gratuit pendant le pilote · Fait à Tours, avec les
+          restaurateurs de Tours
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 2. LE PROBLÈME ============ -->
+    <section id="probleme" class="section" aria-labelledby="probleme-titre">
+      <div class="container">
+        <h2 id="probleme-titre" class="section-title">
+          Les plateformes actuelles vous coûtent cher. Trop cher.
+        </h2>
+        <p class="section-intro">
+          Uber Eats, Deliveroo &amp; co ont transformé la livraison en péage.
+          Vous cuisinez, ils encaissent.
+        </p>
+
+        <div class="grid grid-3">
+          <article class="card problem-card">
+            <h3>Des commissions qui saignent</h3>
+            <p>
+              Jusqu'à ~30 % prélevés sur chaque commande. Sur un panier à 30 €,
+              il ne vous reste parfois que 21 €.
+            </p>
+          </article>
+          <article class="card problem-card">
+            <h3>Vos données captées</h3>
+            <p>
+              Vos clients, leurs habitudes, vos ventes : tout part chez la
+              plateforme. Vous ne les récupérez jamais.
+            </p>
+          </article>
+          <article class="card problem-card">
+            <h3>Des livreurs précaires</h3>
+            <p>
+              Payés à la course, sans protection, poussés à la faute. Un modèle
+              qui use les gens et abîme votre image.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. LA COMPARAISON (centerpiece) ============ -->
+    <section id="comparaison" class="section section-alt" aria-labelledby="comparaison-titre">
+      <div class="container">
+        <h2 id="comparaison-titre" class="section-title">
+          Où part vraiment l'argent d'une commande ?
+        </h2>
+        <p class="section-intro">
+          Même repas, même livraison. Voici ce qui change pour tout le monde.
+        </p>
+
+        <div class="compare-head">
+          <span class="badge">Exemple illustratif</span>
+          <span class="compare-basket">Panier de 30 €</span>
+        </div>
+
+        <div class="compare-grid">
+          <!-- Uber Eats card -->
+          <article class="compare-card compare-them" aria-labelledby="them-titre">
+            <h3 id="them-titre" class="compare-card-title">Sur Uber Eats</h3>
+            <p class="compare-tagline">Le péage</p>
+
+            <div class="money-block">
+              <p class="money-label">Le resto garde</p>
+              <p class="money-figure">21 €</p>
+              <div class="bar" role="img" aria-label="Le restaurant garde 21 € sur 30 €, environ 70 %.">
+                <span class="bar-fill bar-fill-them" style="width:70%"></span>
+              </div>
+              <p class="money-detail">dont ~9 € de commission (~30 %)</p>
+            </div>
+
+            <div class="money-block">
+              <p class="money-label">Le client paie</p>
+              <p class="money-figure">≈ 38 €</p>
+              <p class="money-detail">30 € + frais de service + livraison</p>
+            </div>
+
+            <p class="rider-line rider-bad">
+              <span aria-hidden="true">●</span> Livreur : précaire, payé à la course
+            </p>
+          </article>
+
+          <!-- Captain.Food card -->
+          <article class="compare-card compare-us" aria-labelledby="us-titre">
+            <p class="compare-flag">Notre modèle</p>
+            <h3 id="us-titre" class="compare-card-title">
+              Sur Captain.Food <span class="anchor" aria-hidden="true">⚓</span>
+            </h3>
+            <p class="compare-tagline">L'équipage libre</p>
+
+            <div class="money-block">
+              <p class="money-label">Le resto garde</p>
+              <p class="money-figure">
+                27 € <span class="delta delta-up">+6 €</span>
+              </p>
+              <div class="bar" role="img" aria-label="Le restaurant garde 27 € sur 30 €, soit 90 %.">
+                <span class="bar-fill bar-fill-us" style="width:90%"></span>
+              </div>
+              <p class="money-detail">0 € de commission</p>
+            </div>
+
+            <div class="money-block">
+              <p class="money-label">Le client paie</p>
+              <p class="money-figure">
+                36,99 € <span class="delta delta-flat">pas plus</span>
+              </p>
+              <p class="money-detail">
+                30 € plat + 2,99 € plateforme + 4 € part livraison
+              </p>
+            </div>
+
+            <p class="rider-line rider-good">
+              <span aria-hidden="true">●</span> Livreur : mieux rémunéré, mieux traité
+            </p>
+          </article>
+        </div>
+
+        <p class="compare-conclusion">
+          Le resto gagne <strong>6 € de plus</strong>. Le client ne paie pas
+          plus. Le livreur est mieux traité. Tout le monde y gagne — sauf le
+          péage.
+        </p>
+
+        <!-- Monthly impact strip -->
+        <div class="month-strip" aria-labelledby="month-titre">
+          <p id="month-titre" class="month-title">
+            Sur un mois <span class="month-hyp">exemple : 100 commandes livrées, panier moyen 30 €</span>
+          </p>
+          <div class="grid grid-3 month-grid">
+            <div class="month-item">
+              <p class="month-figure">+ 600 €</p>
+              <p class="month-label">gardés par le restaurant<br />(vs Uber Eats)</p>
+            </div>
+            <div class="month-item">
+              <p class="month-figure">≈ 0 € de plus</p>
+              <p class="month-label">pour le client<br />(voire un peu moins)</p>
+            </div>
+            <div class="month-item">
+              <p class="month-figure">+ juste</p>
+              <p class="month-label">pour le livreur<br />sur chaque course</p>
+            </div>
+          </div>
+          <p class="month-note">
+            Chiffres illustratifs, pour expliquer le principe — pas une grille
+            tarifaire ni une promesse de volume.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. LE PRINCIPE ============ -->
+    <section id="principe" class="section" aria-labelledby="principe-titre">
+      <div class="container">
+        <h2 id="principe-titre" class="section-title">
+          Un équipage libre, un modèle honnête.
+        </h2>
+        <p class="section-intro">
+          Captain.Food renverse la logique : la plateforme est au service du
+          restaurant, pas l'inverse.
+        </p>
+
+        <div class="grid grid-2">
+          <article class="card principle-card">
+            <h3>100 % pour le resto</h3>
+            <p>
+              Zéro commission sur vos ventes. Le prix de votre plat vous revient,
+              entièrement.
+            </p>
+          </article>
+          <article class="card principle-card">
+            <h3>Prix libre côté client</h3>
+            <p>
+              Une petite contribution plateforme (exemple : 2,99 €), en prix
+              libre : le client paie ce qu'il veut pour faire vivre le projet.
+            </p>
+          </article>
+          <article class="card principle-card">
+            <h3>Livraison partagée, jamais à perte</h3>
+            <p>
+              Le coût de livraison est réparti équitablement entre le client et
+              le restaurant, et votre part reste calée sur votre marge : vous ne
+              perdez jamais d'argent sur une commande.
+            </p>
+          </article>
+          <article class="card principle-card">
+            <h3>Des livreurs respectés</h3>
+            <p>
+              Rémunération correcte et conditions dignes. Parce qu'un bon service
+              commence par des gens bien traités.
+            </p>
+          </article>
+        </div>
+
+        <p class="fine-print">
+          Les montants cités sont des exemples pour illustrer le principe, pas
+          une grille tarifaire figée.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 5. POUR QUI ============ -->
+    <section id="pour-qui" class="section section-alt" aria-labelledby="pourqui-titre">
+      <div class="container">
+        <h2 id="pourqui-titre" class="section-title">Fait pour les indépendants de Tours.</h2>
+        <p class="section-intro">Pas pour les chaînes. Pour vous.</p>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Restaurants indépendants</h3>
+            <p>
+              Une salle, une cuisine, une identité. Vous voulez livrer sans y
+              laisser votre marge.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Food trucks &amp; street food</h3>
+            <p>
+              Mobiles, réactifs, ancrés dans le quartier. La livraison locale est
+              faite pour vous.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Artisans du goût</h3>
+            <p>
+              Traiteurs, cavistes, primeurs qui veulent toucher leurs clients en
+              direct.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. POURQUOI TOURS ============ -->
+    <section id="pourquoi-tours" class="section" aria-labelledby="tours-titre">
+      <div class="container narrow">
+        <h2 id="tours-titre" class="section-title">On commence à Tours. Avec vous.</h2>
+        <p class="lead">
+          Captain.Food démarre par un pilote local, ici, à Tours. Pas de
+          déploiement national tape-à-l'œil : on construit d'abord un modèle qui
+          marche vraiment pour les restaurateurs de la ville, à taille humaine,
+          en écoutant le terrain. Les premiers restaurants embarqués façonnent le
+          service avec nous — horaires, zones, fonctionnement. Rejoindre le
+          pilote, c'est avoir voix au chapitre.
+        </p>
+        <div class="honesty-box">
+          <p>
+            <strong>Soyons clairs :</strong> Captain.Food en est à ses tout
+            débuts. Pas de faux chiffres, pas de fausse hype. On cherche les
+            premiers restaurateurs prêts à construire l'alternative avec nous.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. REJOINDRE LE PILOTE (form) ============ -->
+    <section id="rejoindre" class="section section-alt" aria-labelledby="rejoindre-titre">
+      <div class="container narrow">
+        <h2 id="rejoindre-titre" class="section-title">Rejoignez le pilote à Tours</h2>
+        <p class="section-intro">
+          Laissez-nous vos coordonnées : on vous recontacte pour en discuter,
+          sans engagement.
+        </p>
+
+        <!--
+          TODO FORMSPREE: replace PLACEHOLDER_ID with your real Formspree form ID.
+          See README.md ("Swap the Formspree ID").
+        -->
+        <form
+          id="pilot-form"
+          class="form"
+          action="https://formspree.io/f/PLACEHOLDER_ID"
+          method="POST"
+        >
+          <div class="form-row">
+            <div class="field">
+              <label for="prenom">Prénom <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="prenom" name="prenom" autocomplete="given-name" required />
+              <p class="field-error" id="prenom-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="nom">Nom <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="nom" name="nom" autocomplete="family-name" required />
+              <p class="field-error" id="nom-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="etablissement">
+              Nom du restaurant / food truck <span class="req" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="etablissement" name="etablissement" required />
+            <p class="field-error" id="etablissement-error" hidden></p>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <p class="field-error" id="email-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="telephone">Téléphone / WhatsApp</label>
+              <input type="tel" id="telephone" name="telephone" autocomplete="tel" />
+              <p class="field-error" id="telephone-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="ville">Ville <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="ville" name="ville" value="Tours" required />
+              <p class="field-error" id="ville-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="interet">Votre intérêt pour le pilote <span class="req" aria-hidden="true">*</span></label>
+              <select id="interet" name="interet" required>
+                <option value="">Choisir…</option>
+                <option value="rejoindre">Je veux rejoindre le pilote</option>
+                <option value="en-savoir-plus">Je veux juste en savoir plus</option>
+                <option value="curieux">Je suis curieux / autre</option>
+              </select>
+              <p class="field-error" id="interet-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Message libre</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Votre cuisine, vos volumes, vos questions…"
+            ></textarea>
+          </div>
+
+          <div class="field field-consent">
+            <label class="consent">
+              <input type="checkbox" id="consentement" name="consentement" required />
+              <span>
+                J'accepte que mes informations soient utilisées pour être
+                recontacté au sujet du pilote Captain.Food. Voir la
+                <a href="confidentialite.html">politique de confidentialité</a>.
+                <span class="req" aria-hidden="true">*</span>
+              </span>
+            </label>
+            <p class="field-error" id="consentement-error" hidden></p>
+          </div>
+
+          <!-- Honeypot anti-spam (hidden from humans) -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
+
+          <button type="submit" class="btn btn-primary btn-block">Envoyer ma demande</button>
+
+          <p class="form-note">
+            Vos données ne sont jamais revendues. On vous recontacte, c'est tout.
+          </p>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ 8. FAQ ============ -->
+    <section id="faq" class="section" aria-labelledby="faq-titre">
+      <div class="container narrow">
+        <h2 id="faq-titre" class="section-title">Questions fréquentes</h2>
+
+        <div class="faq">
+          <details>
+            <summary>C'est vraiment sans commission ?</summary>
+            <p>
+              Oui. Vous gardez 100 % du prix de vos plats. La plateforme se
+              finance par une petite contribution du client en prix libre, pas
+              sur votre dos.
+            </p>
+          </details>
+          <details>
+            <summary>Combien ça coûte pour mon resto ?</summary>
+            <p>
+              Pendant le pilote à Tours, c'est gratuit. Les montants évoqués sur
+              cette page sont des exemples pour expliquer le principe, pas une
+              grille tarifaire.
+            </p>
+          </details>
+          <details>
+            <summary>Et la livraison, qui paie ?</summary>
+            <p>
+              Le coût est partagé entre le client et le resto, votre part étant
+              calée sur votre marge pour que la commande vous rapporte toujours.
+            </p>
+          </details>
+          <details>
+            <summary>Vous êtes déjà lancés ?</summary>
+            <p>
+              Non, on démarre. On réunit les premiers restaurateurs de Tours pour
+              construire le service ensemble.
+            </p>
+          </details>
+          <details>
+            <summary>Comment sont traités les livreurs ?</summary>
+            <p>
+              Rémunération correcte et conditions dignes, à l'opposé du modèle à
+              la course. C'est un principe fondateur, pas une option.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 9. FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand">Captain<span class="brand-dot">.</span>Food</p>
+        <p>Reprenons les commandes.<br />Pilote local à Tours.</p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-h">Contact</h2>
+        <ul class="footer-list">
+          <li><a href="mailto:contact@captain.food">contact@captain.food</a></li>
+          <!-- TODO: replace with real WhatsApp link (see README) -->
+          <li><a href="#" rel="nofollow">WhatsApp</a></li>
+          <!-- TODO: replace with real LinkedIn link (see README) -->
+          <li><a href="#" rel="nofollow">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-h">Légal</h2>
+        <ul class="footer-list">
+          <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Captain.Food — Projet indépendant en construction à Tours.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
