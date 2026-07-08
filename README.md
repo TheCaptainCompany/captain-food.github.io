@@ -68,19 +68,15 @@ Until this is done, `script.js` detects the placeholder and shows a friendly
 French message inviting the visitor to email `contact@captain.food` instead — so
 the page never silently loses a lead.
 
-### 2. WhatsApp & LinkedIn links
+### 2. Contact & social links
 
-Footer links in `index.html`:
+All footer contact links are set (update in `index.html` if any change):
 
-- **WhatsApp:** ✅ set to `https://community.captain.food` (the WhatsApp
-  community invite). Update that link if the community URL changes.
-- **LinkedIn:** still a placeholder — replace it:
-  ```html
-  <!-- TODO: replace with real LinkedIn link -->
-  <li><a href="#" rel="nofollow">LinkedIn</a></li>
-  ```
-  with the project/company page URL, e.g.
-  `https://www.linkedin.com/company/captain-food/`.
+- **Email:** `contact@captain.food`
+- **WhatsApp community:** `https://community.captain.food`
+- **Instagram:** `https://www.instagram.com/captain.food__`
+- **LinkedIn:** `https://www.linkedin.com/company/captain-food-coop/`
+- **Facebook:** `https://facebook.com/captain.food.coop`
 
 ### 3. Brand assets (already in place)
 
