@@ -70,19 +70,16 @@ the page never silently loses a lead.
 
 ### 2. WhatsApp & LinkedIn links
 
-In `index.html`, in the footer, replace the two placeholder links:
+Footer links in `index.html`:
 
-```html
-<!-- TODO: replace with real WhatsApp link -->
-<li><a href="#" rel="nofollow">WhatsApp</a></li>
-<!-- TODO: replace with real LinkedIn link -->
-<li><a href="#" rel="nofollow">LinkedIn</a></li>
-```
-
-- **WhatsApp:** use a `https://wa.me/<international-number>` link
-  (e.g. `https://wa.me/33612345678`), optionally with a prefilled message:
-  `https://wa.me/33612345678?text=Bonjour%20Captain.Food`.
-- **LinkedIn:** the project/company page URL, e.g.
+- **WhatsApp:** ✅ set to `https://community.captain.food` (the WhatsApp
+  community invite). Update that link if the community URL changes.
+- **LinkedIn:** still a placeholder — replace it:
+  ```html
+  <!-- TODO: replace with real LinkedIn link -->
+  <li><a href="#" rel="nofollow">LinkedIn</a></li>
+  ```
+  with the project/company page URL, e.g.
   `https://www.linkedin.com/company/captain-food/`.
 
 ### 3. Brand assets (already in place)
