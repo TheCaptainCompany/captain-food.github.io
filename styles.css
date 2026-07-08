@@ -234,6 +234,16 @@ p {
 }
 .nav-cta {
   margin-left: 0.5rem;
+  white-space: nowrap;
+}
+@media (max-width: 430px) {
+  .nav-cta {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  .brand-name {
+    font-size: 1.05rem;
+  }
 }
 
 @media (max-width: 760px) {
@@ -268,12 +278,9 @@ p {
   text-align: center;
 }
 .hero-portrait img {
-  max-height: 460px;
+  max-height: 520px;
   width: auto;
-  border-radius: var(--radius);
-  border: 3px solid rgba(255, 255, 255, 0.9);
-  box-shadow: var(--shadow-lg);
-  background: #fff;
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.35));
 }
 .hero-portrait figcaption {
   margin-top: 0.7rem;

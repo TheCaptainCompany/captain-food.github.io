@@ -26,7 +26,7 @@ captain-food.github.io/
 ├── assets/
 │   ├── logo.png          # brand mark (skull-toque), transparent, header/nav
 │   ├── favicon.png       # 64px browser-tab icon (same mark)
-│   └── captain.jpg       # Captain Food hero portrait
+│   └── captain.png       # Captain Food hero portrait (transparent cutout)
 ├── CNAME                 # custom domain: captain.food
 └── README.md
 ```
@@ -92,8 +92,8 @@ The real Captain Food art is wired in:
 - `assets/logo.png` — the skull-toque mark, whitespace trimmed and background
   made transparent, used in every page header and as the base for the favicon.
 - `assets/favicon.png` — 64 px browser-tab icon (same mark).
-- `assets/captain.jpg` — the Captain Food portrait shown in the hero (cropped
-  from the character sheet and compressed to ~150 KB).
+- `assets/captain.png` — the Captain Food portrait shown in the hero, cut
+  out from the character sheet with a transparent background (~170 KB).
 
 To update any of them, replace the file at the same path to keep all references
 working (logo is referenced in `index.html`, `confidentialite.html`,
