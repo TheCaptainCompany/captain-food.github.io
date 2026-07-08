@@ -563,6 +563,19 @@ p {
   margin: 1.2rem 0 0;
 }
 
+/* ---------- Engagement band (non-profit commitment) ---------- */
+.engagement-band {
+  margin-top: 1.6rem;
+  background: linear-gradient(90deg, rgba(0, 71, 171, 0.08), rgba(255, 107, 53, 0.1));
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+}
+.engagement-band p {
+  margin: 0;
+}
+
 /* ---------- Honesty box ---------- */
 .honesty-box {
   margin-top: 1.6rem;

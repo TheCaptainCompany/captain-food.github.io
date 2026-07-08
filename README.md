@@ -159,3 +159,17 @@ Allow up to a few hours for DNS + certificate propagation on first setup.
   fine print). Keep it that way: no formula is published, only the principle.
 - No fake testimonials, metrics, or traction. The page frames Captain.Food
   honestly as an early pilot being built with Tours restaurateurs.
+- **Why the "prix libre" claim is credible.** The pay-what-you-want (PWYW)
+  model is supported by 15+ years of academic research (e.g. Kim/Natter/Spann
+  2009, Gneezy et al. 2012, meta-analyses by Gerpott 2016 and Greiff/Egbert
+  2018) and real cases (the Wiener Deewan restaurant on PWYW since 2005,
+  museums, Wikipedia). The research-backed success factors — a displayed
+  **reference/anchor price**, **transparent cost communication**, and a
+  genuine **prosocial / common-good** purpose — are reflected in the copy and
+  in the non-profit structure. The page states these as principle, not as a
+  published tariff or a guaranteed outcome.
+- **Legal-status wording.** The page says Captain.Food "a vocation à être créé
+  comme une structure à but non lucratif et d'intérêt général, avec une visée
+  d'utilité publique" — phrased as an intention, not a granted status.
+  "Reconnaissance d'utilité publique" (RUP) is a demanding French status; keep
+  the wording aspirational until it is actually obtained.
