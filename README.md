@@ -24,7 +24,9 @@ captain-food.github.io/
 ├── confidentialite.html  # RGPD privacy notice (real French copy)
 ├── mentions-legales.html # legal notice scaffold (placeholders to fill in)
 ├── assets/
-│   └── logo.svg          # PLACEHOLDER logo — replace with the real one
+│   ├── logo.png          # brand mark (skull-toque), transparent, header/nav
+│   ├── favicon.png       # 64px browser-tab icon (same mark)
+│   └── captain.jpg       # Captain Food hero portrait
 ├── CNAME                 # custom domain: captain.food
 └── README.md
 ```
@@ -83,13 +85,24 @@ In `index.html`, in the footer, replace the two placeholder links:
 - **LinkedIn:** the project/company page URL, e.g.
   `https://www.linkedin.com/company/captain-food/`.
 
-### 3. Replace the logo
+### 3. Brand assets (already in place)
 
-`assets/logo.svg` is a placeholder anchor mark. Drop the real logo in at the
-same path (`assets/logo.svg`) to keep every reference working, **or** replace it
-with e.g. `assets/logo.png` and update the three `<img src="assets/logo.svg">`
-references (in `index.html`, `confidentialite.html`, `mentions-legales.html`).
-Recommended: an SVG or a 2× PNG, roughly square, readable at 32 px.
+The real Captain Food art is wired in:
+
+- `assets/logo.png` — the skull-toque mark, whitespace trimmed and background
+  made transparent, used in every page header and as the base for the favicon.
+- `assets/favicon.png` — 64 px browser-tab icon (same mark).
+- `assets/captain.jpg` — the Captain Food portrait shown in the hero (cropped
+  from the character sheet and compressed to ~150 KB).
+
+To update any of them, replace the file at the same path to keep all references
+working (logo is referenced in `index.html`, `confidentialite.html`,
+`mentions-legales.html`; captain in `index.html`). Keep the logo roughly square
+and readable at 32 px.
+
+> **IP note:** the brand art is illustrative and stylistically close to
+> well-known manga/anime. Before Captain.Food goes fully public and commercial,
+> confirm the rights to these images are cleared for commercial use.
 
 ### 4. Fill in the legal notice
 
