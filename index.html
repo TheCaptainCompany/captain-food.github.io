@@ -139,40 +139,59 @@
     <section id="comparaison" class="section section-alt" aria-labelledby="comparaison-titre">
       <div class="container">
         <h2 id="comparaison-titre" class="section-title">
-          Où part vraiment l'argent d'une commande ?
+          Le vrai coût de la commission : vos clients commandent moins.
         </h2>
         <p class="section-intro">
-          Même repas, même livraison. Voici ce qui change pour tout le monde.
+          La commission ne vous prend pas seulement 30 % sur chaque vente. Pour
+          l'absorber, vous montez vos prix — et des prix plus hauts, ce sont des
+          paniers plus petits et des clients qui commandent moins souvent.
         </p>
 
         <div class="compare-head">
           <span class="badge">Exemple illustratif</span>
-          <span class="compare-basket">Panier de 30 €</span>
+          <span class="compare-basket">Même carte, même livraison</span>
         </div>
 
         <div class="compare-grid">
-          <!-- Uber Eats card -->
+          <!-- Commissioned-platform card -->
           <article class="compare-card compare-them" aria-labelledby="them-titre">
-            <h3 id="them-titre" class="compare-card-title">Sur Uber Eats</h3>
-            <p class="compare-tagline">Le péage</p>
+            <h3 id="them-titre" class="compare-card-title">Sur une plateforme commissionnée</h3>
+            <p class="compare-tagline">comme Uber Eats, Deliveroo &amp; Co — le péage</p>
+
+            <p class="compare-mechanism">
+              Pour absorber ~30 % de commission, vous affichez des prix gonflés :
+            </p>
+            <ul class="menu-demo">
+              <li>
+                <span class="menu-item">Burger</span>
+                <span class="menu-price"><span class="price-old">12 €</span> <span class="price-new price-up">17 €</span></span>
+              </li>
+              <li>
+                <span class="menu-item">Dessert</span>
+                <span class="menu-price"><span class="price-old">5 €</span> <span class="price-new price-up">7 €</span></span>
+              </li>
+              <li>
+                <span class="menu-item">Boisson</span>
+                <span class="menu-price"><span class="price-old">3 €</span> <span class="price-new price-up">4,30 €</span></span>
+              </li>
+            </ul>
+            <p class="customer-reaction reaction-bad">
+              → Trop cher. Le client retire le dessert et la boisson — et commande moins souvent.
+            </p>
 
             <div class="money-block">
-              <p class="money-label">Le resto garde</p>
-              <p class="money-figure">21 €</p>
-              <div class="bar" role="img" aria-label="Le restaurant garde 21 € sur 30 €, environ 70 %.">
-                <span class="bar-fill bar-fill-them" style="width:70%"></span>
-              </div>
-              <p class="money-detail">dont ~9 € de commission (~30 %)</p>
-            </div>
-
-            <div class="money-block">
-              <p class="money-label">Le client paie</p>
-              <p class="money-figure">≈ 38 €</p>
-              <p class="money-detail">30 € + frais de service + livraison</p>
+              <p class="money-label">Le client ne prend que le burger</p>
+              <p class="money-figure">17 €</p>
+              <p class="money-label">Il vous reste</p>
+              <p class="money-figure">≈ 12 €</p>
+              <p class="money-detail">
+                soit le prix réel du burger : votre hausse est partie en
+                commission, et le reste du panier est perdu.
+              </p>
             </div>
 
             <p class="rider-line rider-bad">
-              <span aria-hidden="true">●</span> Livreur : précaire, payé à la course
+              <span aria-hidden="true">●</span> Livreur : ~4 € par course en moyenne <span class="src">(source ARPE, 2024)</span>
             </p>
           </article>
 
@@ -184,61 +203,109 @@
             </h3>
             <p class="compare-tagline">L'équipage libre</p>
 
-            <div class="money-block">
-              <p class="money-label">Le resto garde</p>
-              <p class="money-figure">
-                27 € <span class="delta delta-up">+6 €</span>
-              </p>
-              <div class="bar" role="img" aria-label="Le restaurant garde 27 € sur 30 €, soit 90 %.">
-                <span class="bar-fill bar-fill-us" style="width:90%"></span>
-              </div>
-              <p class="money-detail">0 € de commission</p>
-            </div>
+            <p class="compare-mechanism">
+              0 % de commission sur vos produits : le prix affiché, c'est votre vrai prix.
+            </p>
+            <ul class="menu-demo">
+              <li>
+                <span class="menu-item">Burger</span>
+                <span class="menu-price"><span class="price-new">12 €</span></span>
+              </li>
+              <li>
+                <span class="menu-item">Dessert</span>
+                <span class="menu-price"><span class="price-new">5 €</span></span>
+              </li>
+              <li>
+                <span class="menu-item">Boisson</span>
+                <span class="menu-price"><span class="price-new">3 €</span></span>
+              </li>
+            </ul>
+            <p class="customer-reaction reaction-good">
+              → Prix justes. Le client prend le menu complet — et revient plus souvent.
+            </p>
 
             <div class="money-block">
-              <p class="money-label">Le client paie</p>
-              <p class="money-figure">
-                36,99 € <span class="delta delta-flat">pas plus</span>
-              </p>
+              <p class="money-label">Le client prend le menu complet</p>
+              <p class="money-figure">20 €</p>
+              <p class="money-label">Vous gardez</p>
+              <p class="money-figure">20 € <span class="delta delta-up">100 %</span></p>
               <p class="money-detail">
-                30 € plat + 2,99 € plateforme + 4 € part livraison
+                0 € de commission. Panier plus gros — et un client qui recommande.
               </p>
             </div>
 
             <p class="rider-line rider-good">
-              <span aria-hidden="true">●</span> Livreur : mieux rémunéré, mieux traité
+              <span aria-hidden="true">●</span> Livreur : 7 € minimum par course
             </p>
           </article>
         </div>
 
         <p class="compare-conclusion">
-          Le resto gagne <strong>6 € de plus</strong>. Le client ne paie pas
-          plus. Le livreur est mieux traité. Tout le monde y gagne — sauf le
-          péage.
+          La commission ne vous coûte pas seulement 30 % sur chaque vente. Elle
+          vous coûte aussi <strong>toutes les commandes que vos clients ne passent
+          pas</strong> — ou passent en plus petit — parce que c'est devenu trop
+          cher. Ça, c'est le vrai coût.
         </p>
 
-        <!-- Monthly impact strip -->
+        <!-- Impact strip -->
         <div class="month-strip" aria-labelledby="month-titre">
           <p id="month-titre" class="month-title">
-            Sur un mois <span class="month-hyp">exemple : 100 commandes livrées, panier moyen 30 €</span>
+            Ce que ça change pour vous
+            <span class="month-hyp">à volume de commandes égal — ou supérieur</span>
           </p>
           <div class="grid grid-3 month-grid">
             <div class="month-item">
-              <p class="month-figure">+ 600 €</p>
-              <p class="month-label">gardés par le restaurant<br />(vs Uber Eats)</p>
+              <p class="month-figure">Prix plus bas</p>
+              <p class="month-label">aucune commission<br />à répercuter sur vos plats</p>
             </div>
             <div class="month-item">
-              <p class="month-figure">≈ 0 € de plus</p>
-              <p class="month-label">pour le client<br />(voire un peu moins)</p>
+              <p class="month-figure">Paniers plus gros</p>
+              <p class="month-label">le dessert et la boisson<br />reviennent dans la commande</p>
             </div>
             <div class="month-item">
-              <p class="month-figure">+ juste</p>
-              <p class="month-label">pour le livreur<br />sur chaque course</p>
+              <p class="month-figure">100 % pour vous</p>
+              <p class="month-label">sur chaque vente,<br />pas 70 %</p>
             </div>
           </div>
           <p class="month-note">
-            Chiffres illustratifs, pour expliquer le principe — pas une grille
+            Exemple illustratif, pour expliquer le principe — pas une grille
             tarifaire ni une promesse de volume.
+          </p>
+        </div>
+
+        <!-- Objection: « je répercute la commission sur mes prix » -->
+        <div class="myth-box" aria-labelledby="myth-titre">
+          <p class="myth-flag">« Je m'en moque : je répercute la commission sur mes prix de vente. »</p>
+          <p id="myth-titre" class="myth-title">C'est exactement ce que la plateforme espère — et ça se retourne contre vous.</p>
+          <ul class="myth-list">
+            <li>
+              <strong>Vous ne récupérez jamais vraiment les 30 %.</strong> La
+              commission se calcule sur le prix affiché — donc sur votre hausse
+              aussi. Pour toucher 10 € nets, il ne suffit pas d'ajouter 30 % :
+              il faut monter à ~14,30 € (soit <strong>+43 %</strong>). Et sur ces
+              4,30 € de hausse, la plateforme en reprend encore près d'un tiers.
+            </li>
+            <li>
+              <strong>Vous devenez plus cher que le resto d'à côté.</strong> Le
+              client compare les prix à l'écran. Un plat gonflé de 40 % fait fuir
+              des commandes : l'addition finit par retomber sur votre volume.
+            </li>
+            <li>
+              <strong>Vos clients en direct trinquent aussi.</strong> Avec une
+              seule carte, vos habitués sur place et en click-and-collect paient
+              votre surcoût plateforme — alors qu'ils n'ont jamais mis les pieds
+              dessus.
+            </li>
+            <li>
+              <strong>Vous financez le système qui vous tient.</strong> Répercuter,
+              c'est accepter de rester dépendant d'un acteur qui possède vos
+              clients et fixe les règles. Le jour où la commission grimpe, vous
+              remontez encore vos prix.
+            </li>
+          </ul>
+          <p class="myth-kicker">
+            Chez Captain.Food, il n'y a rien à répercuter : 0 % de commission,
+            votre prix reste votre prix.
           </p>
         </div>
       </div>
@@ -487,6 +554,18 @@
             </p>
           </details>
           <details>
+            <summary>Je répercute déjà la commission sur mes prix, donc ça m'est égal, non ?</summary>
+            <p>
+              C'est le piège. Comme la commission se calcule sur le prix affiché,
+              il faut monter d'environ +43 % (pas +30 %) pour vraiment retrouver
+              votre marge — et la plateforme reprend encore sa part sur cette
+              hausse. Résultat : vous devenez plus cher que le resto d'à côté,
+              vos clients en direct paient un surcoût qui ne les concerne pas, et
+              vous restez dépendant d'un acteur qui possède vos clients. Chez
+              Captain.Food, il n'y a rien à répercuter : 0 % de commission.
+            </p>
+          </details>
+          <details>
             <summary>Le prix libre, ça tient vraiment la route ?</summary>
             <p>
               Oui, et ce n'est pas un pari en l'air. Le paiement à prix libre
@@ -543,7 +622,7 @@
       <div class="footer-col">
         <h2 class="footer-h">Contact</h2>
         <ul class="footer-list">
-          <li><a href="mailto:contact@captain.food">contact@captain.food</a></li>
+          <li><a href="mailto:miam@captain.food">miam@captain.food</a></li>
           <li><a href="https://community.captain.food" target="_blank" rel="noopener">Communauté WhatsApp</a></li>
           <li><a href="https://www.instagram.com/captain.food__" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.linkedin.com/company/captain-food-coop/" target="_blank" rel="noopener">LinkedIn</a></li>

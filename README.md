@@ -65,14 +65,14 @@ The contact form posts to Formspree. In `index.html`, find:
 3. Submit the form once and confirm the email in Formspree's dashboard.
 
 Until this is done, `script.js` detects the placeholder and shows a friendly
-French message inviting the visitor to email `contact@captain.food` instead — so
+French message inviting the visitor to email `miam@captain.food` instead — so
 the page never silently loses a lead.
 
 ### 2. Contact & social links
 
 All footer contact links are set (update in `index.html` if any change):
 
-- **Email:** `contact@captain.food`
+- **Email:** `miam@captain.food`
 - **WhatsApp community:** `https://community.captain.food`
 - **Instagram:** `https://www.instagram.com/captain.food__`
 - **LinkedIn:** `https://www.linkedin.com/company/captain-food-coop/`
@@ -106,7 +106,7 @@ block (GitHub Pages / GitHub, Inc.) is already complete.
 
 The privacy notice (`confidentialite.html`) is real, working French RGPD copy.
 Review the retention period (currently 24 months) and the data-contact address
-(`contact@captain.food`) and adjust if needed.
+(`miam@captain.food`) and adjust if needed.
 
 ### 5. Analytics (optional, cookieless — no cookie banner needed)
 

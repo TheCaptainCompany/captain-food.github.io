@@ -491,6 +491,62 @@ p {
   margin: 0.4rem 0 0;
 }
 
+/* ---------- Menu-price demo (comparison) ---------- */
+.compare-mechanism {
+  font-weight: 600;
+  margin: 0 0 0.8rem;
+}
+.menu-demo {
+  list-style: none;
+  margin: 0 0 0.9rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  display: grid;
+  gap: 0.55rem;
+}
+.menu-demo li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.menu-item {
+  font-weight: 500;
+}
+.menu-price {
+  white-space: nowrap;
+}
+.price-old {
+  color: var(--ink-soft);
+  text-decoration: line-through;
+  margin-right: 0.3rem;
+}
+.price-new {
+  font-weight: 700;
+  color: var(--navy);
+}
+.price-up {
+  color: var(--orange-dark);
+}
+.customer-reaction {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 1.2rem;
+}
+.reaction-bad {
+  color: var(--orange-dark);
+}
+.reaction-good {
+  color: var(--good);
+}
+.src {
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
 .bar {
   height: 14px;
   background: #e4e0d7;
@@ -626,6 +682,42 @@ p {
 }
 .honesty-box p {
   margin: 0;
+}
+
+/* ---------- Myth / objection box ---------- */
+.myth-box {
+  margin-top: 1.6rem;
+  background: rgba(255, 107, 53, 0.06);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.5rem;
+}
+.myth-flag {
+  margin: 0 0 0.5rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.myth-title {
+  margin: 0 0 0.9rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--navy);
+}
+.myth-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.75rem;
+}
+.myth-list li {
+  line-height: 1.55;
+}
+.myth-kicker {
+  margin: 1.1rem 0 0;
+  font-weight: 600;
+  color: var(--navy);
 }
 
 /* ---------- Form ---------- */

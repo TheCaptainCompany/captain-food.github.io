@@ -137,7 +137,7 @@
     if (action.indexOf("PLACEHOLDER_ID") !== -1) {
       setStatus(
         "err",
-        "Le formulaire n'est pas encore connecté. Écrivez-nous à contact@captain.food."
+        "Le formulaire n'est pas encore connecté. Écrivez-nous à miam@captain.food."
       );
       return;
     }
@@ -169,7 +169,7 @@
       .catch(function () {
         setStatus(
           "err",
-          "Oups, l'envoi a échoué. Réessayez ou écrivez-nous à contact@captain.food."
+          "Oups, l'envoi a échoué. Réessayez ou écrivez-nous à miam@captain.food."
         );
       })
       .then(function () {
