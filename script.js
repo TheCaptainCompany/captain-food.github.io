@@ -141,7 +141,8 @@
 
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.textContent = "Envoi…";
+      // literal "…" is the static fallback; .cf-dots animates it when motion is allowed
+      submitBtn.innerHTML = 'Envoi<span class="cf-dots" aria-hidden="true">…</span>';
     }
     setStatus("ok", "Envoi en cours…");
 
@@ -156,7 +157,7 @@
         if (res.ok) {
           form.reset();
           setStatus(
-            "ok",
+            "ok done",
             "Bien reçu ⚓ On te recontacte très vite. Bienvenue à bord !"
           );
         } else {
