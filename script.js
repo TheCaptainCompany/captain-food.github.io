@@ -173,7 +173,7 @@
       .then(function () {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = "Rejoins les restaurateurs libres";
+          submitBtn.textContent = "Je rejoins les restaurateurs libres";
         }
       });
   });
@@ -196,4 +196,23 @@
     { rootMargin: "0px 0px -40% 0px" }
   );
   io.observe(target);
+})();
+
+/* The Captain's line under the portrait — a different one on each visit. */
+(function () {
+  "use strict";
+  var el = document.getElementById("capitaine-quote");
+  if (!el) return;
+  var lines = [
+    "« Tes plats, tes prix, tes clients. »",
+    "« 0 % de commission. Toujours. »",
+    "« Ici, c'est toi le capitaine. »",
+    "« Reprends la barre de ton affaire. »",
+    "« Ta cuisine mérite mieux qu'un péage. »",
+    "« Le client est à toi — qu'il le reste. »",
+    "« On rame pour les indépendants, pas contre eux. »",
+    "« Garde ta marge. On s'occupe du reste. »",
+    "« Cuisine. Encaisse. Recommence. »",
+  ];
+  el.textContent = lines[Math.floor(Math.random() * lines.length)];
 })();

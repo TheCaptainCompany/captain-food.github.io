@@ -922,7 +922,7 @@ code {
     background: var(--orange-dark);
   }
   body {
-    padding-bottom: 3.6rem; /* room so the bar never hides the footer */
+    padding-bottom: 5.5rem; /* room so the (possibly 2-line) sticky bar never hides the footer */
   }
 }
 
