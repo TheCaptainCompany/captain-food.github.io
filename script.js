@@ -178,3 +178,22 @@
       });
   });
 })();
+
+/* Sticky mobile CTA: hide it once the form section is on screen (it would be
+   redundant there). Progressive enhancement — the bar shows by default. */
+(function () {
+  "use strict";
+  var bar = document.querySelector(".mobile-cta");
+  var target = document.getElementById("rejoindre");
+  if (!bar || !target || !("IntersectionObserver" in window)) return;
+
+  var io = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        bar.classList.toggle("is-hidden", entry.isIntersecting);
+      });
+    },
+    { rootMargin: "0px 0px -40% 0px" }
+  );
+  io.observe(target);
+})();

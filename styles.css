@@ -770,6 +770,75 @@ code {
   animation: cf-bob 7s ease-in-out infinite; /* offset period so the two don't sync */
 }
 
+/* ---------- Pre-form reassurance strip (answers top objections at decision) ---------- */
+.pre-embark {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-6) 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+.pre-embark li {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+.pre-embark strong {
+  display: block;
+  font-family: var(--font-display);
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+.pre-embark p {
+  color: #cdd8e2;
+  font-size: 0.92rem;
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .pre-embark {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Sticky mobile CTA ---------- */
+.mobile-cta {
+  display: none;
+}
+.mobile-cta.is-hidden {
+  transform: translateY(120%);
+}
+@media (max-width: 860px) {
+  .mobile-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    background: var(--orange);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.98rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.95rem 1rem;
+    box-shadow: 0 -6px 20px rgba(10, 30, 50, 0.24);
+    transition: transform 0.2s ease, background-color 0.15s ease;
+  }
+  .mobile-cta:hover {
+    background: var(--orange-dark);
+  }
+  body {
+    padding-bottom: 3.6rem; /* room so the bar never hides the footer */
+  }
+}
+
 /* ---------- Form ---------- */
 .form {
   margin-top: 1.8rem;
