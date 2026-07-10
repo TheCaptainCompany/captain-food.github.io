@@ -50,23 +50,15 @@ and relative links behave exactly as in production.
 These are the placeholders wired into the code. Search the repo for `TODO` and
 `PLACEHOLDER` to find them all.
 
-### 1. Swap the Formspree ID (required for the form to work)
+### 1. Formspree (contact form) — ✅ connected
 
-The contact form posts to Formspree. In `index.html`, find:
+The contact form posts to Formspree form `xqevrjwp`
+(`action="https://formspree.io/f/xqevrjwp"` in `index.html`). To change it,
+swap that ID. Submit the form once from the live site and confirm the email in
+the Formspree dashboard so submissions aren't held for verification.
 
-```html
-<form id="pilot-form" ... action="https://formspree.io/f/PLACEHOLDER_ID" ...>
-```
-
-1. Create a free form at https://formspree.io and copy its form ID
-   (looks like `xayzabcd`).
-2. Replace `PLACEHOLDER_ID` with your real ID:
-   `action="https://formspree.io/f/xayzabcd"`.
-3. Submit the form once and confirm the email in Formspree's dashboard.
-
-Until this is done, `script.js` detects the placeholder and shows a friendly
-French message inviting the visitor to email `miam@captain.food` instead — so
-the page never silently loses a lead.
+`script.js` still guards against a `PLACEHOLDER_ID` action (shows a friendly
+"email us instead" message) in case the ID is ever reset.
 
 ### 2. Contact & social links
 
