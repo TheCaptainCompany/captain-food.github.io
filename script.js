@@ -21,9 +21,8 @@
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   var RULES = [
-    { id: "prenom", msg: "Merci de renseigner votre prénom." },
-    { id: "nom", msg: "Merci de renseigner votre nom." },
-    { id: "etablissement", msg: "Merci d'indiquer le nom de votre établissement." },
+    { id: "resto", msg: "Indique le nom de ton restaurant ou food truck." },
+    { id: "contact", msg: "Dis-nous ton nom." },
     {
       id: "email",
       msg: "Adresse email invalide.",
@@ -31,11 +30,9 @@
         return EMAIL_RE.test(v);
       },
     },
-    { id: "ville", msg: "Merci d'indiquer votre ville." },
-    { id: "interet", msg: "Merci de préciser votre intérêt pour le pilote." },
     {
       id: "consentement",
-      msg: "Vous devez accepter la politique de confidentialité pour continuer.",
+      msg: "Tu dois accepter la politique de confidentialité pour continuer.",
       checkbox: true,
     },
   ];
@@ -125,7 +122,7 @@
     });
 
     if (!allValid) {
-      setStatus("err", "Merci de corriger les champs signalés ci-dessus.");
+      setStatus("err", "Corrige les champs signalés ci-dessus.");
       if (firstInvalid) firstInvalid.focus();
       return;
     }
@@ -137,7 +134,7 @@
     if (action.indexOf("PLACEHOLDER_ID") !== -1) {
       setStatus(
         "err",
-        "Le formulaire n'est pas encore connecté. Écrivez-nous à miam@captain.food."
+        "Le formulaire n'est pas encore connecté. Écris-nous à miam@captain.food."
       );
       return;
     }
@@ -160,7 +157,7 @@
           form.reset();
           setStatus(
             "ok",
-            "Merci, message bien reçu ⚓ On vous recontacte très vite."
+            "Bien reçu ⚓ On te recontacte très vite. Bienvenue à bord !"
           );
         } else {
           throw new Error("bad response");
@@ -169,13 +166,13 @@
       .catch(function () {
         setStatus(
           "err",
-          "Oups, l'envoi a échoué. Réessayez ou écrivez-nous à miam@captain.food."
+          "Oups, l'envoi a échoué. Réessaie ou écris-nous à miam@captain.food."
         );
       })
       .then(function () {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = "Envoyer ma demande";
+          submitBtn.textContent = "Rejoins les restaurateurs libres";
         }
       });
   });
