@@ -1358,7 +1358,126 @@ code {
     display: none;
   }
 }
+/* ---------- Commission calculator ---------- */
+.calc {
+  margin-top: var(--space-6);
+  background: var(--grad-navy);
+  color: var(--parchment);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  box-shadow: var(--shadow-lg);
+}
+.calc-inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.calc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.calc-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(247, 239, 223, 0.85);
+}
+.calc-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.calc-input-wrap input {
+  width: 100%;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--navy);
+  background: var(--white);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 3rem 0.6rem 0.8rem;
+}
+.calc-input-wrap input:focus-visible {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(224, 161, 43, 0.4);
+}
+.calc-unit {
+  position: absolute;
+  right: 0.8rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  pointer-events: none;
+}
+.calc-result {
+  margin-top: 1.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px dashed rgba(247, 239, 223, 0.3);
+  text-align: center;
+}
+.calc-result-lead {
+  font-size: 0.95rem;
+  color: rgba(247, 239, 223, 0.85);
+  margin-bottom: 0.7rem;
+}
+.calc-figures {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2.6rem;
+  flex-wrap: wrap;
+}
+.calc-fig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calc-fig-value {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.1rem;
+  line-height: 1.1;
+  color: var(--gold);
+}
+.calc-fig-year .calc-fig-value {
+  font-size: 2.7rem;
+  color: var(--orange);
+}
+.calc-fig-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(247, 239, 223, 0.75);
+  margin-top: 0.25rem;
+}
+.calc-sentence {
+  margin-top: 1.1rem;
+  font-weight: 600;
+  color: var(--parchment);
+  min-height: 1.4em;
+}
+.calc-cta {
+  margin-top: 1.6rem;
+}
+.calc-fine {
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  color: rgba(247, 239, 223, 0.6);
+  text-align: center;
+}
+
 @media (max-width: 720px) {
+  .calc-inputs {
+    grid-template-columns: 1fr;
+  }
+  .calc-fig-value {
+    font-size: 1.8rem;
+  }
+  .calc-fig-year .calc-fig-value {
+    font-size: 2.2rem;
+  }
   .grid-2,
   .grid-3 {
     grid-template-columns: 1fr;

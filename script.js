@@ -228,3 +228,86 @@
   ];
   el.textContent = lines[Math.floor(Math.random() * lines.length)];
 })();
+
+/* Commission calculator — quantify, honestly, what the platforms take.
+   Live-updates a monthly/yearly loss estimate from average basket × orders ×
+   rate, and hands the numbers to the pilot form when the visitor clicks through
+   (source=calculateur + a pre-filled, editable note giving the founder context). */
+(function () {
+  "use strict";
+  var root = document.querySelector("[data-calc]");
+  if (!root) return;
+
+  var panierEl = document.getElementById("calc-panier");
+  var cmdEl = document.getElementById("calc-commandes");
+  var tauxEl = document.getElementById("calc-taux");
+  var monthEl = root.querySelector("[data-calc-month]");
+  var yearEl = root.querySelector("[data-calc-year]");
+  var sentenceEl = root.querySelector("[data-calc-sentence]");
+  var cta = root.querySelector("[data-calc-cta]");
+  if (!panierEl || !cmdEl || !tauxEl) return;
+
+  var euro = new Intl.NumberFormat("fr-FR", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: 0,
+  });
+
+  function num(el) {
+    var v = parseFloat(String(el.value).replace(",", "."));
+    return isFinite(v) && v > 0 ? v : 0;
+  }
+
+  var monthLoss = 0;
+  var yearLoss = 0;
+
+  function compute() {
+    monthLoss = num(panierEl) * num(cmdEl) * (num(tauxEl) / 100);
+    yearLoss = monthLoss * 12;
+
+    monthEl.textContent = monthLoss > 0 ? euro.format(monthLoss) : "—";
+    yearEl.textContent = yearLoss > 0 ? euro.format(yearLoss) : "—";
+
+    if (monthLoss > 0) {
+      sentenceEl.textContent =
+        "Avec Captain.Food, à 0 % de commission, c'est " +
+        euro.format(yearLoss) +
+        " que tu gardes sur un an.";
+    } else {
+      sentenceEl.textContent =
+        "Renseigne ton panier moyen et ton nombre de commandes pour voir le montant.";
+    }
+  }
+
+  [panierEl, cmdEl, tauxEl].forEach(function (el) {
+    el.addEventListener("input", compute);
+  });
+
+  // On click-through, tag the lead as coming from the calculator and pre-fill
+  // the message with the estimate (only if empty — never clobber the visitor).
+  if (cta) {
+    cta.addEventListener("click", function () {
+      var srcField = document.getElementById("lead-source");
+      if (srcField) srcField.value = "calculateur";
+
+      var mot = document.getElementById("mot");
+      if (mot && monthLoss > 0 && !mot.value.trim()) {
+        mot.value =
+          "Via le calculateur : je perds environ " +
+          euro.format(monthLoss) +
+          "/mois (" +
+          euro.format(yearLoss) +
+          "/an) en commission — panier " +
+          euro.format(num(panierEl)) +
+          ", " +
+          num(cmdEl) +
+          " commandes/mois, taux " +
+          num(tauxEl) +
+          " %.";
+      }
+      // The anchor's default jump to #rejoindre then carries the visitor down.
+    });
+  }
+
+  compute();
+})();
