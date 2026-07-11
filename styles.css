@@ -451,6 +451,51 @@ code {
   }
 }
 
+/* ---------- Section split (text + captain illustration) ---------- */
+.section-split {
+  display: grid;
+  grid-template-columns: 1fr 0.72fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+.section-split .split-text .eyebrow-center,
+.section-split .split-text .section-title,
+.section-split .split-text .section-intro {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+}
+.section-split-figure {
+  margin: 0;
+  text-align: center;
+}
+.section-split-figure img {
+  max-height: 360px;
+  width: auto;
+  margin-inline: auto;
+  filter: drop-shadow(0 14px 24px rgba(10, 30, 50, 0.22));
+}
+@media (max-width: 820px) {
+  .section-split {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .section-split .split-text .eyebrow-center,
+  .section-split .split-text .section-title,
+  .section-split .split-text .section-intro {
+    text-align: center;
+    margin-inline: auto;
+  }
+  .section-split-figure {
+    order: -1;
+  }
+  .section-split-figure img {
+    max-height: 300px;
+  }
+}
+
 /* ---------- Grids & cards ---------- */
 .grid {
   display: grid;
