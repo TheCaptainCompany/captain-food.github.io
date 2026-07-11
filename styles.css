@@ -1576,142 +1576,74 @@ section[id],
   }
 }
 
-/* ---------- Répercussion simulator (linked from the pull-quote) ---------- */
-.repercuss {
-  margin-top: 1.6rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: var(--shadow);
+/* ---------- Répercussion : deux boutons + phrase, dans la citation ---------- */
+.repercuss-inline {
+  margin-top: 1.3rem;
 }
-.repercuss > summary {
-  cursor: pointer;
-  list-style: none;
-  padding: 1rem 1.2rem;
-  font-family: var(--font-display);
-  font-weight: 700;
+.repercuss-q {
+  font-style: normal;
+  font-weight: 600;
   color: var(--navy);
+  margin-bottom: 0.6rem;
 }
-.repercuss > summary::-webkit-details-marker {
-  display: none;
-}
-.repercuss > summary:hover,
-.repercuss > summary:focus-visible {
-  color: var(--orange-dark);
-}
-.repercuss[open] > summary {
-  border-bottom: 1px solid var(--line);
-}
-.repercuss-body {
-  padding: 1.2rem;
-}
-.repercuss-intro {
-  color: var(--ink-soft);
-  margin-bottom: 1rem;
-}
-.repercuss-inputs {
+.repercuss-btns {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
-.repercuss-field {
-  flex: 1 1 160px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-.repercuss-field label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--ink-soft);
-}
-.repercuss-input-wrap {
+.repercuss-btns label {
   position: relative;
-  display: flex;
+  cursor: pointer;
+  display: inline-flex;
   align-items: center;
-}
-.repercuss-input-wrap input {
-  width: 100%;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--navy);
-  background: var(--parchment);
-  border: 2px solid var(--line);
-  border-radius: var(--radius-sm);
-  padding: 0.5rem 2.4rem 0.5rem 0.7rem;
-}
-.repercuss-input-wrap input:focus-visible {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(224, 161, 43, 0.35);
-}
-.repercuss-unit {
-  position: absolute;
-  right: 0.7rem;
-  color: var(--ink-soft);
-  font-weight: 600;
   font-size: 0.9rem;
-  pointer-events: none;
+  color: var(--navy);
+  background: var(--white);
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
-.repercuss-toggle {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
+.repercuss-btns input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
 }
-.repercuss-toggle label {
-  flex: 1 1 200px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  border: 2px solid var(--line);
-  border-radius: var(--radius-sm);
-  padding: 0.55rem 0.8rem;
-  font-weight: 600;
-  font-size: 0.92rem;
+.repercuss-btns label:hover {
+  border-color: var(--orange);
+}
+.repercuss-btns label:has(input:checked) {
+  border-color: var(--orange);
+  background: rgba(232, 97, 58, 0.12);
+}
+.repercuss-btns label:has(input:focus-visible) {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+.rep-msg {
+  display: none;
+  font-style: normal;
+  margin-top: 0.85rem;
   color: var(--ink);
 }
-.repercuss-toggle label em {
-  font-style: normal;
-  color: var(--ink-soft);
-  font-weight: 500;
-}
-.repercuss-toggle label:has(input:checked) {
-  border-color: var(--orange);
-  background: rgba(232, 97, 58, 0.08);
+.rep-msg strong {
   color: var(--navy);
 }
-.repercuss-result {
-  margin-top: 1.2rem;
-  padding-top: 1rem;
-  border-top: 1px dashed var(--line);
+.repercuss-inline:has(input[value="100"]:checked) .rep-100,
+.repercuss-inline:has(input[value="50"]:checked) .rep-50 {
+  display: block;
 }
-.repercuss-price {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  color: var(--navy);
-}
-.repercuss-price strong {
-  font-size: 1.55rem;
-  color: var(--orange-dark);
-}
-.repercuss-price [data-rep-delta] {
-  color: var(--rust);
-  font-weight: 700;
-}
-.repercuss-explain {
-  margin-top: 0.6rem;
-  color: var(--ink-soft);
-}
-.repercuss-explain strong {
-  color: var(--navy);
-}
-.repercuss-conclusion {
-  margin-top: 1rem;
-  font-weight: 600;
-  color: var(--navy);
+/* Fallback where :has() is unsupported — show both explanations */
+@supports not (selector(:has(*))) {
+  .rep-msg {
+    display: block;
+  }
+  .repercuss-btns label {
+    border-color: var(--line);
+  }
 }
 
 /* ---------- Reduced motion ---------- */
