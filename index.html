@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Captain.Food — Reprenons les commandes ! | 0 commission, à Tours</title>
+  <title>Captain.Food — Reprenons les commandes ! | Commande en ligne sans commission, à Tours</title>
   <meta
     name="description"
-    content="La plateforme de commande locale à 0 % de commission pour les restaurants et food trucks indépendants de Tours. Tes plats, tes prix, tes clients. Entreprise solidaire d'utilité sociale (ESUS)."
+    content="Commande en ligne sans commission (livraison, à emporter / click and collect, à table) pour les restaurants et food trucks indépendants de Tours. Tes plats, tes prix, tes clients. Entreprise solidaire d'utilité sociale (ESUS)."
   />
   <meta name="theme-color" content="#0e3a5f" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="canonical" href="https://captain.food/" />
 
   <!-- Open Graph / social preview -->
   <meta property="og:type" content="website" />
@@ -38,6 +39,110 @@
   />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data: Organization + WebSite + FAQ (honest — no reviews/LocalBusiness we don't have) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://captain.food/#organization",
+        "name": "Captain.Food",
+        "url": "https://captain.food/",
+        "logo": "https://captain.food/assets/logo.png",
+        "image": "https://captain.food/assets/og.png",
+        "description": "Plateforme de commande en ligne à 0 % de commission pour les restaurants et food trucks indépendants. Entreprise solidaire d'utilité sociale (ESUS), à Tours.",
+        "email": "miam@captain.food",
+        "areaServed": {
+          "@type": "City",
+          "name": "Tours",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tours",
+            "addressRegion": "Centre-Val de Loire",
+            "addressCountry": "FR"
+          }
+        },
+        "sameAs": [
+          "https://www.instagram.com/captain.food__",
+          "https://www.linkedin.com/company/captain-food-coop/",
+          "https://facebook.com/captain.food.coop"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://captain.food/#website",
+        "url": "https://captain.food/",
+        "name": "Captain.Food",
+        "inLanguage": "fr-FR",
+        "publisher": { "@id": "https://captain.food/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://captain.food/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "C'est vraiment gratuit pour moi ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. 0 % de commission sur tes plats, inscription gratuite. Le service est financé par une contribution libre des clients, pas par toi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vous vous financez comment, alors ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Par une contribution libre du client, ajoutée à sa commande, en toute transparence. Si ça ne suffit pas, un petit montant fixe — à la charge du client, jamais un pourcentage — prend le relais pour couvrir les frais de transaction. Toi, tu ne paies pas de commission : 0 €, dans tous les cas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Je dois quitter Uber Eats / Deliveroo ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Captain.Food vient en plus, sans exclusivité. Beaucoup de restaurants gardent les deux et voient Captain.Food comme leur canal direct, celui qu'ils maîtrisent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Il n'y a pas encore de clients sur la plateforme, pourquoi m'inscrire maintenant ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Parce que ça ne te coûte rien et que tu n'as aucune exclusivité à donner. Tu es référencé, tu récupères ta base clients dès tes premières commandes directes, et tu façonnes l'outil pendant qu'on démarre. Les premiers embarqués sont ceux qui pèsent le plus."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment je récupère mes clients ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Chaque commande passée en direct sur ta page t'appartient : tu accèdes aux coordonnées de tes clients (avec leur consentement) pour les fidéliser toi-même. Contrairement aux grandes plateformes, on ne confisque pas ta clientèle."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "C'est quoi, une entreprise ESUS ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "« Entreprise solidaire d'utilité sociale » : un agrément qui encadre juridiquement notre lucrativité et impose une finalité sociale. En clair, une garantie que Captain.Food ne pourra pas dériver vers ce qu'on dénonce."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Et pour la commande à table ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tu peux aussi prendre les commandes à table via Captain.Food, sous ton nom. Le paiement reste dans ton système habituel — on ne s'insère pas dans ta caisse."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!--
     TODO ANALYTICS (sans cookie, pas de bandeau nécessaire). Choisir UNE option et décommenter.
@@ -289,8 +394,8 @@
         <p class="eyebrow eyebrow-center"><span aria-hidden="true">⚓</span> Ton pavillon, tes règles</p>
         <h2 id="solution-titre" class="section-title">Captain.Food : ton canal, tes règles</h2>
         <p class="section-intro">
-          Captain.Food est une plateforme de commande locale qui te redonne le
-          contrôle. En ligne et à table, sous ton nom.
+          Captain.Food est une plateforme de commande en ligne locale qui te
+          redonne le contrôle. En ligne et à table, sous ton nom.
         </p>
 
         <div class="grid grid-2">
@@ -399,7 +504,7 @@
             </article>
             <article class="card channel-card">
               <p class="channel-icon" aria-hidden="true">🥡</p>
-              <h4>À emporter</h4>
+              <h4>À emporter (click and collect)</h4>
               <p>
                 Le client commande à l'avance et récupère sur place. Simple, direct,
                 sans matériel en plus.
