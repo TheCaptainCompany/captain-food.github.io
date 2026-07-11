@@ -354,3 +354,79 @@
     }, 0);
   });
 })();
+
+/* Répercussion simulator — answers the "I just pass the commission on to my
+   prices" objection: shows the online price and margin at 100% or 50% passed on,
+   with a plain-language verdict that both cases hurt. */
+(function () {
+  "use strict";
+  var root = document.querySelector("[data-repercuss]");
+  if (!root) return;
+
+  var prixEl = document.getElementById("rep-prix");
+  var tauxEl = document.getElementById("rep-taux");
+  var radios = root.querySelectorAll('input[name="rep"]');
+  var priceOut = root.querySelector("[data-rep-price]");
+  var deltaOut = root.querySelector("[data-rep-delta]");
+  var explainOut = root.querySelector("[data-rep-explain]");
+  if (!prixEl || !tauxEl) return;
+
+  var euro = new Intl.NumberFormat("fr-FR", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: 2,
+  });
+
+  function num(el) {
+    var v = parseFloat(String(el.value).replace(",", "."));
+    return isFinite(v) && v > 0 ? v : 0;
+  }
+  function repFraction() {
+    var r = root.querySelector('input[name="rep"]:checked');
+    return r && r.value === "50" ? 0.5 : 1;
+  }
+
+  function compute() {
+    var salle = num(prixEl);
+    var c = num(tauxEl) / 100;
+    var r = repFraction();
+
+    if (salle <= 0 || c <= 0 || c >= 1) {
+      priceOut.textContent = "—";
+      deltaOut.textContent = "";
+      explainOut.textContent = "";
+      return;
+    }
+
+    // Extra the customer would pay if you passed on the WHOLE commission.
+    var extraFull = (salle * c) / (1 - c);
+    var price = salle + r * extraFull; // online price at the chosen pass-through
+    var deltaPct = Math.round(((price - salle) / salle) * 100);
+    var marge = price * (1 - c); // what's left after the platform's cut
+
+    priceOut.textContent = euro.format(price);
+    deltaOut.textContent = "(+" + deltaPct + " %)";
+
+    if (r >= 1) {
+      explainOut.innerHTML =
+        "Ton plat à " + euro.format(salle) + " passe à " + euro.format(price) +
+        " en ligne. Tu gardes ta marge sur le papier — mais le client compare, " +
+        "trouve ça cher, et commande moins, ou ailleurs. Ces ventes perdues, tu " +
+        "ne les vois jamais.";
+    } else {
+      explainOut.innerHTML =
+        "Ton plat monte quand même à " + euro.format(price) + ", <strong>et</strong> " +
+        "ta marge tombe à " + euro.format(marge) + " au lieu de " + euro.format(salle) +
+        ". Tu perds sur les deux tableaux : un peu de prix qui fait fuir, un peu de " +
+        "marge en moins.";
+    }
+  }
+
+  [prixEl, tauxEl].forEach(function (el) {
+    el.addEventListener("input", compute);
+  });
+  radios.forEach(function (el) {
+    el.addEventListener("change", compute);
+  });
+  compute();
+})();
