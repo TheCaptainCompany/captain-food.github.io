@@ -355,3 +355,75 @@
   });
 })();
 
+/* Scrollspy: highlight the chip of the section currently in view, and scroll the
+   chip bar so the active chip stays visible (helps orientation, esp. on mobile). */
+(function () {
+  "use strict";
+  var nav = document.querySelector(".chip-nav-inner");
+  if (!nav) return;
+
+  var items = Array.prototype.slice
+    .call(nav.querySelectorAll(".chip"))
+    .map(function (chip) {
+      var id = (chip.getAttribute("href") || "").slice(1);
+      return { chip: chip, section: id ? document.getElementById(id) : null };
+    })
+    .filter(function (it) {
+      return it.section;
+    });
+  if (!items.length) return;
+
+  var header = document.querySelector(".site-header");
+  var reduce =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var current = -2;
+  var ticking = false;
+
+  function centerChip(chip) {
+    var navRect = nav.getBoundingClientRect();
+    var chipRect = chip.getBoundingClientRect();
+    var within = chipRect.left - navRect.left + nav.scrollLeft;
+    var target = within - nav.clientWidth / 2 + chipRect.width / 2;
+    if (target < 0) target = 0;
+    if (nav.scrollTo) {
+      nav.scrollTo({ left: target, behavior: reduce ? "auto" : "smooth" });
+    } else {
+      nav.scrollLeft = target;
+    }
+  }
+
+  function update() {
+    ticking = false;
+    var line = (header ? header.offsetHeight : 0) + 24;
+    var active = -1;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].section.getBoundingClientRect().top - line <= 0) active = i;
+    }
+    // At the very bottom of the page, force the last chip active.
+    var doc = document.documentElement;
+    if (window.innerHeight + window.scrollY >= doc.scrollHeight - 2) {
+      active = items.length - 1;
+    }
+    if (active === current) return;
+    current = active;
+    items.forEach(function (it, idx) {
+      var on = idx === active;
+      it.chip.classList.toggle("is-active", on);
+      if (on) it.chip.setAttribute("aria-current", "true");
+      else it.chip.removeAttribute("aria-current");
+    });
+    if (active >= 0) centerChip(items[active].chip);
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  update();
+})();
+

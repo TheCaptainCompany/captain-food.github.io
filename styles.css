@@ -310,6 +310,11 @@ code {
   border-color: var(--navy);
   background: var(--parchment);
 }
+.chip.is-active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
 @media (min-width: 721px) {
   .chip-nav-inner {
     justify-content: center;
