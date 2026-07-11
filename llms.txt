@@ -1,0 +1,19 @@
+# Captain.Food
+
+> Plateforme de commande en ligne locale et solidaire à 0 % de commission pour les restaurants et food trucks indépendants de Tours (France). Entreprise solidaire d'utilité sociale (ESUS), avec pour cap une coopérative (SCIC). Les restaurateurs gardent 100 % du prix de leurs plats, leurs clients et leurs prix ; les livreurs sont payés dignement.
+
+Captain.Food recrute actuellement ses tout premiers restaurateurs à Tours. Pour le restaurateur, c'est gratuit : 0 % de commission sur les plats, sans exclusivité ni engagement — il garde ses plateformes actuelles, Captain.Food vient en plus. Le service se finance par une contribution libre des clients, jamais par une commission sur la marge du restaurateur. Seule la livraison a un coût de service, partagé entre le restaurateur (dans la limite d'une marge plancher qu'il fixe) et le client. Les comptes sont ouverts publiquement sur Open Collective (transparence radicale).
+
+## Pages principales
+- [Accueil](https://captain.food/): présentation, calculateur de commission (perte estimée par mois et par an), formulaire pour rejoindre le pilote.
+- [Manifeste](https://captain.food/manifeste.html): pourquoi le fondateur a lancé Captain.Food, contre l'ubérisation et les commissions extractives.
+- [Comment on se finance](https://captain.food/financement.html): le 0 % de commission expliqué en clair, exemple chiffré, garanties.
+- [La livraison, payée juste](https://captain.food/livraison.html): comment est financée une livraison qui paie dignement le livreur, avec l'ambition à terme de les salarier.
+
+## Contact & liens
+- Email: miam@captain.food
+- Communauté WhatsApp: https://community.captain.food
+- Comptes publics: https://opencollective.com/captain-food
+- Instagram: https://www.instagram.com/captain.food__
+- LinkedIn: https://www.linkedin.com/company/captain-food-coop/
+- Facebook: https://facebook.com/captain.food.coop

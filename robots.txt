@@ -1,4 +1,24 @@
+# Captain.Food — tout le monde est bienvenu, y compris les robots des IA.
 User-agent: *
+Allow: /
+
+# Robots des moteurs de réponse génératifs (IA) — explicitement autorisés
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://captain.food/sitemap.xml
