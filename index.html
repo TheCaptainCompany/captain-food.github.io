@@ -773,11 +773,20 @@
             Tes données ne sont jamais revendues. On te recontacte, c'est tout.
           </p>
 
-          <figure class="form-thanks" id="form-thanks" aria-hidden="true" hidden>
-            <img src="assets/captain-thumbsup.png" alt="" width="150" height="221" />
-          </figure>
           <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
         </form>
+
+        <!-- Panneau de succès : remplace le formulaire un moment, puis le formulaire revient -->
+        <div class="form-success" id="form-success" tabindex="-1" hidden>
+          <figure class="form-success-captain" aria-hidden="true">
+            <img src="assets/captain-thumbsup.png" alt="" width="200" height="295" />
+          </figure>
+          <p class="form-success-title" role="status">Bien reçu ⚓ Bienvenue à bord&nbsp;!</p>
+          <p class="form-success-text">
+            On te recontacte très vite. En attendant, tu peux nous écrire à
+            <a href="mailto:miam@captain.food">miam@captain.food</a>.
+          </p>
+        </div>
       </div>
     </section>
 

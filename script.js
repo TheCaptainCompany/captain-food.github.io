@@ -11,7 +11,10 @@
   if (!form) return;
 
   var statusEl = document.getElementById("form-status");
-  var thanksEl = document.getElementById("form-thanks");
+  var successEl = document.getElementById("form-success");
+  // How long the Captain thank-you stays before the form comes back (~2 min).
+  var REAPPEAR_MS = 120000;
+  var reappearTimer = null;
 
   // Progressive enhancement: only disable native validation once JS is running,
   // so if JS is unavailable the browser still enforces required fields and the
@@ -111,9 +114,6 @@
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Hide any previous thank-you image while we (re)process this submit.
-    if (thanksEl) thanksEl.hidden = true;
-
     // Validate all; focus the first invalid field.
     var firstInvalid = null;
     var allValid = true;
@@ -160,11 +160,18 @@
       .then(function (res) {
         if (res.ok) {
           form.reset();
-          if (thanksEl) thanksEl.hidden = false; // Captain's thumbs-up thank-you
-          setStatus(
-            "ok done",
-            "Bien reçu ⚓ On te recontacte très vite. Bienvenue à bord !"
-          );
+          // Swap: hide the form, let the Captain celebrate, bring the form back later.
+          if (statusEl) statusEl.hidden = true;
+          form.hidden = true;
+          if (successEl) {
+            successEl.hidden = false;
+            successEl.focus(); // move focus for screen readers (role="status" announces)
+            if (reappearTimer) clearTimeout(reappearTimer);
+            reappearTimer = setTimeout(function () {
+              successEl.hidden = true;
+              form.hidden = false;
+            }, REAPPEAR_MS);
+          }
         } else {
           throw new Error("bad response");
         }
