@@ -158,6 +158,9 @@
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
+  <!-- Barre de progression de lecture (remplit au scroll) -->
+  <div class="read-progress" aria-hidden="true"><span></span></div>
+
   <!-- ============ NAV ============ -->
   <header class="site-header">
     <div class="container nav">
@@ -166,14 +169,18 @@
         <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
       </a>
 
-      <nav class="nav-links" aria-label="Navigation principale">
-        <a href="#probleme">Le problème</a>
-        <a href="#modeles">Les deux modèles</a>
-        <a href="#solution">La solution</a>
-      </nav>
-
       <a class="btn btn-primary btn-sm nav-cta" href="#rejoindre">Je rejoins</a>
     </div>
+
+    <!-- Menu de questions (pas de rubriques) : les vraies interrogations d'un restaurateur -->
+    <nav class="chip-nav" aria-label="Accès rapide aux réponses">
+      <div class="container chip-nav-inner">
+        <a class="chip" href="#calculateur">🧮 Combien je perds&nbsp;?</a>
+        <a class="chip" href="#solution">⚙️ Comment ça marche&nbsp;?</a>
+        <a class="chip" href="#esus">🎣 Où est le piège&nbsp;?</a>
+        <a class="chip" href="#faq">❓ Vos questions</a>
+      </div>
+    </nav>
   </header>
 
   <main id="contenu">
@@ -296,65 +303,8 @@
       </div>
     </section>
 
-    <!-- ============ SÉLECTEUR « 3 taux, 3 vérités » (CSS-only via :has()) ============ -->
-    <section id="simulateur" class="section section-alt" aria-labelledby="simulateur-titre">
-      <div class="container narrow">
-        <h2 id="simulateur-titre" class="section-title">
-          Tu répercutes la commission ? Aucun réglage ne te fait gagner.
-        </h2>
-
-        <div class="selector">
-          <fieldset class="taux-fieldset">
-            <legend>Choisis ce que tu fais de la commission :</legend>
-            <div class="taux-options">
-              <label class="taux-opt">
-                <input type="radio" name="taux" id="taux-0" value="0" checked />
-                <span class="taux-opt-label">Je ne répercute pas <em>(0 %)</em></span>
-              </label>
-              <label class="taux-opt">
-                <input type="radio" name="taux" id="taux-50" value="50" />
-                <span class="taux-opt-label">Je répercute à moitié <em>(50 %)</em></span>
-              </label>
-              <label class="taux-opt">
-                <input type="radio" name="taux" id="taux-100" value="100" />
-                <span class="taux-opt-label">Je répercute tout <em>(100 %)</em></span>
-              </label>
-            </div>
-          </fieldset>
-
-          <div class="taux-messages" aria-live="polite">
-            <p class="taux-msg msg-0">
-              <strong>Tu absorbes toute la commission.</strong> Ta marge fond sur
-              chaque commande — tu travailles autant, tu gagnes moins.
-            </p>
-            <p class="taux-msg msg-50">
-              <strong>Le compromis le moins mauvais d'un mauvais choix.</strong> Un
-              peu de marge en moins, un peu de volume en moins. Et si tu t'arrêtes
-              à la moitié, c'est bien que tu sais qu'aller plus loin ferait fuir
-              tes clients.
-            </p>
-            <p class="taux-msg msg-100">
-              <strong>Tes prix gonflent.</strong> Le client compare, hésite,
-              commande moins souvent — ou ailleurs. Tu ne vois pas les commandes
-              que tu perds : elles n'arrivent jamais.
-            </p>
-          </div>
-        </div>
-
-        <p class="selector-conclusion">
-          <strong>Le point commun des trois ?</strong> Tu perds — de la marge, du
-          volume, ou les deux. Le seul réglage qui te fait vraiment gagner n'est
-          pas dans cette liste : <strong>0 commission.</strong>
-        </p>
-        <p class="fine-print">
-          Les plateformes de livraison à commission prélèvent en général 25 à 35 %
-          par commande.
-        </p>
-      </div>
-    </section>
-
     <!-- ============ CALCULATEUR — combien la commission te coûte ============ -->
-    <section id="calculateur" class="section" aria-labelledby="calc-titre">
+    <section id="calculateur" class="section section-alt" aria-labelledby="calc-titre">
       <div class="container narrow">
         <p class="eyebrow eyebrow-center"><span aria-hidden="true">🧮</span> Le calcul, pour toi</p>
         <h2 id="calc-titre" class="section-title">Combien la commission te coûte, à toi&nbsp;?</h2>
@@ -406,6 +356,11 @@
           <a class="btn btn-primary btn-block calc-cta" href="#rejoindre" data-calc-cta>
             Je récupère cet argent
           </a>
+          <p class="calc-reassure">
+            « 0 € pour moi, où est le loup&nbsp;? » Il n'y en a pas&nbsp;:
+            <strong>c'est le client qui contribue, pas toi.</strong>
+            <a href="financement.html">Comment on se finance, en clair →</a>
+          </p>
           <p class="calc-fine">
             Estimation à titre indicatif, à partir d'un taux de commission que tu peux
             ajuster. Chaque plateforme et chaque contrat diffèrent&nbsp;: c'est un ordre
@@ -656,36 +611,25 @@
         <p class="lead">
           Captain.Food part d'une conviction simple : le numérique doit être un
           <strong>outil d'utilité publique</strong>, pas un péage aux mains de
-          quelques géants de la tech. On commence là où le déséquilibre est le plus
-          criant — la livraison de repas — du côté des restaurateurs, des livreurs
-          et des habitants.
-        </p>
-        <p class="lead">
-          Le problème des grandes plateformes n'est pas qu'elles gagnent de
-          l'argent. C'est qu'une fois que tu en dépends, elles peuvent presser — et
+          quelques géants de la tech. Le problème n'est pas qu'ils gagnent de
+          l'argent — c'est qu'une fois que tu en dépends, ils peuvent presser, et
           rien ne les en empêche.
         </p>
         <p class="lead">
-          Captain.Food est une <strong>entreprise solidaire d'utilité sociale
-          (ESUS)</strong>. Ce statut n'est pas un argument marketing : c'est un
-          cadre juridique qui encadre notre lucrativité et notre raison d'être.
-          Notre objectif est de faire vivre une alternative locale et juste, pas de
-          maximiser un profit sur les indépendants.
-        </p>
-        <p class="lead">
-          Notre cap : devenir une <strong>coopérative (SCIC)</strong>, où
-          restaurateurs, livreurs et citoyens auront voix au chapitre. Par
-          construction, on ne pourra pas devenir ce qu'on combat.
+          Alors on se donne des garde-fous qui tiennent. Captain.Food est une
+          <strong>entreprise solidaire d'utilité sociale (ESUS)</strong> — un cadre
+          juridique qui encadre notre lucrativité et notre raison d'être — avec pour
+          cap une <strong>coopérative (SCIC)</strong>, où restaurateurs, livreurs et
+          citoyens auront voix au chapitre. Par construction, on ne pourra pas
+          devenir ce qu'on combat.
         </p>
         <p class="lead">
           Et pour que tu n'aies pas à nous croire sur parole&nbsp;: on ouvre nos
           comptes en public sur
-          <a href="https://opencollective.com/captain-food" target="_blank" rel="noopener">Open Collective</a>.
-          Chaque euro reçu et dépensé, destiné à être visible par tous — la
+          <a href="https://opencollective.com/captain-food" target="_blank" rel="noopener">Open Collective</a>
+          — chaque euro reçu et dépensé, destiné à être visible par tous. La
           transparence radicale, pas le slogan.
-        </p>
-        <p class="lead">
-          <a href="manifeste.html">→ Lire le manifeste : pourquoi on lance Captain.Food</a>
+          <a href="manifeste.html">Lire le manifeste →</a>
         </p>
 
         <!-- Problème sociétal n°2 : le livreur précarisé — notre choix : payer mieux, viser le salariat -->

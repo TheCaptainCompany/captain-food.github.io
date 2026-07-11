@@ -251,8 +251,76 @@ code {
   right: 0;
 }
 .nav-cta {
-  margin-left: 0.4rem;
+  margin-left: auto;
   white-space: nowrap;
+}
+
+/* Reading-progress bar (fills on scroll) */
+.read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 55;
+  background: rgba(14, 58, 95, 0.12);
+  pointer-events: none;
+}
+.read-progress > span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: var(--gold);
+}
+
+/* Chip nav — a menu of the restaurateur's real QUESTIONS, not rubrics */
+.chip-nav {
+  border-top: 1px solid var(--line);
+  background: rgba(247, 239, 223, 0.85);
+}
+.chip-nav-inner {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.chip-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+.chip {
+  flex: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.chip:hover,
+.chip:focus-visible {
+  border-color: var(--navy);
+  background: var(--parchment);
+}
+@media (min-width: 721px) {
+  .chip-nav-inner {
+    justify-content: center;
+    gap: 0.6rem;
+  }
+}
+
+/* Anchors land clear of the sticky header + chip bar */
+section[id],
+[id="contenu"] {
+  scroll-margin-top: 6.5rem;
 }
 @media (max-width: 400px) {
   .nav-cta {
@@ -1460,6 +1528,20 @@ code {
 }
 .calc-cta {
   margin-top: 1.6rem;
+}
+.calc-reassure {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: rgba(247, 239, 223, 0.92);
+  line-height: 1.5;
+}
+.calc-reassure strong {
+  color: var(--gold);
+}
+.calc-reassure a {
+  color: #ffe7b0;
+  white-space: nowrap;
 }
 .calc-fine {
   margin-top: 0.9rem;

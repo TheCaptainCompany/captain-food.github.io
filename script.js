@@ -311,3 +311,46 @@
 
   compute();
 })();
+
+/* Reading-progress bar — fills as the page scrolls (rAF, GPU transform). */
+(function () {
+  "use strict";
+  var bar = document.querySelector(".read-progress > span");
+  if (!bar) return;
+  var ticking = false;
+  function update() {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var ratio = max > 0 ? h.scrollTop / max : 0;
+    ratio = ratio < 0 ? 0 : ratio > 1 ? 1 : ratio;
+    bar.style.transform = "scaleX(" + ratio + ")";
+    ticking = false;
+  }
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  update();
+})();
+
+/* Accessibility: when an in-page anchor is clicked, move focus to the target
+   section so keyboard and screen-reader users continue from there (not the top). */
+(function () {
+  "use strict";
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var id = a.getAttribute("href").slice(1);
+    if (!id) return;
+    var target = document.getElementById(id);
+    if (!target) return;
+    window.setTimeout(function () {
+      if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+      target.focus({ preventScroll: true });
+    }, 0);
+  });
+})();
