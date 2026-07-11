@@ -144,17 +144,8 @@
   }
   </script>
 
-  <!--
-    TODO ANALYTICS (sans cookie, pas de bandeau nécessaire). Choisir UNE option et décommenter.
-    Voir README.md.
-
-    Plausible:
-    <script defer data-domain="captain.food" src="https://plausible.io/js/script.js"></script>
-
-    Cloudflare Web Analytics:
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-            data-cf-beacon='{"token": "PLACEHOLDER_TOKEN"}'></script>
-  -->
+  <!-- Cloudflare Web Analytics (cookieless, aucun bandeau requis) -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a9fe368f9d994cf6b874cf584aada144"}'></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>

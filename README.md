@@ -100,24 +100,15 @@ The privacy notice (`confidentialite.html`) is real, working French RGPD copy.
 Review the retention period (currently 24 months) and the data-contact address
 (`miam@captain.food`) and adjust if needed.
 
-### 5. Analytics (optional, cookieless — no cookie banner needed)
+### 5. Analytics — ✅ Cloudflare Web Analytics (cookieless)
 
-A commented snippet block sits in the `<head>` of `index.html`. Pick **one**
-privacy-friendly, cookieless provider and uncomment it. **Do not add Google
-Analytics** — it would require a cookie-consent banner.
+**Cloudflare Web Analytics** is enabled on every page (`index`, `manifeste`,
+`financement`, `confidentialite`, `mentions-legales`, `404`) via the beacon
+snippet in each `<head>`. It's cookieless and GDPR-friendly, so **no cookie
+banner is required**. No Google Analytics (would need a consent banner).
 
-- **Plausible** (https://plausible.io):
-  ```html
-  <script defer data-domain="captain.food" src="https://plausible.io/js/script.js"></script>
-  ```
-- **Cloudflare Web Analytics** (https://www.cloudflare.com/web-analytics/):
-  ```html
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "YOUR_TOKEN"}'></script>
-  ```
-
-Both are cookieless and GDPR-friendly, so no consent banner is required. Add
-whichever provider's script and, for Cloudflare, replace `YOUR_TOKEN`.
+To change/rotate the site token, update the `data-cf-beacon` token in the
+`<head>` of each page. View stats in the Cloudflare dashboard → Web Analytics.
 
 ---
 
