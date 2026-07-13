@@ -830,6 +830,26 @@ section[id],
 }
 
 /* ---------- Finance example (chiffré) ---------- */
+/* Financement page — framed hero illustration (scene image w/ white bg) */
+.finance-hero-figure {
+  margin: 2rem auto 0;
+  max-width: 440px;
+  text-align: center;
+}
+.finance-hero-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.finance-hero-figure figcaption {
+  margin-top: 0.7rem;
+  font-style: italic;
+  color: var(--brass-ink);
+  font-size: 0.95rem;
+}
+
 .finance-example {
   margin-top: var(--space-5);
   background: var(--white);
@@ -1029,6 +1049,8 @@ section[id],
   margin-bottom: 0.5rem;
 }
 .cta-captain img {
+  max-height: 360px;
+  width: auto;
   margin-inline: auto;
   filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.35));
   animation: cf-bob 7s ease-in-out infinite; /* offset period so the two don't sync */
