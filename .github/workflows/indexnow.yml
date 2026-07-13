@@ -1,0 +1,70 @@
+name: IndexNow ping
+
+# Notify IndexNow engines (Bing, Yandex, Seznam, DuckDuckGo…) to re-crawl.
+# Single source of truth: sitemap.xml for the URL list, {key}.txt for the key.
+# Add/rename a page -> update sitemap.xml -> it gets submitted automatically.
+# (Google does not use IndexNow — use Search Console for Google.)
+
+on:
+  push:
+    branches: [claude/captain-food-landing-0mcx0f]
+    paths:
+      - "**/*.html"
+      - "sitemap.xml"
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Submit sitemap URLs to IndexNow
+        run: |
+          set -euo pipefail
+          HOST="captain.food"
+
+          # Key = the IndexNow verification file at the repo root ([hex].txt),
+          # matched so robots.txt / llms.txt are never picked up by mistake.
+          KEYFILE="$(ls *.txt 2>/dev/null | grep -E '^[0-9a-f]{8,128}\.txt$' | head -1 || true)"
+          if [ -z "$KEYFILE" ]; then
+            echo "::error::No IndexNow key file ([hex].txt) found at repo root."
+            exit 1
+          fi
+          KEY="${KEYFILE%.txt}"
+
+          # URL list = every <loc> in sitemap.xml (the single source of truth).
+          mapfile -t URLS < <(grep -oE '<loc>[^<]+</loc>' sitemap.xml | sed -E 's#</?loc>##g')
+          if [ "${#URLS[@]}" -eq 0 ]; then
+            echo "::error::No <loc> URLs found in sitemap.xml."
+            exit 1
+          fi
+          echo "Found ${#URLS[@]} URL(s) in sitemap.xml."
+
+          PAYLOAD="$(printf '%s\n' "${URLS[@]}" \
+            | jq -R . \
+            | jq -s \
+                --arg host "$HOST" \
+                --arg key "$KEY" \
+                --arg loc "https://$HOST/$KEYFILE" \
+                '{host:$host, key:$key, keyLocation:$loc, urlList:.}')"
+
+          echo "Payload:"; echo "$PAYLOAD" | jq .
+
+          CODE="$(curl -sS -o /tmp/indexnow_resp -w '%{http_code}' \
+            -X POST 'https://api.indexnow.org/indexnow' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data-binary "$PAYLOAD")"
+
+          echo "IndexNow responded HTTP $CODE"
+          cat /tmp/indexnow_resp 2>/dev/null || true
+          echo
+
+          # 200 OK / 202 Accepted are both success.
+          case "$CODE" in
+            200|202) echo "Submitted successfully." ;;
+            *) echo "::error::IndexNow submission failed (HTTP $CODE)."; exit 1 ;;
+          esac
