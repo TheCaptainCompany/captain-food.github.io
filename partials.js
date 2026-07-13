@@ -35,22 +35,19 @@
 
   // ---------- Footer (single source) ----------
   var FOOTER =
-    '<nav class="footer-menu" aria-label="Menu du site">' +
-      '<a href="' + sec + '#calculateur">🧮 Combien je perds&nbsp;?</a>' +
-      '<a href="' + sec + '#combat">🍴 La solution</a>' +
-      '<a href="' + sec + '#esus">🎣 Où est le piège&nbsp;?</a>' +
-      '<a href="' + sec + '#rejoindre">⚓ Rejoindre</a>' +
-      '<a href="' + sec + '#faq">❓ Vos questions</a>' +
-    '</nav>' +
     '<div class="container footer-grid">' +
       '<div class="footer-col">' +
         '<p class="footer-brand"><img class="footer-logo" src="/assets/logo.png" alt="" width="30" height="30"><span class="footer-brand-name">Captain<span class="brand-dot">.</span>Food</span></p>' +
         '<p class="footer-tagline"><em>&laquo;&nbsp;Reprenons les commandes&nbsp;!&nbsp;&raquo;</em><br><em>Une alternative locale et solidaire, à Tours.</em></p>' +
         '<ul class="footer-list footer-nav">' +
+          '<li><a href="' + sec + '#probleme"><span class="fi" aria-hidden="true">🧭</span> Constat</a></li>' +
+          '<li><a href="' + sec + '#combat"><span class="fi" aria-hidden="true">🍴</span> Solution</a></li>' +
+          '<li><a href="' + sec + '#solution"><span class="fi" aria-hidden="true">⚙️</span> Comment</a></li>' +
+          '<li><a href="' + sec + '#rejoindre"><span class="fi" aria-hidden="true">⚓</span> Rejoindre</a></li>' +
+          '<li><a href="' + faqHref + '"><span class="fi" aria-hidden="true">❓</span> FAQ</a></li>' +
           '<li><a href="/manifeste.html"><span class="fi" aria-hidden="true">📜</span> Le manifeste</a></li>' +
           '<li><a href="/financement.html"><span class="fi" aria-hidden="true">🧾</span> Comment on se finance&nbsp;?</a></li>' +
           '<li><a href="/livraison.html"><span class="fi" aria-hidden="true">🛵</span> La livraison, payée juste</a></li>' +
-          '<li><a href="' + faqHref + '"><span class="fi" aria-hidden="true">❓</span> Questions fréquentes</a></li>' +
           '<li><a href="https://opencollective.com/captain-food" target="_blank" rel="noopener">' + ICON.oc + ' Nos comptes (Open Collective)</a></li>' +
         '</ul>' +
       '</div>' +

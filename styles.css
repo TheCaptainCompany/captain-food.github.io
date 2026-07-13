@@ -1454,32 +1454,6 @@ section[id],
   color: #cdd8e2;
   padding-top: 3rem;
 }
-.footer-menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem 0.7rem;
-  padding: 0 0 1.4rem;
-  margin-bottom: 1.6rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-.footer-menu a {
-  color: #cdd8e2;
-  text-decoration: none;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.85rem;
-  padding: 0.32rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
-  white-space: nowrap;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-.footer-menu a:hover,
-.footer-menu a:focus-visible {
-  color: #fff;
-  border-color: var(--gold);
-}
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
