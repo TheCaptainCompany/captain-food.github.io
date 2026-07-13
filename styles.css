@@ -1700,3 +1700,92 @@ section[id],
     animation: none !important;
   }
 }
+
+/* ---------- Shared footer enhancements (logo, icons, tagline) ---------- */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-logo {
+  width: 30px;
+  height: 30px;
+  flex: none;
+}
+.footer-tagline {
+  color: #9fb0be;
+  margin-top: 0.2rem;
+}
+.footer-tagline em {
+  font-style: italic;
+}
+.footer-nav a,
+.footer-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.footer-nav .fi {
+  width: 1.15em;
+  text-align: center;
+  flex: none;
+}
+.footer-list .ic {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+/* ---------- First-time WhatsApp hint bubble ---------- */
+.wa-hint {
+  position: fixed;
+  right: 1.3rem;
+  bottom: 5.6rem;
+  z-index: 66;
+  max-width: 232px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  padding: 0.7rem 1.9rem 0.7rem 0.9rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.wa-hint.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.wa-hint::after {
+  content: "";
+  position: absolute;
+  right: 24px;
+  bottom: -7px;
+  border: 7px solid transparent;
+  border-top-color: var(--navy);
+  border-bottom: 0;
+}
+.wa-hint-close {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  background: none;
+  border: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+.wa-hint-close:hover {
+  color: #fff;
+}
+@media (max-width: 860px) {
+  .wa-hint {
+    right: 1rem;
+    bottom: 11.6rem;
+  }
+}
