@@ -104,26 +104,6 @@
     }
   }
 
-  // ---------- Sticky mobile CTA (points to the pilot form) ----------
-  if (!document.querySelector(".mobile-cta")) {
-    var cta = document.createElement("a");
-    cta.className = "mobile-cta";
-    cta.href = isHome ? "#rejoindre" : "/index.html#rejoindre";
-    cta.innerHTML =
-      '<span aria-hidden="true">⚓</span> Je rejoins les restaurateurs libres — gratuit, sans engagement';
-    document.body.appendChild(cta);
-
-    // On the homepage, hide it once the form is on screen (redundant there).
-    var target = document.getElementById("rejoindre");
-    if (target && "IntersectionObserver" in window) {
-      new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            cta.classList.toggle("is-hidden", entry.isIntersecting);
-          });
-        },
-        { rootMargin: "0px 0px -40% 0px" }
-      ).observe(target);
-    }
-  }
+  // The sticky mobile CTA was retired in favour of the fixed bottom chip-nav
+  // (which carries an orange "Rejoindre" action) + the sticky header CTA.
 })();

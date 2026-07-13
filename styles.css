@@ -64,6 +64,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* room for the fixed bottom nav bar (+ iOS safe area) */
+  padding-bottom: calc(3.6rem + env(safe-area-inset-bottom, 0px));
 }
 img {
   max-width: 100%;
@@ -275,10 +277,19 @@ code {
   background: var(--gold);
 }
 
-/* Chip nav — a menu of the restaurateur's real QUESTIONS, not rubrics */
+/* Chip nav — a menu of the restaurateur's real QUESTIONS, fixed at the bottom
+   (app-style bottom bar). Follows the scroll and highlights the current section. */
 .chip-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
   border-top: 1px solid var(--line);
-  background: rgba(247, 239, 223, 0.85);
+  background: rgba(247, 239, 223, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 -6px 20px rgba(10, 30, 50, 0.14);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 .chip-nav-inner {
   display: flex;
@@ -315,6 +326,18 @@ code {
   border-color: var(--navy);
   color: var(--white);
 }
+/* Rejoindre = primary action, styled as a CTA inside the bottom bar */
+.chip-cta,
+.chip-cta.is-active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+.chip-cta:hover,
+.chip-cta:focus-visible {
+  background: var(--orange-dark);
+  border-color: var(--orange-dark);
+}
 @media (min-width: 721px) {
   .chip-nav-inner {
     justify-content: center;
@@ -322,10 +345,10 @@ code {
   }
 }
 
-/* Anchors land clear of the sticky header + chip bar */
+/* Anchors land clear of the (now shorter) sticky top header */
 section[id],
 [id="contenu"] {
-  scroll-margin-top: 6.5rem;
+  scroll-margin-top: 4.75rem;
 }
 @media (max-width: 400px) {
   .nav-cta {
@@ -1080,7 +1103,7 @@ section[id],
 .cta-layout .cta-captain {
   grid-column: 2;
   position: sticky;
-  top: 7.5rem;
+  top: 5rem;
   align-self: start;
   margin: 0;
 }
@@ -1095,7 +1118,7 @@ section[id],
 .faq-figure {
   margin: 0;
   position: sticky;
-  top: 7.5rem;
+  top: 5rem;
   align-self: start;
   text-align: center;
 }
@@ -1166,7 +1189,7 @@ section[id],
 .wa-fab {
   position: fixed;
   right: 1.3rem;
-  bottom: 1.4rem;
+  bottom: calc(4.4rem + env(safe-area-inset-bottom, 0px));
   z-index: 65;
   width: 56px;
   height: 56px;
@@ -1187,49 +1210,16 @@ section[id],
   height: 32px;
   fill: #fff;
 }
-/* on mobile, lift it above the sticky CTA bar so they never overlap */
 @media (max-width: 860px) {
   .wa-fab {
     right: 1rem;
-    bottom: 6.4rem;
   }
 }
 
-/* ---------- Sticky mobile CTA ---------- */
+/* The old sticky mobile CTA is retired: the fixed bottom chip-nav (with its
+   orange "Rejoindre" chip) plus the sticky header CTA now cover conversion. */
 .mobile-cta {
-  display: none;
-}
-.mobile-cta.is-hidden {
-  transform: translateY(120%);
-}
-@media (max-width: 860px) {
-  .mobile-cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 60;
-    background: var(--orange);
-    color: #fff;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 0.98rem;
-    text-align: center;
-    text-decoration: none;
-    padding: 0.95rem 1rem;
-    box-shadow: 0 -6px 20px rgba(10, 30, 50, 0.24);
-    transition: transform 0.2s ease, background-color 0.15s ease;
-  }
-  .mobile-cta:hover {
-    background: var(--orange-dark);
-  }
-  body {
-    padding-bottom: 5.5rem; /* room so the (possibly 2-line) sticky bar never hides the footer */
-  }
+  display: none !important;
 }
 
 /* ---------- Form ---------- */
