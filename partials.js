@@ -35,7 +35,7 @@
   var FOOTER =
     '<div class="container footer-grid">' +
       '<div class="footer-col">' +
-        '<p class="footer-brand"><img class="footer-logo" src="/assets/logo.png" alt="" width="30" height="30"> Captain<span class="brand-dot">.</span>Food</p>' +
+        '<p class="footer-brand"><img class="footer-logo" src="/assets/logo.png" alt="" width="30" height="30"><span class="footer-brand-name">Captain<span class="brand-dot">.</span>Food</span></p>' +
         '<p class="footer-tagline"><em>&laquo;&nbsp;Reprenons les commandes&nbsp;!&nbsp;&raquo;</em><br><em>Une alternative locale et solidaire, à Tours.</em></p>' +
         '<ul class="footer-list footer-nav">' +
           '<li><a href="/manifeste.html"><span class="fi" aria-hidden="true">📜</span> Le manifeste</a></li>' +
