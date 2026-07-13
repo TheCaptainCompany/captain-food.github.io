@@ -353,6 +353,13 @@
       return it.section;
     });
   if (!items.length) return;
+  // Order by document position so highlighting is correct even if the chips
+  // are displayed in a different order than the sections appear on the page.
+  items.sort(function (a, b) {
+    return (
+      a.section.getBoundingClientRect().top - b.section.getBoundingClientRect().top
+    );
+  });
 
   var header = document.querySelector(".site-header");
   var reduce =
@@ -443,4 +450,25 @@
       html.style.scrollBehavior = prev;
     }
   } catch (e) {}
+})();
+
+/* Clickable cards: an element with [data-href] navigates on click/Enter,
+   except when the click lands on an inner link or button. */
+(function () {
+  "use strict";
+  var cards = document.querySelectorAll("[data-href]");
+  Array.prototype.forEach.call(cards, function (card) {
+    var url = card.getAttribute("data-href");
+    if (!url) return;
+    card.addEventListener("click", function (e) {
+      if (e.target.closest("a, button")) return;
+      window.location.href = url;
+    });
+    card.addEventListener("keydown", function (e) {
+      if ((e.key === "Enter" || e.key === " ") && !e.target.closest("a, button")) {
+        e.preventDefault();
+        window.location.href = url;
+      }
+    });
+  });
 })();

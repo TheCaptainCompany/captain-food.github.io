@@ -64,8 +64,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  /* room for the fixed bottom nav bar (+ iOS safe area) */
-  padding-bottom: calc(3.6rem + env(safe-area-inset-bottom, 0px));
 }
 img {
   max-width: 100%;
@@ -277,19 +275,11 @@ code {
   background: var(--gold);
 }
 
-/* Chip nav — a menu of the restaurateur's real QUESTIONS, fixed at the bottom
-   (app-style bottom bar). Follows the scroll and highlights the current section. */
+/* Chip nav — a menu of the restaurateur's real QUESTIONS, under the header.
+   Follows the scroll and highlights the current section. */
 .chip-nav {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 60;
   border-top: 1px solid var(--line);
-  background: rgba(247, 239, 223, 0.92);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 -6px 20px rgba(10, 30, 50, 0.14);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: rgba(247, 239, 223, 0.85);
 }
 .chip-nav-inner {
   display: flex;
@@ -345,10 +335,10 @@ code {
   }
 }
 
-/* Anchors land clear of the (now shorter) sticky top header */
+/* Anchors land clear of the sticky header + chip bar */
 section[id],
 [id="contenu"] {
-  scroll-margin-top: 4.75rem;
+  scroll-margin-top: 6.5rem;
 }
 @media (max-width: 400px) {
   .nav-cta {
@@ -1113,7 +1103,7 @@ section[id],
 .cta-layout .cta-captain {
   grid-column: 2;
   position: sticky;
-  top: 5rem;
+  top: 7.5rem;
   align-self: start;
   margin: 0;
 }
@@ -1128,7 +1118,7 @@ section[id],
 .faq-figure {
   margin: 0;
   position: sticky;
-  top: 5rem;
+  top: 7.5rem;
   align-self: start;
   text-align: center;
 }
@@ -1199,7 +1189,7 @@ section[id],
 .wa-fab {
   position: fixed;
   right: 1.3rem;
-  bottom: calc(4.4rem + env(safe-area-inset-bottom, 0px));
+  bottom: 1.4rem;
   z-index: 65;
   width: 56px;
   height: 56px;
@@ -1463,6 +1453,32 @@ section[id],
   background: var(--navy-deep);
   color: #cdd8e2;
   padding-top: 3rem;
+}
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.7rem;
+  padding: 0 0 1.4rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.footer-menu a {
+  color: #cdd8e2;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.32rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.footer-menu a:hover,
+.footer-menu a:focus-visible {
+  color: #fff;
+  border-color: var(--gold);
 }
 .footer-grid {
   display: grid;
@@ -1745,6 +1761,209 @@ section[id],
   .repercuss-btns label {
     border-color: var(--line);
   }
+}
+
+/* ---------- "Le constat" : camembert + statistiques ---------- */
+:root {
+  --c-comm: #cf3a3a;   /* commission — rouge */
+  --c-ingr: #2f6fb0;   /* ingrédients — bleu */
+  --c-prep: #e8613a;   /* préparation — orange */
+  --c-fixe: #e0a12b;   /* charges fixes — laiton/jaune */
+  --c-marge: #1c7a4d;  /* marge — vert */
+}
+.probleme-lead {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  margin-top: 1.6rem;
+}
+.probleme-lead-text h3 {
+  font-size: 1.5rem;
+  color: var(--rust);
+}
+.probleme-lead-text p {
+  margin-top: 0.6rem;
+  color: var(--ink-soft);
+}
+.probleme-lead-text strong {
+  color: var(--navy);
+}
+.pie-figure {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pie {
+  width: 190px;
+  height: 190px;
+  flex: none;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--c-comm) 0 108deg,
+    var(--c-ingr) 108deg 198deg,
+    var(--c-prep) 198deg 277.2deg,
+    var(--c-fixe) 277.2deg 342deg,
+    var(--c-marge) 342deg 360deg
+  );
+  -webkit-mask: radial-gradient(circle, transparent 45%, #000 46%);
+  mask: radial-gradient(circle, transparent 45%, #000 46%);
+}
+.pie-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.pie-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ink-soft);
+}
+.pie-legend b {
+  color: var(--ink);
+  font-family: var(--font-display);
+  margin-left: 0.15rem;
+}
+.pie-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  flex: none;
+}
+.dot-comm { background: var(--c-comm); }
+.dot-ingr { background: var(--c-ingr); }
+.dot-prep { background: var(--c-prep); }
+.dot-fixe { background: var(--c-fixe); }
+.dot-marge { background: var(--c-marge); }
+
+.stat-tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+.stat-tile {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--rust);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  box-shadow: var(--shadow);
+}
+.stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--rust);
+  line-height: 1;
+}
+.stat-lbl {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.stat-lbl strong { color: var(--navy); }
+@media (max-width: 720px) {
+  .probleme-lead {
+    grid-template-columns: 1fr;
+  }
+  .stat-tiles {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Table brand cell (logo instead of the anchor emoji) ---------- */
+.th-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  color: var(--navy);
+}
+.th-brand img {
+  display: inline-block;
+}
+
+/* ---------- Dish caption ---------- */
+.dish-caption {
+  margin-top: 0.7rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--navy);
+}
+
+/* ---------- Clickable zones (turn navy on hover) ---------- */
+.card-cue {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--orange-dark);
+}
+.finance-box.clickable-card {
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+.finance-box.clickable-card:hover,
+.finance-box.clickable-card:focus-visible {
+  background: var(--grad-navy);
+  border-color: var(--navy);
+  color: #e8eef4;
+  outline: none;
+}
+.finance-box.clickable-card:hover h3,
+.finance-box.clickable-card:focus-visible h3 {
+  color: #fff;
+}
+.finance-box.clickable-card:hover p,
+.finance-box.clickable-card:focus-visible p {
+  color: #e8eef4;
+}
+.finance-box.clickable-card:hover strong,
+.finance-box.clickable-card:focus-visible strong {
+  color: var(--gold);
+}
+.finance-box.clickable-card:hover .card-cue,
+.finance-box.clickable-card:hover a,
+.finance-box.clickable-card:focus-visible .card-cue,
+.finance-box.clickable-card:focus-visible a {
+  color: #ffe7b0;
+}
+
+.channel-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+.channel-link:hover,
+.channel-link:focus-visible {
+  background: var(--grad-navy);
+  border-color: var(--navy);
+  transform: translateY(-2px);
+}
+.channel-link:hover h4,
+.channel-link:hover p,
+.channel-link:focus-visible h4,
+.channel-link:focus-visible p {
+  color: #e8eef4;
+}
+.channel-link:hover .card-cue,
+.channel-link:focus-visible .card-cue {
+  color: #ffe7b0;
 }
 
 /* ---------- Reduced motion ---------- */

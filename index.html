@@ -171,6 +171,17 @@
 
       <a class="btn btn-primary btn-sm nav-cta" href="#rejoindre">Je rejoins</a>
     </div>
+
+    <!-- Menu de questions (repères de la page) -->
+    <nav class="chip-nav" aria-label="Accès rapide aux réponses">
+      <div class="container chip-nav-inner">
+        <a class="chip" href="#calculateur">🧮 Combien je perds&nbsp;?</a>
+        <a class="chip" href="#combat">🍴 La solution</a>
+        <a class="chip" href="#esus">🎣 Où est le piège&nbsp;?</a>
+        <a class="chip chip-cta" href="#rejoindre">⚓ Rejoindre</a>
+        <a class="chip" href="#faq">❓ Vos questions</a>
+      </div>
+    </nav>
   </header>
 
   <main id="contenu">
@@ -219,43 +230,64 @@
     <!-- ============ PROBLÈME ============ -->
     <section id="probleme" class="section" aria-labelledby="probleme-titre">
       <div class="container">
-        <p class="eyebrow eyebrow-center"><span aria-hidden="true">🧭</span> Là où part ton argent</p>
-        <h2 id="probleme-titre" class="section-title">Tu cuisines. Elles encaissent.</h2>
+        <p class="eyebrow eyebrow-center"><span aria-hidden="true">📊</span> Le constat</p>
+        <h2 id="probleme-titre" class="section-title">Elles abusent&nbsp;!</h2>
         <p class="section-intro">
           Sur les grandes plateformes, chaque commande te coûte plus cher que tu
           ne le crois.
         </p>
 
-        <div class="grid grid-2">
-          <article class="card problem-card">
+        <!-- Commission qui ronge la marge : camembert + statistiques -->
+        <div class="probleme-lead">
+          <div class="probleme-lead-text">
             <h3>La commission ronge ta marge.</h3>
             <p>
-              Une grosse part de chaque commande part à la plateforme. Sur un
-              métier où la marge se joue à quelques points, ça change tout.
+              Une grosse part de chaque commande part à la plateforme — souvent
+              <strong>plus que tout ce que tu gagnes vraiment</strong> sur cette
+              commande. Regarde où passe chaque euro d'une commande&nbsp;:
             </p>
-          </article>
-          <article class="card problem-card">
-            <h3>Tes clients ne sont pas tes clients.</h3>
-            <p>
-              La plateforme connaît leur nom, leur adresse, leurs habitudes. Toi,
-              non. Le jour où tu la quittes, tu repars de zéro.
-            </p>
-          </article>
-          <article class="card problem-card">
-            <h3>Tu ne fixes plus vraiment tes prix.</h3>
-            <p>
-              Pour absorber la commission, tu gonfles tes tarifs en ligne : deux
-              cartes, deux prix, un client qui ne comprend pas.
-            </p>
-          </article>
-          <article class="card problem-card">
-            <h3>Tu ne décides de rien.</h3>
-            <p>
-              La commission monte ? Tu l'apprends. Ton classement baisse ? Tu ne
-              sais pas pourquoi. Les règles changent ? Tu suis.
-            </p>
-          </article>
+          </div>
+          <figure class="pie-figure">
+            <div
+              class="pie"
+              role="img"
+              aria-label="Répartition d'une commande livrée : commission 25 à 35 %, ingrédients environ 25 %, préparation environ 22 %, charges fixes environ 18 %, marge restante environ 5 %."
+            ></div>
+            <ul class="pie-legend">
+              <li><span class="pie-dot dot-comm" aria-hidden="true"></span> Commission <b>25–35 %</b></li>
+              <li><span class="pie-dot dot-ingr" aria-hidden="true"></span> Coût des ingrédients <b>~25 %</b></li>
+              <li><span class="pie-dot dot-prep" aria-hidden="true"></span> Coût de préparation <b>~22 %</b></li>
+              <li><span class="pie-dot dot-fixe" aria-hidden="true"></span> Charges fixes <b>~18 %</b></li>
+              <li><span class="pie-dot dot-marge" aria-hidden="true"></span> Marge qui te reste <b>~5 %</b></li>
+            </ul>
+          </figure>
         </div>
+        <p class="fine-print">
+          Exemple illustratif de la répartition d'une commande livrée via une grande
+          plateforme (~30 % de commission). La part de commission est souvent plus
+          grosse que la marge qui te reste.
+        </p>
+
+        <div class="stat-tiles">
+          <div class="stat-tile">
+            <span class="stat-num">3 à 9 %</span>
+            <span class="stat-lbl">
+              seulement : c'est la <strong>marge nette</strong> d'un restaurant
+              indépendant (tombée à environ <strong>3 %</strong> en 2024).
+            </span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-num">≈ 17 000</span>
+            <span class="stat-lbl">
+              <strong>restaurants ont fait faillite</strong> en France sur les
+              3 dernières années (2022-2024).
+            </span>
+          </div>
+        </div>
+        <p class="fine-print">
+          Sources&nbsp;: marge nette du secteur (Observatoire Fiducial, 2024)&nbsp;;
+          défaillances en restauration 2022-2024 (Altares).
+        </p>
 
         <blockquote class="pull-quote">
           <p class="pull-quote-lead">« Je m'en moque, je répercute la commission sur mes prix. »</p>
@@ -293,11 +325,29 @@
             </p>
           </div>
         </blockquote>
+
+        <div class="grid grid-2">
+          <article class="card problem-card">
+            <h3>Tes clients ne sont pas tes clients.</h3>
+            <p>
+              Impossible de les fidéliser&nbsp;: pas de carte de fidélité utilisable,
+              et tu deviens dépendant de la plateforme pour avoir des commandes.
+            </p>
+          </article>
+          <article class="card problem-card">
+            <h3>Tu ne fixes pas tes prix.</h3>
+            <p>
+              Pour absorber leur commission, tu gonfles tes tarifs en ligne. Et tu
+              subis les promotions forcées et les changements d'algorithme dont tu
+              dépends — qui impactent ta position.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- ============ BANDEAU COMBAT — on écrase la commission ============ -->
-    <section class="combat-band" aria-label="Captain.Food met la commission à terre">
+    <section id="combat" class="combat-band" aria-label="Captain.Food met la commission à terre">
       <div class="container combat-inner">
         <div class="combat-text">
           <p class="combat-title">La commission&nbsp;? On la met à terre.</p>
@@ -308,10 +358,10 @@
         </div>
         <figure class="combat-figure">
           <img
-            src="assets/captain-commission.png"
-            alt="Le Capitaine Food embroche de sa fourchette dorée le mot « commission », dessiné comme un parasite, et le cloue au sol"
-            width="640"
-            height="965"
+            src="assets/captain-commission.webp"
+            alt="Le Capitaine Food embroche de sa fourchette dorée le parasite « commission » et le cloue au sol"
+            width="800"
+            height="1354"
           />
         </figure>
       </div>
@@ -416,7 +466,7 @@
               <tr>
                 <th scope="col"><span class="sr-only">Critère</span></th>
                 <th scope="col">Plateforme à commission</th>
-                <th scope="col" class="col-us">Captain.Food <span aria-hidden="true">⚓</span></th>
+                <th scope="col" class="col-us"><span class="th-brand"><img src="assets/logo.png" alt="" width="22" height="22" /> Captain<span class="brand-dot">.</span>Food</span></th>
               </tr>
             </thead>
             <tbody>
@@ -442,7 +492,7 @@
               </tr>
               <tr>
                 <th scope="row">Les règles du jeu</th>
-                <td>Elles changent, tu l'apprends</td>
+                <td>Elles changent, tu subis</td>
                 <td class="col-us">Fixées par un statut solidaire (ESUS)</td>
               </tr>
             </tbody>
@@ -474,6 +524,7 @@
               height="1124"
               loading="lazy"
             />
+            <figcaption class="dish-caption">Qu'est-ce qu'on met sur la table&nbsp;?</figcaption>
           </figure>
         </div>
 
@@ -504,8 +555,8 @@
           </article>
         </div>
 
-        <!-- Financement -->
-        <div class="finance-box">
+        <!-- Financement — zone cliquable vers la page dédiée -->
+        <div class="finance-box clickable-card" data-href="financement.html" role="link" tabindex="0" aria-label="Comment on se finance — le détail complet">
           <h3>« 0 commission, alors vous vivez de quoi ? »</h3>
           <p>Question légitime — et voici la réponse, en clair.</p>
           <p>
@@ -534,6 +585,7 @@
             le client paie la différence, en clair.
             <a href="livraison.html">Comment on paie la livraison →</a>
           </p>
+          <span class="card-cue">Comment on se finance, en clair →</span>
         </div>
 
         <!-- Exemple chiffré -->
@@ -583,18 +635,21 @@
           </figure>
           <h3 class="channels-title">Un seul QG, trois façons de recevoir tes commandes</h3>
           <p class="channels-intro">
-            Ton site Captain.Food, c'est ta base. De là, tu encaisses des commandes
-            de trois manières — toutes sans commission sur tes plats.
+            Ton site à toi&nbsp;: <code>tonresto.captain.food</code> (ou ton propre
+            <code>tonresto.fr</code>). Les commandes arrivent depuis l'annuaire
+            <strong>captain.food</strong> ou en direct depuis ton site — de trois
+            manières, toutes sans commission sur tes plats.
           </p>
           <div class="grid grid-3">
-            <article class="card channel-card">
+            <a class="card channel-card channel-link" href="livraison.html">
               <p class="channel-icon" aria-hidden="true">🛵</p>
               <h4>En livraison</h4>
               <p>
                 Tes clients commandent en ligne sur ton site, à ton nom. Pas
                 d'intermédiaire qui se sert au passage.
               </p>
-            </article>
+              <span class="card-cue">Comment on paie la livraison →</span>
+            </a>
             <article class="card channel-card">
               <p class="channel-icon" aria-hidden="true">🥡</p>
               <h4>À emporter (click and collect)</h4>
@@ -981,17 +1036,6 @@
       </div>
     </noscript>
   </footer>
-
-  <!-- Menu de questions en barre fixe en bas (façon appli) -->
-  <nav class="chip-nav" aria-label="Accès rapide aux réponses">
-    <div class="container chip-nav-inner">
-      <a class="chip" href="#calculateur">🧮 Combien je perds&nbsp;?</a>
-      <a class="chip" href="#solution">⚙️ Comment ça marche&nbsp;?</a>
-      <a class="chip" href="#esus">🎣 Où est le piège&nbsp;?</a>
-      <a class="chip chip-cta" href="#rejoindre">⚓ Rejoindre</a>
-      <a class="chip" href="#faq">❓ Vos questions</a>
-    </div>
-  </nav>
 
   <script src="/partials.js"></script>
   <script src="script.js"></script>

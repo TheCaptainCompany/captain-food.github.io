@@ -12,6 +12,8 @@
   var path = location.pathname;
   var isHome = path === "/" || /\/index\.html$/.test(path);
   var faqHref = isHome ? "#faq" : "/index.html#faq";
+  // Section anchors live on the homepage; from other pages, prefix the path.
+  var sec = isHome ? "" : "/index.html";
 
   // Inline brand / type icons — monochrome, inherit the link colour.
   function svg(d) {
@@ -33,6 +35,13 @@
 
   // ---------- Footer (single source) ----------
   var FOOTER =
+    '<nav class="footer-menu" aria-label="Menu du site">' +
+      '<a href="' + sec + '#calculateur">🧮 Combien je perds&nbsp;?</a>' +
+      '<a href="' + sec + '#combat">🍴 La solution</a>' +
+      '<a href="' + sec + '#esus">🎣 Où est le piège&nbsp;?</a>' +
+      '<a href="' + sec + '#rejoindre">⚓ Rejoindre</a>' +
+      '<a href="' + sec + '#faq">❓ Vos questions</a>' +
+    '</nav>' +
     '<div class="container footer-grid">' +
       '<div class="footer-col">' +
         '<p class="footer-brand"><img class="footer-logo" src="/assets/logo.png" alt="" width="30" height="30"><span class="footer-brand-name">Captain<span class="brand-dot">.</span>Food</span></p>' +
