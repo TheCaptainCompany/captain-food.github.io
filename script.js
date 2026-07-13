@@ -427,3 +427,39 @@
   update();
 })();
 
+/* Return-to-scroll: leaving the homepage for a sub-page and then coming back via
+   "Retour à l'accueil" lands you where you were, not at the top. Homepage only. */
+(function () {
+  "use strict";
+  var path = location.pathname;
+  var isHome = path === "/" || /\/index\.html$/.test(path);
+  if (!isHome) return;
+  var KEY = "cf-home-scroll";
+
+  // Remember the scroll position whenever we leave the homepage.
+  window.addEventListener("pagehide", function () {
+    try { sessionStorage.setItem(KEY, String(window.scrollY || window.pageYOffset || 0)); } catch (e) {}
+  });
+
+  // On arrival, restore only when we came back from a same-origin sub-page,
+  // and only if the URL isn't already targeting a section (#hash wins).
+  if (location.hash) return;
+  var ref = document.referrer;
+  if (!ref || ref.indexOf(location.origin) !== 0) return;
+  var refPath = ref.slice(location.origin.length).replace(/[?#].*$/, "");
+  var backFromSubPage = refPath && refPath !== "/" && !/\/index\.html$/.test(refPath);
+  if (!backFromSubPage) return;
+  try {
+    var y = sessionStorage.getItem(KEY);
+    if (y !== null) {
+      var top = parseInt(y, 10) || 0;
+      // Force an instant jump (the site sets scroll-behavior: smooth globally,
+      // which would otherwise animate the restore from the top of the page).
+      var html = document.documentElement;
+      var prev = html.style.scrollBehavior;
+      html.style.scrollBehavior = "auto";
+      window.scrollTo(0, top);
+      html.style.scrollBehavior = prev;
+    }
+  } catch (e) {}
+})();
