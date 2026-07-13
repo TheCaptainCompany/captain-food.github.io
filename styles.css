@@ -830,20 +830,28 @@ section[id],
 }
 
 /* ---------- Finance example (chiffré) ---------- */
-/* Financement page — framed hero illustration (scene image w/ white bg) */
-.finance-hero-figure {
+/* Sub-page framed hero illustrations (scene images with white bg) */
+.finance-hero-figure,
+.livraison-hero-figure {
   margin: 2rem auto 0;
-  max-width: 440px;
   text-align: center;
 }
-.finance-hero-figure img {
+.finance-hero-figure {
+  max-width: 440px;
+}
+.livraison-hero-figure {
+  max-width: 620px;
+}
+.finance-hero-figure img,
+.livraison-hero-figure img {
   width: 100%;
   height: auto;
   border-radius: var(--radius);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
-.finance-hero-figure figcaption {
+.finance-hero-figure figcaption,
+.livraison-hero-figure figcaption {
   margin-top: 0.7rem;
   font-style: italic;
   color: var(--brass-ink);
