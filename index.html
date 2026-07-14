@@ -251,42 +251,41 @@
             <div
               class="pie"
               role="img"
-              aria-label="Répartition d'une commande livrée : commission 25 à 35 %, ingrédients environ 25 %, préparation environ 22 %, charges fixes environ 18 %, marge restante environ 5 %."
+              aria-label="Répartition d'une commande livrée : commission environ 30 %, coûts du restaurant environ 65 %, marge qui reste environ 5 %."
             ></div>
             <ul class="pie-legend">
-              <li><span class="pie-dot dot-comm" aria-hidden="true"></span> Commission <b>25–35 %</b></li>
-              <li><span class="pie-dot dot-ingr" aria-hidden="true"></span> Coût des ingrédients <b>~25 %</b></li>
-              <li><span class="pie-dot dot-prep" aria-hidden="true"></span> Coût de préparation <b>~22 %</b></li>
-              <li><span class="pie-dot dot-fixe" aria-hidden="true"></span> Charges fixes <b>~18 %</b></li>
+              <li><span class="pie-dot dot-comm" aria-hidden="true"></span> Commission <b>~30 %</b></li>
+              <li><span class="pie-dot dot-cout" aria-hidden="true"></span> Tes coûts (ingrédients, personnel, charges) <b>~65 %</b></li>
               <li><span class="pie-dot dot-marge" aria-hidden="true"></span> Marge qui te reste <b>~5 %</b></li>
             </ul>
           </figure>
         </div>
         <p class="fine-print">
-          Exemple illustratif de la répartition d'une commande livrée via une grande
-          plateforme (~30 % de commission). La part de commission est souvent plus
-          grosse que la marge qui te reste.
+          Exemple illustratif d'une commande livrée via une grande plateforme. Coûts
+          et marge nette d'un restaurant d'après
+          <a href="https://earn.fr/marge-restauration-2024-guide-pour-maximiser-sa-rentabilite/" target="_blank" rel="noopener">EARN, collectif d'experts-comptables (2024)</a>
+          — la commission est souvent plus grosse que la marge qui te reste.
         </p>
 
         <div class="stat-tiles">
           <div class="stat-tile">
-            <span class="stat-num">3 à 9 %</span>
+            <span class="stat-num">5 à 10 %</span>
             <span class="stat-lbl">
-              seulement : c'est la <strong>marge nette</strong> d'un restaurant
-              indépendant (tombée à environ <strong>3 %</strong> en 2024).
+              c'est la <strong>marge nette</strong> visée par un restaurant — bien
+              moins que la commission (~30 %) prélevée sur chaque commande livrée.
             </span>
           </div>
           <div class="stat-tile">
-            <span class="stat-num">≈ 17 000</span>
+            <span class="stat-num">6 400+</span>
             <span class="stat-lbl">
-              <strong>restaurants ont fait faillite</strong> en France sur les
-              3 dernières années (2022-2024).
+              <strong>restaurants ont fait faillite</strong> en France en 2023,
+              soit <strong>+45 %</strong> en un an.
             </span>
           </div>
         </div>
         <p class="fine-print">
-          Sources&nbsp;: marge nette du secteur (Observatoire Fiducial, 2024)&nbsp;;
-          défaillances en restauration 2022-2024 (Altares).
+          Sources&nbsp;: marge et coûts (EARN, collectif d'experts-comptables, 2024)&nbsp;;
+          défaillances de la restauration en 2023 (Altares).
         </p>
 
         <blockquote class="pull-quote">
@@ -402,8 +401,14 @@
             </div>
           </div>
 
+          <div class="calc-presets">
+            <span class="calc-presets-lbl">Préréglage&nbsp;:</span>
+            <button type="button" class="calc-preset" data-taux="30">Uber Eats ~30 %</button>
+            <button type="button" class="calc-preset" data-taux="28">Deliveroo ~25-30 %</button>
+          </div>
+
           <div class="calc-result">
-            <p class="calc-result-lead">Ce que la commission te prend&nbsp;:</p>
+            <p class="calc-result-lead">Ce que la commission te prend, sur ton volume livré via cette plateforme&nbsp;:</p>
             <div class="calc-figures" aria-live="polite">
               <div class="calc-fig">
                 <span class="calc-fig-value" data-calc-month>—</span>
@@ -418,7 +423,7 @@
           </div>
 
           <a class="btn btn-primary btn-block calc-cta" href="#rejoindre" data-calc-cta>
-            Je récupère cet argent
+            Je garde cet argent
           </a>
           <p class="calc-reassure">
             « 0 € pour moi, où est le loup&nbsp;? » Il n'y en a pas&nbsp;:
@@ -426,9 +431,10 @@
             <a href="financement.html">Comment on se finance, en clair →</a>
           </p>
           <p class="calc-fine">
-            Estimation à titre indicatif, à partir d'un taux de commission que tu peux
-            ajuster. Chaque plateforme et chaque contrat diffèrent&nbsp;: c'est un ordre
-            de grandeur, pas un relevé.
+            Estimation à titre indicatif, à partir d'un taux que tu peux ajuster, sur
+            ton volume livré via cette plateforme. Taux indicatifs&nbsp;: Uber&nbsp;Eats
+            ~30 %, Deliveroo ~25-30 % (sources publiques, 2024). Chaque contrat
+            diffère&nbsp;: c'est un ordre de grandeur, pas un relevé.
           </p>
         </div>
       </div>

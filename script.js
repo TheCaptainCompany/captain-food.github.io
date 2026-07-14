@@ -264,6 +264,14 @@
     el.addEventListener("input", compute);
   });
 
+  // Named presets (Uber Eats / Deliveroo) set the rate; it stays adjustable.
+  Array.prototype.forEach.call(root.querySelectorAll(".calc-preset"), function (btn) {
+    btn.addEventListener("click", function () {
+      tauxEl.value = btn.getAttribute("data-taux");
+      compute();
+    });
+  });
+
   // On click-through, tag the lead as coming from the calculator and pre-fill
   // the message with the estimate (only if empty — never clobber the visitor).
   if (cta) {

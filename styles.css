@@ -1620,6 +1620,35 @@ section[id],
 .calc-cta {
   margin-top: 1.6rem;
 }
+.calc-presets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.calc-presets-lbl {
+  font-size: 0.85rem;
+  color: rgba(247, 239, 223, 0.8);
+  font-weight: 600;
+}
+.calc-preset {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--parchment);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.calc-preset:hover,
+.calc-preset:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--gold);
+}
 .calc-reassure {
   margin-top: 1rem;
   text-align: center;
@@ -1740,9 +1769,7 @@ section[id],
 /* ---------- "Le constat" : camembert + statistiques ---------- */
 :root {
   --c-comm: #cf3a3a;   /* commission — rouge */
-  --c-ingr: #2f6fb0;   /* ingrédients — bleu */
-  --c-prep: #e8613a;   /* préparation — orange */
-  --c-fixe: #e0a12b;   /* charges fixes — laiton/jaune */
+  --c-cout: #2f6fb0;   /* coûts du restaurant — bleu */
   --c-marge: #1c7a4d;  /* marge — vert */
 }
 .probleme-lead {
@@ -1778,9 +1805,7 @@ section[id],
   border-radius: 50%;
   background: conic-gradient(
     var(--c-comm) 0 108deg,
-    var(--c-ingr) 108deg 198deg,
-    var(--c-prep) 198deg 277.2deg,
-    var(--c-fixe) 277.2deg 342deg,
+    var(--c-cout) 108deg 342deg,
     var(--c-marge) 342deg 360deg
   );
   -webkit-mask: radial-gradient(circle, transparent 45%, #000 46%);
@@ -1812,9 +1837,7 @@ section[id],
   flex: none;
 }
 .dot-comm { background: var(--c-comm); }
-.dot-ingr { background: var(--c-ingr); }
-.dot-prep { background: var(--c-prep); }
-.dot-fixe { background: var(--c-fixe); }
+.dot-cout { background: var(--c-cout); }
 .dot-marge { background: var(--c-marge); }
 
 .stat-tiles {
