@@ -223,6 +223,7 @@
   var punch = root.querySelector("[data-punch]");
   var cta = root.querySelector("[data-calc-cta]");
   var smicEl = root.querySelector("[data-smic]");
+  var rateEl = document.getElementById("calc-rate");
   if (!caEl || !pie) return;
 
   var COST = 65; // % — illustrative restaurant cost share (EARN, 2024)
@@ -241,6 +242,14 @@
     var v = parseFloat(String(el.value).replace(",", "."));
     return isFinite(v) && v > 0 ? v : 0;
   }
+  // The commission rate is driven by the editable field (presets just fill it).
+  function currentRate() {
+    if (!rateEl) return rate;
+    var v = parseFloat(String(rateEl.value).replace(",", "."));
+    if (!isFinite(v) || v < 0) v = 0;
+    if (v > 100) v = 100;
+    return v;
+  }
   function setText(sel, txt) {
     var e = root.querySelector(sel);
     if (e) e.textContent = txt;
@@ -248,7 +257,7 @@
 
   function compute() {
     var ca = num(caEl);
-    var comm = rate;
+    var comm = currentRate();
     var cost = COST;
     var marge = Math.max(0, 100 - comm - cost);
 
@@ -298,17 +307,40 @@
     }
   }
 
+  function setActivePreset(activeBtn) {
+    Array.prototype.forEach.call(root.querySelectorAll(".calc-plat"), function (b) {
+      var on = b === activeBtn;
+      b.classList.toggle("is-active", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+  // Highlight the preset whose rate matches the field — or none if it's custom.
+  function syncPresetToRate() {
+    var v = currentRate();
+    var match = null;
+    Array.prototype.forEach.call(root.querySelectorAll(".calc-plat"), function (b) {
+      if (parseFloat(b.getAttribute("data-rate")) === v) match = b;
+    });
+    setActivePreset(match);
+  }
+
+  // Presets just fill the editable rate field, then recompute.
   Array.prototype.forEach.call(root.querySelectorAll(".calc-plat"), function (btn) {
     btn.addEventListener("click", function () {
-      rate = parseFloat(btn.getAttribute("data-rate")) || 30;
-      Array.prototype.forEach.call(root.querySelectorAll(".calc-plat"), function (b) {
-        var on = b === btn;
-        b.classList.toggle("is-active", on);
-        b.setAttribute("aria-pressed", on ? "true" : "false");
-      });
+      if (rateEl) rateEl.value = btn.getAttribute("data-rate");
+      rate = currentRate();
+      setActivePreset(btn);
       compute();
     });
   });
+
+  if (rateEl) {
+    rateEl.addEventListener("input", function () {
+      rate = currentRate();
+      syncPresetToRate();
+      compute();
+    });
+  }
 
   caEl.addEventListener("input", compute);
 

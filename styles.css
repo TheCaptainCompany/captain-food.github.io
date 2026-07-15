@@ -1665,8 +1665,12 @@ section[id],
 .calc-fine {
   margin-top: 0.9rem;
   font-size: 0.8rem;
-  color: rgba(247, 239, 223, 0.6);
+  color: rgba(247, 239, 223, 0.74);
   text-align: center;
+  line-height: 1.5;
+}
+.calc-fine a {
+  color: #ffe7b0; /* legible link on the dark box (was navy = invisible) */
 }
 
 @media (max-width: 720px) {
@@ -2205,4 +2209,22 @@ section[id],
 .channels-intro,
 .channel-card p {
   color: var(--ink);
+}
+
+/* ---------- Editable commission-rate field (under the presets) ---------- */
+.calc-field-rate {
+  max-width: 260px;
+  margin: 0.2rem auto 1.4rem;
+  text-align: center;
+}
+.calc-field-rate label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+.calc-rate-hint {
+  font-weight: 400;
+  opacity: 0.75;
+  font-size: 0.85rem;
 }
