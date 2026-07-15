@@ -1105,9 +1105,15 @@ section[id],
 }
 .cta-layout .cta-captain {
   order: -1; /* centred, above the block below */
-  margin: 0 auto clamp(0.4rem, 2vw, 1rem); /* small gap — never covers the title */
+  margin: 0 auto clamp(0.4rem, 2vw, 1rem);
   text-align: center;
-  pointer-events: none; /* decorative — never intercepts clicks */
+  /* Stay pinned and let the content scroll up BEHIND the Captain (he passes
+     over the elements below as you scroll). pointer-events:none so he never
+     blocks the form even while overlapping it. */
+  position: sticky;
+  top: 4.5rem;
+  z-index: 3;
+  pointer-events: none;
 }
 .cta-layout .cta-captain img {
   max-height: 300px;
