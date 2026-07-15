@@ -210,23 +210,22 @@
   el.textContent = lines[Math.floor(Math.random() * lines.length)];
 })();
 
-/* Commission calculator — quantify, honestly, what the platforms take.
-   Live-updates a monthly/yearly loss estimate from average basket × orders ×
-   rate, and hands the numbers to the pilot form when the visitor clicks through
-   (source=calculateur + a pre-filled, editable note giving the founder context). */
+/* Commission simulator — pick a platform preset (sets the rate), enter monthly
+   revenue, and a dynamic camembert shows where each euro goes: in %, and in
+   €/month + €/year per slice. Hands the numbers to the pilot form on click. */
 (function () {
   "use strict";
   var root = document.querySelector("[data-calc]");
   if (!root) return;
 
-  var panierEl = document.getElementById("calc-panier");
-  var cmdEl = document.getElementById("calc-commandes");
-  var tauxEl = document.getElementById("calc-taux");
-  var monthEl = root.querySelector("[data-calc-month]");
-  var yearEl = root.querySelector("[data-calc-year]");
-  var sentenceEl = root.querySelector("[data-calc-sentence]");
+  var caEl = document.getElementById("calc-ca");
+  var pie = root.querySelector("[data-pie]");
+  var punch = root.querySelector("[data-punch]");
   var cta = root.querySelector("[data-calc-cta]");
-  if (!panierEl || !cmdEl || !tauxEl) return;
+  if (!caEl || !pie) return;
+
+  var COST = 65; // % — illustrative restaurant cost share (EARN, 2024)
+  var rate = 30; // active commission rate (from the selected platform preset)
 
   var euro = new Intl.NumberFormat("fr-FR", {
     style: "currency",
@@ -238,63 +237,78 @@
     var v = parseFloat(String(el.value).replace(",", "."));
     return isFinite(v) && v > 0 ? v : 0;
   }
-
-  var monthLoss = 0;
-  var yearLoss = 0;
+  function setText(sel, txt) {
+    var e = root.querySelector(sel);
+    if (e) e.textContent = txt;
+  }
 
   function compute() {
-    monthLoss = num(panierEl) * num(cmdEl) * (num(tauxEl) / 100);
-    yearLoss = monthLoss * 12;
+    var ca = num(caEl);
+    var comm = rate;
+    var cost = COST;
+    var marge = Math.max(0, 100 - comm - cost);
 
-    monthEl.textContent = monthLoss > 0 ? euro.format(monthLoss) : "—";
-    yearEl.textContent = yearLoss > 0 ? euro.format(yearLoss) : "—";
+    var a1 = comm * 3.6;
+    var a2 = (comm + cost) * 3.6;
+    pie.style.background =
+      "conic-gradient(var(--c-comm) 0 " + a1 + "deg, var(--c-cout) " + a1 +
+      "deg " + a2 + "deg, var(--c-marge) " + a2 + "deg 360deg)";
+    pie.setAttribute(
+      "aria-label",
+      "Commission " + comm + " %, tes couts " + cost + " %, ta marge " + marge + " %."
+    );
 
-    if (monthLoss > 0) {
-      sentenceEl.textContent =
-        "Avec Captain.Food, à 0 % de commission, c'est " +
-        euro.format(yearLoss) +
-        " que tu gardes sur un an.";
+    setText('[data-pct="comm"]', comm + " %");
+    setText('[data-pct="cout"]', "~" + cost + " %");
+    setText('[data-pct="marge"]', marge + " %");
+
+    function amt(key, pct) {
+      var m = (ca * pct) / 100;
+      setText('[data-m="' + key + '"]', ca > 0 ? euro.format(m) : "—");
+      setText('[data-y="' + key + '"]', ca > 0 ? euro.format(m * 12) : "—");
+    }
+    amt("comm", comm);
+    amt("cout", cost);
+    amt("marge", marge);
+
+    var commMonth = (ca * comm) / 100;
+    if (ca > 0) {
+      punch.innerHTML =
+        "Cette plateforme te prend <strong>" + euro.format(commMonth) +
+        " / mois</strong>, soit <strong>" + euro.format(commMonth * 12) +
+        " / an</strong> — souvent plus que toute ta marge.";
     } else {
-      sentenceEl.textContent =
-        "Renseigne ton panier moyen et ton nombre de commandes pour voir le montant.";
+      punch.textContent = "Entre ton chiffre d'affaires mensuel pour voir le calcul.";
     }
   }
 
-  [panierEl, cmdEl, tauxEl].forEach(function (el) {
-    el.addEventListener("input", compute);
-  });
-
-  // Named presets (Uber Eats / Deliveroo) set the rate; it stays adjustable.
-  Array.prototype.forEach.call(root.querySelectorAll(".calc-preset"), function (btn) {
+  Array.prototype.forEach.call(root.querySelectorAll(".calc-plat"), function (btn) {
     btn.addEventListener("click", function () {
-      tauxEl.value = btn.getAttribute("data-taux");
+      rate = parseFloat(btn.getAttribute("data-rate")) || 30;
+      Array.prototype.forEach.call(root.querySelectorAll(".calc-plat"), function (b) {
+        var on = b === btn;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
       compute();
     });
   });
 
-  // On click-through, tag the lead as coming from the calculator and pre-fill
-  // the message with the estimate (only if empty — never clobber the visitor).
+  caEl.addEventListener("input", compute);
+
   if (cta) {
     cta.addEventListener("click", function () {
       var srcField = document.getElementById("lead-source");
       if (srcField) srcField.value = "calculateur";
-
       var mot = document.getElementById("mot");
-      if (mot && monthLoss > 0 && !mot.value.trim()) {
+      var ca = num(caEl);
+      var commMonth = (ca * rate) / 100;
+      if (mot && commMonth > 0 && !mot.value.trim()) {
         mot.value =
-          "Via le calculateur : je perds environ " +
-          euro.format(monthLoss) +
-          "/mois (" +
-          euro.format(yearLoss) +
-          "/an) en commission — panier " +
-          euro.format(num(panierEl)) +
-          ", " +
-          num(cmdEl) +
-          " commandes/mois, taux " +
-          num(tauxEl) +
-          " %.";
+          "Via le calculateur : CA " + euro.format(ca) + "/mois sur la plateforme, " +
+          "commission ~" + rate + " % = " + euro.format(commMonth) + "/mois (" +
+          euro.format(commMonth * 12) + "/an).";
       }
-      // The anchor's default jump to #rejoindre then carries the visitor down.
     });
   }
 

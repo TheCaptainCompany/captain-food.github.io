@@ -2072,3 +2072,100 @@ section[id],
     bottom: 11.6rem;
   }
 }
+
+/* ---------- Commission simulator: platform presets + dynamic camembert ---------- */
+.calc-plats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+.calc-plat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+.calc-plat:hover,
+.calc-plat:focus-visible {
+  border-color: var(--plat);
+}
+.calc-plat.is-active {
+  border-color: var(--plat);
+  background: color-mix(in srgb, var(--plat) 10%, var(--white));
+  box-shadow: 0 4px 14px rgba(10, 30, 50, 0.1);
+}
+.calc-plat-logo {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  color: var(--plat);
+}
+.calc-plat-rate {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  background: var(--parchment-alt);
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+}
+.calc-plat.is-active .calc-plat-rate {
+  color: var(--plat);
+}
+.calc-field-ca {
+  max-width: 420px;
+  margin: 0 auto 1.8rem;
+  text-align: center;
+}
+.calc-field-ca label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.calc-pie-figure {
+  gap: 1.6rem;
+  margin-top: 0.5rem;
+}
+.calc-pie-legend {
+  gap: 0.9rem;
+}
+.calc-pie-legend li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.6rem;
+  row-gap: 0.1rem;
+  align-items: center;
+}
+.calc-pie-legend .pie-dot {
+  grid-row: 1 / span 2;
+  align-self: center;
+}
+.pie-leg-l {
+  color: #f3ede0;
+}
+.pie-leg-a {
+  font-size: 0.85rem;
+  color: rgba(247, 239, 223, 0.78);
+}
+/* percentages + amounts pop white on the dark simulator box */
+.calc-pie-legend b {
+  color: #fff;
+}
+.calc-punch {
+  text-align: center;
+  font-size: 1.08rem;
+  margin-top: 1.4rem;
+}
+.calc-punch strong {
+  color: var(--orange-dark);
+}
