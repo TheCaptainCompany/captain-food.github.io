@@ -222,10 +222,14 @@
   var pie = root.querySelector("[data-pie]");
   var punch = root.querySelector("[data-punch]");
   var cta = root.querySelector("[data-calc-cta]");
+  var smicEl = root.querySelector("[data-smic]");
   if (!caEl || !pie) return;
 
   var COST = 65; // % — illustrative restaurant cost share (EARN, 2024)
   var rate = 30; // active commission rate (from the selected platform preset)
+  // Employer cost of a full-time SMIC, 2026 (SMIC brut 1 867,02 € + residual
+  // employer charges after réduction générale). Source: service-public.gouv.fr.
+  var SMIC_EMPLOYER = 1933;
 
   var euro = new Intl.NumberFormat("fr-FR", {
     style: "currency",
@@ -279,6 +283,18 @@
         " / an</strong> — souvent plus que toute ta marge.";
     } else {
       punch.textContent = "Entre ton chiffre d'affaires mensuel pour voir le calcul.";
+    }
+
+    if (smicEl) {
+      if (ca > 0) {
+        var nb = commMonth / SMIC_EMPLOYER;
+        smicEl.innerHTML =
+          "💡 Soit ≈ <strong>" +
+          nb.toLocaleString("fr-FR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) +
+          " SMIC brut employeur</strong>, chaque mois.";
+      } else {
+        smicEl.textContent = "";
+      }
     }
   }
 

@@ -2169,3 +2169,20 @@ section[id],
 .calc-punch strong {
   color: var(--orange-dark);
 }
+
+/* ---------- Simulator lead heading + SMIC measure ---------- */
+.calc-lead-title {
+  text-align: center;
+  font-size: clamp(1.4rem, 3.2vw, 2rem);
+  color: var(--navy);
+  margin-top: 0.5rem;
+}
+.calc-smic {
+  text-align: center;
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  color: var(--gold);
+}
+.calc-smic strong {
+  color: #fff;
+}
