@@ -86,10 +86,12 @@ h4 {
 code {
   font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   font-size: 0.9em;
-  background: var(--parchment-alt);
-  padding: 0.1em 0.4em;
+  color: var(--navy);
+  /* blue-grey tint so the chip is visible on parchment, the alt band AND white cards */
+  background: rgba(14, 58, 95, 0.09);
+  padding: 0.12em 0.45em;
   border-radius: 5px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(14, 58, 95, 0.18);
 }
 
 /* ---------- Accessibility helpers ---------- */
