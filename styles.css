@@ -1097,26 +1097,28 @@ section[id],
   flex-direction: column;
   align-items: center;
 }
+/* Stick zone = Captain + title + intro + cards. The Captain is sticky WITHIN
+   this block, so he stops gliding exactly where it ends — i.e. at the top of
+   the form (which is a sibling below, not inside the zone). */
 .cta-layout .cta-body {
   width: 100%;
   min-width: 0;
-  position: relative;
-  z-index: 1;
 }
 .cta-layout .cta-captain {
-  order: -1; /* centred, above the block below */
   margin: 0 auto clamp(0.4rem, 2vw, 1rem);
   text-align: center;
-  /* Stay pinned and let the content scroll up BEHIND the Captain (he passes
-     over the elements below as you scroll). pointer-events:none so he never
-     blocks the form even while overlapping it. */
   position: sticky;
-  top: 4.5rem;
+  top: 7.5rem; /* clear the sticky header + chip menu so the toque isn't hidden */
   z-index: 3;
   pointer-events: none;
 }
 .cta-layout .cta-captain img {
   max-height: 300px;
+}
+/* Form + success panel are siblings of the stick zone, full width. */
+.cta-layout .form,
+.cta-layout .form-success {
+  width: 100%;
 }
 
 /* ---------- FAQ: sticky captain beside the list ---------- */

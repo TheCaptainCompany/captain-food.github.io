@@ -812,10 +812,10 @@
     <!-- ============ FORMULAIRE / CTA ============ -->
     <section id="rejoindre" class="section section-cta" aria-labelledby="rejoindre-titre">
       <div class="container cta-layout">
-        <figure class="cta-captain" aria-hidden="true">
-          <img src="assets/captain-contact.webp" alt="Le Capitaine Food, prêt à embarquer de nouveaux restaurateurs" width="900" height="1132" loading="lazy" />
-        </figure>
         <div class="cta-body">
+          <figure class="cta-captain" aria-hidden="true">
+            <img src="assets/captain-contact.webp" alt="Le Capitaine Food, prêt à embarquer de nouveaux restaurateurs" width="900" height="1132" loading="lazy" />
+          </figure>
         <h2 id="rejoindre-titre" class="section-title">Rejoins les restaurateurs libres</h2>
         <p class="section-intro">
           Laisse-nous ton contact : on te recontacte pour te présenter
@@ -836,6 +836,8 @@
             <p>On s'occupe de la mise en place, à ton rythme.</p>
           </li>
         </ul>
+        </div>
+        <!-- /.cta-body (stick zone) — the form is a sibling so the Captain stops here -->
 
         <form
           id="pilot-form"
@@ -934,7 +936,6 @@
           <p class="form-success-text">
             Ou écris-nous à <a href="mailto:miam@captain.food">miam@captain.food</a>.
           </p>
-        </div>
         </div>
       </div>
     </section>
