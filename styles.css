@@ -18,7 +18,7 @@
   --parchment-alt: #efe4cd;/* bande alternée */
   --white: #fffdf8;        /* cartes */
   --ink: #2a2018;          /* texte principal */
-  --ink-soft: #5c5040;     /* texte secondaire (>= 4.5:1 sur parchemin) */
+  --ink-soft: #493e2c;     /* texte secondaire — assombri pour la lisibilité (~8:1 sur parchemin) */
   --line: #ddcdac;
   --good: #1c7a4d;
   --radius: 14px;
@@ -468,8 +468,9 @@ section[id],
 }
 .section-intro {
   text-align: center;
-  font-size: 1.12rem;
-  color: var(--ink-soft);
+  font-size: 1.16rem;
+  font-weight: 500;
+  color: var(--ink);
   max-width: 62ch;
   margin: 1rem auto 0;
 }
@@ -2185,4 +2186,21 @@ section[id],
 }
 .calc-smic strong {
   color: #fff;
+}
+
+/* ---------- Legibility: key phrases pop, card bodies a touch darker ---------- */
+/* Bold phrases inside light-background prose take the navy accent so the key
+   information stands out from the running text. */
+.card p strong,
+.channels strong,
+.channel-card strong,
+.pour-qui-close strong,
+.probleme-lead-text strong {
+  color: var(--navy);
+}
+/* Card + channel body copy: darker ink (not the soft secondary) for readability. */
+.card p,
+.channels-intro,
+.channel-card p {
+  color: var(--ink);
 }
