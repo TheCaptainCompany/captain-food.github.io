@@ -1103,6 +1103,9 @@ section[id],
 .cta-layout .cta-body {
   width: 100%;
   min-width: 0;
+  /* Extend the stick zone down to the form's top edge so the Captain can glide
+     all the way to it (the gap that used to be the form's margin-top). */
+  padding-bottom: 1.8rem;
 }
 .cta-layout .cta-captain {
   margin: 0 auto clamp(0.4rem, 2vw, 1rem);
@@ -1114,11 +1117,14 @@ section[id],
 }
 .cta-layout .cta-captain img {
   max-height: 300px;
+  animation: none; /* no slow up/down bob — distracting while he stays pinned */
 }
-/* Form + success panel are siblings of the stick zone, full width. */
+/* Form + success panel are siblings of the stick zone, full width.
+   margin-top:0 because that gap now lives in .cta-body's padding-bottom. */
 .cta-layout .form,
 .cta-layout .form-success {
   width: 100%;
+  margin-top: 0;
 }
 
 /* ---------- FAQ: sticky captain beside the list ---------- */
