@@ -103,6 +103,9 @@
     }
     .tarif-catch p { color: var(--ink-soft); }
     .tarif-catch p + p { margin-top: 0.7rem; }
+    .tarif-bet-list { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .tarif-bet-list li { color: var(--ink-soft); margin-bottom: 0.55rem; line-height: 1.5; }
+    .tarif-bet-list strong { color: var(--navy); }
     .tarif-note {
       background: rgba(232, 97, 58, 0.1);
       border-left: 4px solid var(--orange);
@@ -141,7 +144,7 @@
         "name": "Si c'est gratuit, la plateforme vit de quoi ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "De la contribution volontaire de ses utilisateurs : le client peut ajouter une contribution libre à sa commande s'il le souhaite (0 € possible, sans jugement). Jamais un pourcentage sur ta marge, jamais une surcharge imposée. Le projet est porté par une association à but non lucratif, avec le cap d'une coopérative (SCIC) et de l'agrément ESUS, visés."
+          "text": "De la contribution volontaire de ses utilisateurs : le client peut ajouter une contribution libre à sa commande s'il le souhaite (0 € possible, sans jugement). C'est un pari assumé. S'il ne suffit pas, un plan B transparent s'appliquerait : des frais de fonctionnement à la commande côté client (tout versement au-delà restant une contribution) et des frais fixes côté restaurateur, proportionnels au coût et au nombre de restaurateurs embarqués — jamais une commission, jamais un pourcentage sur les plats. Si le modèle le permet, ces frais disparaîtraient : retour au gratuit. Le projet est porté par une association à but non lucratif, avec le cap d'une coopérative (SCIC) et de l'agrément ESUS, visés."
         }
       }
     ]
@@ -176,7 +179,7 @@
       <!-- La carte "tarif" : la réponse, tout de suite -->
       <div class="tarif-card">
         <p class="tarif-for">Restaurants &amp; food trucks indépendants</p>
-        <p class="tarif-price">0&nbsp;€<span class="tarif-price-sub">pour toi, toujours</span></p>
+        <p class="tarif-price">0&nbsp;€<span class="tarif-price-sub">pour toi, aujourd'hui — et on se bat pour que ça dure</span></p>
         <ul class="tarif-list">
           <li><strong>0 % de commission</strong> sur tes plats — jamais un pourcentage sur ta marge.</li>
           <li><strong>0 € d'abonnement</strong>, aucun forfait mensuel, aucun palier payant.</li>
@@ -215,6 +218,37 @@
         </p>
       </div>
 
+      <!-- Le pari + le plan B, en toute transparence -->
+      <div class="tarif-catch">
+        <h2>Notre pari, en toute transparence</h2>
+        <p>
+          Gratuit aujourd'hui, ça repose sur un <strong>pari</strong>&nbsp;: que la
+          contribution volontaire des clients suffise à faire tourner la plateforme.
+          On y croit — et on te dit aussi, sans zone d'ombre, ce qui se passerait si
+          ça ne suffisait pas.
+        </p>
+        <p><strong>Si le pari ne tient pas&nbsp;:</strong></p>
+        <ul class="tarif-bet-list">
+          <li>
+            <strong>Côté client</strong> — des <strong>frais de fonctionnement</strong>
+            seraient appliqués à la commande. Ce que le client verse au-delà de ces
+            frais reste une contribution.
+          </li>
+          <li>
+            <strong>Côté restaurateur</strong> — des <strong>frais fixes</strong>
+            seraient appliqués, proportionnels au coût réel de la plateforme et
+            répartis sur le nombre de restaurateurs embarqués&nbsp;:
+            <strong>plus on est nombreux, plus c'est faible</strong>. Jamais une
+            commission, jamais un pourcentage sur tes plats.
+          </li>
+        </ul>
+        <p>
+          <strong>Et si le modèle le permet</strong>, ces frais de fonctionnement
+          (côté client) comme ces frais fixes (côté restaurateur)
+          <strong>disparaîtront</strong>&nbsp;: retour au gratuit. C'est le cap.
+        </p>
+      </div>
+
       <!-- Ancrage : pendant ce temps, une plateforme te prend combien ? -->
       <p class="ratio-punch" style="margin-top:2.6rem;">
         Pendant qu'une plateforme prélève jusqu'à <b>10×</b> ta marge, ici c'est
@@ -244,9 +278,11 @@
           <details>
             <summary>Alors, vous vivez de quoi&nbsp;?</summary>
             <p>
-              De la contribution volontaire des clients, ajoutée à leur commande s'ils
-              le veulent (0 € possible). Jamais sur ton dos.
-              <a href="financement.html">Voir le détail complet, exemple à l'appui.</a>
+              De la contribution volontaire des clients (0 € possible). C'est un
+              pari&nbsp;: s'il ne suffit pas, un plan B transparent s'applique — frais
+              de fonctionnement côté client, frais fixes (jamais une commission) côté
+              restaurateur, voués à disparaître si le modèle le permet. Jamais sur ton
+              dos. <a href="financement.html">Voir le détail complet.</a>
             </p>
           </details>
         </div>
