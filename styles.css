@@ -2228,3 +2228,46 @@ section[id],
   opacity: 0.75;
   font-size: 0.85rem;
 }
+
+/* ---------- Maquettes / co-construction (section #maquettes) ---------- */
+.mockup-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0 1.75rem;
+}
+.mockup-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.4rem 1.2rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.mockup-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.mockup-card:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+.mc-emo { font-size: 1.9rem; }
+.mc-role { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--navy); }
+.mc-desc { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.45; }
+.mc-badge {
+  position: absolute; top: 0.9rem; right: 0.9rem;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
+  background: #fbeee0; color: #c77f1a; padding: 0.2rem 0.55rem; border-radius: 999px;
+}
+.mockup-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+.mockup-note { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-top: 1rem; }
+@media (max-width: 720px) {
+  .mockup-cards { grid-template-columns: 1fr; }
+}

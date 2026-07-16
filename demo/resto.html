@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex, follow">
+<title>Chez Marco — Espace restaurateur · Captain.Food (maquette)</title>
+<style>
+  /* ============================================================
+     MAQUETTE JETABLE — Captain.Food · côté RESTAURATEUR
+     Faux resto "Chez Marco". Aucun backend, tout simulé en JS.
+     Périmètre : réception commandes, menu (86-ing), suivi. Niveau A.
+     Palette reprise de la landing : bleu maritime #0e3a5f.
+     ============================================================ */
+  :root{
+    --navy:#0e3a5f; --navy-deep:#0a2942; --navy-line:#1d4e78;
+    --gold:#e8b84b; --gold-soft:#f5d98a;
+    --paper:#f4f6f8; --card:#ffffff; --ink:#16232e; --ink-soft:#5a6b78;
+    --line:#e4e9ee; --green:#2e7d5b; --green-soft:#e3f2ea;
+    --red:#c0392b; --amber:#c77f1a; --amber-soft:#fbf0da;
+    --shadow:0 4px 20px rgba(14,58,95,.08); --shadow-lift:0 12px 40px rgba(14,58,95,.18);
+    --font-display:"Georgia","Times New Roman",serif;
+    --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:var(--font-body);background:var(--navy);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .stage{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 12px;
+    background:radial-gradient(1200px 600px at 50% -10%,#164a76 0%,var(--navy) 45%,var(--navy-deep) 100%)}
+  .phone{width:100%;max-width:420px;background:var(--paper);border-radius:28px;
+    box-shadow:var(--shadow-lift),0 0 0 10px rgba(255,255,255,.04);overflow:hidden;position:relative;
+    min-height:780px;display:flex;flex-direction:column}
+  .screen{display:none;flex-direction:column;flex:1;animation:fade .28s ease}
+  .screen.active{display:flex}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.screen,.screen.active{animation:none}*{transition:none!important}}
+
+  /* header */
+  .head{background:var(--navy);color:#fff;padding:16px 18px 14px}
+  .head .top{display:flex;align-items:center;gap:10px}
+  .head .logo{width:34px;height:34px;border-radius:9px;background:var(--gold);color:var(--navy-deep);
+    display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}
+  .head .rn{font-family:var(--font-display);font-size:18px;font-weight:700}
+  .head .rs{font-size:12px;opacity:.8}
+  .head .spacer{flex:1}
+  .toggle{display:flex;align-items:center;gap:7px;font-size:12px;background:rgba(255,255,255,.12);
+    padding:6px 10px;border-radius:999px;cursor:pointer;user-select:none}
+  .dot{width:9px;height:9px;border-radius:50%;background:#43d17a;box-shadow:0 0 0 3px rgba(67,209,122,.25)}
+  .toggle.off .dot{background:#e0663f;box-shadow:0 0 0 3px rgba(224,102,63,.2)}
+
+  /* tabs */
+  .tabs{display:flex;background:var(--navy-deep)}
+  .tab{flex:1;text-align:center;padding:11px 4px;color:rgba(255,255,255,.6);font-size:12.5px;font-weight:600;
+    cursor:pointer;border-bottom:2.5px solid transparent}
+  .tab .e{display:block;font-size:16px;margin-bottom:2px}
+  .tab.on{color:#fff;border-color:var(--gold)}
+  .tab .badge{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:700;
+    border-radius:999px;padding:1px 6px;margin-left:3px}
+
+  .scroll{overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch;padding:14px}
+
+  .view{display:none}.view.on{display:block}
+
+  /* section label */
+  .sec{font-family:var(--font-display);font-size:13px;letter-spacing:.4px;text-transform:uppercase;
+    color:var(--navy);font-weight:700;margin:4px 2px 10px;display:flex;align-items:center;gap:8px}
+  .sec::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  /* order card */
+  .ocard{background:var(--card);border-radius:14px;box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden;
+    border-left:4px solid var(--gold)}
+  .ocard.new{border-left-color:var(--red);animation:pulse 2s ease infinite}
+  @keyframes pulse{0%,100%{box-shadow:var(--shadow)}50%{box-shadow:0 4px 24px rgba(192,57,43,.28)}}
+  .ocard.done{border-left-color:var(--green);opacity:.82}
+  .oc-head{display:flex;align-items:center;gap:9px;padding:12px 14px 8px}
+  .oc-num{font-weight:800;font-size:15px;color:var(--navy)}
+  .oc-mode{font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;background:#eef3f7;color:var(--navy)}
+  .oc-mode.liv{background:#fbeee0;color:var(--amber)}
+  .oc-time{margin-left:auto;font-size:12px;color:var(--ink-soft)}
+  .oc-body{padding:0 14px 6px}
+  .oc-item{display:flex;justify-content:space-between;font-size:13.5px;padding:3px 0;color:var(--ink)}
+  .oc-item .q{color:var(--navy);font-weight:700;margin-right:6px}
+  .oc-item .note{font-size:11.5px;color:var(--amber);font-style:italic}
+  .oc-foot{display:flex;align-items:center;gap:8px;padding:10px 14px;border-top:1px solid var(--line);background:#fafbfc}
+  .oc-total{font-weight:800;color:var(--navy);font-size:14px}
+  .oc-contrib{font-size:11px;color:var(--green);font-weight:600}
+  .oc-btn{margin-left:auto;border:none;cursor:pointer;font-weight:700;font-size:13px;
+    padding:9px 15px;border-radius:10px;background:var(--navy);color:#fff}
+  .oc-btn:active{transform:translateY(1px)}
+  .oc-btn.accept{background:var(--green)}
+  .oc-btn.ready{background:var(--gold);color:var(--navy-deep)}
+  .oc-btn.ghost{background:#eef3f7;color:var(--navy)}
+
+  .empty{text-align:center;color:var(--ink-soft);padding:44px 24px}
+  .empty .b{font-size:38px;margin-bottom:10px}
+
+  /* menu management */
+  .mitem{background:var(--card);border-radius:12px;box-shadow:var(--shadow);margin-bottom:10px;
+    display:flex;align-items:center;gap:12px;padding:11px 13px}
+  .mitem .em{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#f6ede0,#efe3cf);
+    display:flex;align-items:center;justify-content:center;font-size:22px;flex:none;border:1px solid var(--line)}
+  .mitem .mi{flex:1;min-width:0}
+  .mitem .mn{font-weight:650;font-size:14px}
+  .mitem .mp{font-size:12.5px;color:var(--navy);font-weight:700}
+  .mitem.out{opacity:.55}
+  .mitem.out .mn{text-decoration:line-through}
+  /* toggle switch */
+  .sw{width:46px;height:27px;border-radius:999px;background:var(--green);position:relative;cursor:pointer;flex:none;transition:background .2s}
+  .sw::after{content:"";position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:#fff;
+    box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .2s}
+  .sw.off{background:#c7ced4}
+  .sw.off::after{transform:translateX(19px)}
+  .sw-lbl{font-size:10px;color:var(--ink-soft);text-align:center;margin-top:2px}
+  .sw-wrap{text-align:center;flex:none}
+
+  /* stat cards */
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+  .stat{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:14px}
+  .stat .v{font-size:24px;font-weight:800;color:var(--navy);font-variant-numeric:tabular-nums}
+  .stat .l{font-size:11.5px;color:var(--ink-soft);margin-top:2px}
+  .stat.hl{background:linear-gradient(135deg,var(--navy),#17527f);color:#fff}
+  .stat.hl .v{color:#fff}.stat.hl .l{color:rgba(255,255,255,.85)}
+  .bigcard{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:16px;margin-bottom:12px}
+  .bigcard .bt{font-size:13px;color:var(--ink-soft);margin-bottom:4px}
+  .bigcard .bv{font-size:20px;font-weight:800;color:var(--green)}
+  .bigcard .bd{font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.4}
+  .compare{display:flex;gap:10px;margin-top:12px}
+  .compare>div{flex:1;text-align:center;padding:11px 6px;border-radius:11px}
+  .compare .them{background:#fbeaea}.compare .us{background:var(--green-soft)}
+  .compare .cv{font-size:17px;font-weight:800}
+  .compare .them .cv{color:var(--red)}.compare .us .cv{color:var(--green)}
+  .compare .cl{font-size:10.5px;color:var(--ink-soft);margin-top:2px}
+
+  /* toast */
+  .toast{position:absolute;left:50%;bottom:22px;transform:translateX(-50%) translateY(80px);
+    background:var(--navy-deep);color:#fff;font-size:13px;font-weight:600;padding:11px 18px;border-radius:999px;
+    box-shadow:var(--shadow-lift);opacity:0;transition:.3s;z-index:30;white-space:nowrap}
+  .toast.show{transform:translateX(-50%);opacity:1}
+
+  .credit{text-align:center;font-size:11px;color:var(--ink-soft);padding:12px;background:var(--paper);border-top:1px solid var(--line)}
+  .credit b{color:var(--navy)}
+
+  .ribbon{position:fixed;top:14px;left:14px;z-index:100;background:var(--gold);color:var(--navy-deep);
+    font-size:11px;font-weight:700;letter-spacing:.4px;padding:6px 12px;border-radius:999px;box-shadow:var(--shadow)}
+  .navlink{position:fixed;top:14px;right:14px;z-index:100;background:rgba(255,255,255,.14);color:#fff;
+    border:1px solid rgba(255,255,255,.3);font-size:11px;font-weight:600;padding:6px 12px;border-radius:999px;
+    cursor:pointer;text-decoration:none}
+
+  /* ===== Bande participation communautaire (co-construction) ===== */
+  .cf-cta{background:var(--paper);color:var(--ink);padding:44px 20px 52px;border-top:4px solid var(--gold)}
+  .cf-inner{max-width:440px;margin:0 auto}
+  .cf-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--navy);background:#fff;border:1px solid var(--line);padding:5px 11px;border-radius:999px}
+  .cf-title{font-family:var(--font-display);font-size:24px;color:var(--navy);margin:14px 0 8px;line-height:1.18}
+  .cf-lead{font-size:14px;color:var(--ink-soft);line-height:1.55}
+  .cf-lead b{color:var(--navy)}
+  .cf-btn{display:block;width:100%;text-align:center;border:none;cursor:pointer;font-weight:700;font-size:15px;padding:14px;border-radius:13px;text-decoration:none;font-family:var(--font-body)}
+  .cf-btn-wa{background:#25d366;color:#0a2942;margin:18px 0 6px}
+  .cf-btn-wa:active{filter:brightness(.96)}
+  .cf-btn-primary{background:var(--navy);color:#fff;margin-top:8px}
+  .cf-btn-primary:active{transform:translateY(1px)}
+  .cf-btn-primary:disabled{opacity:.5;cursor:default}
+  .cf-form{margin-top:6px}
+  .cf-lbl{display:block;font-size:12.5px;font-weight:600;color:var(--navy);margin:14px 0 5px}
+  .cf-opt{font-weight:400;color:var(--ink-soft)}
+  .cf-form textarea,.cf-form input[type=email]{width:100%;box-sizing:border-box;border:1.5px solid var(--line);border-radius:11px;padding:12px;font-family:var(--font-body);font-size:14px;background:#fff;color:var(--ink)}
+  .cf-form textarea:focus,.cf-form input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(14,58,95,.12)}
+  .cf-hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+  .cf-status{font-size:13px;font-weight:600;margin-top:12px;text-align:center}
+  .cf-status.ok{color:var(--green)}
+  .cf-status.err{color:var(--red)}
+  .cf-home{display:block;text-align:center;margin-top:22px;font-size:12.5px;color:var(--ink-soft);text-decoration:none}
+  .cf-home:hover{color:var(--navy)}
+</style>
+</head>
+<body>
+
+<div class="ribbon">◐ MAQUETTE — espace resto</div>
+<a class="navlink" href="client.html">← Vue client</a>
+
+<div class="stage">
+  <div class="phone" id="phone">
+
+    <div class="head">
+      <div class="top">
+        <div class="logo">🍝</div>
+        <div>
+          <div class="rn">Chez Marco</div>
+          <div class="rs">Espace restaurateur</div>
+        </div>
+        <span class="spacer"></span>
+        <div class="toggle" id="open-toggle" onclick="toggleOpen()">
+          <span class="dot"></span><span id="open-lbl">Ouvert</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <div class="tab on" data-v="orders" onclick="tab(this)">
+        <span class="e">🔔</span>Commandes<span class="badge" id="tab-badge">2</span>
+      </div>
+      <div class="tab" data-v="menu" onclick="tab(this)"><span class="e">📋</span>Ma carte</div>
+      <div class="tab" data-v="stats" onclick="tab(this)"><span class="e">📈</span>Aujourd'hui</div>
+    </div>
+
+    <div class="scroll">
+
+      <!-- ORDERS -->
+      <div class="view on" id="v-orders">
+        <div class="sec">🔴 Nouvelles</div>
+        <div id="orders-new"></div>
+        <div class="sec">👨‍🍳 En préparation</div>
+        <div id="orders-prep"></div>
+        <div class="sec">✅ Prêtes</div>
+        <div id="orders-done"></div>
+      </div>
+
+      <!-- MENU -->
+      <div class="view" id="v-menu">
+        <div class="sec">📋 Ta carte — disponibilité</div>
+        <p style="font-size:12.5px;color:var(--ink-soft);margin:0 2px 12px;line-height:1.45">
+          Coupe un plat en rupture d'un geste (86-ing). Tes clients le voient indisponible aussitôt.
+        </p>
+        <div id="menu-list"></div>
+      </div>
+
+      <!-- STATS -->
+      <div class="view" id="v-stats">
+        <div class="sec">📈 Ta journée</div>
+        <div class="stats">
+          <div class="stat hl"><div class="v" id="st-ca">318 €</div><div class="l">Encaissé aujourd'hui</div></div>
+          <div class="stat"><div class="v" id="st-orders">14</div><div class="l">Commandes</div></div>
+          <div class="stat"><div class="v">23 €</div><div class="l">Panier moyen</div></div>
+          <div class="stat"><div class="v" style="color:var(--green)">0 €</div><div class="l">Commission prélevée</div></div>
+        </div>
+
+        <div class="bigcard">
+          <div class="bt">Ce que tu as gardé grâce au 0 commission</div>
+          <div class="bv" id="st-saved">+ 95 € aujourd'hui</div>
+          <div class="compare">
+            <div class="them"><div class="cv">~223 €</div><div class="cl">Resté avec une plateforme à ~30 %</div></div>
+            <div class="us"><div class="cv">318 €</div><div class="cl">Resté avec Captain.Food</div></div>
+          </div>
+          <div class="bd">Illustration sur le CA du jour. Sur une plateforme à ~30 % de commission, il te resterait environ 223 € au lieu de 318 €.</div>
+        </div>
+
+        <div class="bigcard">
+          <div class="bt">Tes clients directs</div>
+          <div class="bv" style="color:var(--navy)">9 habitués reconnus</div>
+          <div class="bd">Chaque commande directe t'appartient : tu retrouves tes clients pour les fidéliser toi-même. (Aperçu — fonction à venir.)</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="toast" id="toast">✓</div>
+    <div class="credit">Espace propulsé par <b>Captain.Food</b> ⚓</div>
+  </div>
+</div>
+
+<!-- ===== Participation communautaire (sous la maquette) ===== -->
+<section class="cf-cta" id="participer">
+  <div class="cf-inner">
+    <span class="cf-eyebrow">⚓ Maquette · on la construit ensemble</span>
+    <h2 class="cf-title">Restaurateur : cet espace, c'est le tien. Façonne-le.</h2>
+    <p class="cf-lead">Cette maquette montre à quoi pourrait ressembler ton espace de gestion des commandes. Rien n'est figé : dis-nous ce qui te ferait vraiment gagner du temps en service, ce qui manque, ce que tu changerais. <b>On construit Captain.Food avec les restaurateurs de Tours.</b></p>
+    <a class="cf-btn cf-btn-wa" href="https://community.captain.food" target="_blank" rel="noopener">💬 Rejoindre la communauté WhatsApp</a>
+    <form class="cf-form" action="https://formspree.io/f/REMPLACER_ID_RESTO" method="POST">
+      <input type="hidden" name="maquette" value="Restaurateur — espace commandes">
+      <label class="cf-lbl" for="cf-msg">Ton retour sur la maquette « restaurateur »</label>
+      <textarea id="cf-msg" name="message" rows="4" required placeholder="Ce qui t'aiderait en service, ce qui manque, une idée…"></textarea>
+      <label class="cf-lbl" for="cf-email">Ton email <span class="cf-opt">(pour qu'on te réponde — facultatif)</span></label>
+      <input id="cf-email" type="email" name="email" placeholder="toi@exemple.fr" autocomplete="email">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="cf-hp">
+      <button type="submit" class="cf-btn cf-btn-primary">Envoyer mon retour ⚓</button>
+      <p class="cf-status" role="status" aria-live="polite" hidden></p>
+    </form>
+    <a class="cf-home" href="../index.html">← Retour au site Captain.Food</a>
+  </div>
+</section>
+
+<script>
+/* ---------- data (fake) ---------- */
+let orders = [
+  { id:"#1043", mode:"À emporter", liv:false, min:2, status:"new",
+    items:[{q:1,n:"Tagliatelle carbonara",note:"sans oignon"},{q:1,n:"Tiramisù maison"}], total:19.50, contrib:2 },
+  { id:"#1042", mode:"Livraison", liv:true, min:5, status:"new",
+    items:[{q:2,n:"Margherita DOP"},{q:1,n:"Burrata des Pouilles"}], total:31.00, contrib:1 },
+  { id:"#1041", mode:"À table", liv:false, min:11, status:"prep",
+    items:[{q:1,n:"Pappardelle al ragù"},{q:1,n:"Bruschetta al pomodoro"}], total:21.00, contrib:0 },
+  { id:"#1040", mode:"À emporter", liv:false, min:18, status:"done",
+    items:[{q:1,n:"Trofie al pesto"}], total:12.00, contrib:1 },
+];
+
+const menu = [
+  {n:"Bruschetta al pomodoro",p:6.5,e:"🍅",out:false},
+  {n:"Burrata des Pouilles",p:9,e:"🧀",out:false},
+  {n:"Tagliatelle carbonara",p:13.5,e:"🍝",out:false},
+  {n:"Trofie al pesto",p:12,e:"🌿",out:false},
+  {n:"Pappardelle al ragù",p:14.5,e:"🍖",out:false},
+  {n:"Margherita DOP",p:11,e:"🍕",out:false},
+  {n:"Diavola",p:13,e:"🌶️",out:true},
+  {n:"Tiramisù maison",p:6,e:"☕",out:false},
+];
+
+let isOpen = true;
+
+/* ---------- orders render ---------- */
+function eur(n){return n.toFixed(2).replace(".",",")+" €";}
+
+function renderOrders(){
+  const groups={new:[],prep:[],done:[]};
+  orders.forEach(o=>groups[o.status].push(o));
+  document.getElementById("orders-new").innerHTML  = groups.new.length ? groups.new.map(card).join("")  : emptyMsg("Aucune nouvelle commande");
+  document.getElementById("orders-prep").innerHTML = groups.prep.length? groups.prep.map(card).join("") : emptyMsg("Rien en préparation");
+  document.getElementById("orders-done").innerHTML = groups.done.length? groups.done.map(card).join("") : emptyMsg("Rien de prêt");
+  const nb=groups.new.length;
+  const badge=document.getElementById("tab-badge");
+  badge.textContent=nb; badge.style.display=nb?"inline-block":"none";
+}
+function emptyMsg(t){return `<div class="empty"><div class="b">🍽️</div>${t}</div>`;}
+
+function card(o){
+  const cls = o.status==="new"?"new":o.status==="done"?"done":"";
+  const modeCls = o.liv?"liv":"";
+  let btn="";
+  if(o.status==="new") btn=`<button class="oc-btn accept" onclick="advance('${o.id}')">Accepter</button>`;
+  else if(o.status==="prep") btn=`<button class="oc-btn ready" onclick="advance('${o.id}')">Prête</button>`;
+  else btn=`<button class="oc-btn ghost" onclick="advance('${o.id}')">Remise</button>`;
+  const contrib = o.contrib>0 ? `<span class="oc-contrib">⚓ +${eur(o.contrib)} contribution</span>` : `<span class="oc-contrib" style="color:var(--ink-soft)">contribution 0 €</span>`;
+  return `<div class="ocard ${cls}">
+    <div class="oc-head">
+      <span class="oc-num">${o.id}</span>
+      <span class="oc-mode ${modeCls}">${o.mode}</span>
+      <span class="oc-time">il y a ${o.min} min</span>
+    </div>
+    <div class="oc-body">
+      ${o.items.map(i=>`<div class="oc-item"><span><span class="q">${i.q}×</span>${i.n}${i.note?` <span class="note">— ${i.note}</span>`:""}</span></div>`).join("")}
+    </div>
+    <div class="oc-foot">
+      <span class="oc-total">${eur(o.total)}</span>
+      ${contrib}
+      ${btn}
+    </div>
+  </div>`;
+}
+
+function advance(id){
+  const o=orders.find(x=>x.id===id); if(!o)return;
+  if(o.status==="new"){o.status="prep";toast("Commande "+id+" acceptée 👨‍🍳");}
+  else if(o.status==="prep"){o.status="done";toast("Commande "+id+" prête ✅");}
+  else{orders=orders.filter(x=>x.id!==id);toast("Commande "+id+" remise · merci !");}
+  renderOrders();
+}
+
+/* ---------- menu render ---------- */
+function renderMenu(){
+  document.getElementById("menu-list").innerHTML = menu.map((m,idx)=>`
+    <div class="mitem ${m.out?"out":""}">
+      <div class="em">${m.e}</div>
+      <div class="mi">
+        <div class="mn">${m.n}</div>
+        <div class="mp">${eur(m.p)}</div>
+      </div>
+      <div class="sw-wrap">
+        <div class="sw ${m.out?"off":""}" onclick="toggleItem(${idx})"></div>
+        <div class="sw-lbl">${m.out?"Épuisé":"Dispo"}</div>
+      </div>
+    </div>`).join("");
+}
+function toggleItem(i){
+  menu[i].out=!menu[i].out;
+  toast(menu[i].out?menu[i].n+" marqué épuisé":menu[i].n+" de retour");
+  renderMenu();
+}
+
+/* ---------- misc ---------- */
+function tab(el){
+  document.querySelectorAll(".tab").forEach(t=>t.classList.remove("on"));
+  el.classList.add("on");
+  document.querySelectorAll(".view").forEach(v=>v.classList.remove("on"));
+  document.getElementById("v-"+el.dataset.v).classList.add("on");
+  document.querySelector(".scroll").scrollTop=0;
+}
+function toggleOpen(){
+  isOpen=!isOpen;
+  const t=document.getElementById("open-toggle");
+  t.classList.toggle("off",!isOpen);
+  document.getElementById("open-lbl").textContent=isOpen?"Ouvert":"Fermé";
+  toast(isOpen?"Restaurant ouvert — tu reçois les commandes":"Restaurant fermé — commandes en pause");
+}
+let toastT;
+function toast(msg){
+  const el=document.getElementById("toast");
+  el.textContent=msg; el.classList.add("show");
+  clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove("show"),1900);
+}
+
+/* simulate an incoming order after a few seconds */
+setTimeout(()=>{
+  orders.unshift({id:"#1044",mode:"À emporter",liv:false,min:0,status:"new",
+    items:[{q:1,n:"Diavola"},{q:2,n:"Tiramisù maison"}],total:25.00,contrib:2});
+  renderOrders(); toast("🔔 Nouvelle commande #1044 !");
+},6000);
+
+renderOrders(); renderMenu();
+
+/* ---- participation form (AJAX Formspree) ---- */
+document.querySelectorAll(".cf-form").forEach(function(f){
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var s=f.querySelector(".cf-status"), b=f.querySelector("button[type=submit]");
+    s.hidden=false; s.className="cf-status"; s.textContent="Envoi…"; b.disabled=true;
+    fetch(f.action,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}})
+      .then(function(r){ b.disabled=false;
+        if(r.ok){f.reset();s.className="cf-status ok";s.textContent="Merci ⚓ Ton retour est bien parti !";}
+        else{s.className="cf-status err";s.textContent="Envoi impossible pour l'instant. Passe plutôt par WhatsApp ci-dessus.";}
+      })
+      .catch(function(){ b.disabled=false; s.className="cf-status err"; s.textContent="Envoi impossible pour l'instant. Passe plutôt par WhatsApp ci-dessus."; });
+  });
+});
+</script>
+</body>
+</html>

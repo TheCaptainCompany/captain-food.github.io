@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex, follow">
+<title>Captain.Food — Espace livreur (maquette · canal à venir)</title>
+<style>
+  /* ============================================================
+     MAQUETTE JETABLE — Captain.Food · côté LIVREUR
+     ⚠️ La livraison est un canal À VENIR (Niveau B, non construit).
+     Cette maquette illustre l'INTENTION : rémunération digne et
+     transparente, cap salariat (modèle CoopCycle). Tout simulé.
+     Palette reprise de la landing : bleu maritime #0e3a5f.
+     ============================================================ */
+  :root{
+    --navy:#0e3a5f; --navy-deep:#0a2942;
+    --gold:#e8b84b; --gold-soft:#f5d98a;
+    --paper:#f4f6f8; --card:#ffffff; --ink:#16232e; --ink-soft:#5a6b78;
+    --line:#e4e9ee; --green:#2e7d5b; --green-soft:#e3f2ea; --amber:#c77f1a;
+    --shadow:0 4px 20px rgba(14,58,95,.08); --shadow-lift:0 12px 40px rgba(14,58,95,.18);
+    --font-display:"Georgia","Times New Roman",serif;
+    --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:var(--font-body);background:var(--navy);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .stage{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 12px;
+    background:radial-gradient(1200px 600px at 50% -10%,#164a76 0%,var(--navy) 45%,var(--navy-deep) 100%)}
+  .phone{width:100%;max-width:420px;background:var(--paper);border-radius:28px;
+    box-shadow:var(--shadow-lift),0 0 0 10px rgba(255,255,255,.04);overflow:hidden;position:relative;
+    min-height:780px;display:flex;flex-direction:column}
+  .screen{display:none;flex-direction:column;flex:1;animation:fade .28s ease}
+  .screen.active{display:flex}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.screen,.screen.active{animation:none}*{transition:none!important}}
+
+  /* soon banner */
+  .soon{background:var(--amber);color:#fff;font-size:11.5px;font-weight:600;text-align:center;padding:7px 12px;line-height:1.35}
+
+  /* header with availability */
+  .head{background:var(--navy);color:#fff;padding:16px 18px}
+  .head .top{display:flex;align-items:center;gap:11px}
+  .head .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#f0cd6f);
+    color:var(--navy-deep);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex:none}
+  .head .nm{font-weight:700;font-size:16px}
+  .head .sub{font-size:12px;opacity:.82}
+  .head .spacer{flex:1}
+  /* big availability switch */
+  .avail{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border-radius:14px;padding:12px 14px;margin-top:14px}
+  .avail .lbl{font-size:13px;font-weight:600}
+  .avail .st{font-size:11px;opacity:.8}
+  .avail .spacer{flex:1}
+  .bigsw{width:58px;height:32px;border-radius:999px;background:var(--green);position:relative;cursor:pointer;flex:none;transition:background .2s}
+  .bigsw::after{content:"";position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .2s}
+  .bigsw.off{background:rgba(255,255,255,.3)}
+  .bigsw.off::after{transform:translateX(26px)}
+
+  .scroll{overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch;padding:14px}
+
+  .sec{font-family:var(--font-display);font-size:13px;letter-spacing:.4px;text-transform:uppercase;
+    color:var(--navy);font-weight:700;margin:6px 2px 10px;display:flex;align-items:center;gap:8px}
+  .sec::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  /* earnings hero */
+  .earn{background:linear-gradient(135deg,var(--navy),#17527f);color:#fff;border-radius:16px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px}
+  .earn .l{font-size:12px;opacity:.85}
+  .earn .v{font-size:34px;font-weight:800;font-variant-numeric:tabular-nums;margin:2px 0 4px}
+  .earn .row{display:flex;gap:10px;margin-top:14px}
+  .earn .row>div{flex:1;background:rgba(255,255,255,.1);border-radius:11px;padding:10px 12px}
+  .earn .rv{font-size:17px;font-weight:800}
+  .earn .rl{font-size:10.5px;opacity:.8;margin-top:2px}
+
+  /* ride offer card */
+  .ride{background:var(--card);border-radius:16px;box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden;border:1.5px solid var(--gold-soft)}
+  .ride-top{padding:14px 15px 8px;display:flex;align-items:center;gap:10px}
+  .ride-top .rt-em{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#f6ede0,#efe3cf);display:flex;align-items:center;justify-content:center;font-size:20px;flex:none;border:1px solid var(--line)}
+  .ride-top .rt-n{font-weight:700;font-size:15px;color:var(--navy)}
+  .ride-top .rt-d{font-size:12px;color:var(--ink-soft)}
+  .ride-pay{margin-left:auto;text-align:right}
+  .ride-pay .p{font-size:20px;font-weight:800;color:var(--green)}
+  .ride-pay .pl{font-size:10px;color:var(--ink-soft)}
+  /* route */
+  .route{padding:4px 15px 10px}
+  .stop{display:flex;gap:11px;align-items:flex-start;position:relative;padding:6px 0}
+  .stop .pin{width:22px;flex:none;text-align:center;font-size:14px;z-index:1}
+  .stop .si{font-size:13px}
+  .stop .sa{font-size:11.5px;color:var(--ink-soft)}
+  .route .line{position:absolute;left:25px;top:26px;bottom:26px;width:2px;background:var(--line)}
+  .ride-meta{display:flex;gap:14px;padding:8px 15px;background:#fafbfc;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft)}
+  .ride-meta b{color:var(--navy)}
+  .ride-act{display:flex;gap:9px;padding:12px 15px}
+  .ride-act button{flex:1;border:none;cursor:pointer;font-weight:700;font-size:14px;padding:13px;border-radius:11px}
+  .ride-act .no{background:#eef3f7;color:var(--ink-soft);flex:.5}
+  .ride-act .yes{background:var(--green);color:#fff}
+  .ride-act .yes:active{transform:translateY(1px)}
+
+  /* transparency card — the differentiator */
+  .transp{background:var(--green-soft);border:1px solid #bfe3ce;border-radius:14px;padding:15px;margin-bottom:12px}
+  .transp .tt{font-family:var(--font-display);font-size:15px;font-weight:700;color:#1c5e42;display:flex;align-items:center;gap:7px}
+  .transp .tr{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;color:#1c5e42}
+  .transp .tr.tot{border-top:1px solid #bfe3ce;margin-top:5px;padding-top:9px;font-weight:800;font-size:15px}
+  .transp .note{font-size:11.5px;color:#2e7d5b;margin-top:8px;line-height:1.45}
+
+  .empty{text-align:center;color:var(--ink-soft);padding:40px 24px}
+  .empty .b{font-size:38px;margin-bottom:10px}
+  .empty .s{font-size:13px;margin-top:6px}
+
+  /* goal / salariat card */
+  .goal{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:15px;margin-bottom:12px}
+  .goal .gt{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px}
+  .goal .gd{font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+  .goal .bar{height:9px;border-radius:999px;background:var(--line);margin:12px 0 6px;overflow:hidden}
+  .goal .bar span{display:block;height:100%;width:62%;background:linear-gradient(90deg,var(--gold),var(--green));border-radius:999px}
+  .goal .bl{font-size:11px;color:var(--ink-soft)}
+
+  .toast{position:absolute;left:50%;bottom:22px;transform:translateX(-50%) translateY(80px);background:var(--navy-deep);color:#fff;font-size:13px;font-weight:600;padding:11px 18px;border-radius:999px;box-shadow:var(--shadow-lift);opacity:0;transition:.3s;z-index:30;white-space:nowrap}
+  .toast.show{transform:translateX(-50%);opacity:1}
+  .credit{text-align:center;font-size:11px;color:var(--ink-soft);padding:12px;background:var(--paper);border-top:1px solid var(--line)}
+  .credit b{color:var(--navy)}
+
+  .ribbon{position:fixed;top:14px;left:14px;z-index:100;background:var(--gold);color:var(--navy-deep);font-size:11px;font-weight:700;letter-spacing:.4px;padding:6px 12px;border-radius:999px;box-shadow:var(--shadow)}
+  .navlink{position:fixed;top:14px;right:14px;z-index:100;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3);font-size:11px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer;text-decoration:none}
+
+  /* active ride (accepted, awaiting delivery) */
+  .active-ride{background:var(--card);border-radius:16px;box-shadow:var(--shadow);margin-bottom:12px;border:1.5px solid var(--navy);overflow:hidden}
+  .ar-top{background:var(--navy);color:#fff;padding:11px 15px;display:flex;align-items:center;gap:9px;font-size:13px}
+  .ar-top .ar-em{font-size:18px}
+  .ar-top .ar-n{font-weight:700}
+  .ar-top .ar-tag{margin-left:auto;font-size:10.5px;background:rgba(255,255,255,.18);padding:3px 9px;border-radius:999px}
+  .ar-body{padding:11px 15px;font-size:12.5px;color:var(--ink-soft)}
+  .ar-body b{color:var(--navy)}
+  .ar-deliver{width:100%;border:none;cursor:pointer;background:var(--gold);color:var(--navy-deep);font-weight:800;font-size:14px;padding:13px;border-radius:0}
+  .ar-deliver:active{filter:brightness(.96)}
+
+  /* code sheet */
+  .sheet-back{position:absolute;inset:0;background:rgba(10,41,66,.45);display:none;align-items:flex-end;z-index:40}
+  .sheet-back.show{display:flex}
+  .code-sheet{background:var(--paper);width:100%;border-radius:22px 22px 0 0;padding:8px 20px calc(22px + env(safe-area-inset-bottom));animation:up .28s ease;text-align:center}
+  @keyframes up{from{transform:translateY(100%)}to{transform:none}}
+  .code-sheet .grip{width:40px;height:4px;background:var(--line);border-radius:3px;margin:6px auto 14px}
+  .cs-em{font-size:44px}
+  .cs-h{font-family:var(--font-display);font-size:21px;color:var(--navy);margin-top:4px}
+  .cs-d{font-size:13px;color:var(--ink-soft);margin:8px 14px 0;line-height:1.45}
+  .code-inputs{display:flex;gap:10px;justify-content:center;margin-top:18px}
+  .code-cell{width:54px;height:64px;border:2px solid var(--line);border-radius:13px;background:#fff;
+    text-align:center;font-size:28px;font-weight:800;color:var(--navy);font-family:var(--font-body)}
+  .code-cell:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(14,58,95,.12)}
+  .code-cell.err{border-color:var(--red);animation:shake .3s}
+  @keyframes shake{0%,100%{transform:none}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+  .cs-hint{font-size:11.5px;color:var(--ink-soft);margin-top:12px}
+  .cs-hint.err{color:var(--red);font-weight:600}
+  .cs-btn{flex:1;border:none;cursor:pointer;font-weight:700;font-size:14px;padding:13px;border-radius:11px}
+  .cs-btn.no{background:#eef3f7;color:var(--ink-soft);flex:.5}
+  .cs-btn.yes{background:var(--green);color:#fff}
+
+  /* ===== Bande participation communautaire (co-construction) ===== */
+  .cf-cta{background:var(--paper);color:var(--ink);padding:44px 20px 52px;border-top:4px solid var(--gold)}
+  .cf-inner{max-width:440px;margin:0 auto}
+  .cf-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--navy);background:#fff;border:1px solid var(--line);padding:5px 11px;border-radius:999px}
+  .cf-title{font-family:var(--font-display);font-size:24px;color:var(--navy);margin:14px 0 8px;line-height:1.18}
+  .cf-lead{font-size:14px;color:var(--ink-soft);line-height:1.55}
+  .cf-lead b{color:var(--navy)}
+  .cf-btn{display:block;width:100%;text-align:center;border:none;cursor:pointer;font-weight:700;font-size:15px;padding:14px;border-radius:13px;text-decoration:none;font-family:var(--font-body)}
+  .cf-btn-wa{background:#25d366;color:#0a2942;margin:18px 0 6px}
+  .cf-btn-wa:active{filter:brightness(.96)}
+  .cf-btn-primary{background:var(--navy);color:#fff;margin-top:8px}
+  .cf-btn-primary:active{transform:translateY(1px)}
+  .cf-btn-primary:disabled{opacity:.5;cursor:default}
+  .cf-form{margin-top:6px}
+  .cf-lbl{display:block;font-size:12.5px;font-weight:600;color:var(--navy);margin:14px 0 5px}
+  .cf-opt{font-weight:400;color:var(--ink-soft)}
+  .cf-form textarea,.cf-form input[type=email]{width:100%;box-sizing:border-box;border:1.5px solid var(--line);border-radius:11px;padding:12px;font-family:var(--font-body);font-size:14px;background:#fff;color:var(--ink)}
+  .cf-form textarea:focus,.cf-form input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(14,58,95,.12)}
+  .cf-hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+  .cf-status{font-size:13px;font-weight:600;margin-top:12px;text-align:center}
+  .cf-status.ok{color:var(--green)}
+  .cf-status.err{color:#c0392b}
+  .cf-home{display:block;text-align:center;margin-top:22px;font-size:12.5px;color:var(--ink-soft);text-decoration:none}
+  .cf-home:hover{color:var(--navy)}
+</style>
+</head>
+<body>
+
+<div class="ribbon">◐ MAQUETTE — espace livreur</div>
+<a class="navlink" href="client.html">← Vue client</a>
+
+<div class="stage">
+  <div class="phone" id="phone">
+
+    <div class="soon">⚓ Canal livraison — aperçu de l'intention, pas encore actif. Ce que ça pourrait être.</div>
+
+    <div class="head">
+      <div class="top">
+        <div class="av">J</div>
+        <div>
+          <div class="nm">Julien</div>
+          <div class="sub">Livreur · Tours</div>
+        </div>
+      </div>
+      <div class="avail">
+        <div>
+          <div class="lbl">Disponible</div>
+          <div class="st" id="avail-st">Tu reçois des courses</div>
+        </div>
+        <span class="spacer"></span>
+        <div class="bigsw" id="avail-sw" onclick="toggleAvail()"></div>
+      </div>
+    </div>
+
+    <div class="scroll">
+
+      <!-- earnings -->
+      <div class="earn">
+        <div class="l">Gagné aujourd'hui</div>
+        <div class="v" id="earn-today">32,50 €</div>
+        <div class="row">
+          <div><div class="rv" id="earn-rides">4</div><div class="rl">courses</div></div>
+          <div><div class="rv">8,13 €</div><div class="rl">par course (moy.)</div></div>
+          <div><div class="rv">2 h 10</div><div class="rl">en ligne</div></div>
+        </div>
+      </div>
+
+      <!-- active ride (accepted) -->
+      <div id="active-wrap"></div>
+
+      <!-- ride offers -->
+      <div class="sec">🛵 Courses proposées</div>
+      <div id="rides"></div>
+
+      <!-- goal: salariat -->
+      <div class="goal">
+        <div class="gt">⚓ Le cap : le salariat</div>
+        <div class="bar"><span></span></div>
+        <div class="bl">Modèle CoopCycle — l'objectif affiché est de salarier les livreurs, pas de les laisser en autoentrepreneurs précaires.</div>
+        <div class="gd" style="margin-top:10px">Tant que ce n'est pas possible, la phase de transition est assumée en toute transparence : tu vois exactement ce que tu gagnes, sans temps mort caché.</div>
+      </div>
+
+    </div>
+
+    <div class="toast" id="toast">✓</div>
+    <div class="credit">Espace propulsé par <b>Captain.Food</b> ⚓ — le livreur, payé dignement</div>
+
+    <!-- delivery code sheet -->
+    <div class="sheet-back" id="code-back">
+      <div class="code-sheet">
+        <div class="grip"></div>
+        <div class="cs-em">🔑</div>
+        <h3 class="cs-h">Confirme la livraison</h3>
+        <p class="cs-d">Demande au client son <b>code à 4 chiffres</b> et saisis-le pour valider la remise.</p>
+        <div class="code-inputs" id="code-inputs">
+          <input inputmode="numeric" maxlength="1" class="code-cell">
+          <input inputmode="numeric" maxlength="1" class="code-cell">
+          <input inputmode="numeric" maxlength="1" class="code-cell">
+          <input inputmode="numeric" maxlength="1" class="code-cell">
+        </div>
+        <div class="cs-hint" id="cs-hint">Le client voit ce code sur son écran de confirmation.</div>
+        <div style="display:flex;gap:9px;margin-top:16px">
+          <button class="cs-btn no" onclick="closeCode()">Annuler</button>
+          <button class="cs-btn yes" onclick="validateCode()">Valider la remise</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Participation communautaire (sous la maquette) ===== -->
+<section class="cf-cta" id="participer">
+  <div class="cf-inner">
+    <span class="cf-eyebrow">⚓ Maquette · canal à venir</span>
+    <h2 class="cf-title">Livreur : ce canal n'existe pas encore. Aide-nous à le penser juste.</h2>
+    <p class="cf-lead">La livraison est un <b>canal à venir</b> : cette maquette montre l'intention — une rémunération digne, transparente, avec le cap du salariat. Livreurs, restaurateurs, clients : dites-nous ce qui rendrait ce modèle vraiment juste et tenable à Tours.</p>
+    <a class="cf-btn cf-btn-wa" href="https://community.captain.food" target="_blank" rel="noopener">💬 Rejoindre la communauté WhatsApp</a>
+    <form class="cf-form" action="https://formspree.io/f/REMPLACER_ID_LIVREUR" method="POST">
+      <input type="hidden" name="maquette" value="Livreur — espace courses (canal à venir)">
+      <label class="cf-lbl" for="cf-msg">Ton retour sur la maquette « livreur »</label>
+      <textarea id="cf-msg" name="message" rows="4" required placeholder="Ce qui rendrait la rému juste, ce qui manque, une idée…"></textarea>
+      <label class="cf-lbl" for="cf-email">Ton email <span class="cf-opt">(pour qu'on te réponde — facultatif)</span></label>
+      <input id="cf-email" type="email" name="email" placeholder="toi@exemple.fr" autocomplete="email">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="cf-hp">
+      <button type="submit" class="cf-btn cf-btn-primary">Envoyer mon retour ⚓</button>
+      <p class="cf-status" role="status" aria-live="polite" hidden></p>
+    </form>
+    <a class="cf-home" href="../index.html">← Retour au site Captain.Food</a>
+  </div>
+</section>
+
+<script>
+let avail=true;
+let earnToday=32.50, ridesToday=4;
+
+let rides=[
+  { id:1, resto:"Chez Marco", em:"🍝", pickup:"rue Colbert", drop:"rue Nationale", dist:"1,8 km", min:12, pay:7.50, tip:1.00 },
+  { id:2, resto:"Le Bistrot du Coin", em:"🥘", pickup:"place Plumereau", drop:"bd Béranger", dist:"2,4 km", min:16, pay:8.20, tip:0 },
+];
+
+function eur(n){return n.toFixed(2).replace(".",",")+" €";}
+
+function renderRides(){
+  const wrap=document.getElementById("rides");
+  if(!avail){wrap.innerHTML=`<div class="empty"><div class="b">😴</div>Tu es indisponible.<div class="s">Active « Disponible » pour recevoir des courses.</div></div>`;return;}
+  if(!rides.length){wrap.innerHTML=`<div class="empty"><div class="b">✅</div>Pas de course pour l'instant.<div class="s">On te prévient dès qu'une arrive.</div></div>`;return;}
+  wrap.innerHTML=rides.map(r=>{
+    const total=r.pay+r.tip;
+    return `<div class="ride">
+      <div class="ride-top">
+        <div class="rt-em">${r.em}</div>
+        <div><div class="rt-n">${r.resto}</div><div class="rt-d">${r.dist} · ~${r.min} min</div></div>
+        <div class="ride-pay"><div class="p">${eur(total)}</div><div class="pl">pour toi</div></div>
+      </div>
+      <div class="route">
+        <div class="line"></div>
+        <div class="stop"><span class="pin">🟢</span><div><div class="si">Retrait — ${r.resto}</div><div class="sa">${r.pickup}</div></div></div>
+        <div class="stop"><span class="pin">🔴</span><div><div class="si">Livraison</div><div class="sa">${r.drop}</div></div></div>
+      </div>
+      <div class="transp">
+        <div class="tt">⚓ Ta rému, en clair</div>
+        <div class="tr"><span>Course (base juste)</span><span>${eur(r.pay)}</span></div>
+        <div class="tr"><span>Pourboire client</span><span>${eur(r.tip)}</span></div>
+        <div class="tr tot"><span>Total pour toi</span><span>${eur(total)}</span></div>
+        <div class="note">Pas de rému opaque, pas de « prix dynamique » qui baisse sans prévenir. La course ne descend jamais sous un plancher digne (au moins 7 €).</div>
+      </div>
+      <div class="ride-act">
+        <button class="no" onclick="declineRide(${r.id})">Passer</button>
+        <button class="yes" onclick="acceptRide(${r.id})">Accepter · ${eur(total)}</button>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+let activeRide=null;           // course acceptée en attente de livraison
+const DEMO_CODE="4242";        // code simulé attendu (démo)
+
+function renderActive(){
+  const wrap=document.getElementById("active-wrap");
+  if(!activeRide){wrap.innerHTML="";return;}
+  const r=activeRide, total=r.pay+r.tip;
+  wrap.innerHTML=`
+    <div class="sec">🎯 Course en cours</div>
+    <div class="active-ride">
+      <div class="ar-top"><span class="ar-em">${r.em}</span><span class="ar-n">${r.resto}</span>
+        <span class="ar-tag">${eur(total)}</span></div>
+      <div class="ar-body">Livraison vers <b>${r.drop}</b> · ${r.dist}<br>
+        À l'arrivée, demande au client son <b>code à 4 chiffres</b> pour confirmer la remise.</div>
+      <button class="ar-deliver" onclick="openCode()">📦 J'ai livré — saisir le code</button>
+    </div>`;
+}
+
+function acceptRide(id){
+  const r=rides.find(x=>x.id===id); if(!r)return;
+  if(activeRide){toast("Termine ta course en cours d'abord");return;}
+  activeRide=r;
+  rides=rides.filter(x=>x.id!==id);
+  toast("Course acceptée · direction "+r.resto+" 🛵");
+  renderActive(); renderRides();
+  document.querySelector(".scroll").scrollTop=0;
+}
+function declineRide(id){ rides=rides.filter(x=>x.id!==id); toast("Course passée"); renderRides(); }
+
+/* ---- delivery code validation ---- */
+function openCode(){
+  document.getElementById("code-back").classList.add("show");
+  const cells=document.querySelectorAll(".code-cell");
+  cells.forEach(c=>{c.value="";c.classList.remove("err")});
+  const hint=document.getElementById("cs-hint");
+  hint.textContent="Le client voit ce code sur son écran de confirmation. (Démo : 4 2 4 2)";
+  hint.classList.remove("err");
+  setTimeout(()=>cells[0].focus(),100);
+}
+function closeCode(){ document.getElementById("code-back").classList.remove("show"); }
+
+function validateCode(){
+  const cells=[...document.querySelectorAll(".code-cell")];
+  const entered=cells.map(c=>c.value).join("");
+  const hint=document.getElementById("cs-hint");
+  if(entered.length<4){hint.textContent="Saisis les 4 chiffres.";hint.classList.add("err");return;}
+  if(entered!==DEMO_CODE){
+    cells.forEach(c=>c.classList.add("err"));
+    hint.textContent="Code incorrect. Vérifie avec le client. (Démo : 4242)";
+    hint.classList.add("err");
+    return;
+  }
+  // success
+  const total=activeRide.pay+activeRide.tip;
+  earnToday+=total; ridesToday++;
+  document.getElementById("earn-today").textContent=eur(earnToday);
+  document.getElementById("earn-rides").textContent=ridesToday;
+  activeRide=null;
+  closeCode(); renderActive();
+  toast("✅ Livraison confirmée · +"+eur(total));
+}
+
+/* auto-advance focus between code cells */
+document.addEventListener("input",e=>{
+  if(!e.target.classList.contains("code-cell"))return;
+  e.target.value=e.target.value.replace(/[^0-9]/g,"");
+  const cells=[...document.querySelectorAll(".code-cell")];
+  const i=cells.indexOf(e.target);
+  if(e.target.value && i<3) cells[i+1].focus();
+});
+document.addEventListener("keydown",e=>{
+  if(!e.target.classList.contains("code-cell"))return;
+  const cells=[...document.querySelectorAll(".code-cell")];
+  const i=cells.indexOf(e.target);
+  if(e.key==="Backspace" && !e.target.value && i>0) cells[i-1].focus();
+});
+
+function toggleAvail(){
+  avail=!avail;
+  document.getElementById("avail-sw").classList.toggle("off",!avail);
+  document.getElementById("avail-st").textContent=avail?"Tu reçois des courses":"En pause";
+  toast(avail?"Tu es disponible 🟢":"Tu es en pause");
+  renderRides();
+}
+let toastT;
+function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove("show"),1900);}
+
+/* a new ride comes in */
+setTimeout(()=>{
+  if(avail){rides.push({id:3,resto:"Sushi Loire",em:"🍣",pickup:"rue de Bordeaux",drop:"quai Portillon",dist:"3,1 km",min:19,pay:8.90,tip:2.00});renderRides();toast("🔔 Nouvelle course proposée !");}
+},7000);
+
+renderActive(); renderRides();
+
+/* ---- participation form (AJAX Formspree) ---- */
+document.querySelectorAll(".cf-form").forEach(function(f){
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var s=f.querySelector(".cf-status"), b=f.querySelector("button[type=submit]");
+    s.hidden=false; s.className="cf-status"; s.textContent="Envoi…"; b.disabled=true;
+    fetch(f.action,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}})
+      .then(function(r){ b.disabled=false;
+        if(r.ok){f.reset();s.className="cf-status ok";s.textContent="Merci ⚓ Ton retour est bien parti !";}
+        else{s.className="cf-status err";s.textContent="Envoi impossible pour l'instant. Passe plutôt par WhatsApp ci-dessus.";}
+      })
+      .catch(function(){ b.disabled=false; s.className="cf-status err"; s.textContent="Envoi impossible pour l'instant. Passe plutôt par WhatsApp ci-dessus."; });
+  });
+});
+</script>
+</body>
+</html>

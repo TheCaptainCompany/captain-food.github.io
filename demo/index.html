@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les maquettes — Captain.Food</title>
+<meta name="description" content="Maquettes cliquables de Captain.Food : le parcours client, l'espace restaurateur et l'espace livreur. Des ébauches à tester et à construire avec la communauté.">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<meta name="robots" content="noindex, follow">
+<style>
+  :root{
+    --navy:#0e3a5f; --navy-deep:#0a2942; --navy-line:#1d4e78;
+    --gold:#e8b84b; --gold-soft:#f5d98a;
+    --paper:#fbf9f4; --card:#ffffff; --ink:#16232e; --ink-soft:#5a6b78;
+    --line:#e4e9ee; --green:#2e7d5b;
+    --shadow:0 6px 28px rgba(14,58,95,.10); --shadow-lift:0 16px 46px rgba(10,41,66,.35);
+    --font-display:"Georgia","Times New Roman",serif;
+    --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:var(--font-body);color:#fff;line-height:1.55;-webkit-font-smoothing:antialiased;
+    background:radial-gradient(1200px 700px at 50% -10%,#164a76 0%,var(--navy) 45%,var(--navy-deep) 100%);
+    min-height:100vh;display:flex;flex-direction:column}
+  .wrap{width:100%;max-width:960px;margin:0 auto;padding:32px 20px 48px;flex:1;display:flex;flex-direction:column}
+
+  .top{display:flex;align-items:center;gap:11px;margin-bottom:auto}
+  .top img{width:38px;height:38px;border-radius:10px;background:var(--paper);padding:3px}
+  .top .bn{font-family:var(--font-display);font-size:19px;font-weight:700}
+  .top .bn .dot{color:var(--gold)}
+  .top a{margin-left:auto;color:rgba(255,255,255,.8);text-decoration:none;font-size:13px;font-weight:600}
+  .top a:hover{color:#fff}
+
+  .hero{text-align:center;padding:44px 0 8px}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+    color:var(--navy-deep);background:var(--gold);padding:6px 13px;border-radius:999px}
+  h1{font-family:var(--font-display);font-size:clamp(30px,7vw,48px);line-height:1.08;margin:18px auto 14px;max-width:14ch;letter-spacing:-.5px}
+  .sub{font-size:clamp(15px,2.4vw,17px);color:rgba(255,255,255,.82);max-width:52ch;margin:0 auto}
+  .sub b{color:var(--gold-soft)}
+
+  .cards{display:grid;grid-template-columns:1fr;gap:16px;margin:40px 0 8px}
+  @media(min-width:720px){.cards{grid-template-columns:repeat(3,1fr)}}
+
+  .card{position:relative;display:flex;flex-direction:column;background:var(--card);color:var(--ink);
+    border-radius:20px;padding:24px 22px 22px;text-decoration:none;box-shadow:var(--shadow);
+    border:1px solid rgba(255,255,255,.5);transition:transform .18s ease,box-shadow .18s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
+  .card:active{transform:translateY(-1px)}
+  .card .emo{width:56px;height:56px;border-radius:15px;display:flex;align-items:center;justify-content:center;
+    font-size:30px;background:linear-gradient(135deg,#f6ede0,#efe3cf);border:1px solid var(--line);margin-bottom:16px}
+  .card h2{font-family:var(--font-display);font-size:22px;color:var(--navy);margin-bottom:2px}
+  .card .role{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .card p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;flex:1}
+  .card .go{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-weight:700;font-size:14px;color:var(--navy)}
+  .card .go .arr{transition:transform .18s ease}
+  .card:hover .go .arr{transform:translateX(4px)}
+  .card .tag{position:absolute;top:16px;right:16px;font-size:10.5px;font-weight:700;letter-spacing:.3px;
+    background:#fbeee0;color:#c77f1a;padding:4px 9px;border-radius:999px}
+
+  .foot{margin-top:36px;text-align:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+    border-radius:18px;padding:24px 20px}
+  .foot .ft{font-family:var(--font-display);font-size:19px;margin-bottom:6px}
+  .foot p{font-size:14px;color:rgba(255,255,255,.8);max-width:48ch;margin:0 auto 16px}
+  .wa{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#0a2942;text-decoration:none;
+    font-weight:700;font-size:15px;padding:13px 22px;border-radius:13px}
+  .wa:active{filter:brightness(.96)}
+
+  .note{text-align:center;font-size:11.5px;color:rgba(255,255,255,.5);margin-top:26px;line-height:1.5}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <img src="../assets/logo.png" alt="">
+      <span class="bn">Captain<span class="dot">.</span>Food</span>
+      <a href="../index.html">← Retour au site</a>
+    </div>
+
+    <header class="hero">
+      <span class="eyebrow">⚓ Maquettes · à construire ensemble</span>
+      <h1>À quoi ça ressemble ?</h1>
+      <p class="sub">Voici des <b>maquettes cliquables</b> de Captain.Food — pas encore le produit final. Choisis un point de vue, teste, puis dis-nous ce qui marche et ce qui manque. On construit l'appli <b>avec</b> la communauté.</p>
+    </header>
+
+    <main class="cards">
+      <a class="card" href="client.html">
+        <div class="emo">🍽️</div>
+        <div class="role">Côté client</div>
+        <h2>Je commande</h2>
+        <p>Le parcours d'un client : choisir ses plats, sa contribution libre, payer, suivre sa commande. 0 commission pour le resto.</p>
+        <span class="go">Ouvrir la maquette <span class="arr">→</span></span>
+      </a>
+
+      <a class="card" href="resto.html">
+        <div class="emo">👨‍🍳</div>
+        <div class="role">Côté restaurateur</div>
+        <h2>Je reçois</h2>
+        <p>L'espace du resto : recevoir et suivre les commandes, gérer la carte et les ruptures, voir sa journée — sans commission prélevée.</p>
+        <span class="go">Ouvrir la maquette <span class="arr">→</span></span>
+      </a>
+
+      <a class="card" href="livreur.html">
+        <span class="tag">Canal à venir</span>
+        <div class="emo">🛵</div>
+        <div class="role">Côté livreur</div>
+        <h2>Je livre</h2>
+        <p>L'intention pour la livraison : une rémunération digne et transparente, avec le cap du salariat. Un canal pas encore actif.</p>
+        <span class="go">Ouvrir la maquette <span class="arr">→</span></span>
+      </a>
+    </main>
+
+    <section class="foot">
+      <div class="ft">⚓ Ton avis façonne le produit</div>
+      <p>Sous chaque maquette, un formulaire pour nous envoyer ton retour. Ou viens en discuter en direct avec la communauté.</p>
+      <a class="wa" href="https://community.captain.food" target="_blank" rel="noopener">💬 Rejoindre la communauté WhatsApp</a>
+    </section>
+
+    <p class="note">Maquettes de démonstration — aucun paiement réel, aucune donnée client. Tout est simulé.</p>
+  </div>
+</body>
+</html>
