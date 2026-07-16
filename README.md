@@ -14,6 +14,25 @@ trucks in Tours, France**.
 > All source comments and docs are in English. All visible page copy is in
 > French, by design.
 
+## License & brand
+
+The code in this repository is released under the **Captain.Food Coopyleft
+License** — a copyleft based on the GNU AGPL v3, in the spirit of the CoopCycle
+license. You may study, run, modify and redistribute it, but **commercial use is
+reserved to social-and-solidarity-economy organisations** (cooperatives,
+non-profit and limited-profit entities). See [`LICENSE.md`](LICENSE.md) and
+[`LICENSES/AGPL-3.0.txt`](LICENSES/AGPL-3.0.txt); the canonical text lives in the
+product repo [`Captain-Food/captain-food`](https://github.com/Captain-Food/captain-food).
+
+### Brand reservation
+
+The code license does **not** cover the project's brand identity. The name
+**"Captain.Food"**, the logo (the skull-toque mark) and the **Captain
+illustrations** are reserved. You may not reuse them to represent another
+project, product or service, nor in any way that suggests affiliation with or
+endorsement by Captain.Food. Any reuse of the brand requires prior written
+permission. (This is separate from, and not waived by, the code license above.)
+
 ## File structure
 
 ```
