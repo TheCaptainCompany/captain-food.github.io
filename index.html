@@ -100,6 +100,14 @@
           },
           {
             "@type": "Question",
+            "name": "Et ce que mes clients paient en caisse ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ce qui se paie dans ta caisse habituelle (sur place, au comptoir), on n'y touche pas : c'est gratuit, point, hors de notre flux. La contribution ne concerne que les commandes payées en ligne via Captain.Food."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Je dois quitter Uber Eats / Deliveroo ?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -167,10 +175,10 @@
     <!-- Menu (repères de la page) -->
     <nav class="chip-nav" aria-label="Menu">
       <div class="container chip-nav-inner">
-        <a class="chip" href="#probleme">Constat</a>
-        <a class="chip" href="#combat">Solution</a>
-        <a class="chip" href="#solution">Comment</a>
-        <a class="chip chip-cta" href="#rejoindre">Rejoindre</a>
+        <a class="chip" href="#probleme">Le constat</a>
+        <a class="chip" href="#combat">0 % commission</a>
+        <a class="chip" href="#solution">Comment ça marche</a>
+        <a class="chip chip-cta" href="#rejoindre">Je rejoins</a>
         <a class="chip" href="#faq">FAQ</a>
       </div>
     </nav>
@@ -189,13 +197,12 @@
           </p>
           <p class="hero-note">
             Une plateforme de commande locale à but non lucratif, portée par une
-            association — avec le cap d'une <strong>coopérative (SCIC)</strong> et de
-            l'<strong>agrément ESUS</strong>. Pour les indépendants de Tours.
-            On démarre&nbsp;: rien n'est encore construit, c'est maintenant qu'on
-            l'écrit ensemble.
+            association — construite pour ne <strong>jamais</strong> pouvoir se
+            transformer en péage. Pour les indépendants de Tours. On démarre&nbsp;:
+            rien n'est encore construit, c'est maintenant qu'on l'écrit ensemble.
           </p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="#rejoindre">Rejoins les restaurateurs libres</a>
+            <a class="btn btn-primary" href="#rejoindre">Je rejoins les restaurateurs libres</a>
             <a class="btn btn-ghost" href="https://wa.me/message/LTDD42WUFXINA1" target="_blank" rel="noopener">On t'explique tout</a>
           </div>
           <p class="hero-reassure">
@@ -214,11 +221,11 @@
         </figure>
       </div>
 
-      <ul class="hero-stats" aria-label="Ce qui distingue Captain.Food">
-        <li class="hero-stat"><b>0 %</b><span>commission sur tes plats</span></li>
-        <li class="hero-stat"><b>SCIC</b><span>cap coopératif visé</span></li>
-        <li class="hero-stat"><b>ESUS</b><span>agrément visé</span></li>
-        <li class="hero-stat"><b>100 % public</b><span>comptes ouverts sur Open Collective</span></li>
+      <ul class="hero-stats" aria-label="Ce que Captain.Food te rend">
+        <li class="hero-stat"><b>0 %</b><span>de commission sur tes plats</span></li>
+        <li class="hero-stat"><b>100 %</b><span>de tes clients, à toi</span></li>
+        <li class="hero-stat"><b>Tes prix</b><span>les mêmes qu'en salle</span></li>
+        <li class="hero-stat"><b>0 €</b><span>inscription, sans engagement</span></li>
       </ul>
 
       <!-- wave divider -->
@@ -288,9 +295,9 @@
             Je reprends mes commandes
           </a>
           <p class="calc-reassure">
-            «&nbsp;0&nbsp;€ pour moi, où est le loup&nbsp;?&nbsp;» Il n'y en a pas&nbsp;:
+            0&nbsp;€ pour toi, dans tous les cas —
             <strong>c'est le client qui contribue, pas toi.</strong>
-            <a href="financement.html">Comment on se finance, en clair →</a>
+            <a href="financement.html">Comment on se finance →</a>
           </p>
           <p class="calc-fine">
             Le calcul de commission est factuel&nbsp;: ton chiffre d'affaires × le taux.
@@ -301,6 +308,11 @@
             charges patronales résiduelles comprises (~1&nbsp;933&nbsp;€). Ordre de grandeur, pas un relevé.
           </p>
         </div>
+
+        <p class="ratio-punch">
+          Sur une commande livrée, la commission (~30&nbsp;%) pèse
+          <b>jusqu'à 10×</b> ta marge nette (~3&nbsp;%). Tu travailles, elle encaisse.
+        </p>
 
         <div class="stat-tiles">
           <div class="stat-tile">
@@ -392,6 +404,7 @@
             0 % sur tes plats, toujours. Ta marge reste dans ta poche — pas dans
             celle d'une plateforme.
           </p>
+          <a class="combat-cue" href="#rejoindre">Je reprends mes commandes →</a>
         </div>
         <figure class="combat-figure">
           <img
@@ -444,7 +457,7 @@
               <tr>
                 <th scope="row">Commission sur tes plats</th>
                 <td>25 à 35 % par commande</td>
-                <td class="col-us"><strong>0 %</strong></td>
+                <td class="col-us"><strong class="us-zero">0 %</strong></td>
               </tr>
               <tr>
                 <th scope="row">Tes prix</th>
@@ -548,14 +561,6 @@
             frais de paiement par carte sont ceux, standards, de tout encaissement en
             ligne — <strong>jamais un pourcentage sur tes plats, jamais une surcharge
             ajoutée au client.</strong>
-          </p>
-          <p>
-            Reste un vrai coût, qu'on ne cache pas&nbsp;: <strong>la livraison</strong>
-            — payer dignement la personne qui l'apporte. Tu y participes seulement sur
-            tes commandes livrées, à hauteur de ce que ta marge permet
-            (<strong>tu fixes ton plancher, on ne descend jamais dessous</strong>), et
-            le client paie la différence, en clair.
-            <a href="livraison.html">Comment on paie la livraison →</a>
           </p>
           <a class="card-cue" href="financement.html">Comment on se finance, en clair →</a>
         </div>
@@ -911,6 +916,9 @@
           <!-- Honeypot anti-spam (invisible pour les humains) -->
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
 
+          <p class="form-reassure-inline">
+            0&nbsp;€ · sans engagement · tu gardes Uber&nbsp;Eats &amp; Deliveroo · rien à installer dans l'urgence
+          </p>
           <button type="submit" class="btn btn-primary btn-block">Je rejoins les restaurateurs libres</button>
 
           <p class="form-note">

@@ -274,8 +274,8 @@
           ? moisEmploye.toLocaleString("fr-FR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })
           : Math.round(moisEmploye).toLocaleString("fr-FR");
         smicEl.innerHTML =
-          "💡 De quoi employer quelqu'un ≈ <strong>" + moisTxt +
-          " mois</strong> au SMIC (charges comprises) — chaque année.";
+          "C'est ≈ <strong>" + moisTxt +
+          " mois de salaire</strong> au SMIC (charges comprises). Chaque année.";
       } else {
         smicEl.textContent = "";
       }
