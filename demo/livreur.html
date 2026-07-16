@@ -215,9 +215,13 @@
 </div>
 <script>
 (function(){var g=document.getElementById("demoGate");if(!g)return;
-try{if(sessionStorage.getItem("cf-demo-gate")==="ok"){g.classList.add("hidden");return;}}catch(e){}
 var b=document.getElementById("demoGateBtn");
-b.addEventListener("click",function(){g.classList.add("hidden");try{sessionStorage.setItem("cf-demo-gate","ok");}catch(e){}});})();
+function close(){g.classList.add("hidden");document.removeEventListener("keydown",onKey);try{sessionStorage.setItem("cf-demo-gate","ok");}catch(e){}}
+function onKey(e){if(e.key==="Escape"){e.preventDefault();close();}else if(e.key==="Tab"){e.preventDefault();b.focus();}}
+try{if(sessionStorage.getItem("cf-demo-gate")==="ok"){g.classList.add("hidden");return;}}catch(e){}
+b.addEventListener("click",close);
+document.addEventListener("keydown",onKey);
+try{b.focus();}catch(e){}})();
 </script>
 
 <div class="ribbon">◐ MAQUETTE — espace livreur</div>
