@@ -63,6 +63,18 @@
         '</ul>' +
       '</div>' +
       '<div class="footer-col">' +
+        '<h2 class="footer-h">Autour de Tours</h2>' +
+        '<ul class="footer-list">' +
+          '<li><a href="/alternative-uber-eats-tours.html">Alternative à Uber Eats</a></li>' +
+          '<li><a href="/alternative-deliveroo-tours.html">Alternative à Deliveroo</a></li>' +
+          '<li><a href="/restaurant-sans-commission-tours.html">Restaurant sans commission</a></li>' +
+          '<li><a href="/commande-en-ligne-restaurant-tours.html">Commande en ligne</a></li>' +
+          '<li><a href="/click-and-collect-tours.html">Click and collect</a></li>' +
+          '<li><a href="/livraison-ethique-tours.html">Livraison éthique</a></li>' +
+          '<li><a href="/restaurants-tours-indre-et-loire.html">Tours &amp; Indre-et-Loire</a></li>' +
+        '</ul>' +
+      '</div>' +
+      '<div class="footer-col">' +
         '<h2 class="footer-h">Légal</h2>' +
         '<ul class="footer-list">' +
           '<li><a href="/confidentialite.html">Politique de confidentialité</a></li>' +
