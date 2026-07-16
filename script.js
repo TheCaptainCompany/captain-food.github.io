@@ -269,11 +269,13 @@
 
     if (smicEl) {
       if (ca > 0) {
-        var nb = commMonth / SMIC_EMPLOYER;
+        var moisEmploye = commYear / SMIC_EMPLOYER;
+        var moisTxt = moisEmploye < 1.5
+          ? moisEmploye.toLocaleString("fr-FR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })
+          : Math.round(moisEmploye).toLocaleString("fr-FR");
         smicEl.innerHTML =
-          "💡 Soit ≈ <strong>" +
-          nb.toLocaleString("fr-FR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) +
-          " SMIC brut employeur</strong>, chaque mois.";
+          "💡 De quoi employer quelqu'un ≈ <strong>" + moisTxt +
+          " mois</strong> au SMIC (charges comprises) — chaque année.";
       } else {
         smicEl.textContent = "";
       }
