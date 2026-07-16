@@ -45,6 +45,7 @@
           '<li><a href="' + sec + '#solution"><span class="fi" aria-hidden="true">⚙️</span> Comment</a></li>' +
           '<li><a href="' + sec + '#rejoindre"><span class="fi" aria-hidden="true">⚓</span> Rejoindre</a></li>' +
           '<li><a href="' + faqHref + '"><span class="fi" aria-hidden="true">❓</span> FAQ</a></li>' +
+          '<li><a href="/tarifs.html"><span class="fi" aria-hidden="true">🏷️</span> Tarifs (c\'est gratuit)</a></li>' +
           '<li><a href="/manifeste.html"><span class="fi" aria-hidden="true">📜</span> Le manifeste</a></li>' +
           '<li><a href="/financement.html"><span class="fi" aria-hidden="true">🧾</span> Comment on se finance&nbsp;?</a></li>' +
           '<li><a href="/livraison.html"><span class="fi" aria-hidden="true">🛵</span> La livraison, payée juste</a></li>' +

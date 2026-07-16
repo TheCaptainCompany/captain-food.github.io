@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarifs : c'est gratuit pour les restaurants — Captain.Food</title>
+  <meta
+    name="description"
+    content="Le tarif de Captain.Food pour les restaurants et food trucks : gratuit. 0 % de commission, 0 € d'abonnement, 0 frais caché. La plateforme vit de la contribution volontaire des clients."
+  />
+  <meta name="theme-color" content="#0e3a5f" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="canonical" href="https://join.captain.food/tarifs.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tarifs : c'est gratuit pour les restaurants" />
+  <meta property="og:description" content="0 % de commission, 0 € d'abonnement, 0 frais caché. Captain.Food est gratuit pour les restaurants ; la plateforme vit de la contribution volontaire des clients." />
+  <meta property="og:url" content="https://join.captain.food/tarifs.html" />
+  <meta property="og:site_name" content="Captain.Food" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="https://join.captain.food/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Captain.Food — Reprenons les commandes ! 0 commission, à Tours." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tarifs : c'est gratuit pour les restaurants" />
+  <meta name="twitter:description" content="0 % de commission, 0 € d'abonnement, 0 frais caché. La plateforme vit de la contribution volontaire des clients." />
+  <meta name="twitter:image" content="https://join.captain.food/assets/og.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .tarif-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--good);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1.6rem, 4vw, 2.8rem);
+      text-align: center;
+      max-width: 540px;
+      margin: 2.2rem auto 0;
+    }
+    .tarif-for {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+    .tarif-price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(4.5rem, 17vw, 7.5rem);
+      color: var(--good);
+      line-height: 0.95;
+      margin: 0.5rem 0 0.2rem;
+    }
+    .tarif-price-sub {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+    .tarif-list {
+      list-style: none;
+      margin: 1.8rem 0 0;
+      padding: 0;
+      text-align: left;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .tarif-list li {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      color: var(--ink);
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+    .tarif-list li::before {
+      content: "✓";
+      color: var(--good);
+      font-weight: 800;
+      flex: none;
+      font-size: 1.1rem;
+    }
+    .tarif-list strong { color: var(--navy); }
+    .tarif-cta { margin-top: 1.9rem; }
+    .tarif-catch {
+      max-width: 640px;
+      margin: 2.6rem auto 0;
+      background: var(--parchment-alt);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+    }
+    .tarif-catch h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+    .tarif-catch p { color: var(--ink-soft); }
+    .tarif-catch p + p { margin-top: 0.7rem; }
+    .tarif-note {
+      background: rgba(232, 97, 58, 0.1);
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin: 1.4rem 0 0;
+      color: var(--ink);
+    }
+    .tarif-faq { max-width: 640px; margin: 2.6rem auto 0; }
+    .tarif-actions { text-align: center; margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://join.captain.food/tarifs.html#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Combien coûte Captain.Food pour un restaurant ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rien. C'est gratuit pour les restaurants et food trucks : 0 % de commission sur tes plats, 0 € d'abonnement, 0 frais d'inscription ou d'installation, sans engagement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Y a-t-il un abonnement ou un forfait mensuel ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. Aucun abonnement, aucun forfait, aucun palier payant. Le tarif est le même pour tout le monde : gratuit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Si c'est gratuit, la plateforme vit de quoi ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De la contribution volontaire de ses utilisateurs : le client peut ajouter une contribution libre à sa commande s'il le souhaite (0 € possible, sans jugement). Jamais un pourcentage sur ta marge, jamais une surcharge imposée. Le projet est porté par une association à but non lucratif, avec le cap d'une coopérative (SCIC) et de l'agrément ESUS, visés."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Cloudflare Web Analytics (cookieless) -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a9fe368f9d994cf6b874cf584aada144"}'></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Captain.Food, accueil">
+        <img src="assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark" />
+        <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
+      </a>
+      <a class="btn btn-primary btn-sm nav-cta" href="index.html#rejoindre">Je rejoins</a>
+    </div>
+  </header>
+
+  <main id="contenu" class="section">
+    <div class="container narrow">
+      <p class="eyebrow eyebrow-center"><span aria-hidden="true">🏷️</span> Tarifs</p>
+      <h1 class="section-title">C'est gratuit. Point.</h1>
+      <p class="section-intro">
+        Tu cherches le prix&nbsp;? Il n'y en a pas. Captain.Food est
+        <strong>gratuit</strong> pour les restaurants et food trucks —
+        pas de commission, pas d'abonnement, pas de frais caché.
+      </p>
+
+      <!-- La carte "tarif" : la réponse, tout de suite -->
+      <div class="tarif-card">
+        <p class="tarif-for">Restaurants &amp; food trucks indépendants</p>
+        <p class="tarif-price">0&nbsp;€<span class="tarif-price-sub">pour toi, toujours</span></p>
+        <ul class="tarif-list">
+          <li><strong>0 % de commission</strong> sur tes plats — jamais un pourcentage sur ta marge.</li>
+          <li><strong>0 € d'abonnement</strong>, aucun forfait mensuel, aucun palier payant.</li>
+          <li><strong>0 € d'inscription</strong> et 0 frais d'installation.</li>
+          <li><strong>0 engagement</strong> — tu gardes Uber&nbsp;Eats &amp; Deliveroo en parallèle.</li>
+          <li><strong>Tes clients restent à toi</strong>, dès la première commande directe.</li>
+        </ul>
+        <div class="tarif-cta">
+          <a class="btn btn-primary btn-block" href="index.html#rejoindre">Je rejoins les restaurateurs libres</a>
+        </div>
+      </div>
+
+      <p class="tarif-note">
+        ⚓ <strong>Rien n'est encore construit.</strong> Captain.Food démarre à Tours,
+        avec ses premiers restaurateurs. Le modèle est clair dès le départ&nbsp;:
+        gratuit pour toi, pour de vrai.
+      </p>
+
+      <!-- Le "piège" : il n'y en a pas -->
+      <div class="tarif-catch">
+        <h2>« Gratuit… c'est quoi le piège&nbsp;? »</h2>
+        <p>
+          Aucun. La plateforme vit de la <strong>contribution volontaire de ses
+          utilisateurs</strong>&nbsp;: au moment de commander, le client peut ajouter
+          une contribution libre à son panier s'il le souhaite —
+          <strong>0 € possible, sans jugement</strong>. C'est un pari&nbsp;: celui que
+          des clients informés préfèrent soutenir leur commerce local plutôt qu'une
+          multinationale.
+        </p>
+        <p>
+          Toi, tu ne paies rien&nbsp;: jamais un pourcentage sur ta marge, jamais une
+          surcharge qu'on ajouterait à ta place. Le projet est porté par une
+          <strong>association à but non lucratif</strong>, construit pour ne jamais
+          pouvoir se transformer en péage.
+          <a href="financement.html">Comment on se finance, en clair →</a>
+        </p>
+      </div>
+
+      <!-- Ancrage : pendant ce temps, une plateforme te prend combien ? -->
+      <p class="ratio-punch" style="margin-top:2.6rem;">
+        Pendant qu'une plateforme prélève jusqu'à <b>10×</b> ta marge, ici c'est
+        <b>0&nbsp;€</b>. <a href="index.html#probleme">Chiffre ta perte actuelle →</a>
+      </p>
+
+      <!-- FAQ -->
+      <div class="tarif-faq">
+        <h2 class="section-title" style="font-size:1.5rem;">Les questions qu'on nous pose</h2>
+        <div class="faq">
+          <details>
+            <summary>C'est vraiment 100 % gratuit pour mon restaurant&nbsp;?</summary>
+            <p>
+              Oui. 0 % de commission sur tes plats, 0 € d'abonnement, 0 frais
+              d'inscription ou d'installation, sans engagement. Le tarif est le même
+              pour tout le monde&nbsp;: gratuit.
+            </p>
+          </details>
+          <details>
+            <summary>Y a-t-il un abonnement ou un forfait caché&nbsp;?</summary>
+            <p>
+              Non. Aucun abonnement, aucun forfait, aucun palier payant «&nbsp;premium&nbsp;».
+              Ce qui se paie dans ta caisse habituelle (sur place, au comptoir), on n'y
+              touche pas non plus.
+            </p>
+          </details>
+          <details>
+            <summary>Alors, vous vivez de quoi&nbsp;?</summary>
+            <p>
+              De la contribution volontaire des clients, ajoutée à leur commande s'ils
+              le veulent (0 € possible). Jamais sur ton dos.
+              <a href="financement.html">Voir le détail complet, exemple à l'appui.</a>
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <div class="tarif-actions">
+        <a class="btn btn-primary" href="index.html#rejoindre">Je rejoins les restaurateurs libres</a>
+        <a class="btn btn-wa" href="https://community.captain.food" target="_blank" rel="noopener">Rejoindre le WhatsApp</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" data-shared-footer>
+    <noscript>
+      <div class="container footer-bottom">
+        <p><a href="/">Accueil</a> · <a href="/tarifs.html">Tarifs</a> · <a href="/financement.html">Comment on se finance ?</a> · <a href="/manifeste.html">Le manifeste</a> · <a href="/index.html#faq">Questions fréquentes</a> · <a href="/mentions-legales.html">Mentions légales</a><br>© 2026 Captain.Food — Projet indépendant en construction à Tours.</p>
+      </div>
+    </noscript>
+  </footer>
+  <script src="/partials.js"></script>
+</body>
+</html>
