@@ -387,9 +387,46 @@
   .cf-status.err{color:#c0392b}
   .cf-home{display:block;text-align:center;margin-top:22px;font-size:12.5px;color:var(--ink-soft);text-decoration:none}
   .cf-home:hover{color:var(--navy)}
+
+  /* ===== Gate d'avertissement maquette (LOT 6) ===== */
+  .demo-gate{position:fixed;inset:0;z-index:1000;background:rgba(10,41,66,.72);display:flex;align-items:center;justify-content:center;padding:20px}
+  .demo-gate.hidden{display:none}
+  .demo-gate-card{background:var(--paper);color:var(--ink);max-width:400px;width:100%;border-radius:20px;padding:26px 24px;box-shadow:0 20px 60px rgba(0,0,0,.4);text-align:center}
+  .demo-gate-emo{font-size:40px}
+  .demo-gate-card h2{font-family:var(--font-display);color:var(--navy);font-size:24px;margin:6px 0 10px}
+  .demo-gate-card p{font-size:14px;color:var(--ink-soft);line-height:1.55}
+  .demo-gate-card ul{text-align:left;margin:14px auto;padding-left:20px;max-width:320px}
+  .demo-gate-card li{font-size:13.5px;color:var(--ink-soft);line-height:1.5;margin-bottom:6px}
+  .demo-gate-card strong{color:var(--navy)}
+  .demo-gate-note{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:6px}
+  .demo-gate-btn{margin-top:18px;width:100%;border:none;cursor:pointer;font-weight:700;font-size:15px;padding:14px;border-radius:13px;background:var(--navy);color:#fff;font-family:var(--font-body)}
+  .demo-gate-btn:active{transform:translateY(1px)}
 </style>
 </head>
 <body>
+
+<!-- Gate d'avertissement maquette (LOT 6) -->
+<div class="demo-gate" id="demoGate" role="dialog" aria-modal="true" aria-labelledby="demoGateTitle">
+  <div class="demo-gate-card">
+    <div class="demo-gate-emo" aria-hidden="true">⚓</div>
+    <h2 id="demoGateTitle">C'est une maquette</h2>
+    <p>Tu regardes une <strong>maquette de démonstration</strong> de Captain.Food.
+      <strong>Rien n'est encore construit.</strong></p>
+    <ul>
+      <li>« Chez Marco » et les autres noms affichés sont <strong>fictifs</strong>.</li>
+      <li>Aucun paiement réel, aucune commande réelle.</li>
+      <li>Aucune donnée n'est collectée pendant que tu explores.</li>
+    </ul>
+    <p class="demo-gate-note">C'est là qu'on a besoin de toi : dis-nous ce qui marche et ce qui manque (formulaire en bas de page).</p>
+    <button type="button" class="demo-gate-btn" id="demoGateBtn">J'ai compris</button>
+  </div>
+</div>
+<script>
+(function(){var g=document.getElementById("demoGate");if(!g)return;
+try{if(sessionStorage.getItem("cf-demo-gate")==="ok"){g.classList.add("hidden");return;}}catch(e){}
+var b=document.getElementById("demoGateBtn");
+b.addEventListener("click",function(){g.classList.add("hidden");try{sessionStorage.setItem("cf-demo-gate","ok");}catch(e){}});})();
+</script>
 
 <div class="ribbon">◐ MAQUETTE — démo</div>
 <button class="restart" onclick="restart()">↻ Recommencer</button>
