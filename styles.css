@@ -8,6 +8,10 @@
 
 /* ---------- Tokens ---------- */
 :root {
+  /* Le site est conçu en palette claire (parchemin). On le déclare
+     explicitement pour que les navigateurs en mode sombre n'inversent pas
+     la page (sinon l'en-tête devient foncé et le logo sombre disparaît). */
+  color-scheme: light;
   --navy: #0e3a5f;         /* haute mer */
   --navy-deep: #0a2b46;
   --gold: #e0a12b;         /* laiton / boussole */
