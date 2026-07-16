@@ -210,9 +210,9 @@
   el.textContent = lines[Math.floor(Math.random() * lines.length)];
 })();
 
-/* Commission simulator — pick a platform preset (sets the rate), enter monthly
-   revenue, and a dynamic camembert shows where each euro goes: in %, and in
-   €/month + €/year per slice. Hands the numbers to the pilot form on click. */
+/* Commission simulator — pick a platform preset (sets the rate) or edit it,
+   enter monthly revenue, and see what the commission costs per month and per
+   year (+ its SMIC equivalent). Hands the numbers to the pilot form on click. */
 (function () {
   "use strict";
   var root = document.querySelector("[data-calc]");
@@ -223,7 +223,7 @@
   var cta = root.querySelector("[data-calc-cta]");
   var smicEl = root.querySelector("[data-smic]");
   var rateEl = document.getElementById("calc-rate");
-  if (!caEl) return;
+  if (!caEl || !punch) return;
 
   var rate = 30; // active commission rate (from the selected platform preset)
   // Employer cost of a full-time SMIC, 2026 (SMIC brut 1 867,02 € + residual
@@ -319,11 +319,12 @@
       if (srcField) srcField.value = "calculateur";
       var mot = document.getElementById("mot");
       var ca = num(caEl);
-      var commMonth = (ca * rate) / 100;
+      var r = currentRate();
+      var commMonth = (ca * r) / 100;
       if (mot && commMonth > 0 && !mot.value.trim()) {
         mot.value =
           "Via le calculateur : CA " + euro.format(ca) + "/mois sur la plateforme, " +
-          "commission ~" + rate + " % = " + euro.format(commMonth) + "/mois (" +
+          "commission ~" + r + " % = " + euro.format(commMonth) + "/mois (" +
           euro.format(commMonth * 12) + "/an).";
       }
     });
