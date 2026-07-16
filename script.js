@@ -219,14 +219,12 @@
   if (!root) return;
 
   var caEl = document.getElementById("calc-ca");
-  var pie = root.querySelector("[data-pie]");
   var punch = root.querySelector("[data-punch]");
   var cta = root.querySelector("[data-calc-cta]");
   var smicEl = root.querySelector("[data-smic]");
   var rateEl = document.getElementById("calc-rate");
-  if (!caEl || !pie) return;
+  if (!caEl) return;
 
-  var COST = 65; // % — illustrative restaurant cost share (EARN, 2024)
   var rate = 30; // active commission rate (from the selected platform preset)
   // Employer cost of a full-time SMIC, 2026 (SMIC brut 1 867,02 € + residual
   // employer charges after réduction générale). Source: service-public.gouv.fr.
@@ -250,39 +248,10 @@
     if (v > 100) v = 100;
     return v;
   }
-  function setText(sel, txt) {
-    var e = root.querySelector(sel);
-    if (e) e.textContent = txt;
-  }
 
   function compute() {
     var ca = num(caEl);
     var comm = currentRate();
-    var cost = COST;
-    var marge = Math.max(0, 100 - comm - cost);
-
-    var a1 = comm * 3.6;
-    var a2 = (comm + cost) * 3.6;
-    pie.style.background =
-      "conic-gradient(var(--c-comm) 0 " + a1 + "deg, var(--c-cout) " + a1 +
-      "deg " + a2 + "deg, var(--c-marge) " + a2 + "deg 360deg)";
-    pie.setAttribute(
-      "aria-label",
-      "Commission " + comm + " %, tes couts " + cost + " %, ta marge " + marge + " %."
-    );
-
-    setText('[data-pct="comm"]', comm + " %");
-    setText('[data-pct="cout"]', "~" + cost + " %");
-    setText('[data-pct="marge"]', marge + " %");
-
-    function amt(key, pct) {
-      var m = (ca * pct) / 100;
-      setText('[data-m="' + key + '"]', ca > 0 ? euro.format(m) : "—");
-      setText('[data-y="' + key + '"]', ca > 0 ? euro.format(m * 12) : "—");
-    }
-    amt("comm", comm);
-    amt("cout", cost);
-    amt("marge", marge);
 
     var commMonth = (ca * comm) / 100;
     if (ca > 0) {

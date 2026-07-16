@@ -2271,3 +2271,15 @@ section[id],
 @media (max-width: 720px) {
   .mockup-cards { grid-template-columns: 1fr; }
 }
+
+/* ---------- Calculateur : encart marge vs commission (remplace le camembert) ---------- */
+.calc-insight {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.15rem;
+  margin: 0.5rem 0 0.25rem;
+}
+.calc-insight p { margin: 0; color: var(--ink); font-size: 1rem; line-height: 1.5; }
+.calc-insight .calc-insight-kick { margin-top: 0.5rem; color: var(--good); font-weight: 600; }
