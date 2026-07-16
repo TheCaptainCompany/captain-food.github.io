@@ -385,6 +385,7 @@
   .cf-status{font-size:13px;font-weight:600;margin-top:12px;text-align:center}
   .cf-status.ok{color:var(--green)}
   .cf-status.err{color:#c0392b}
+  .cf-direct{display:block;text-align:center;margin-top:10px;font-size:13px;color:var(--navy);text-decoration:underline}
   .cf-home{display:block;text-align:center;margin-top:22px;font-size:12.5px;color:var(--ink-soft);text-decoration:none}
   .cf-home:hover{color:var(--navy)}
 
@@ -609,7 +610,8 @@ b.addEventListener("click",function(){g.classList.add("hidden");try{sessionStora
     <h2 class="cf-title">Cette maquette est une ébauche. Aide-nous à la finir.</h2>
     <p class="cf-lead">Ce que tu viens de tester n'est pas le produit final : c'est une <b>maquette cliquable</b> pour décider ensemble à quoi ressemblera Captain.Food. Dis-nous ce qui te plaît, ce qui manque, ce qui te gênerait au quotidien.</p>
     <a class="cf-btn cf-btn-wa" href="https://community.captain.food" target="_blank" rel="noopener">💬 Rejoindre la communauté WhatsApp</a>
-    <form class="cf-form" action="https://formspree.io/f/REMPLACER_ID_CLIENT" method="POST">
+    <a class="cf-direct" href="https://wa.me/message/LTDD42WUFXINA1" target="_blank" rel="noopener">ou discute directement avec nous →</a>
+    <form class="cf-form" action="https://formspree.io/f/mvzezyal" method="POST">
       <input type="hidden" name="maquette" value="Client — parcours de commande">
       <label class="cf-lbl" for="cf-msg">Ton retour sur la maquette « client »</label>
       <textarea id="cf-msg" name="message" rows="4" required placeholder="Ce que tu aimes, ce qui manque, une idée…"></textarea>
