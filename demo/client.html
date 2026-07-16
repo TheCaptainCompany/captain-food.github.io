@@ -95,7 +95,7 @@
     display: flex; align-items: center; justify-content: center;
   }
   .topbar .back:active { background: rgba(255,255,255,.25); }
-  .topbar h1 { font-family: var(--font-body); font-size: 16px; font-weight: 600; letter-spacing: .2px; }
+  .topbar h1, .topbar h2 { font-family: var(--font-body); font-size: 16px; font-weight: 600; letter-spacing: .2px; }
   .topbar .spacer { flex: 1; }
   .topbar .cart-pill {
     background: var(--gold); color: var(--navy-deep);
@@ -435,7 +435,7 @@ try{b.focus();}catch(e){}})();
 
 <div class="ribbon">◐ MAQUETTE — démo</div>
 <button class="restart" onclick="restart()">↻ Recommencer</button>
-<div class="stage">
+<div class="stage" role="main">
   <div class="phone" id="phone">
 
     <!-- ============ SCREEN 1 : MENU ============ -->
@@ -482,7 +482,7 @@ try{b.focus();}catch(e){}})();
     <section class="screen" id="s-cart">
       <div class="topbar">
         <button class="back" onclick="go('menu')">‹</button>
-        <h1>Ma commande</h1>
+        <h2>Ma commande</h2>
       </div>
 
       <div class="scroll">
@@ -528,7 +528,7 @@ try{b.focus();}catch(e){}})();
     <section class="screen" id="s-pay">
       <div class="topbar">
         <button class="back" onclick="go('cart')">‹</button>
-        <h1>Paiement</h1>
+        <h2>Paiement</h2>
       </div>
 
       <div class="scroll">
@@ -845,5 +845,6 @@ document.querySelectorAll(".cf-form").forEach(function(f){
   });
 });
 </script>
+<script src="a11y.js"></script>
 </body>
 </html>
