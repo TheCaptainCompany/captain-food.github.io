@@ -1,18 +1,22 @@
-# Captain.Food — landing page
+# Captain.Food — marketing site
 
-First public landing page for **Captain.Food**, an early-stage project building
-a local, ethical alternative to extractive food-delivery platforms. The page's
-single job is to validate local market interest and start a community by
-collecting qualified contact requests from **independent restaurants and food
-trucks in Tours, France**.
+Public marketing site for **Captain.Food**, an early-stage project building a
+local, ethical, **0 %-commission** alternative to extractive food-delivery
+platforms, as a **digital public good**. The site's job is to validate local
+interest and grow a community by collecting contact requests from **independent
+restaurants and food trucks in Tours, France**, and to explain the model
+honestly.
 
-- **Live domain:** https://captain.food
+- **Live domain:** https://join.captain.food
+  (the apex `captain.food` and `www` **301-redirect** to `join.captain.food`)
 - **Hosting:** GitHub Pages (org `Captain-Food`, repo `captain-food.github.io`)
+- **Product code (the app itself):** https://github.com/Captain-Food/captain-food
 - **Stack:** static site — plain hand-written HTML/CSS/JS, **no framework, no
-  build step**. Just open `index.html`.
+  build step**. A shared footer + floating WhatsApp button are injected on every
+  page by `partials.js` (single source of truth).
 
 > All source comments and docs are in English. All visible page copy is in
-> French, by design.
+> French, by design (tutoiement, direct tone, maritime "Captain" identity).
 
 ## License & brand
 
@@ -33,154 +37,138 @@ project, product or service, nor in any way that suggests affiliation with or
 endorsement by Captain.Food. Any reuse of the brand requires prior written
 permission. (This is separate from, and not waived by, the code license above.)
 
+## Project status & honesty rules
+
+The product is **not built yet** — the site presents everything as a roadmap
+("on démarre", "à venir", "avec les premiers restos"), never as a live service.
+A few rules are baked into the copy and must be preserved:
+
+- **Legal structure.** The publisher is the **association Caring Hope Foundation**
+  (loi 1901, RNA `W372020229`). **ESUS accreditation and the SCIC cooperative
+  are goals ("visés"), not acquired** — never state them as current facts.
+- **Figures are sourced or illustrative.** Only sourced numbers are used: net
+  margin ~3 % (Observatoire Fiducial, UMIH/GHR/SNARR 2025); ~8 000 restaurant
+  insolvencies in France in 2024, +80 % over two years (Altares 2024); platform
+  commission Uber Eats ~25-35 %, Deliveroo ~25-30 % (public ranges). Every
+  worked example is labelled *illustratif*.
+- **Funding model.** Free for restaurants: 0 % commission, no subscription, no
+  hidden fee. The platform runs on **voluntary contributions** from customers
+  (0 € possible). If that isn't enough, a transparent fallback ("plan B") shares
+  real costs **at cost** (a small per-order operating fee for customers — any
+  overpayment stays a contribution — and a fixed share for restaurateurs,
+  spread across how many have joined), meant to disappear if the model works.
+  **Never a commission, never a card surcharge** (a card surcharge would breach
+  art. L112-12 CMF / PSD2).
+- **No pricing grid.** It's a **digital public good, open source** — not a
+  commercial product with tiers.
+- **No fake testimonials, logos, metrics or traction.** No named-competitor
+  denigration — compare models, not brands.
+
 ## File structure
 
 ```
 captain-food.github.io/
-├── index.html            # landing page (all sections)
-├── styles.css            # hand-written CSS (brand tokens as CSS variables)
-├── script.js             # form validation + Formspree submission
-├── confidentialite.html  # RGPD privacy notice (real French copy)
-├── mentions-legales.html # legal notice scaffold (placeholders to fill in)
-├── assets/
-│   ├── logo.png          # brand mark (skull-toque), transparent, header/nav
-│   ├── favicon.png       # 64px browser-tab icon (same mark)
-│   └── captain.png       # Captain Food hero portrait (transparent cutout)
-├── CNAME                 # custom domain: captain.food
-└── README.md
+├── index.html                          # landing (hero, calculator, model, FAQ, join form, mockups)
+├── tarifs.html                         # pricing page — "c'est gratuit" + transparent plan B
+├── manifeste.html                      # the founder's manifesto
+├── financement.html                    # how it's funded (0 % commission, contribution, plan B)
+├── livraison.html                      # delivery model (a future channel)
+├── mentions-legales.html               # legal notice (siège + directeur still to fill in)
+├── confidentialite.html                # RGPD privacy notice (real French copy)
+├── 404.html                            # not-found page
+│   # SEO intent pages (indexable):
+├── alternative-uber-eats-tours.html
+├── alternative-deliveroo-tours.html
+├── restaurant-sans-commission-tours.html
+├── commande-en-ligne-restaurant-tours.html
+├── click-and-collect-tours.html
+├── livraison-ethique-tours.html
+├── restaurants-tours-indre-et-loire.html   # local hub (Tours + communes)
+├── demo/                               # clickable throwaway mockups (noindex)
+│   ├── index.html                      # chooser: client / resto / livreur
+│   ├── client.html  resto.html  livreur.html
+│                                       # each: warning gate + community feedback form
+├── styles.css                          # hand-written CSS (brand tokens as CSS variables)
+├── script.js                           # form validation + Formspree, calculator, scrollspy, etc.
+├── partials.js                         # shared footer + floating WhatsApp button (injected)
+├── sitemap.xml  robots.txt  llms.txt   # SEO + AI-crawler discovery
+├── .github/workflows/indexnow.yml      # pings IndexNow on push (host: join.captain.food)
+├── 00f1c06…3f8b7.txt                   # IndexNow verification key
+├── assets/                             # logo.png, favicon.png, og.png + captain-*.webp/png art
+├── prospection/                        # A5 flyer (HTML + PDF) + QR code
+├── LICENSE.md  LICENSES/AGPL-3.0.txt   # Captain.Food Coopyleft License (verbatim)
+├── CNAME                               # custom domain: join.captain.food
+└── .claude/                            # Claude Code tooling that travels with the repo
+    ├── agents/                         # vendored subagents (incl. custom "Yan" neuromarketing)
+    ├── skills/frontend-design/         # Anthropic frontend-design skill
+    └── commands/ + plugins/            # /code-review command (Anthropic plugin)
 ```
+
+Docs kept in the repo: `content.md` (copy notes) and
+`captain-food-brief-direction-artistique.md` (art direction brief).
 
 ## Local preview
 
-No build needed. Either open `index.html` directly, or serve the folder:
+No build needed. Serve the folder (so `fetch`, relative links and `partials.js`
+behave as in production):
 
 ```bash
 python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-Serving over HTTP (rather than `file://`) is recommended so the form `fetch`
-and relative links behave exactly as in production.
+## Forms (Formspree)
 
----
+- **Join form** (`index.html`, `#rejoindre`): Formspree `xqevrjwp`.
+- **Mockup feedback forms** (`demo/`): `mvzezyal` (client), `mrenedqv` (resto),
+  `mnjejrde` (livreur).
 
-## TODO checklist before go-live
+`script.js` guards against a `PLACEHOLDER_ID` action (shows a friendly "email us
+instead" message) in case an ID is ever reset. After first deploy, submit each
+form once and confirm the address in the Formspree dashboard so submissions
+aren't held for verification.
 
-These are the placeholders wired into the code. Search the repo for `TODO` and
-`PLACEHOLDER` to find them all.
+## SEO & discovery
 
-### 1. Formspree (contact form) — ✅ connected
+- `sitemap.xml` lists every indexable page (URLs on `join.captain.food`).
+- `robots.txt` allows everyone, incl. named AI crawlers (GPTBot, ClaudeBot,
+  PerplexityBot…), and points to the sitemap.
+- `llms.txt` gives LLMs a concise, linkable overview.
+- **IndexNow**: `.github/workflows/indexnow.yml` submits the sitemap URLs to
+  IndexNow engines (Bing, etc.) on every push that touches `*.html` or
+  `sitemap.xml`. Host is `join.captain.food`; the key file is the `…​.txt` at the
+  repo root. (Google doesn't use IndexNow — use Search Console for Google.)
+- The `demo/` mockups are `noindex` (throwaway prototypes with a fictional
+  restaurant).
 
-The contact form posts to Formspree form `xqevrjwp`
-(`action="https://formspree.io/f/xqevrjwp"` in `index.html`). To change it,
-swap that ID. Submit the form once from the live site and confirm the email in
-the Formspree dashboard so submissions aren't held for verification.
+## Analytics
 
-`script.js` still guards against a `PLACEHOLDER_ID` action (shows a friendly
-"email us instead" message) in case the ID is ever reset.
-
-### 2. Contact & social links
-
-All footer contact links are set (update in `index.html` if any change):
-
-- **Email:** `miam@captain.food`
-- **WhatsApp community:** `https://community.captain.food`
-- **Instagram:** `https://www.instagram.com/captain.food__`
-- **LinkedIn:** `https://www.linkedin.com/company/captain-food-coop/`
-- **Facebook:** `https://facebook.com/captain.food.coop`
-
-### 3. Brand assets (already in place)
-
-The real Captain Food art is wired in:
-
-- `assets/logo.png` — the skull-toque mark, whitespace trimmed and background
-  made transparent, used in every page header and as the base for the favicon.
-- `assets/favicon.png` — 64 px browser-tab icon (same mark).
-- `assets/captain.png` — the Captain Food portrait shown in the hero, cut
-  out from the character sheet with a transparent background (~170 KB).
-
-To update any of them, replace the file at the same path to keep all references
-working (logo is referenced in `index.html`, `confidentialite.html`,
-`mentions-legales.html`; captain in `index.html`). Keep the logo roughly square
-and readable at 32 px.
-
-> **IP note:** the brand art is illustrative and stylistically close to
-> well-known manga/anime. Before Captain.Food goes fully public and commercial,
-> confirm the rights to these images are cleared for commercial use.
-
-### 4. Fill in the legal notice
-
-`mentions-legales.html` contains clearly-marked `[À COMPLÉTER — …]` placeholders
-(raison sociale, forme juridique, SIRET, siège social, directeur de la
-publication). Fill these in as soon as the legal structure exists. The host
-block (GitHub Pages / GitHub, Inc.) is already complete.
-
-The privacy notice (`confidentialite.html`) is real, working French RGPD copy.
-Review the retention period (currently 24 months) and the data-contact address
-(`miam@captain.food`) and adjust if needed.
-
-### 5. Analytics — ✅ Cloudflare Web Analytics (cookieless)
-
-**Cloudflare Web Analytics** is enabled on every page (`index`, `manifeste`,
-`financement`, `confidentialite`, `mentions-legales`, `404`) via the beacon
-snippet in each `<head>`. It's cookieless and GDPR-friendly, so **no cookie
-banner is required**. No Google Analytics (would need a consent banner).
-
-To change/rotate the site token, update the `data-cf-beacon` token in the
-`<head>` of each page. View stats in the Cloudflare dashboard → Web Analytics.
-
----
+**Cloudflare Web Analytics** (cookieless, no cookie banner required) is enabled
+in the `<head>` of every content page. No Google Analytics. To rotate the token,
+update the `data-cf-beacon` token in each page's `<head>`.
 
 ## Deploy to GitHub Pages with the custom domain
 
-The repo name `captain-food.github.io` is an org site, so Pages serves it at the
-root.
+1. **Source branch:** repo **Settings → Pages → Build and deployment** → deploy
+   from the chosen branch, `/ (root)`.
+2. **Custom domain:** the `CNAME` file already contains `join.captain.food`, which
+   sets the Pages custom domain automatically.
+3. **DNS** (at the registrar for `captain.food`):
+   - `join.captain.food` → **CNAME** → `captain-food.github.io`
+   - the apex `captain.food` and `www` → **301 redirect** to
+     `https://join.captain.food` (registrar/CDN redirect).
+4. **Enforce HTTPS:** tick **Settings → Pages → Enforce HTTPS** once the
+   certificate is provisioned.
 
-1. **Push to the default branch** (or set Pages to build from your chosen
-   branch): repo **Settings → Pages → Build and deployment → Source:** "Deploy
-   from a branch", pick the branch and `/ (root)` folder.
-2. **Custom domain:** the `CNAME` file in this repo already contains
-   `captain.food`, which sets the custom domain automatically. You can also set
-   it under **Settings → Pages → Custom domain**.
-3. **DNS** (at your domain registrar for `captain.food`): point the apex domain
-   at GitHub Pages with four `A` records:
-   ```
-   185.199.108.153
-   185.199.109.153
-   185.199.110.153
-   185.199.111.153
-   ```
-   (and optionally the matching `AAAA` records for IPv6). If you also want
-   `www`, add a `CNAME` record `www → captain-food.github.io`.
-4. **Enforce HTTPS:** once DNS propagates, tick **Settings → Pages → Enforce
-   HTTPS**. GitHub provisions the TLS certificate automatically.
+## Still to complete (legal)
 
-Allow up to a few hours for DNS + certificate propagation on first setup.
+`mentions-legales.html` reflects the real publisher (association Caring Hope
+Foundation, RNA W372020229) but still needs the **siège social** (a
+non-personal address) and the **directeur de la publication**. Fill these in as
+soon as they're settled. The host block (GitHub Pages / GitHub, Inc.) is
+complete. The privacy notice (`confidentialite.html`) is real, working French
+RGPD copy — review the retention period (currently 24 months) if needed.
 
----
-
-## Content & honesty notes
-
-- All euro figures on the page (30 € basket, 21 € / 27 € kept, ~38 € vs 36,99 €,
-  the monthly `+600 €`) are **illustrative examples** to explain the model — not
-  a fixed tariff. This is stated explicitly on the page ("Exemple illustratif",
-  fine print). Keep it that way: no formula is published, only the principle.
-- No fake testimonials, metrics, or traction. The page frames Captain.Food
-  honestly as an early pilot being built with Tours restaurateurs.
-- **Why the "prix libre" claim is credible.** The pay-what-you-want (PWYW)
-  model is supported by 15+ years of academic research (e.g. Kim/Natter/Spann
-  2009, Gneezy et al. 2012, meta-analyses by Gerpott 2016 and Greiff/Egbert
-  2018) and real cases (the Wiener Deewan restaurant on PWYW since 2005,
-  museums, Wikipedia). The research-backed success factors — a displayed
-  **reference/anchor price**, **transparent cost communication**, and a
-  genuine **prosocial / common-good** purpose — are reflected in the copy and
-  in the non-profit structure. The page states these as principle, not as a
-  published tariff or a guaranteed outcome.
-- **Legal-status wording.** Captain.Food launches as a **SASU with ESUS
-  accreditation** (Entreprise Solidaire d'Utilité Sociale) and aims to become a
-  **SCIC** (Société Coopérative d'Intérêt Collectif) — a multi-stakeholder
-  cooperative where restaurateurs, riders and citizens hold governance rights.
-  The engagement band states the SCIC step as a goal ("avec pour cap de devenir
-  une SCIC"), not a done deal. Keep it phrased as a trajectory until the
-  conversion actually happens; ESUS is an accreditation to hold, not a claim to
-  make loosely.
+> **Brand-art IP note:** the Captain illustrations are stylistically close to
+> well-known manga/anime. Before Captain.Food goes fully commercial, confirm the
+> rights to these images are cleared.
