@@ -2022,13 +2022,14 @@ section[id],
 .calc-plat {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.6rem 1rem;
+  gap: 0.85rem;
+  padding: 1.05rem 1.8rem;
   border: 2px solid var(--line);
   border-radius: 999px;
   background: var(--white);
   font-family: var(--font-display);
   font-weight: 600;
+  font-size: 1.18rem;
   color: var(--ink);
   cursor: pointer;
   transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
@@ -2043,18 +2044,18 @@ section[id],
   box-shadow: 0 4px 14px rgba(10, 30, 50, 0.1);
 }
 .calc-plat-logo {
-  width: 22px;
-  height: 22px;
+  width: 34px;
+  height: 34px;
   flex: none;
   color: var(--plat);
 }
 .calc-plat-rate {
   font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.82rem;
+  font-weight: 700;
+  font-size: 0.98rem;
   color: var(--ink-soft);
   background: var(--parchment-alt);
-  padding: 0.1rem 0.5rem;
+  padding: 0.2rem 0.7rem;
   border-radius: 999px;
 }
 .calc-plat.is-active .calc-plat-rate {
@@ -2070,13 +2071,54 @@ section[id],
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-.calc-punch {
+/* Zone "perte" : le montant annuel domine visuellement (aversion à la perte) */
+.calc-loss {
   text-align: center;
-  font-size: 1.08rem;
-  margin-top: 1.4rem;
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
 }
-.calc-punch strong {
-  color: var(--orange-dark);
+.calc-loss .loss-lead {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+}
+.calc-loss .loss-big {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 12vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #ff7a5c;
+  text-shadow: 0 2px 22px rgba(255, 90, 60, 0.3);
+}
+.calc-loss .loss-unit {
+  font-size: 0.32em;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.72);
+}
+.calc-loss .loss-sub {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin-top: 0.35rem;
+}
+.calc-loss .loss-empty {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+.calc-habitues {
+  text-align: center;
+  margin: 1.3rem 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #eafff3;
+}
+.calc-habitues strong {
+  color: #7ee0a8;
 }
 
 /* ---------- Simulator lead heading + SMIC measure ---------- */
@@ -2172,18 +2214,6 @@ section[id],
 @media (max-width: 720px) {
   .mockup-cards { grid-template-columns: 1fr; }
 }
-
-/* ---------- Calculateur : encart marge vs commission (remplace le camembert) ---------- */
-.calc-insight {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--orange);
-  border-radius: var(--radius-sm);
-  padding: 1rem 1.15rem;
-  margin: 0.5rem 0 0.25rem;
-}
-.calc-insight p { margin: 0; color: var(--ink); font-size: 1rem; line-height: 1.5; }
-.calc-insight .calc-insight-kick { margin-top: 0.5rem; color: var(--good); font-weight: 600; }
 
 /* ---------- Hero : bandeau de stats (Axe 1) ---------- */
 .hero-stats {

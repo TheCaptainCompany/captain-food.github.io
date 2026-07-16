@@ -254,13 +254,17 @@
     var comm = currentRate();
 
     var commMonth = (ca * comm) / 100;
+    var commYear = commMonth * 12;
     if (ca > 0) {
       punch.innerHTML =
-        "Cette plateforme te prend <strong>" + euro.format(commMonth) +
-        " / mois</strong>, soit <strong>" + euro.format(commMonth * 12) +
-        " / an</strong> — souvent plus que toute ta marge.";
+        '<span class="loss-lead">Cette plateforme t\'arrache</span>' +
+        '<span class="loss-big">' + euro.format(commYear) +
+        '<span class="loss-unit"> / an</span></span>' +
+        '<span class="loss-sub">soit ' + euro.format(commMonth) +
+        ' / mois \u2014 souvent plus que toute ta marge.</span>';
     } else {
-      punch.textContent = "Entre ton chiffre d'affaires mensuel pour voir le calcul.";
+      punch.innerHTML =
+        '<span class="loss-empty">Entre ton chiffre d\'affaires mensuel pour voir ce que la commission t\'arrache.</span>';
     }
 
     if (smicEl) {
