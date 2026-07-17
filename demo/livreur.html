@@ -86,7 +86,7 @@
   .ride-pay .p{font-size:20px;font-weight:800;color:var(--green)}
   .ride-pay .pl{font-size:10px;color:var(--ink-soft)}
   /* route */
-  .route{padding:4px 15px 10px}
+  .route{padding:4px 15px 10px;position:relative}
   .stop{display:flex;gap:11px;align-items:flex-start;position:relative;padding:6px 0}
   .stop .pin{width:22px;flex:none;text-align:center;font-size:14px;z-index:1}
   .stop .si{font-size:13px}
@@ -258,7 +258,6 @@
         <div class="cs-hint" id="cs-hint">Le client voit ce code sur son écran de confirmation.</div>
         <div style="display:flex;gap:9px;margin-top:16px">
           <button class="cs-btn no" onclick="closeCode()">Annuler</button>
-          <button class="cs-btn yes" onclick="validateCode()">Valider la remise</button>
         </div>
       </div>
     </div>
@@ -399,6 +398,10 @@ document.addEventListener("input",e=>{
   const cells=[...document.querySelectorAll(".code-cell")];
   const i=cells.indexOf(e.target);
   if(e.target.value && i<3) cells[i+1].focus();
+  // Dès que les 4 chiffres sont saisis, on valide automatiquement :
+  // code correct → remise confirmée et sheet fermée (pas de bouton à cliquer),
+  // code faux → message d'erreur, et on revalide à la prochaine correction.
+  if(cells.every(c=>c.value)) setTimeout(validateCode,150);
 });
 document.addEventListener("keydown",e=>{
   if(!e.target.classList.contains("code-cell"))return;
