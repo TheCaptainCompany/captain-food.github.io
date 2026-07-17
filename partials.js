@@ -44,6 +44,7 @@
           '<li><a href="' + sec + '#probleme"><span class="fi" aria-hidden="true">🧭</span> Constat</a></li>' +
           '<li><a href="' + sec + '#combat"><span class="fi" aria-hidden="true">🍴</span> Solution</a></li>' +
           '<li><a href="' + sec + '#solution"><span class="fi" aria-hidden="true">⚙️</span> Comment</a></li>' +
+          '<li><a href="/demo/"><span class="fi" aria-hidden="true">📱</span> Voir les maquettes</a></li>' +
           '<li><a href="' + sec + '#rejoindre"><span class="fi" aria-hidden="true">⚓</span> Rejoindre</a></li>' +
           '<li><a href="' + faqHref + '"><span class="fi" aria-hidden="true">❓</span> FAQ</a></li>' +
           '<li><a href="/tarifs.html"><span class="fi" aria-hidden="true">🏷️</span> Tarifs (c\'est gratuit)</a></li>' +
