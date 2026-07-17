@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="robots" content="noindex, follow">
 <title>Chez Marco — Commande en ligne · propulsé par Captain.Food</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="demo.css">
 <style>
   /* ============================================================
      PROTOTYPE JETABLE — Captain.Food
@@ -29,8 +33,8 @@
     --radius: 16px;
     --shadow: 0 6px 28px rgba(14,58,95,.10);
     --shadow-lift: 0 12px 40px rgba(14,58,95,.18);
-    --font-display: "Georgia", "Times New Roman", serif;
-    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-display: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -363,45 +367,8 @@
   }
   .restart:active { background: rgba(255,255,255,.28); }
 
-  /* ===== Bande participation communautaire (co-construction) ===== */
-  .cf-cta{background:var(--paper);color:var(--ink);padding:44px 20px 52px;border-top:4px solid var(--gold)}
-  .cf-inner{max-width:440px;margin:0 auto}
-  .cf-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--navy);background:#fff;border:1px solid var(--line);padding:5px 11px;border-radius:999px}
-  .cf-title{font-family:var(--font-display);font-size:24px;color:var(--navy);margin:14px 0 8px;line-height:1.18}
-  .cf-lead{font-size:14px;color:var(--ink-soft);line-height:1.55}
-  .cf-lead b{color:var(--navy)}
-  .cf-btn{display:block;width:100%;text-align:center;border:none;cursor:pointer;font-weight:700;font-size:15px;padding:14px;border-radius:13px;text-decoration:none;font-family:var(--font-body)}
-  .cf-btn-wa{background:#25d366;color:#0a2942;margin:18px 0 6px}
-  .cf-btn-wa:active{filter:brightness(.96)}
-  .cf-btn-primary{background:var(--navy);color:#fff;margin-top:8px}
-  .cf-btn-primary:active{transform:translateY(1px)}
-  .cf-btn-primary:disabled{opacity:.5;cursor:default}
-  .cf-form{margin-top:6px}
-  .cf-lbl{display:block;font-size:12.5px;font-weight:600;color:var(--navy);margin:14px 0 5px}
-  .cf-opt{font-weight:400;color:var(--ink-soft)}
-  .cf-form textarea,.cf-form input[type=email]{width:100%;box-sizing:border-box;border:1.5px solid var(--line);border-radius:11px;padding:12px;font-family:var(--font-body);font-size:14px;background:#fff;color:var(--ink)}
-  .cf-form textarea:focus,.cf-form input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(14,58,95,.12)}
-  .cf-hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
-  .cf-status{font-size:13px;font-weight:600;margin-top:12px;text-align:center}
-  .cf-status.ok{color:var(--green)}
-  .cf-status.err{color:#c0392b}
-  .cf-direct{display:block;text-align:center;margin-top:10px;font-size:13px;color:var(--navy);text-decoration:underline}
-  .cf-home{display:block;text-align:center;margin-top:22px;font-size:12.5px;color:var(--ink-soft);text-decoration:none}
-  .cf-home:hover{color:var(--navy)}
-
-  /* ===== Gate d'avertissement maquette (LOT 6) ===== */
-  .demo-gate{position:fixed;inset:0;z-index:1000;background:rgba(10,41,66,.72);display:flex;align-items:center;justify-content:center;padding:20px}
-  .demo-gate.hidden{display:none}
-  .demo-gate-card{background:var(--paper);color:var(--ink);max-width:400px;width:100%;border-radius:20px;padding:26px 24px;box-shadow:0 20px 60px rgba(0,0,0,.4);text-align:center}
-  .demo-gate-emo{font-size:40px}
-  .demo-gate-card h2{font-family:var(--font-display);color:var(--navy);font-size:24px;margin:6px 0 10px}
-  .demo-gate-card p{font-size:14px;color:var(--ink-soft);line-height:1.55}
-  .demo-gate-card ul{text-align:left;margin:14px auto;padding-left:20px;max-width:320px}
-  .demo-gate-card li{font-size:13.5px;color:var(--ink-soft);line-height:1.5;margin-bottom:6px}
-  .demo-gate-card strong{color:var(--navy)}
-  .demo-gate-note{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:6px}
-  .demo-gate-btn{margin-top:18px;width:100%;border:none;cursor:pointer;font-weight:700;font-size:15px;padding:14px;border-radius:13px;background:var(--navy);color:#fff;font-family:var(--font-body)}
-  .demo-gate-btn:active{transform:translateY(1px)}
+  /* Le gate d'avertissement et la bande de participation communautaire
+     sont désormais dans demo.css (partagé par les 3 maquettes). */
 </style>
 </head>
 <body>
@@ -409,7 +376,7 @@
 <!-- Gate d'avertissement maquette (LOT 6) -->
 <div class="demo-gate" id="demoGate" role="dialog" aria-modal="true" aria-labelledby="demoGateTitle">
   <div class="demo-gate-card">
-    <div class="demo-gate-emo" aria-hidden="true">⚓</div>
+    <img class="demo-gate-logo" src="../assets/logo.png" alt="" width="56" height="56" />
     <h2 id="demoGateTitle">C'est une maquette</h2>
     <p>Tu regardes une <strong>maquette de démonstration</strong> de Captain.Food.
       <strong>Rien n'est encore construit.</strong></p>
@@ -422,16 +389,6 @@
     <button type="button" class="demo-gate-btn" id="demoGateBtn">J'ai compris</button>
   </div>
 </div>
-<script>
-(function(){var g=document.getElementById("demoGate");if(!g)return;
-var b=document.getElementById("demoGateBtn");
-function close(){g.classList.add("hidden");document.removeEventListener("keydown",onKey);try{sessionStorage.setItem("cf-demo-gate","ok");}catch(e){}}
-function onKey(e){if(e.key==="Escape"){e.preventDefault();close();}else if(e.key==="Tab"){e.preventDefault();b.focus();}}
-try{if(sessionStorage.getItem("cf-demo-gate")==="ok"){g.classList.add("hidden");return;}}catch(e){}
-b.addEventListener("click",close);
-document.addEventListener("keydown",onKey);
-try{b.focus();}catch(e){}})();
-</script>
 
 <div class="ribbon">◐ MAQUETTE — démo</div>
 <button class="restart" onclick="restart()">↻ Recommencer</button>
@@ -829,22 +786,8 @@ function restart() {
 /* init */
 renderMenu();
 sync();
-
-/* ---- participation form (AJAX Formspree) ---- */
-document.querySelectorAll(".cf-form").forEach(function(f){
-  f.addEventListener("submit",function(e){
-    e.preventDefault();
-    var s=f.querySelector(".cf-status"), b=f.querySelector("button[type=submit]");
-    s.hidden=false; s.className="cf-status"; s.textContent="Envoi…"; b.disabled=true;
-    fetch(f.action,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}})
-      .then(function(r){ b.disabled=false;
-        if(r.ok){f.reset();s.className="cf-status ok";s.textContent="Merci ⚓ Ton retour est bien parti !";}
-        else{s.className="cf-status err";s.textContent="Envoi impossible pour l'instant. Passe plutôt par WhatsApp ci-dessus.";}
-      })
-      .catch(function(){ b.disabled=false; s.className="cf-status err"; s.textContent="Envoi impossible pour l'instant. Passe plutôt par WhatsApp ci-dessus."; });
-  });
-});
 </script>
+<script src="demo.js"></script>
 <script src="a11y.js"></script>
 </body>
 </html>
