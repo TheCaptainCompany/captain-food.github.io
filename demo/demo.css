@@ -27,8 +27,9 @@
 .cf-lead { font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
 .cf-lead b { color: var(--navy); }
 .cf-btn { display: block; width: 100%; text-align: center; border: none; cursor: pointer; font-weight: 700; font-size: 15px; padding: 14px; border-radius: 13px; text-decoration: none; font-family: var(--font-body); }
-.cf-btn-wa { background: #25d366; color: #0a2942; margin: 18px 0 6px; }
+.cf-btn-wa { background: #25d366; color: #fff; margin: 18px 0 6px; display: flex; align-items: center; justify-content: center; gap: 9px; }
 .cf-btn-wa:active { filter: brightness(.96); }
+.cf-btn-wa .cf-wa-ico { width: 20px; height: 20px; fill: currentColor; flex: none; }
 .cf-btn-primary { background: var(--navy); color: #fff; margin-top: 8px; }
 .cf-btn-primary:active { transform: translateY(1px); }
 .cf-btn-primary:disabled { opacity: .5; cursor: default; }
