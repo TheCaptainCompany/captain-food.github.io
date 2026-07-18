@@ -75,7 +75,7 @@
   }
 
   /* Screens */
-  .screen { display: none; flex-direction: column; flex: 1; animation: fade .28s ease; }
+  .screen { display: none; flex-direction: column; flex: 1; min-height: 0; animation: fade .28s ease; }
   .screen.active { display: flex; }
   @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
@@ -156,7 +156,7 @@
   .mode .emo { display: block; font-size: 17px; margin-bottom: 2px; }
   .mode.on { border-color: var(--navy); color: var(--navy); box-shadow: 0 2px 8px rgba(14,58,95,.12); }
 
-  .scroll { overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; }
+  .scroll { overflow-y: auto; flex: 1; min-height: 0; -webkit-overflow-scrolling: touch; overscroll-behavior: auto; }
 
   /* menu list */
   .cat-title {
