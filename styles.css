@@ -190,6 +190,21 @@ code {
   border-color: var(--orange);
 }
 
+/* Marque « Captain.Food » en corps de texte — c'est la marque, ça ressort */
+.cf-name {
+  font-weight: 600;
+  color: var(--navy);
+}
+.cf-name .cf-dot {
+  color: var(--orange);
+  font-weight: 800;
+}
+/* Dans un bouton/chip coloré, on garde la couleur du contrôle (juste le point reste corail) */
+.btn .cf-name,
+.chip .cf-name {
+  color: inherit;
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   --btn-bg: var(--orange);
@@ -2107,6 +2122,8 @@ section[id],
   background: var(--parchment-alt);
   padding: 0.2rem 0.7rem;
   border-radius: 999px;
+  white-space: nowrap; /* garde "25-35 %" sur une seule ligne */
+  flex: none;
 }
 .calc-plat.is-active .calc-plat-rate {
   color: var(--plat);
