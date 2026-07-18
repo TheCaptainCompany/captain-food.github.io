@@ -116,79 +116,11 @@
     }
     .tarif-faq { max-width: 640px; margin: 2.6rem auto 0; }
     .tarif-actions { text-align: center; margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
-    /* Grille tarifaire "type" barrée (générique — on vise un modèle, pas un acteur) */
-    .killgrid { max-width: 560px; margin: 2.2rem auto 0; }
-    .killgrid-grid {
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.6rem;
-      opacity: 0.85;
-    }
-    .kg-tier {
-      background: #eef1f4;
-      border: 1px solid #d7dee6;
-      border-radius: 12px;
-      padding: 0.9rem 0.7rem;
-      text-align: center;
-    }
-    .kg-tier.kg-featured { outline: 2px solid #c3cdd7; }
-    .kg-name {
-      display: block;
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      color: #6b7883;
-    }
-    .kg-price {
-      display: block;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.5rem;
-      color: #48555f;
-      margin: 0.15rem 0 0.35rem;
-    }
-    .kg-price small { font-size: 0.5em; font-weight: 600; color: #8894a0; }
-    .kg-line { font-size: 0.72rem; color: #8894a0; line-height: 1.35; }
-    .killgrid-grid::after {
-      content: "";
-      position: absolute;
-      left: -3%;
-      right: -3%;
-      top: 50%;
-      height: 7px;
-      background: #e23b2e;
-      transform: translateY(-50%) rotate(-7deg);
-      border-radius: 6px;
-      box-shadow: 0 0 0 3px rgba(255, 253, 248, 0.7);
-    }
-    .kg-stamp {
-      position: absolute;
-      top: -14px;
-      right: -10px;
-      transform: rotate(8deg);
-      background: var(--good);
-      color: #fff;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      box-shadow: var(--shadow-lg);
-      white-space: nowrap;
-      border: 2px solid #fffdf8;
-    }
-    .killgrid figcaption { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-top: 1.1rem; }
-    .killgrid figcaption strong { color: var(--navy); }
-    @media (max-width: 520px) {
-      .kg-line { display: none; }
-      .kg-price { font-size: 1.2rem; }
-      .kg-stamp { font-size: 0.9rem; }
-    }
+    /* Le Capitaine casse la grille tarifaire (illustration) */
+    .killwall { max-width: 620px; margin: 2.2rem auto 0; text-align: center; }
+    .killwall img { width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: 0 10px 30px rgba(10, 30, 50, 0.14); }
+    .killwall figcaption { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-top: 1.1rem; }
+    .killwall figcaption strong { color: var(--navy); }
   </style>
   <script type="application/ld+json">
   {
@@ -265,26 +197,9 @@
         usage commercial réservé à l'économie sociale et solidaire).
       </p>
 
-      <!-- Grille tarifaire "type" barrée : ce que font les autres modèles -->
-      <figure class="killgrid" role="img" aria-label="Une grille tarifaire classique à trois forfaits payants (par exemple 29, 59 et 99 € par mois, plus une commission par commande), barrée d'un trait rouge : chez Captain.Food, cette grille n'existe pas.">
-        <div class="killgrid-grid" aria-hidden="true">
-          <div class="kg-tier">
-            <span class="kg-name">Basique</span>
-            <span class="kg-price">29&nbsp;€<small>&nbsp;/mois</small></span>
-            <span class="kg-line">+ commission par commande</span>
-          </div>
-          <div class="kg-tier kg-featured">
-            <span class="kg-name">Pro</span>
-            <span class="kg-price">59&nbsp;€<small>&nbsp;/mois</small></span>
-            <span class="kg-line">+ commission par commande</span>
-          </div>
-          <div class="kg-tier">
-            <span class="kg-name">Premium</span>
-            <span class="kg-price">99&nbsp;€<small>&nbsp;/mois</small></span>
-            <span class="kg-line">+ commission par commande</span>
-          </div>
-          <span class="kg-stamp">0 € ici ⚓</span>
-        </div>
+      <!-- Le Capitaine casse la grille tarifaire -->
+      <figure class="killwall">
+        <img src="assets/captain-killgrid.webp" alt="Le Capitaine Food fracasse d'un coup de fourchette une grille tarifaire à trois forfaits payants (Starter, Pro, Premium)." width="1402" height="1122" loading="lazy" />
         <figcaption>
           Ailleurs, tu choisis un forfait (et tu paies quand même une commission).
           <strong>Ici, il n'y a pas de grille.</strong>
