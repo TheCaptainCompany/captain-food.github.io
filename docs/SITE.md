@@ -125,7 +125,7 @@ update the `data-cf-beacon` token in each page's `<head>`.
 ## Deploy to GitHub Pages with the custom domain
 
 1. **Source branch:** repo **Settings → Pages → Build and deployment** → deploy
-   from the chosen branch, `/ (root)`.
+   from `main`, `/ (root)`.
 2. **Custom domain:** the `CNAME` file already contains `join.captain.food`, which
    sets the Pages custom domain automatically.
 3. **DNS** (at the registrar for `captain.food`):

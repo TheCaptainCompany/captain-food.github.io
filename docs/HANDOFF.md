@@ -16,10 +16,13 @@
 
 ## 2. Branche de travail
 
-- On développe et on déploie sur **`claude/captain-food-landing-0mcx0f`** (c'est la branche vivante).
-- La **PR #1 vers `main` a été fermée** (non mergée) : on **ne veut pas** utiliser `main`. Rester sur cette branche.
-- Le fondateur souhaite en faire la **branche par défaut** du dépôt (à faire manuellement dans Settings → Branches ; non modifiable via les outils dispo).
-- Git : pousser avec `git push -u origin claude/captain-food-landing-0mcx0f` (rebase sur l'origin avant push).
+- **`main` est désormais la branche vivante** (décision du fondateur, juillet 2026) : tout l'historique du site
+  — ex-`claude/captain-food-landing-0mcx0f`, PR #1 comprise — y a été reporté. On développe et on déploie sur `main`.
+- Bascule manuelle dans les Settings GitHub : **branche par défaut → `main`** (Settings → General → Default branch)
+  et **Pages → Build and deployment → branche `main`**. ⚠️ Ne pas supprimer `claude/captain-food-landing-0mcx0f`
+  **avant** d'avoir basculé la source GitHub Pages, sinon le site en ligne tombe. Une fois la bascule faite,
+  supprimer les anciennes branches `claude/…`.
+- Git : pousser avec `git push -u origin main` (rebase sur l'origin avant push).
 
 ## 3. Règles & garde-fous (À RESPECTER ABSOLUMENT)
 
@@ -83,7 +86,7 @@ Le fondateur veut savoir si on peut **proposer d'installer la démo en PWA** sur
 
 ## 7. Autres points ouverts
 
-- **Branche par défaut** : passer `claude/captain-food-landing-0mcx0f` en défaut (manuel, Settings → Branches).
+- **Branche par défaut & Pages** : basculer défaut **et** source Pages sur `main`, puis supprimer les branches `claude/…` (voir §2).
 - **Image « casse la grille »** : la version FR sans texte est intégrée sur `tarifs`. Si une meilleure version arrive, remplacer `assets/captain-killgrid.webp`.
 - **Détail cosmétique** : sur le bouton Uber Eats du simulateur, le libellé « Uber Eats » passe encore sur 2 lignes (le `%` est réglé). À lisser si souhaité (`white-space:nowrap` sur le libellé).
 - Pages `manifeste` / `financement` / `livraison` : 1 image chacune (correct) ; possibilité de les enrichir (2ᵉ visuel) pour le même niveau que les pages SEO.
