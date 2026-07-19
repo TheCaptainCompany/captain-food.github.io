@@ -7,7 +7,7 @@ name: IndexNow ping
 
 on:
   push:
-    branches: [claude/captain-food-landing-0mcx0f]
+    branches: [main]
     paths:
       - "**/*.html"
       - "sitemap.xml"
