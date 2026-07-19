@@ -1,5 +1,8 @@
 # Captain.Food — marketing site
 
+> 🧭 **Reprendre le travail / une discussion en cours ?** Voir **[`docs/HANDOFF.md`](docs/HANDOFF.md)**
+> (état du projet, règles à respecter, décisions en attente — dont la piste **PWA + notifications**).
+
 Public marketing site for **Captain.Food**, an early-stage project building a
 local, ethical, **0 %-commission** alternative to extractive food-delivery
 platforms, as a **digital public good**. The site's job is to validate local
