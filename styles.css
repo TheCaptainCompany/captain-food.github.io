@@ -190,19 +190,17 @@ code {
   border-color: var(--orange);
 }
 
-/* Marque « Captain.Food » en corps de texte — c'est la marque, ça ressort */
+/* Marque « Captain.Food » en corps de texte — c'est la marque, ça ressort.
+   Le mot HÉRITE de la couleur du texte ambiant (currentColor) : ainsi il reste
+   lisible sur fond clair COMME sur fond navy (jamais invisible). Le « pop »
+   vient du gras + du point corail, la signature du logo. */
 .cf-name {
-  font-weight: 600;
-  color: var(--navy);
+  font-weight: 700;
+  color: inherit;
 }
 .cf-name .cf-dot {
   color: var(--orange);
   font-weight: 800;
-}
-/* Dans un bouton/chip coloré, on garde la couleur du contrôle (juste le point reste corail) */
-.btn .cf-name,
-.chip .cf-name {
-  color: inherit;
 }
 
 /* ---------- Buttons ---------- */
