@@ -190,17 +190,38 @@ code {
   border-color: var(--orange);
 }
 
-/* Marque « Captain.Food » en corps de texte — c'est la marque, ça ressort.
-   Le mot HÉRITE de la couleur du texte ambiant (currentColor) : ainsi il reste
-   lisible sur fond clair COMME sur fond navy (jamais invisible). Le « pop »
-   vient du gras + du point corail, la signature du logo. */
+/* Marque « Captain.Food » en corps de texte — deux tons selon le fond :
+   NAVY sur fond clair, BLANC sur fond navy. La couleur est pilotée par la
+   variable --cf-brand (navy par défaut) ; les sections à fond navy la passent
+   à blanc, et les cartes claires imbriquées dans ces sections la re-forcent
+   en navy. Le point reste corail (signature du logo). */
 .cf-name {
   font-weight: 700;
-  color: inherit;
+  color: var(--cf-brand, var(--navy));
 }
 .cf-name .cf-dot {
   color: var(--orange);
   font-weight: 800;
+}
+/* Sections / blocs à fond navy → la marque passe en clair */
+.hero,
+.combat-band,
+.section-cta,
+.calc,
+.site-footer {
+  --cf-brand: #fff;
+}
+/* …mais une carte claire à l'intérieur d'une section sombre garde le navy */
+.section-cta .form,
+.calc .calc-card,
+.combat-band .card,
+.finance-box {
+  --cf-brand: var(--navy);
+}
+/* Dans un bouton/chip coloré, la marque suit la couleur du contrôle */
+.btn .cf-name,
+.chip .cf-name {
+  color: inherit;
 }
 
 /* ---------- Buttons ---------- */
