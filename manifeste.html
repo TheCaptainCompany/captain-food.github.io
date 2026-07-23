@@ -3,27 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pourquoi j'ai lancé Captain.Food — Le manifeste</title>
+  <title data-i18n="manifesto.meta_title">Pourquoi j'ai lancé Captain.Food — Le manifeste</title>
   <meta
     name="description"
+    data-i18n-content="manifesto.meta_description"
     content="Le manifeste du fondateur : pourquoi Captain.Food, la commande locale à 0 % de commission pour les indépendants de Tours, ne pourra jamais devenir un péage."
   />
   <meta name="theme-color" content="#0e3a5f" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="canonical" href="https://join.captain.food/manifeste.html" />
+
+  <!-- hreflang alternates — the page translates itself client-side via ?lang=
+       (i18n.js); French is the canonical, default content. -->
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/manifeste.html" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/manifeste.html?lang=en" />
+  <link rel="alternate" hreflang="es" href="https://join.captain.food/manifeste.html?lang=es" />
+  <link rel="alternate" hreflang="it" href="https://join.captain.food/manifeste.html?lang=it" />
+  <link rel="alternate" hreflang="pt" href="https://join.captain.food/manifeste.html?lang=pt" />
+  <link rel="alternate" hreflang="de" href="https://join.captain.food/manifeste.html?lang=de" />
+  <link rel="alternate" hreflang="tr" href="https://join.captain.food/manifeste.html?lang=tr" />
+  <link rel="alternate" hreflang="el" href="https://join.captain.food/manifeste.html?lang=el" />
+  <link rel="alternate" hreflang="ro" href="https://join.captain.food/manifeste.html?lang=ro" />
+  <link rel="alternate" hreflang="zh" href="https://join.captain.food/manifeste.html?lang=zh" />
+  <link rel="alternate" hreflang="ja" href="https://join.captain.food/manifeste.html?lang=ja" />
+  <link rel="alternate" hreflang="th" href="https://join.captain.food/manifeste.html?lang=th" />
+  <link rel="alternate" hreflang="hi" href="https://join.captain.food/manifeste.html?lang=hi" />
+  <link rel="alternate" hreflang="ta" href="https://join.captain.food/manifeste.html?lang=ta" />
+  <link rel="alternate" hreflang="ar" href="https://join.captain.food/manifeste.html?lang=ar" />
+  <link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/manifeste.html?lang=ar-lb" />
+  <link rel="alternate" hreflang="he" href="https://join.captain.food/manifeste.html?lang=he" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/manifeste.html" />
+
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Pourquoi j'ai lancé Captain.Food" />
-  <meta property="og:description" content="Le manifeste du fondateur : reprendre les commandes, à Tours, sans commission." />
+  <meta property="og:title" data-i18n-content="manifesto.og_title" content="Pourquoi j'ai lancé Captain.Food" />
+  <meta property="og:description" data-i18n-content="manifesto.og_description" content="Le manifeste du fondateur : reprendre les commandes, à Tours, sans commission." />
   <meta property="og:url" content="https://join.captain.food/manifeste.html" />
   <meta property="og:site_name" content="Captain.Food" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:image" content="https://join.captain.food/assets/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Captain.Food — Reprenons les commandes ! 0 commission, à Tours." />
+  <meta property="og:image:alt" data-i18n-content="meta.og.image_alt" content="Captain.Food — Reprenons les commandes ! 0 commission, à Tours." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pourquoi j'ai lancé Captain.Food" />
-  <meta name="twitter:description" content="Le manifeste du fondateur : reprendre les commandes, à Tours, sans commission." />
+  <meta name="twitter:title" data-i18n-content="manifesto.og_title" content="Pourquoi j'ai lancé Captain.Food" />
+  <meta name="twitter:description" data-i18n-content="manifesto.og_description" content="Le manifeste du fondateur : reprendre les commandes, à Tours, sans commission." />
   <meta name="twitter:image" content="https://join.captain.food/assets/og.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,42 +84,43 @@
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a9fe368f9d994cf6b874cf584aada144"}'></script>
 </head>
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">Aller au contenu</a>
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Captain.Food, accueil">
+      <a class="brand" href="index.html" aria-label="Captain.Food, accueil" data-i18n-aria-label="nav.brand_aria">
         <img src="assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark" />
         <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
       </a>
-      <a class="btn btn-primary btn-sm nav-cta" href="index.html#rejoindre">Je rejoins</a>
+      <a class="btn btn-primary btn-sm nav-cta" href="index.html#rejoindre" data-i18n="nav.join">Je rejoins</a>
     </div>
-      <nav class="chip-nav" aria-label="Menu">
+      <nav class="chip-nav" aria-label="Menu" data-i18n-aria-label="nav.menu_aria">
       <div class="container chip-nav-inner">
-        <a class="chip" href="index.html#solution">Comment ça marche</a>
-        <a class="chip" href="tarifs.html">Tarifs</a>
-        <a class="chip" href="demo/">Maquettes</a>
-        <a class="chip" href="index.html#faq">FAQ</a>
+        <a class="chip" href="index.html#solution" data-i18n="nav.chip.how">Comment ça marche</a>
+        <a class="chip" href="tarifs.html" data-i18n="nav.chip.pricing">Tarifs</a>
+        <a class="chip" href="demo/" data-i18n="nav.chip.mockups">Maquettes</a>
+        <a class="chip" href="index.html#faq" data-i18n="nav.chip.faq">FAQ</a>
       </div>
     </nav>
   </header>
 
   <main id="contenu" class="section">
     <div class="container narrow manifeste">
-      <p class="eyebrow eyebrow-center"><span aria-hidden="true">⚓</span> Le manifeste</p>
-      <h1 class="section-title">Pourquoi j'ai lancé <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span></h1>
+      <p class="eyebrow eyebrow-center"><span aria-hidden="true">⚓</span> <span data-i18n="manifesto.eyebrow">Le manifeste</span></p>
+      <h1 class="section-title" data-i18n-html="manifesto.h1">Pourquoi j'ai lancé <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span></h1>
 
       <figure class="manifeste-portrait">
         <img
           src="assets/captain-heart.webp"
           alt="Le Capitaine Food, une main sur le cœur, le regard porté au loin"
+          data-i18n-alt="manifesto.portrait_alt"
           width="900"
           height="1123"
         />
       </figure>
 
-      <p>Je vais être direct avec toi, parce que tu n'as pas le temps et moi non plus.</p>
-      <p>
+      <p data-i18n="manifesto.intro1">Je vais être direct avec toi, parce que tu n'as pas le temps et moi non plus.</p>
+      <p data-i18n-html="manifesto.intro2">
         <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> n'existe pas encore vraiment. Il n'y a pas de dizaines de
         restaurants à bord, pas de milliers de clients, pas de belle courbe à te
         montrer. Il y a une conviction, un cadre juridique, un site, et moi qui
@@ -104,31 +128,31 @@
         qu'on te raconte des histoires. Alors voici la vraie.
       </p>
 
-      <h2>Ce qui m'a mis en colère</h2>
-      <p>
+      <h2 data-i18n="manifesto.anger_title">Ce qui m'a mis en colère</h2>
+      <p data-i18n-html="manifesto.anger_p1">
         Mon combat est simple : je veux construire des <strong>plateformes
         d'utilité publique</strong>, pour tenir tête aux géants de la tech qui
         abusent de leur position.
       </p>
-      <p>
+      <p data-i18n="manifesto.anger_p2">
         J'ai passé des années à construire des plateformes et des marketplaces. Je
         sais comment elles sont faites — et je sais où elles serrent. L'ubérisation
         des livreurs m'a semblé le bon point de départ : des gens qui triment, mal
         payés, sans protection.
       </p>
-      <p>
+      <p data-i18n-html="manifesto.anger_p3">
         Puis j'ai découvert les chiffres, côté restaurateurs. Des commissions de
         <strong>25 à 35 %</strong> sur chaque commande — ça m'a choqué. Et ce qui
         m'a choqué encore plus, c'est la perte de contrôle : le restaurateur ne
         connaît même plus ses propres clients.
       </p>
-      <p>
+      <p data-i18n="manifesto.anger_p4">
         Le calcul est simple. Sur les grandes plateformes, un plat à 30 € ne te
         rapporte pas 30 €. Il t'en rapporte à peu près 21. Les 9 € qui manquent
         partent en commission, sur un métier où la marge se joue déjà à quelques
         points. Tu cuisines. Elles encaissent.
       </p>
-      <p>
+      <p data-i18n-html="manifesto.anger_p5">
         À force de regarder, je n'ai vu qu'une chose : un système où les clients,
         les restaurateurs et les livreurs survivent et s'en plaignent — tous, sauf
         les grandes plateformes. Alors j'ai décidé d'utiliser ce que je sais faire,
@@ -136,27 +160,27 @@
         de société avant de chercher le profit.</strong>
       </p>
 
-      <h2>Le vrai problème n'est pas le prix. C'est la dépendance.</h2>
-      <p>
+      <h2 data-i18n="manifesto.dependence_title">Le vrai problème n'est pas le prix. C'est la dépendance.</h2>
+      <p data-i18n="manifesto.dependence_p1">
         On croit que le problème des plateformes, c'est la commission. Ce n'est
         qu'une partie. Le vrai problème, c'est que tes clients ne sont pas tes
         clients. La plateforme connaît leur nom, leur adresse, leurs habitudes.
         Toi, non. Le jour où tu pars, tu repars de zéro.
       </p>
-      <p>
+      <p data-i18n="manifesto.dependence_p2">
         Et une fois que tu dépends d'elles, elles peuvent serrer la vis. La
         commission monte ? Tu l'apprends. Ton classement baisse ? Tu ne sais pas
         pourquoi. Les règles changent ? Tu suis. Tu n'es plus capitaine de ton
         affaire. Tu es passager.
       </p>
 
-      <h2>Ce que je refuse de faire</h2>
-      <p>
+      <h2 data-i18n="manifesto.refuse_title">Ce que je refuse de faire</h2>
+      <p data-i18n="manifesto.refuse_p1">
         La tentation, quand on lance une alternative, c'est de faire pareil en plus
         gentil au début — puis de presser une fois que tout le monde est accroché.
         On a tous vu le film. Le gentil service devient le nouveau péage.
       </p>
-      <p>
+      <p data-i18n-html="manifesto.refuse_p2">
         Je refuse ça. Pas par gentillesse : par construction. <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> vise
         l'agrément d'<strong>entreprise solidaire d'utilité sociale (ESUS)</strong>.
         Ce n'est pas un slogan : c'est un cadre juridique qui encadrerait notre
@@ -166,14 +190,14 @@
         qu'on combat, le statut nous en empêchera. C'est le seul garde-fou qui
         vaille : pas une promesse morale, une règle.
       </p>
-      <p>
+      <p data-i18n-html="manifesto.refuse_p3">
         Et pour que ce ne soit pas qu'une parole de plus, on ouvre nos comptes en
         public sur
         <a href="https://opencollective.com/captain-food" target="_blank" rel="noopener">Open Collective</a> :
         chaque euro reçu, chaque euro dépensé, destiné à être visible par tous. La
         règle nous engage&nbsp;; les comptes te le prouvent.
       </p>
-      <p>
+      <p data-i18n-html="manifesto.refuse_p4">
         Et je veux aller plus loin encore : que <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> soit un
         <strong>bien commun</strong>, pas ma propriété. <strong>Le code est déjà
         ouvert</strong> (<a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">sur GitHub</a>),
@@ -188,13 +212,13 @@
         confisquer.
       </p>
 
-      <h2>Ce qu'on te propose, en clair</h2>
-      <p>
+      <h2 data-i18n="manifesto.offer_title">Ce qu'on te propose, en clair</h2>
+      <p data-i18n="manifesto.offer_p1">
         0 % de commission sur tes plats. Toujours. Tu gardes 100 % du prix de ce que
         tu vends. Tes prix, les mêmes qu'en salle — pas de double carte. Ta
         clientèle, à toi, dès la première commande directe. Ton canal, sous ton nom.
       </p>
-      <p>
+      <p data-i18n-html="manifesto.offer_p2">
         Et surtout, tu as enfin un vrai chez-toi en ligne. Pas une fiche noyée dans
         l'annuaire d'un géant, un resto parmi des milliers : <strong>ton propre site,
         à ton nom</strong> — <code>tonresto.captain.food</code>, ou même ton propre
@@ -203,14 +227,14 @@
         qui t'appartient. C'est ça, sortir de la dépendance : ne plus louer une place
         sur la vitrine d'un autre, mais avoir la tienne.
       </p>
-      <p>
+      <p data-i18n-html="manifesto.offer_p3">
         « Alors vous vivez de quoi ? » Bonne question, et la réponse est
         <a href="financement.html">ici, en clair</a> : jamais sur ton dos. Le service
         est financé par une contribution libre du client — 0 € possible, sans
         jugement — jamais un pourcentage, jamais sur ta marge, jamais une surcharge
         ajoutée au client.
       </p>
-      <p>
+      <p data-i18n-html="manifesto.offer_p4">
         Et les livreurs : là où l'ubérisation les presse et les précarise, on a
         choisi de les payer mieux que quiconque, ici à Tours — avec l'ambition, à
         terme, de les salarier. Un service juste commence par des gens correctement
@@ -218,8 +242,8 @@
         (<a href="livraison.html">voir comment on paie la livraison</a>).
       </p>
 
-      <h2>Où on en est, honnêtement</h2>
-      <p>
+      <h2 data-i18n="manifesto.status_title">Où on en est, honnêtement</h2>
+      <p data-i18n-html="manifesto.status_p1">
         On démarre. À Tours, avec un premier groupe de restaurateurs. Pas partout,
         pas tout de suite : un territoire, bien fait, entre indépendants qui se
         connaissent. On construit l'outil avec les premiers qui embarquent — leurs
@@ -227,11 +251,11 @@
         c'est gratuit, sans exclusivité, sans engagement. C'est peser sur ce que
         <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> deviendra.
       </p>
-      <p><strong>Reprenons les commandes.</strong></p>
+      <p data-i18n-html="manifesto.tagline"><strong>Reprenons les commandes.</strong></p>
       <p class="signature"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span></p>
 
       <div class="engagement-band" style="margin-top:2rem;">
-        <p>
+        <p data-i18n-html="manifesto.contact_band">
           Tu tiens un restaurant ou un food truck à Tours&nbsp;? Écris-moi
           directement : <a href="mailto:miam@captain.food">miam@captain.food</a> — ou
           <a href="index.html#rejoindre">rejoins les restaurateurs libres</a>. On en parle, sans
@@ -240,7 +264,7 @@
       </div>
 
       <p style="margin-top:2rem;">
-        <a class="btn btn-navy" href="index.html">← Retour à l'accueil</a>
+        <a class="btn btn-navy" href="index.html" data-i18n="shared.back_home">← Retour à l'accueil</a>
       </p>
     </div>
   </main>
@@ -253,5 +277,6 @@
     </noscript>
   </footer>
   <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
 </body>
 </html>

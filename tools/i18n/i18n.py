@@ -34,8 +34,28 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 CATALOG = ROOT / "i18n" / "translations.yaml"
 GENERATED_DIR = ROOT / "i18n" / "generated"
 
-# Files scanned for used keys. index.html is also the French source of truth.
-HTML_SOURCES = [ROOT / "index.html"]
+# Files scanned for used keys. The HTML pages are also the French source of
+# truth: their annotated copy IS the fr catalog (drift-checked).
+HTML_SOURCES = [
+    ROOT / name
+    for name in (
+        "index.html",
+        "tarifs.html",
+        "manifeste.html",
+        "financement.html",
+        "livraison.html",
+        "alternative-uber-eats-tours.html",
+        "alternative-deliveroo-tours.html",
+        "restaurant-sans-commission-tours.html",
+        "commande-en-ligne-restaurant-tours.html",
+        "click-and-collect-tours.html",
+        "livraison-ethique-tours.html",
+        "restaurants-tours-indre-et-loire.html",
+        "confidentialite.html",
+        "mentions-legales.html",
+        "404.html",
+    )
+]
 JS_SOURCES = [ROOT / "partials.js", ROOT / "i18n.js", ROOT / "script.js"]
 
 I18N_ATTRS = (

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Page introuvable — Captain.Food</title>
+  <title data-i18n="notfound.meta_title">Page introuvable — Captain.Food</title>
   <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#0e3a5f" />
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
@@ -22,19 +22,20 @@
     <section class="hero" style="min-height: 80vh; display: flex; align-items: center;">
       <div class="container hero-inner" style="grid-template-columns: 1fr; text-align: center;">
         <div class="hero-text" style="max-width: 640px; margin-inline: auto;">
-          <p class="eyebrow" style="text-align: center;"><span aria-hidden="true">⚓</span> Erreur 404</p>
-          <h1 class="hero-title">Cette page a pris le large.</h1>
-          <p class="hero-sub" style="margin-inline: auto;">
+          <p class="eyebrow" style="text-align: center;"><span aria-hidden="true">⚓</span> <span data-i18n="notfound.eyebrow">Erreur 404</span></p>
+          <h1 class="hero-title" data-i18n="notfound.h1">Cette page a pris le large.</h1>
+          <p class="hero-sub" style="margin-inline: auto;" data-i18n="notfound.sub">
             Le Capitaine a cherché partout : il n'y a rien à cette adresse.
           </p>
           <div class="hero-cta" style="justify-content: center;">
-            <a class="btn btn-primary" href="/">Revenir au port</a>
+            <a class="btn btn-primary" href="/" data-i18n="notfound.cta_home">Revenir au port</a>
           </div>
         </div>
         <figure class="hero-portrait" style="margin-top: 1.5rem;">
           <img
             src="/assets/captain-facepalm.png"
             alt="Le Capitaine Food, dépité, se prend le visage dans la main"
+            data-i18n-alt="notfound.portrait_alt"
             width="260"
             height="375"
             style="max-height: 320px; width: auto;"
@@ -43,5 +44,6 @@
       </div>
     </section>
   </main>
+  <script src="/i18n.js"></script>
 </body>
 </html>

@@ -3,27 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>La livraison, payée juste — Captain.Food</title>
+  <title data-i18n="delivery.meta_title">La livraison, payée juste — Captain.Food</title>
   <meta
     name="description"
+    data-i18n-content="delivery.meta_description"
     content="La livraison qu'on veut construire (canal à venir) : payer dignement le livreur (objectif : au moins 7 € la course), ta part plafonnée par la marge que tu fixes, le client complète le reste."
   />
   <meta name="theme-color" content="#0e3a5f" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="canonical" href="https://join.captain.food/livraison.html" />
+
+  <!-- hreflang alternates — the page translates itself client-side via ?lang=
+       (i18n.js); French is the canonical, default content. -->
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/livraison.html" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/livraison.html?lang=en" />
+  <link rel="alternate" hreflang="es" href="https://join.captain.food/livraison.html?lang=es" />
+  <link rel="alternate" hreflang="it" href="https://join.captain.food/livraison.html?lang=it" />
+  <link rel="alternate" hreflang="pt" href="https://join.captain.food/livraison.html?lang=pt" />
+  <link rel="alternate" hreflang="de" href="https://join.captain.food/livraison.html?lang=de" />
+  <link rel="alternate" hreflang="tr" href="https://join.captain.food/livraison.html?lang=tr" />
+  <link rel="alternate" hreflang="el" href="https://join.captain.food/livraison.html?lang=el" />
+  <link rel="alternate" hreflang="ro" href="https://join.captain.food/livraison.html?lang=ro" />
+  <link rel="alternate" hreflang="zh" href="https://join.captain.food/livraison.html?lang=zh" />
+  <link rel="alternate" hreflang="ja" href="https://join.captain.food/livraison.html?lang=ja" />
+  <link rel="alternate" hreflang="th" href="https://join.captain.food/livraison.html?lang=th" />
+  <link rel="alternate" hreflang="hi" href="https://join.captain.food/livraison.html?lang=hi" />
+  <link rel="alternate" hreflang="ta" href="https://join.captain.food/livraison.html?lang=ta" />
+  <link rel="alternate" hreflang="ar" href="https://join.captain.food/livraison.html?lang=ar" />
+  <link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/livraison.html?lang=ar-lb" />
+  <link rel="alternate" hreflang="he" href="https://join.captain.food/livraison.html?lang=he" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/livraison.html" />
+
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="La livraison, payée juste" />
-  <meta property="og:description" content="Une livraison qui paie correctement celui qui l'apporte — sans presser ni ta marge, ni le client. En clair, exemple à l'appui." />
+  <meta property="og:title" data-i18n-content="delivery.og_title" content="La livraison, payée juste" />
+  <meta property="og:description" data-i18n-content="delivery.og_description" content="Une livraison qui paie correctement celui qui l'apporte — sans presser ni ta marge, ni le client. En clair, exemple à l'appui." />
   <meta property="og:url" content="https://join.captain.food/livraison.html" />
   <meta property="og:site_name" content="Captain.Food" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:image" content="https://join.captain.food/assets/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Captain.Food — Reprenons les commandes ! 0 commission, à Tours." />
+  <meta property="og:image:alt" data-i18n-content="meta.og.image_alt" content="Captain.Food — Reprenons les commandes ! 0 commission, à Tours." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="La livraison, payée juste" />
-  <meta name="twitter:description" content="Une livraison qui paie correctement celui qui l'apporte — sans presser ni ta marge, ni le client. En clair, exemple à l'appui." />
+  <meta name="twitter:title" data-i18n-content="delivery.og_title" content="La livraison, payée juste" />
+  <meta name="twitter:description" data-i18n-content="delivery.og_description" content="Une livraison qui paie correctement celui qui l'apporte — sans presser ni ta marge, ni le client. En clair, exemple à l'appui." />
   <meta name="twitter:image" content="https://join.captain.food/assets/og.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,37 +59,37 @@
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a9fe368f9d994cf6b874cf584aada144"}'></script>
 </head>
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">Aller au contenu</a>
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Captain.Food, accueil">
+      <a class="brand" href="index.html" aria-label="Captain.Food, accueil" data-i18n-aria-label="nav.brand_aria">
         <img src="assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark" />
         <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
       </a>
-      <a class="btn btn-primary btn-sm nav-cta" href="index.html#rejoindre">Je rejoins</a>
+      <a class="btn btn-primary btn-sm nav-cta" href="index.html#rejoindre" data-i18n="nav.join">Je rejoins</a>
     </div>
-      <nav class="chip-nav" aria-label="Menu">
+      <nav class="chip-nav" aria-label="Menu" data-i18n-aria-label="nav.menu_aria">
       <div class="container chip-nav-inner">
-        <a class="chip" href="index.html#solution">Comment ça marche</a>
-        <a class="chip" href="tarifs.html">Tarifs</a>
-        <a class="chip" href="demo/">Maquettes</a>
-        <a class="chip" href="index.html#faq">FAQ</a>
+        <a class="chip" href="index.html#solution" data-i18n="nav.chip.how">Comment ça marche</a>
+        <a class="chip" href="tarifs.html" data-i18n="nav.chip.pricing">Tarifs</a>
+        <a class="chip" href="demo/" data-i18n="nav.chip.mockups">Maquettes</a>
+        <a class="chip" href="index.html#faq" data-i18n="nav.chip.faq">FAQ</a>
       </div>
     </nav>
   </header>
 
   <main id="contenu" class="section">
     <div class="container narrow">
-      <p class="eyebrow eyebrow-center"><span aria-hidden="true">🛵</span> Le deuxième combat</p>
-      <h1 class="section-title">La livraison, payée juste</h1>
-      <p class="section-intro">
+      <p class="eyebrow eyebrow-center"><span aria-hidden="true">🛵</span> <span data-i18n="delivery.eyebrow">Le deuxième combat</span></p>
+      <h1 class="section-title" data-i18n="delivery.h1">La livraison, payée juste</h1>
+      <p class="section-intro" data-i18n-html="delivery.intro">
         Le premier problème, c'est la commission qui te ronge. Le deuxième, tout le
         monde le voit et personne ne le règle : <strong>le livreur payé une
         misère.</strong> On l'affronte aussi — et voici comment, sans zone d'ombre.
       </p>
 
-      <p style="background:rgba(232,97,58,.1);border-left:4px solid var(--orange);border-radius:8px;padding:.9rem 1.1rem;margin:1.2rem 0 0;color:var(--ink);">
+      <p style="background:rgba(232,97,58,.1);border-left:4px solid var(--orange);border-radius:8px;padding:.9rem 1.1rem;margin:1.2rem 0 0;color:var(--ink);" data-i18n-html="delivery.notice">
         ⚓ <strong>La livraison est un canal à venir</strong> — pas encore actif. Ce
         qui suit décrit <strong>comment on veut la construire</strong> (intention et
         objectifs), pas un service disponible aujourd'hui.
@@ -76,23 +99,24 @@
         <img
           src="assets/captain-livraison.webp"
           alt="Le Capitaine Food serre chaleureusement la main d'un livreur à vélo souriant, sac de livraison sur le dos"
+          data-i18n-alt="delivery.hero_img_alt"
           width="1000"
           height="500"
           loading="lazy"
         />
-        <figcaption>« Bien payé, bien traité. C'est la base, pas un bonus. »</figcaption>
+        <figcaption data-i18n="delivery.hero_caption">« Bien payé, bien traité. C'est la base, pas un bonus. »</figcaption>
       </figure>
 
-      <h2 class="section-title" style="text-align:left; margin-top:2.4rem;">
+      <h2 class="section-title" style="text-align:left; margin-top:2.4rem;" data-i18n="delivery.problem_title">
         Le problème que personne ne veut regarder
       </h2>
-      <p class="lead">
+      <p class="lead" data-i18n="delivery.problem_p1">
         Dans l'ubérisation, le livreur est une variable qu'on presse&nbsp;: statut
         précaire, aucune protection, revenus qui s'érodent. Tout le monde le sait.
         Mais rien ne bouge, parce que ce sont les géants de la tech qui imposent leur
         vision — et elle arrange leurs comptes, pas les gens.
       </p>
-      <p class="lead">
+      <p class="lead" data-i18n-html="delivery.problem_p2">
         Nous, on a fait le choix inverse&nbsp;: <strong>payer nos livreurs mieux que
         quiconque</strong>, ici à Tours — avec une ambition claire, à terme&nbsp;:
         <strong>les salarier</strong>, avec un vrai contrat et de vraies protections.
@@ -101,40 +125,40 @@
         sans presser personne</em> — ni ta marge, ni le client. Voici la réponse.
       </p>
 
-      <h2 class="section-title" style="text-align:left; margin-top:2.4rem;">
+      <h2 class="section-title" style="text-align:left; margin-top:2.4rem;" data-i18n="delivery.trigger_title">
         Le déclic : livrer te coûte souvent moins cher que servir en salle
       </h2>
-      <p class="lead">
+      <p class="lead" data-i18n-html="delivery.trigger_p1">
         On répète que « la livraison, ça coûte cher au resto ». Regarde de plus
         près. Un couvert en salle, c'est du personnel pour accueillir, servir,
         débarrasser, une table immobilisée pendant une heure. Une commande livrée,
         <strong>rien de tout ça</strong>&nbsp;: pas de service en salle à payer.
       </p>
-      <p class="lead">
+      <p class="lead" data-i18n-html="delivery.trigger_p2">
         Autrement dit, <strong>une bonne partie du coût de service que tu dépenses en
         salle, tu ne la dépenses pas en livraison.</strong> C'est souvent là que se
         trouve de quoi payer dignement la personne qui apporte le repas — sans rien
         prendre de plus sur ton assiette.
       </p>
 
-      <h2 class="section-title" style="text-align:left; margin-top:2.4rem;">
+      <h2 class="section-title" style="text-align:left; margin-top:2.4rem;" data-i18n="delivery.who_pays_title">
         Qui paie la course — et comment ta marge est protégée
       </h2>
-      <p class="lead">
+      <p class="lead" data-i18n="delivery.who_pays_intro">
         La règle est simple et tu la contrôles de bout en bout&nbsp;:
       </p>
       <ul class="check-list">
-        <li>
+        <li data-i18n-html="delivery.rule1">
           <strong>Tu fixes ta marge plancher.</strong> Le minimum que tu acceptes de
           faire sur une commande livrée. C'est ton seuil, décidé par toi.
         </li>
-        <li>
+        <li data-i18n-html="delivery.rule2">
           <strong>Ta participation est plafonnée par ce seuil.</strong> Elle se situe
           entre ta marge habituelle et ton plancher — financée par le coût de service
           que la livraison t'épargne. <strong>Jamais on ne descend sous ton
           minimum.</strong>
         </li>
-        <li>
+        <li data-i18n-html="delivery.rule3">
           <strong>Le client paie la différence</strong>, affichée en clair au moment
           de commander. Pas de prix gonflé en douce, pas de frais caché.
         </li>
@@ -142,54 +166,54 @@
 
       <div class="finance-example">
         <p class="finance-example-tag">
-          <span aria-hidden="true">🛵</span> Exemple illustratif — une commande livrée de 30 €
+          <span aria-hidden="true">🛵</span> <span data-i18n="delivery.example_tag">Exemple illustratif — une commande livrée de 30 €</span>
         </p>
         <ul class="finance-example-rows">
           <li>
-            <span class="fe-label">La course, payée dignement (notre choix)</span>
-            <span class="fe-value">7 € <em>juste</em></span>
+            <span class="fe-label" data-i18n="delivery.example_row1_label">La course, payée dignement (notre choix)</span>
+            <span class="fe-value" data-i18n-html="delivery.example_row1_value">7 € <em>juste</em></span>
           </li>
           <li>
-            <span class="fe-label">Ta participation (issue de l'économie de service)</span>
+            <span class="fe-label" data-i18n="delivery.example_row2_label">Ta participation (issue de l'économie de service)</span>
             <span class="fe-value">3 €</span>
           </li>
           <li>
-            <span class="fe-label">Le client complète</span>
+            <span class="fe-label" data-i18n="delivery.example_row3_label">Le client complète</span>
             <span class="fe-value">4 €</span>
           </li>
-          <li class="fe-detail">
+          <li class="fe-detail" data-i18n="delivery.example_detail">
             Tu as fixé un plancher (ex. 50 % de marge). Comme livrer t'épargne le
             coût de service en salle, tu peux mettre 3 € sans jamais passer sous ton
             seuil. Le client voit 4 € de livraison, clairement affichés.
           </li>
         </ul>
-        <p class="finance-example-note">
+        <p class="finance-example-note" data-i18n-html="delivery.example_note">
           Résultat&nbsp;: <strong>le livreur est payé dignement</strong>,
           <strong>ta marge reste au-dessus de ton plancher</strong>, et
           <strong>le client paie le vrai coût</strong> — pas un prix gonflé pour
           nourrir une plateforme.
         </p>
-        <p class="finance-example-compare">
+        <p class="finance-example-compare" data-i18n="delivery.example_compare">
           Sur les grandes plateformes, le client paie souvent autant ou plus… mais
           le livreur touche moins, et la différence disparaît en commission.
         </p>
-        <p class="finance-example-fine">
+        <p class="finance-example-fine" data-i18n="delivery.example_fine">
           Montants donnés à titre d'exemple pour illustrer le principe (la
           rémunération de la course est notre engagement, pas un tarif imposé). Les
           seuils réels se règlent avec chaque restaurateur.
         </p>
       </div>
 
-      <h2 class="section-title" style="text-align:left; margin-top:2.4rem;">
+      <h2 class="section-title" style="text-align:left; margin-top:2.4rem;" data-i18n="delivery.other_title">
         Et sur mes commandes à emporter ou à table ?
       </h2>
-      <p class="lead">
+      <p class="lead" data-i18n-html="delivery.other_p1">
         Aucun coût de ce genre&nbsp;: pas de livreur, donc rien à partager. Sur le
         click and collect et la commande à table, c'est <strong>0 €</strong> pour toi,
         point. La participation à la livraison ne concerne <strong>que</strong> les
         commandes réellement livrées — et seulement si tu proposes la livraison.
       </p>
-      <p class="lead">
+      <p class="lead" data-i18n-html="delivery.other_p2">
         À ne pas confondre avec la commission&nbsp;: <strong>on ne prélève jamais de
         pourcentage sur tes plats.</strong> Tu gardes 100 % du prix de ce que tu
         vends. La livraison, elle, est un <em>service réel</em> — payer celui qui
@@ -198,7 +222,7 @@
       </p>
 
       <div class="engagement-band" style="margin-top:2rem;">
-        <p>
+        <p data-i18n-html="delivery.contact">
           <strong>Une question sur ce modèle&nbsp;?</strong> Écris-nous à
           <a href="mailto:miam@captain.food">miam@captain.food</a> — on répond en
           clair. Et si tu tiens un resto ou un food truck à Tours,
@@ -207,7 +231,7 @@
       </div>
 
       <p style="margin-top:2rem;">
-        <a class="btn btn-navy" href="index.html">← Retour à l'accueil</a>
+        <a class="btn btn-navy" href="index.html" data-i18n="shared.back_home">← Retour à l'accueil</a>
       </p>
     </div>
   </main>
@@ -220,5 +244,6 @@
     </noscript>
   </footer>
   <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
 </body>
 </html>
