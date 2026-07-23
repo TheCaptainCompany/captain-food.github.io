@@ -154,6 +154,19 @@ states that the future product itself will speak these 17 languages
   `HTML_SOURCES` in `tools/i18n/i18n.py`, run `build`, and add hreflang
   `?lang=` alternates to its `<head>` + `sitemap.xml`.
 
+## UI consistency rule (learned the hard way)
+
+A shared visual component must be sized/styled by **one** rule (or one CSS
+token), never by per-page near-duplicates. The FAQ Captain once rendered at
+132px on sub-pages vs 300px on the landing page because `.faq-topper` and
+`.faq-figure` each carried their own size; both now read the single token
+`--captain-faq-h`. The gate `.github/workflows/ui-check.yml` runs
+`tools/checks/ui-consistency.mjs` on every push: it renders **every page** in
+headless Chromium and fails on cross-page drift of the Captain figure, a
+missing language switcher (header or footer), console errors, or a page whose
+`?lang=en` variant doesn't translate. When you add a shared component, give it
+one rule + extend this check.
+
 ## SEO & discovery
 
 - `sitemap.xml` lists every indexable page (URLs on `join.captain.food`);

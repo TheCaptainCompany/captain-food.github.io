@@ -153,24 +153,33 @@ code {
   margin-inline: auto;
   filter: drop-shadow(0 14px 24px rgba(10, 30, 50, 0.22));
 }
-/* Topper de FAQ — le même Capitaine au-dessus de chaque FAQ du site. */
+/* Topper de FAQ — le même Capitaine au-dessus de chaque FAQ du site.
+   ONE size for the FAQ Captain everywhere: this rule and .faq-figure (the
+   landing FAQ) both read --captain-faq-h, so the sub-pages can never drift
+   from the homepage again (enforced by tools/checks/ui-consistency.mjs). */
+:root {
+  --captain-faq-h: 300px;
+}
+@media (max-width: 820px) {
+  :root {
+    --captain-faq-h: 240px;
+  }
+}
 .faq-topper {
   text-align: center;
   margin: 2.6rem auto 0.2rem;
 }
 .faq-topper img {
   width: auto;
-  height: 132px;
+  height: auto;
+  max-height: var(--captain-faq-h);
   max-width: 100%;
   margin-inline: auto;
-  filter: drop-shadow(0 10px 18px rgba(10, 30, 50, 0.2));
+  filter: drop-shadow(0 14px 24px rgba(10, 30, 50, 0.22));
 }
 @media (max-width: 820px) {
   .seo-figure img {
     max-height: 240px;
-  }
-  .faq-topper img {
-    height: 112px;
   }
 }
 
@@ -1234,7 +1243,7 @@ section[id],
   text-align: center;
 }
 .faq-figure img {
-  max-height: 300px;
+  max-height: var(--captain-faq-h);
   width: auto;
   margin-inline: auto;
   filter: drop-shadow(0 14px 24px rgba(10, 30, 50, 0.22));
@@ -1247,9 +1256,6 @@ section[id],
 @media (max-width: 820px) {
   /* Captains a touch smaller on phones. */
   .cta-layout .cta-captain img {
-    max-height: 240px;
-  }
-  .faq-figure img {
     max-height: 240px;
   }
 }
