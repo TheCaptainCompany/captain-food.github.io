@@ -29,13 +29,17 @@ const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
 const consoleErrors = [];
 page.on("console", (m) => {
   // Only same-origin failures count: external resources (Cloudflare beacon,
-  // Google Fonts) are routinely blocked in sandboxes/adblockers and say
-  // nothing about our code. Resource errors carry the URL in location().
+  // Google Fonts) are routinely blocked/CORS-refused when the site is served
+  // from localhost and say nothing about our code. An external origin can
+  // show up either in the message location() (resource errors) or only in
+  // the message text (CORS preflight errors located on the page itself).
+  if (m.type() !== "error") return;
   const url = (m.location() && m.location().url) || "";
-  if (m.type() === "error" && (url === "" || url.startsWith(BASE))) {
-    if (url === "" && /Failed to load resource/.test(m.text())) return; // URL-less external fetch
-    consoleErrors.push(m.text());
-  }
+  const text = m.text();
+  if (url && !url.startsWith(BASE)) return; // resource error on a third-party URL
+  if (/https?:\/\/(?!localhost)[^\s'"]+/.test(text)) return; // text cites a third-party origin
+  if (url === "" && /Failed to load resource/.test(text)) return; // URL-less external fetch
+  consoleErrors.push(text);
 });
 page.on("pageerror", (e) => consoleErrors.push(String(e.message)));
 
