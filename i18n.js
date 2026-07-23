@@ -336,6 +336,25 @@
   // on the active one. Keyboard: Enter/Space/arrows open & navigate, Esc closes.
   // Instantiated twice: header nav (drops down) and footer slot (drops up).
   var switchers = []; // [{ button, label, flag, menu, options }]
+  var flagChips = []; // [{ el, code }] — FAQ flag rows ([data-lang-flags])
+
+  // Hover tooltip for a language entry: its name in French, in English and in
+  // the CURRENT page language — via the browser's Intl.DisplayNames, so no
+  // 17x17 name matrix has to live in the catalog. Falls back to the endonym.
+  function langTooltip(code) {
+    var names = [];
+    try {
+      ["fr", "en", LANGS[current].locale].forEach(function (loc) {
+        var name = new Intl.DisplayNames([loc], { type: "language" }).of(code);
+        if (!name) return;
+        name = name.charAt(0).toUpperCase() + name.slice(1);
+        if (names.indexOf(name) === -1) names.push(name);
+      });
+    } catch (e) {}
+    var endonym = LANGS[code].label;
+    if (names.indexOf(endonym) === -1) names.push(endonym);
+    return names.join(" · ");
+  }
 
   function updateSwitcher() {
     switchers.forEach(function (sw) {
@@ -346,8 +365,31 @@
         t("lang.switch_label", "Choisir la langue") + " — " + LANGS[current].label
       );
       sw.options.forEach(function (option) {
-        var on = option.getAttribute("data-lang") === current;
-        option.setAttribute("aria-selected", on ? "true" : "false");
+        var code = option.getAttribute("data-lang");
+        option.setAttribute("aria-selected", code === current ? "true" : "false");
+        option.title = langTooltip(code);
+      });
+    });
+    flagChips.forEach(function (chip) {
+      var tooltip = langTooltip(chip.code);
+      chip.el.title = tooltip;
+      chip.el.setAttribute("aria-label", tooltip);
+    });
+  }
+
+  // FAQ "how many languages" flag rows: one chip per language (multi-flag
+  // languages keep all their flags in one chip), tooltip + aria-label each.
+  function fillFlagRows() {
+    var rows = document.querySelectorAll("[data-lang-flags]");
+    Array.prototype.forEach.call(rows, function (row) {
+      if (row.childNodes.length) return;
+      Object.keys(LANGS).forEach(function (code) {
+        var chip = document.createElement("span");
+        chip.className = "faq-flag";
+        chip.setAttribute("role", "img");
+        chip.innerHTML = FLAGS[code] || "";
+        row.appendChild(chip);
+        flagChips.push({ el: chip, code: code });
       });
     });
   }
@@ -453,6 +495,7 @@
     Array.prototype.forEach.call(slots, function (slot) {
       if (!slot.querySelector(".lang-switch")) createSwitcher(slot, true);
     });
+    fillFlagRows();
     updateSwitcher();
   }
 

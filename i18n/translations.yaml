@@ -1275,6 +1275,25 @@ keys:
       ar: "حالتان. إذا <strong>دفع الزبون في الصندوق</strong> أو في المحل، فهذا <strong>خارج تدفقنا</strong>: مجاني 100%، ولا نمسّه. أما إذا <strong>دفع أونلاين</strong> عبر رمز QR، فقد تُضاف مساهمة حرة، كما في أي طلب أونلاين. وفي كل الحالات، باسمك أنت، وعمولة 0% على أطباقك."
       ar-lb: "حالتين. إذا الزبون <strong>دفع عالكاشير</strong> أو بالمحل، هيدا <strong>برّات فلوسنا</strong>: ببلاش 100%، ما منقرّب عليه. وإذا <strong>دفع أونلاين</strong> عبر الـQR، فيها تنضاف مساهمة حرّة، متل أي طلب أونلاين. بكل الحالات، باسمك إنت، و0 عمولة على أكلك."
       he: "שני מצבים. אם הלקוח <strong>משלם בקופה</strong> או במקום, זה <strong>מחוץ לזרימה שלנו</strong>: 100% חינם, אנחנו לא נוגעים בזה. אם הוא <strong>משלם אונליין</strong> דרך ה-QR, תרומה חופשית יכולה להתווסף, כמו בהזמנה אונליין. בכל מקרה — על שמך, ו-0 עמלה על המנות שלך."
+  faq.a9:
+    messages:
+      fr: "<strong>17, pour commencer</strong> — celles qu'on parle autour de nous. Cette page les parle déjà toutes (essaie le sélecteur en haut). Et le produit suivra le même cap : le site de commande de tes clients, ton espace restaurateur et, à terme, l'app des livreurs. Chacun dans sa langue — ton client commande en thaï ou en arabe, toi tu travailles dans la tienne."
+      en: "<strong>17, to start with</strong> — the ones spoken around us. This page already speaks them all (try the switcher at the top). And the product will hold the same course: your customers' ordering site, your restaurateur space and, in time, the riders' app. Everyone in their own language — your customer orders in Thai or Arabic, you work in yours."
+      es: "<strong>17, para empezar</strong> — los que se hablan a nuestro alrededor. Esta página ya los habla todos (prueba el selector de arriba). Y el producto seguirá el mismo rumbo: el sitio de pedidos de tus clientes, tu espacio de hostelero y, con el tiempo, la app de los repartidores. Cada uno en su idioma — tu cliente pide en tailandés o en árabe, y tú trabajas en el tuyo."
+      it: "<strong>17, per cominciare</strong> — quelle che si parlano intorno a noi. Questa pagina le parla già tutte (prova il selettore in alto). E il prodotto seguirà la stessa rotta: il sito di ordinazione dei tuoi clienti, il tuo spazio da ristoratore e, col tempo, l'app dei rider. Ognuno nella sua lingua — il tuo cliente ordina in thailandese o in arabo, tu lavori nella tua."
+      pt: "<strong>17, para começar</strong> — as que se falam à nossa volta. Esta página já as fala todas (experimenta o seletor lá em cima). E o produto seguirá o mesmo rumo: o site de encomendas dos teus clientes, o teu espaço de restaurador e, a prazo, a app dos estafetas. Cada um na sua língua — o teu cliente encomenda em tailandês ou em árabe, tu trabalhas na tua."
+      de: "<strong>17, für den Anfang</strong> — die, die um uns herum gesprochen werden. Diese Seite spricht sie schon alle (probier die Sprachauswahl oben). Und das Produkt hält denselben Kurs: die Bestellseite deiner Gäste, dein Gastronomen-Bereich und mit der Zeit die Fahrer-App. Jeder in seiner Sprache — dein Gast bestellt auf Thai oder Arabisch, du arbeitest in deiner."
+      tr: "<strong>Başlangıç olarak 17</strong> — çevremizde konuşulan diller. Bu sayfa şimdiden hepsini konuşuyor (yukarıdaki dil seçiciyi dene). Ürün de aynı rotayı izleyecek: müşterilerinin sipariş sitesi, senin restorancı panelin ve zamanla kuryelerin uygulaması. Herkes kendi dilinde — müşterin Tayca ya da Arapça sipariş verir, sen kendi dilinde çalışırsın."
+      el: "<strong>17, για αρχή</strong> — αυτές που μιλιούνται γύρω μας. Αυτή η σελίδα τις μιλά ήδη όλες (δοκίμασε τον επιλογέα πάνω). Και το προϊόν θα κρατήσει την ίδια ρότα: το site παραγγελιών των πελατών σου, ο χώρος σου ως εστιάτορα και, με τον καιρό, η εφαρμογή των διανομέων. Ο καθένας στη γλώσσα του — ο πελάτης σου παραγγέλνει στα ταϊλανδικά ή στα αραβικά, εσύ δουλεύεις στη δική σου."
+      ro: "<strong>17, pentru început</strong> — cele care se vorbesc în jurul nostru. Această pagină le vorbește deja pe toate (încearcă selectorul de sus). Iar produsul va ține același curs: site-ul de comenzi al clienților tăi, spațiul tău de restaurator și, cu timpul, aplicația curierilor. Fiecare în limba lui — clientul tău comandă în thailandeză sau în arabă, tu lucrezi în a ta."
+      zh: "<strong>17种，这只是开始</strong>——都是我们身边人在说的语言。这个页面已经全都会说了（试试顶部的语言切换）。产品也会沿着同一条航线走：你客人的点餐网站、你的餐厅管理端，以及以后的骑手App。各说各的语言——你的客人用泰语或阿拉伯语下单，你用自己的语言干活。"
+      ja: "<strong>まずは17言語</strong> — 私たちの身の回りで話されている言語です。このページはすでにその全部を話します（上の言語切り替えを試してみて）。そしてプロダクトも同じ針路を進みます：お客様の注文サイト、あなたの店主用スペース、そしてゆくゆくは配達員アプリ。それぞれが自分の言語で — あなたのお客様はタイ語やアラビア語で注文し、あなたは自分の言語で仕事ができます。"
+      th: "<strong>17 ภาษา เอาไว้เริ่มต้น</strong> — ภาษาที่ผู้คนรอบตัวเราพูดกัน หน้านี้พูดได้ครบทุกภาษาแล้ว (ลองตัวเลือกภาษาด้านบนดู) และตัวผลิตภัณฑ์ก็จะมุ่งไปตามเส้นทางเดียวกัน: เว็บไซต์สั่งอาหารของลูกค้าคุณ พื้นที่เจ้าของร้านของคุณ และในอนาคตแอปของไรเดอร์ แต่ละคนในภาษาของตัวเอง — ลูกค้าของคุณสั่งเป็นภาษาไทยหรืออาหรับ ส่วนคุณทำงานในภาษาของคุณเอง"
+      hi: "<strong>शुरुआत के लिए 17</strong> — वही भाषाएँ, जो हमारे आस-पास बोली जाती हैं। यह पेज पहले से ही ये सारी बोलता है (ऊपर का भाषा-चयनकर्ता आज़माइए)। और प्रोडक्ट भी इसी दिशा में आगे बढ़ेगा: आपके ग्राहकों की ऑर्डर साइट, आपका रेस्टोरेंट स्पेस और आगे चलकर डिलीवरी-राइडरों का ऐप। हर कोई अपनी भाषा में — आपका ग्राहक थाई या अरबी में ऑर्डर करता है, और आप अपनी भाषा में काम करते हैं।"
+      ta: "<strong>தொடக்கத்திற்கு 17</strong> — நம்மைச் சுற்றி பேசப்படும் மொழிகள். இந்தப் பக்கம் ஏற்கெனவே அவை அனைத்தையும் பேசுகிறது (மேலே உள்ள மொழித் தேர்வியை முயன்று பாருங்கள்). தயாரிப்பும் அதே திசையிலேயே பயணிக்கும்: உங்கள் வாடிக்கையாளர்களின் ஆர்டர் தளம், உங்கள் உணவக உரிமையாளர் பகுதி, பின்னர் டெலிவரி செய்பவர்களின் ஆப். ஒவ்வொருவரும் தத்தம் மொழியில் — உங்கள் வாடிக்கையாளர் தாய் அல்லது அரபு மொழியில் ஆர்டர் செய்கிறார், நீங்கள் உங்கள் மொழியில் வேலை செய்கிறீர்கள்."
+      ar: "<strong>17 لغة، للبداية</strong> — اللغات التي تُتحدَّث من حولنا. هذه الصفحة تتحدثها كلها بالفعل (جرّب مُبدِّل اللغة في الأعلى). والمنتج سيتبع المسار نفسه: موقع الطلب لزبائنك، ومساحتك كصاحب مطعم، ثم تطبيق السائقين لاحقًا. كلٌّ بلغته — زبونك يطلب بالتايلاندية أو بالعربية، وأنت تعمل بلغتك."
+      ar-lb: "<strong>17، لنبلّش</strong> — اللغات يلي منحكيها حوالينا. هالصفحة صارت بتحكيهن كلّهن (جرّب مبدّل اللغة فوق). والمنتج رح يمشي عنفس الخط: موقع الطلبات تبع زبايتك، ومساحتك كصاحب مطعم، ومع الوقت تطبيق الدليفري. كل واحد بلغته — زبونك بيطلب بالتايلاندي أو بالعربي، وإنت بتشتغل بلغتك."
+      he: "<strong>17, בתור התחלה</strong> — השפות שמדברים סביבנו. הדף הזה כבר מדבר את כולן (נסה את בורר השפות למעלה). והמוצר ימשיך באותו כיוון: אתר ההזמנות של הלקוחות שלך, אזור המסעדן שלך, ובהמשך אפליקציית השליחים. כל אחד בשפה שלו — הלקוח שלך מזמין בתאית או בערבית, ואתה עובד בשלך."
   faq.img_alt:
     messages:
       fr: "Le Capitaine Food, l'index sur la tempe, invite à réfléchir aux questions"
@@ -1465,6 +1484,25 @@ keys:
       ar: "وماذا عن الطلب على الطاولة (رمز QR)؟"
       ar-lb: "والطلب عالطاولة (QR كود)؟"
       he: "ומה עם הזמנה ליד השולחן (QR)?"
+  faq.q9:
+    messages:
+      fr: "Vous parlez combien de langues — pour mes clients, pour moi, pour les livreurs ?"
+      en: "How many languages do you speak — for my customers, for me, for the riders?"
+      es: "¿Cuántos idiomas habláis — para mis clientes, para mí, para los repartidores?"
+      it: "Quante lingue parlate — per i miei clienti, per me, per i rider?"
+      pt: "Quantas línguas falam — para os meus clientes, para mim, para os estafetas?"
+      de: "Wie viele Sprachen sprecht ihr — für meine Gäste, für mich, für die Fahrer?"
+      tr: "Kaç dil konuşuyorsunuz — müşterilerim için, benim için, kuryeler için?"
+      el: "Πόσες γλώσσες μιλάτε — για τους πελάτες μου, για μένα, για τους διανομείς;"
+      ro: "Câte limbi vorbiți — pentru clienții mei, pentru mine, pentru curieri?"
+      zh: "你们会说几种语言——为我的客人、为我自己，还有为骑手？"
+      ja: "いくつの言語を話せるの — 私のお客様に、私に、配達員に？"
+      th: "คุณพูดได้กี่ภาษา — สำหรับลูกค้าของฉัน สำหรับฉัน แล้วก็สำหรับไรเดอร์?"
+      hi: "आप कितनी भाषाएँ बोलते हैं — मेरे ग्राहकों के लिए, मेरे लिए, डिलीवरी-राइडरों के लिए?"
+      ta: "நீங்கள் எத்தனை மொழிகள் பேசுகிறீர்கள் — என் வாடிக்கையாளர்களுக்கு, எனக்கு, டெலிவரி செய்பவர்களுக்கு?"
+      ar: "كم لغة تتحدثون — لزبائني، ولي، وللسائقين؟"
+      ar-lb: "قدّيش لغة بتحكو — لزبايني، وإلي، وللدليفري؟"
+      he: "כמה שפות אתם מדברים — בשביל הלקוחות שלי, בשבילי, בשביל השליחים?"
   faq.title:
     messages:
       fr: "Les questions qu'on nous pose"

@@ -2600,3 +2600,20 @@ section[id],
   align-items: center;
   gap: 2px;
 }
+
+/* ---------- FAQ flag row (the "17 languages" answer) ---------- */
+.faq-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+}
+.faq-flag {
+  display: inline-flex;
+  gap: 0.2rem;
+  cursor: help;
+}
+.faq-flag .lang-flag {
+  width: 1.55rem;
+  height: 1.05rem;
+}
