@@ -1,8 +1,19 @@
 /* =========================================================
    Captain.Food — form validation & submission (no framework)
-   - Client-side validation with French messages
+   - Client-side validation (French fallback; translated via i18n.js)
    - Submits to Formspree via fetch (async), falls back gracefully
    ========================================================= */
+
+/* Dynamic strings go through the i18n runtime when it's loaded (i18n.js is
+   included before this file on translated pages); the French literal is the
+   fallback and MUST stay in sync with the fr messages in
+   i18n/translations.yaml. */
+function cfT(key, fallback, params) {
+  return window.CF_I18N ? window.CF_I18N.t(key, fallback, params) : fallback;
+}
+function cfLocale() {
+  return window.CF_I18N ? window.CF_I18N.locale() : "fr-FR";
+}
 
 (function () {
   "use strict";
@@ -25,10 +36,11 @@
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   var RULES = [
-    { id: "resto", msg: "Indique le nom de ton restaurant ou food truck." },
-    { id: "contact", msg: "Dis-nous ton nom." },
+    { id: "resto", key: "form.err_resto", msg: "Indique le nom de ton restaurant ou food truck." },
+    { id: "contact", key: "form.err_contact", msg: "Dis-nous ton nom." },
     {
       id: "email",
+      key: "form.err_email",
       msg: "Adresse email invalide.",
       test: function (v) {
         return EMAIL_RE.test(v);
@@ -36,6 +48,7 @@
     },
     {
       id: "consentement",
+      key: "form.err_consent",
       msg: "Tu dois accepter la politique de confidentialité pour continuer.",
       checkbox: true,
     },
@@ -48,7 +61,7 @@
   function showError(rule, el) {
     var errEl = document.getElementById(rule.id + "-error");
     if (errEl) {
-      errEl.textContent = rule.msg;
+      errEl.textContent = cfT(rule.key, rule.msg);
       errEl.hidden = false;
       // Link the error to the field so screen readers announce it on focus.
       el.setAttribute("aria-describedby", rule.id + "-error");
@@ -126,7 +139,7 @@
     });
 
     if (!allValid) {
-      setStatus("err", "Corrige les champs signalés ci-dessus.");
+      setStatus("err", cfT("form.err_fix", "Corrige les champs signalés ci-dessus."));
       if (firstInvalid) firstInvalid.focus();
       return;
     }
@@ -138,7 +151,7 @@
     if (action.indexOf("PLACEHOLDER_ID") !== -1) {
       setStatus(
         "err",
-        "Le formulaire n'est pas encore connecté. Écris-nous à miam@captain.food."
+        cfT("form.err_notconnected", "Le formulaire n'est pas encore connecté. Écris-nous à miam@captain.food.")
       );
       return;
     }
@@ -146,9 +159,15 @@
     if (submitBtn) {
       submitBtn.disabled = true;
       // literal "…" is the static fallback; .cf-dots animates it when motion is allowed
-      submitBtn.innerHTML = 'Envoi<span class="cf-dots" aria-hidden="true">…</span>';
+      submitBtn.innerHTML = "";
+      submitBtn.appendChild(document.createTextNode(cfT("form.sending", "Envoi")));
+      var dots = document.createElement("span");
+      dots.className = "cf-dots";
+      dots.setAttribute("aria-hidden", "true");
+      dots.textContent = "…";
+      submitBtn.appendChild(dots);
     }
-    setStatus("ok", "Envoi en cours…");
+    setStatus("ok", cfT("form.sending_status", "Envoi en cours…"));
 
     var data = new FormData(form);
 
@@ -179,35 +198,43 @@
       .catch(function () {
         setStatus(
           "err",
-          "Oups, l'envoi a échoué. Réessaie ou écris-nous à miam@captain.food."
+          cfT("form.err_failed", "Oups, l'envoi a échoué. Réessaie ou écris-nous à miam@captain.food.")
         );
       })
       .then(function () {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = "Je rejoins les restaurateurs libres";
+          submitBtn.textContent = cfT("form.submit", "Je rejoins les restaurateurs libres");
         }
       });
   });
 })();
 
-/* The Captain's line under the portrait — a different one on each visit. */
+/* The Captain's line under the portrait — a different one on each visit.
+   Keys hero.quote.1-9; the French literals double as no-i18n fallbacks. */
 (function () {
   "use strict";
   var el = document.getElementById("capitaine-quote");
   if (!el) return;
   var lines = [
-    "« Tes plats, tes prix, tes clients. »",
-    "« 0 % de commission. Toujours. »",
-    "« Ici, c'est toi le capitaine. »",
-    "« Reprends la barre de ton affaire. »",
-    "« Ta cuisine mérite mieux qu'un péage. »",
-    "« Le client est à toi — qu'il le reste. »",
-    "« On rame pour les indépendants, pas contre eux. »",
-    "« Garde ta marge. On s'occupe du reste. »",
-    "« Cuisine. Encaisse. Recommence. »",
+    { key: "hero.quote.1", fr: "« Tes plats, tes prix, tes clients. »" },
+    { key: "hero.quote.2", fr: "« 0 % de commission. Toujours. »" },
+    { key: "hero.quote.3", fr: "« Ici, c'est toi le capitaine. »" },
+    { key: "hero.quote.4", fr: "« Reprends la barre de ton affaire. »" },
+    { key: "hero.quote.5", fr: "« Ta cuisine mérite mieux qu'un péage. »" },
+    { key: "hero.quote.6", fr: "« Le client est à toi — qu'il le reste. »" },
+    { key: "hero.quote.7", fr: "« On rame pour les indépendants, pas contre eux. »" },
+    { key: "hero.quote.8", fr: "« Garde ta marge. On s'occupe du reste. »" },
+    { key: "hero.quote.9", fr: "« Cuisine. Encaisse. Recommence. »" },
   ];
-  el.textContent = lines[Math.floor(Math.random() * lines.length)];
+  var pick = lines[Math.floor(Math.random() * lines.length)];
+  function render() {
+    el.textContent = cfT(pick.key, pick.fr);
+  }
+  render();
+  // The i18n pass rewrites the figcaption (it carries hero.quote.1) on every
+  // language change — re-apply the visit's random pick right after.
+  document.addEventListener("cf:lang", render);
 })();
 
 /* Commission simulator — pick a platform preset (sets the rate) or edit it,
@@ -230,11 +257,16 @@
   // employer charges after réduction générale). Source: service-public.gouv.fr.
   var SMIC_EMPLOYER = 1933;
 
-  var euro = new Intl.NumberFormat("fr-FR", {
-    style: "currency",
-    currency: "EUR",
-    maximumFractionDigits: 0,
-  });
+  // Locale-aware amount formatting (recreated when the language changes).
+  var euro;
+  function makeFormatter() {
+    euro = new Intl.NumberFormat(cfLocale(), {
+      style: "currency",
+      currency: "EUR",
+      maximumFractionDigits: 0,
+    });
+  }
+  makeFormatter();
 
   function num(el) {
     var v = parseFloat(String(el.value).replace(",", "."));
@@ -257,25 +289,38 @@
     var commYear = commMonth * 12;
     if (ca > 0) {
       punch.innerHTML =
-        '<span class="loss-lead">Cette plateforme t\'arrache</span>' +
+        '<span class="loss-lead"></span>' +
         '<span class="loss-big">' + euro.format(commYear) +
-        '<span class="loss-unit"> / an</span></span>' +
-        '<span class="loss-sub">soit ' + euro.format(commMonth) +
-        ' / mois \u2014 souvent plus que toute ta marge.</span>';
+        '<span class="loss-unit"></span></span>' +
+        '<span class="loss-sub"></span>';
+      punch.querySelector(".loss-lead").textContent =
+        cfT("calc.loss_lead", "Cette plateforme t'arrache");
+      punch.querySelector(".loss-unit").textContent =
+        " " + cfT("calc.loss_year_unit", "/ an");
+      punch.querySelector(".loss-sub").textContent = cfT(
+        "calc.loss_sub",
+        "soit {perMonth} / mois \u2014 souvent plus que toute ta marge.",
+        { perMonth: euro.format(commMonth) }
+      );
     } else {
-      punch.innerHTML =
-        '<span class="loss-empty">Entre ton chiffre d\'affaires mensuel pour voir ce que la commission t\'arrache.</span>';
+      punch.innerHTML = '<span class="loss-empty"></span>';
+      punch.querySelector(".loss-empty").textContent = cfT(
+        "calc.loss_empty",
+        "Entre ton chiffre d'affaires mensuel pour voir ce que la commission t'arrache."
+      );
     }
 
     if (smicEl) {
       if (ca > 0) {
         var moisEmploye = commYear / SMIC_EMPLOYER;
         var moisTxt = moisEmploye < 1.5
-          ? moisEmploye.toLocaleString("fr-FR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })
-          : Math.round(moisEmploye).toLocaleString("fr-FR");
-        smicEl.innerHTML =
-          "C'est ≈ <strong>" + moisTxt +
-          " mois de salaire</strong> au SMIC (charges comprises). Chaque année.";
+          ? moisEmploye.toLocaleString(cfLocale(), { minimumFractionDigits: 1, maximumFractionDigits: 1 })
+          : Math.round(moisEmploye).toLocaleString(cfLocale());
+        smicEl.innerHTML = cfT(
+          "calc.smic",
+          "C'est ≈ <strong>{months} mois de salaire</strong> au SMIC (charges comprises). Chaque année.",
+          { months: moisTxt }
+        );
       } else {
         smicEl.textContent = "";
       }
@@ -328,13 +373,25 @@
       var r = currentRate();
       var commMonth = (ca * r) / 100;
       if (mot && commMonth > 0 && !mot.value.trim()) {
-        mot.value =
-          "Via le calculateur : CA " + euro.format(ca) + "/mois sur la plateforme, " +
-          "commission ~" + r + " % = " + euro.format(commMonth) + "/mois (" +
-          euro.format(commMonth * 12) + "/an).";
+        mot.value = cfT(
+          "calc.prefill",
+          "Via le calculateur : CA {ca}/mois sur la plateforme, commission ~{rate} % = {perMonth}/mois ({perYear}/an).",
+          {
+            ca: euro.format(ca),
+            rate: String(r),
+            perMonth: euro.format(commMonth),
+            perYear: euro.format(commMonth * 12),
+          }
+        );
       }
     });
   }
+
+  // Re-render the computed lines in the new language (and number format).
+  document.addEventListener("cf:lang", function () {
+    makeFormatter();
+    compute();
+  });
 
   compute();
 })();

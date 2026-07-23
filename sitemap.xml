@@ -1,87 +1,342 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://join.captain.food/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <!-- The homepage self-translates client-side (i18n.js); ?lang= variants
+         mirror the hreflang link tags in index.html. -->
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/"/>
   </url>
   <url>
     <loc>https://join.captain.food/tarifs.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/tarifs.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/tarifs.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/tarifs.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/tarifs.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/tarifs.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/tarifs.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/tarifs.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/tarifs.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/tarifs.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/tarifs.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/tarifs.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/tarifs.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/tarifs.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/tarifs.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/tarifs.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/tarifs.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/tarifs.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/manifeste.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/manifeste.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/manifeste.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/manifeste.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/manifeste.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/manifeste.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/manifeste.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/manifeste.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/manifeste.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/manifeste.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/manifeste.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/manifeste.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/manifeste.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/manifeste.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/manifeste.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/manifeste.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/manifeste.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/manifeste.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/manifeste.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/financement.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/financement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/financement.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/financement.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/financement.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/financement.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/financement.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/financement.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/financement.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/financement.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/financement.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/financement.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/financement.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/financement.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/financement.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/financement.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/financement.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/financement.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/financement.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/livraison.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/livraison.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/livraison.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/livraison.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/livraison.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/livraison.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/livraison.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/livraison.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/livraison.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/livraison.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/livraison.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/livraison.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/livraison.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/livraison.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/livraison.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/livraison.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/livraison.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/livraison.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/livraison.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/alternative-uber-eats-tours.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/alternative-uber-eats-tours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/alternative-uber-eats-tours.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/alternative-uber-eats-tours.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/alternative-deliveroo-tours.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/alternative-deliveroo-tours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/alternative-deliveroo-tours.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/alternative-deliveroo-tours.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/restaurant-sans-commission-tours.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/restaurant-sans-commission-tours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/restaurant-sans-commission-tours.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/restaurant-sans-commission-tours.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/commande-en-ligne-restaurant-tours.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/commande-en-ligne-restaurant-tours.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/click-and-collect-tours.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/click-and-collect-tours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/click-and-collect-tours.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/click-and-collect-tours.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/click-and-collect-tours.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/click-and-collect-tours.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/click-and-collect-tours.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/click-and-collect-tours.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/click-and-collect-tours.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/click-and-collect-tours.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/click-and-collect-tours.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/click-and-collect-tours.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/click-and-collect-tours.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/click-and-collect-tours.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/click-and-collect-tours.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/click-and-collect-tours.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/click-and-collect-tours.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/click-and-collect-tours.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/click-and-collect-tours.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/livraison-ethique-tours.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/livraison-ethique-tours.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/livraison-ethique-tours.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/livraison-ethique-tours.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/livraison-ethique-tours.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/livraison-ethique-tours.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/livraison-ethique-tours.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/livraison-ethique-tours.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/livraison-ethique-tours.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/livraison-ethique-tours.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/livraison-ethique-tours.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/livraison-ethique-tours.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/livraison-ethique-tours.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/livraison-ethique-tours.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/livraison-ethique-tours.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/livraison-ethique-tours.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/livraison-ethique-tours.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/livraison-ethique-tours.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/livraison-ethique-tours.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/restaurants-tours-indre-et-loire.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/restaurants-tours-indre-et-loire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/restaurants-tours-indre-et-loire.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/restaurants-tours-indre-et-loire.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/confidentialite.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/confidentialite.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/confidentialite.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/confidentialite.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/confidentialite.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/confidentialite.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/confidentialite.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/confidentialite.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/confidentialite.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/confidentialite.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/confidentialite.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/confidentialite.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/confidentialite.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/confidentialite.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/confidentialite.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/confidentialite.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/confidentialite.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/confidentialite.html"/>
   </url>
   <url>
     <loc>https://join.captain.food/mentions-legales.html</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/mentions-legales.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/mentions-legales.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/mentions-legales.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/mentions-legales.html?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/mentions-legales.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/mentions-legales.html?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/mentions-legales.html?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://join.captain.food/mentions-legales.html?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://join.captain.food/mentions-legales.html?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://join.captain.food/mentions-legales.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://join.captain.food/mentions-legales.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://join.captain.food/mentions-legales.html?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://join.captain.food/mentions-legales.html?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/mentions-legales.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/mentions-legales.html?lang=ar-lb"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/mentions-legales.html?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/mentions-legales.html"/>
   </url>
 </urlset>

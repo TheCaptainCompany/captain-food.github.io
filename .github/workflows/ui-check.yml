@@ -1,0 +1,40 @@
+name: UI consistency check
+
+# Renders every page in headless Chromium and fails when shared components
+# drift between pages (e.g. the FAQ Captain rendering smaller on a sub-page
+# than on the landing page — a real regression this gate now prevents), when
+# a page misses the language switchers, or when a page throws console errors.
+# Script: tools/checks/ui-consistency.mjs
+
+on:
+  push:
+    paths:
+      - "**/*.html"
+      - "styles.css"
+      - "*.js"
+      - "i18n/**"
+      - "tools/checks/**"
+      - ".github/workflows/ui-check.yml"
+  pull_request:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm init -y > /dev/null
+          npm install --no-save playwright > /dev/null
+          npx playwright install --with-deps chromium
+
+      - name: Serve the site
+        run: python3 -m http.server 8123 &
+
+      - name: Run UI consistency check
+        run: node tools/checks/ui-consistency.mjs

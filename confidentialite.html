@@ -3,11 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Politique de confidentialité — Captain.Food</title>
-  <meta name="description" content="Politique de confidentialité et traitement des données personnelles de Captain.Food (RGPD)." />
+  <title data-i18n="privacy.meta_title">Politique de confidentialité — Captain.Food</title>
+  <meta name="description" data-i18n-content="privacy.meta_description" content="Politique de confidentialité et traitement des données personnelles de Captain.Food (RGPD)." />
   <meta name="robots" content="index, follow" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="canonical" href="https://join.captain.food/confidentialite.html" />
+
+  <!-- hreflang alternates — the page translates itself client-side via ?lang=
+       (i18n.js); French is the canonical, default content. -->
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/confidentialite.html" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/confidentialite.html?lang=en" />
+  <link rel="alternate" hreflang="es" href="https://join.captain.food/confidentialite.html?lang=es" />
+  <link rel="alternate" hreflang="it" href="https://join.captain.food/confidentialite.html?lang=it" />
+  <link rel="alternate" hreflang="pt" href="https://join.captain.food/confidentialite.html?lang=pt" />
+  <link rel="alternate" hreflang="de" href="https://join.captain.food/confidentialite.html?lang=de" />
+  <link rel="alternate" hreflang="tr" href="https://join.captain.food/confidentialite.html?lang=tr" />
+  <link rel="alternate" hreflang="el" href="https://join.captain.food/confidentialite.html?lang=el" />
+  <link rel="alternate" hreflang="ro" href="https://join.captain.food/confidentialite.html?lang=ro" />
+  <link rel="alternate" hreflang="zh" href="https://join.captain.food/confidentialite.html?lang=zh" />
+  <link rel="alternate" hreflang="ja" href="https://join.captain.food/confidentialite.html?lang=ja" />
+  <link rel="alternate" hreflang="th" href="https://join.captain.food/confidentialite.html?lang=th" />
+  <link rel="alternate" hreflang="hi" href="https://join.captain.food/confidentialite.html?lang=hi" />
+  <link rel="alternate" hreflang="ta" href="https://join.captain.food/confidentialite.html?lang=ta" />
+  <link rel="alternate" hreflang="ar" href="https://join.captain.food/confidentialite.html?lang=ar" />
+  <link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/confidentialite.html?lang=ar-lb" />
+  <link rel="alternate" hreflang="he" href="https://join.captain.food/confidentialite.html?lang=he" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/confidentialite.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -29,32 +50,33 @@
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a9fe368f9d994cf6b874cf584aada144"}'></script>
 </head>
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">Aller au contenu</a>
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Captain.Food, accueil">
+      <a class="brand" href="index.html" aria-label="Captain.Food, accueil" data-i18n-aria-label="nav.brand_aria">
         <img src="assets/logo.png" alt="Captain.Food" width="32" height="32" class="brand-mark" />
         <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
       </a>
     </div>
-      <nav class="chip-nav" aria-label="Menu">
+      <nav class="chip-nav" aria-label="Menu" data-i18n-aria-label="nav.menu_aria">
       <div class="container chip-nav-inner">
-        <a class="chip" href="index.html#solution">Comment ça marche</a>
-        <a class="chip" href="tarifs.html">Tarifs</a>
-        <a class="chip" href="demo/">Maquettes</a>
-        <a class="chip" href="index.html#faq">FAQ</a>
+        <a class="chip" href="index.html#solution" data-i18n="nav.chip.how">Comment ça marche</a>
+        <a class="chip" href="tarifs.html" data-i18n="nav.chip.pricing">Tarifs</a>
+        <a class="chip" href="demo/" data-i18n="nav.chip.mockups">Maquettes</a>
+        <a class="chip" href="index.html#faq" data-i18n="nav.chip.faq">FAQ</a>
       </div>
     </nav>
   </header>
 
   <main id="contenu" class="legal">
     <div class="container narrow">
-      <a class="btn btn-navy btn-sm back-link" href="index.html">← Retour à l'accueil</a>
-      <h1>Politique de confidentialité</h1>
-      <p class="updated">Dernière mise à jour : juillet 2026.</p>
+      <a class="btn btn-navy btn-sm back-link" href="index.html" data-i18n="shared.back_home">← Retour à l'accueil</a>
+      <h1 data-i18n="privacy.h1">Politique de confidentialité</h1>
+      <p class="fine-print" data-i18n="legal.fr_prevails">Seule la version française de cette page fait foi ; les traductions sont fournies à titre d'information.</p>
+      <p class="updated" data-i18n="privacy.updated">Dernière mise à jour : juillet 2026.</p>
 
-      <p>
+      <p data-i18n-html="privacy.intro">
         La présente politique décrit comment <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> (ci-après « nous »)
         collecte et traite tes données personnelles lorsque tu nous contactes
         via le formulaire de ce site, dans le cadre du pilote local mené à Tours.
@@ -62,8 +84,8 @@
         des données (RGPD) et la loi française « Informatique et Libertés ».
       </p>
 
-      <h2>1. Responsable du traitement</h2>
-      <p>
+      <h2 data-i18n="privacy.s1_title">1. Responsable du traitement</h2>
+      <p data-i18n-html="privacy.s1_body">
         Le traitement des données est assuré par l'<strong>association Caring
         Hope Foundation</strong> — association régie par la loi du 1<sup>er</sup>
         juillet 1901, enregistrée sous le numéro <strong>RNA&nbsp;W372020229</strong>,
@@ -72,96 +94,96 @@
         <a href="mailto:miam@captain.food">miam@captain.food</a>.
       </p>
 
-      <h2>2. Données collectées</h2>
-      <p>Via le formulaire « Rejoindre le pilote », nous collectons :</p>
+      <h2 data-i18n="privacy.s2_title">2. Données collectées</h2>
+      <p data-i18n="privacy.s2_intro">Via le formulaire « Rejoindre le pilote », nous collectons :</p>
       <ul>
-        <li>ton prénom et ton nom ;</li>
-        <li>le nom de ton restaurant ou food truck ;</li>
-        <li>ton adresse email ;</li>
-        <li>ton numéro de téléphone / WhatsApp (facultatif) ;</li>
-        <li>le message libre que tu choisis de nous transmettre.</li>
+        <li data-i18n="privacy.s2_li1">ton prénom et ton nom ;</li>
+        <li data-i18n="privacy.s2_li2">le nom de ton restaurant ou food truck ;</li>
+        <li data-i18n="privacy.s2_li3">ton adresse email ;</li>
+        <li data-i18n="privacy.s2_li4">ton numéro de téléphone / WhatsApp (facultatif) ;</li>
+        <li data-i18n="privacy.s2_li5">le message libre que tu choisis de nous transmettre.</li>
       </ul>
-      <p>
+      <p data-i18n-html="privacy.s2_demo">
         Sur les maquettes de démonstration (<a href="demo/">join.captain.food/demo/</a>),
         un formulaire de retour facultatif peut également recueillir ton message
         et, si tu le renseignes, ton adresse email — uniquement pour te
         répondre.
       </p>
-      <p>
+      <p data-i18n="privacy.s2_nosensitive">
         Nous ne collectons aucune donnée sensible et n'utilisons aucun cookie de
         suivi publicitaire. La mesure d'audience éventuelle est réalisée de façon
         anonyme et sans cookie.
       </p>
 
-      <h2>3. Finalité du traitement</h2>
-      <p>
+      <h2 data-i18n="privacy.s3_title">3. Finalité du traitement</h2>
+      <p data-i18n-html="privacy.s3_body">
         Tes données sont utilisées uniquement pour te recontacter au sujet du
         pilote <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> à Tours : échanger avec toi, comprendre ton
         activité et, le cas échéant, t'associer aux premiers tests du service.
         Elles ne servent à aucune autre finalité.
       </p>
 
-      <h2>4. Base légale</h2>
-      <p>
+      <h2 data-i18n="privacy.s4_title">4. Base légale</h2>
+      <p data-i18n-html="privacy.s4_body">
         Le traitement repose sur ton <strong>consentement</strong>, recueilli
         via la case à cocher du formulaire. Tu peux retirer ce consentement à
         tout moment (voir section 7).
       </p>
 
-      <h2>5. Destinataires des données</h2>
-      <p>
+      <h2 data-i18n="privacy.s5_title">5. Destinataires des données</h2>
+      <p data-i18n-html="privacy.s5_body">
         Tes données sont accessibles uniquement à l'équipe du projet <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>.
         Le formulaire est traité par notre prestataire technique
         <strong>Formspree</strong> (transmission et stockage des messages du
         formulaire). Nous ne vendons, ne louons et ne cédons tes données à aucun
         tiers à des fins commerciales.
       </p>
-      <p>
+      <p data-i18n-html="privacy.s5_whatsapp">
         Si tu rejoins notre communauté d'échange sur <strong>WhatsApp</strong>
         (canal facultatif), tes messages y sont traités par WhatsApp/Meta selon ses
         propres conditions d'utilisation. Nous n'y publions jamais tes coordonnées.
       </p>
 
-      <h2>6. Durée de conservation</h2>
-      <p>
+      <h2 data-i18n="privacy.s6_title">6. Durée de conservation</h2>
+      <p data-i18n-html="privacy.s6_body">
         Tes données sont conservées pendant la durée du pilote et au maximum
         <strong>24 mois</strong> après ton dernier contact avec nous, puis
         supprimées. Tu peux demander leur suppression avant ce délai.
       </p>
 
-      <h2>7. Tes droits</h2>
-      <p>
+      <h2 data-i18n="privacy.s7_title">7. Tes droits</h2>
+      <p data-i18n="privacy.s7_body">
         Conformément au RGPD, tu disposes d'un droit d'accès, de rectification,
         d'effacement, de limitation et d'opposition au traitement de tes données,
         ainsi que d'un droit à la portabilité et du droit de retirer ton
         consentement à tout moment.
       </p>
-      <p>
+      <p data-i18n-html="privacy.s7_exercise">
         Pour exercer ces droits, écris-nous à
         <a href="mailto:miam@captain.food">miam@captain.food</a>. Nous te
         répondrons dans les meilleurs délais et au plus tard sous un mois.
       </p>
-      <p>
+      <p data-i18n-html="privacy.s7_cnil">
         Si tu estimes, après nous avoir contactés, que tes droits ne sont pas
         respectés, tu peux adresser une réclamation à la CNIL
         (<a href="https://www.cnil.fr" rel="noopener" target="_blank">www.cnil.fr</a>).
       </p>
 
-      <h2>8. Sécurité</h2>
-      <p>
+      <h2 data-i18n="privacy.s8_title">8. Sécurité</h2>
+      <p data-i18n="privacy.s8_body">
         Nous mettons en œuvre des mesures raisonnables pour protéger tes données
         contre tout accès non autorisé. Les échanges avec ce site sont chiffrés
         (HTTPS).
       </p>
 
-      <h2>9. Modifications</h2>
-      <p>
+      <h2 data-i18n="privacy.s9_title">9. Modifications</h2>
+      <p data-i18n="privacy.s9_body">
         Cette politique pourra évoluer avec le projet. Toute mise à jour sera
         publiée sur cette page.
       </p>
 
       <p style="margin-top:2rem;">
-        <a class="btn btn-navy" href="index.html">← Retour à l'accueil</a>
+        <a class="btn btn-navy" href="index.html" data-i18n="shared.back_home">← Retour à l'accueil</a>
       </p>
     </div>
   </main>
@@ -174,5 +196,6 @@
     </noscript>
   </footer>
   <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
 </body>
 </html>
