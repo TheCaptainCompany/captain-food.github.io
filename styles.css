@@ -2395,20 +2395,25 @@ section[id],
    (runtime: i18n.js; catalog: i18n/translations.yaml)
    ========================================================= */
 
-/* ---------- Language switcher (header) ---------- */
+/* ---------- Language switcher (header) ----------
+   Custom ARIA listbox (built by i18n.js): a native <select> cannot show the
+   flag SVGs, and emoji flags do not render on Windows. */
 .lang-switch {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
+  position: relative;
   flex-shrink: 0;
 }
-.lang-globe {
-  font-size: 1.05rem;
-  line-height: 1;
+.lang-flag {
+  width: 1.25rem;
+  height: 0.85rem;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(42, 32, 24, 0.18);
+  flex-shrink: 0;
+  display: block;
 }
-.lang-select {
-  appearance: none;
-  -webkit-appearance: none;
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font: inherit;
   font-size: 0.88rem;
   font-weight: 500;
@@ -2416,23 +2421,66 @@ section[id],
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  padding: 0.3rem 1.5rem 0.3rem 0.6rem;
+  padding: 0.32rem 0.6rem;
   cursor: pointer;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%230e3a5f' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.5rem center;
-  background-size: 0.6rem;
 }
-.lang-select:focus-visible {
+.lang-btn:focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 2px;
 }
-[dir="rtl"] .lang-select {
-  padding: 0.3rem 0.6rem 0.3rem 1.5rem;
-  background-position: left 0.5rem center;
+.lang-caret {
+  width: 0.55rem;
+  height: 0.55rem;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%230e3a5f' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+.lang-menu {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + 0.4rem);
+  z-index: 60;
+  min-width: 11rem;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+}
+.lang-menu [role="option"] {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.42rem 0.6rem;
+  border-radius: 7px;
+  font-size: 0.92rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+.lang-menu [role="option"]:hover,
+.lang-menu [role="option"]:focus-visible {
+  background: var(--parchment);
+  outline: none;
+}
+.lang-menu [role="option"] .lang-name {
+  flex: 1;
+}
+.lang-menu [role="option"] .lang-check {
+  visibility: hidden;
+  color: var(--good);
+  font-weight: 700;
+}
+.lang-menu [role="option"][aria-selected="true"] {
+  font-weight: 600;
+  color: var(--navy);
+  background: rgba(224, 161, 43, 0.14);
+}
+.lang-menu [role="option"][aria-selected="true"] .lang-check {
+  visibility: visible;
 }
 @media (max-width: 560px) {
-  .lang-globe {
+  .lang-btn-label {
     display: none;
   }
 }

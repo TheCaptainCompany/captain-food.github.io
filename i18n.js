@@ -47,6 +47,29 @@
   var cache = {}; // lang -> dict
   var originals = null; // snapshot of the French DOM values
 
+  // Inline SVG flags (self-contained — no external requests, and emoji flags
+  // don't render on Windows). Simplified civil flags; ar uses Morocco (the
+  // largest Arabic-speaking community in France, matching og:locale ar_MA).
+  function flagSvg(body) {
+    return (
+      '<svg class="lang-flag" viewBox="0 0 3 2" aria-hidden="true" focusable="false">' +
+      body +
+      "</svg>"
+    );
+  }
+  var FLAGS = {
+    fr: flagSvg('<rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#0055A4"/><rect x="2" width="1" height="2" fill="#EF4135"/>'),
+    en: flagSvg('<rect width="3" height="2" fill="#012169"/><path d="M0,0 3,2 M3,0 0,2" stroke="#fff" stroke-width=".45"/><path d="M1.5,0 V2 M0,1 H3" stroke="#fff" stroke-width=".75"/><path d="M1.5,0 V2 M0,1 H3" stroke="#C8102E" stroke-width=".45"/>'),
+    es: flagSvg('<rect width="3" height="2" fill="#AA151B"/><rect y=".5" width="3" height="1" fill="#F1BF00"/>'),
+    it: flagSvg('<rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#009246"/><rect x="2" width="1" height="2" fill="#CE2B37"/>'),
+    pt: flagSvg('<rect width="3" height="2" fill="#DA291C"/><rect width="1.2" height="2" fill="#046A38"/><circle cx="1.2" cy="1" r=".38" fill="#FFE900"/><circle cx="1.2" cy="1" r=".22" fill="#DA291C"/>'),
+    de: flagSvg('<rect width="3" height="2" fill="#000"/><rect y=".667" width="3" height="1.333" fill="#D00"/><rect y="1.333" width="3" height=".667" fill="#FFCE00"/>'),
+    tr: flagSvg('<rect width="3" height="2" fill="#E30A17"/><circle cx="1.2" cy="1" r=".5" fill="#fff"/><circle cx="1.32" cy="1" r=".4" fill="#E30A17"/><polygon fill="#fff" points="2.1,1 1.893,.932 1.893,.715 1.764,.891 1.557,.824 1.685,1 1.557,1.176 1.764,1.109 1.893,1.285 1.893,1.068"/>'),
+    el: flagSvg('<rect width="3" height="2" fill="#0D5EAF"/><path d="M0,.333H3M0,.778H3M0,1.222H3M0,1.667H3" stroke="#fff" stroke-width=".222"/><rect width="1" height="1.111" fill="#0D5EAF"/><path d="M.5,0 V1.111 M0,.556 H1" stroke="#fff" stroke-width=".222"/>'),
+    ar: flagSvg('<rect width="3" height="2" fill="#C1272D"/><path fill="none" stroke="#006233" stroke-width=".1" d="M1.5,.55 1.236,1.364 1.928,.861 1.072,.861 1.764,1.364 Z"/>'),
+    he: flagSvg('<rect width="3" height="2" fill="#fff"/><rect y=".22" width="3" height=".26" fill="#0038B8"/><rect y="1.52" width="3" height=".26" fill="#0038B8"/><path fill="none" stroke="#0038B8" stroke-width=".1" d="M1.5,.6 1.85,1.2 1.15,1.2 Z M1.5,1.4 1.15,.8 1.85,.8 Z"/>')
+  };
+
   // ---------- helpers ----------
   function isLang(code) {
     return !!(code && Object.prototype.hasOwnProperty.call(LANGS, code));
@@ -162,14 +185,7 @@
     var og = document.querySelector('meta[property="og:locale"]');
     if (og) og.setAttribute("content", LANGS[current].og);
 
-    var select = document.querySelector(".lang-select");
-    if (select) {
-      select.value = current;
-      select.setAttribute(
-        "aria-label",
-        t("lang.switch_label", "Choisir la langue")
-      );
-    }
+    updateSwitcher();
 
     document.dispatchEvent(
       new CustomEvent("cf:lang", { detail: { lang: current } })
@@ -208,7 +224,12 @@
     opts = opts || {};
     if (!isLang(code)) code = DEFAULT_LANG;
     load(code, function (dict, err) {
-      if (err && code !== DEFAULT_LANG) return; // keep current page language
+      if (err && code !== DEFAULT_LANG) {
+        // Catalog unavailable — keep the page language and snap the picker
+        // back so the UI never claims a language it could not load.
+        updateSwitcher();
+        return;
+      }
       current = code;
       strings = dict;
       applyDom();
@@ -283,33 +304,125 @@
     if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
   }
 
-  // ---------- language picker ----------
+  // ---------- language picker (custom listbox: flags + selected state) ----------
+  // A native <select> cannot render flag images (and emoji flags do not render
+  // on Windows), so this is a small ARIA listbox: a button showing the current
+  // flag + name, a popup listing every language with its flag, and a checkmark
+  // on the active one. Keyboard: Enter/Space/arrows open & navigate, Esc closes.
+  var switcher = null; // { button, label, flag, menu, options }
+
+  function closeMenu(refocus) {
+    if (!switcher) return;
+    switcher.menu.hidden = true;
+    switcher.button.setAttribute("aria-expanded", "false");
+    if (refocus) switcher.button.focus();
+  }
+
+  function openMenu() {
+    if (!switcher) return;
+    switcher.menu.hidden = false;
+    switcher.button.setAttribute("aria-expanded", "true");
+    var active = switcher.menu.querySelector('[aria-selected="true"]') ||
+      switcher.options[0];
+    if (active) active.focus();
+  }
+
+  function updateSwitcher() {
+    if (!switcher) return;
+    switcher.flag.innerHTML = FLAGS[current] || "";
+    switcher.label.textContent = LANGS[current].label;
+    switcher.button.setAttribute(
+      "aria-label",
+      t("lang.switch_label", "Choisir la langue") + " — " + LANGS[current].label
+    );
+    switcher.options.forEach(function (option) {
+      var on = option.getAttribute("data-lang") === current;
+      option.setAttribute("aria-selected", on ? "true" : "false");
+    });
+  }
+
   function buildSwitcher() {
     var nav = document.querySelector(".site-header .nav");
-    if (!nav || nav.querySelector(".lang-select")) return;
+    if (!nav || nav.querySelector(".lang-switch")) return;
+
     var wrap = document.createElement("div");
     wrap.className = "lang-switch";
-    var globe = document.createElement("span");
-    globe.className = "lang-globe";
-    globe.setAttribute("aria-hidden", "true");
-    globe.textContent = "🌐";
-    var select = document.createElement("select");
-    select.className = "lang-select";
-    select.setAttribute("aria-label", "Choisir la langue");
-    Object.keys(LANGS).forEach(function (code) {
-      var option = document.createElement("option");
-      option.value = code;
-      option.textContent = LANGS[code].label;
-      option.lang = code;
-      select.appendChild(option);
+
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "lang-btn";
+    button.setAttribute("aria-haspopup", "listbox");
+    button.setAttribute("aria-expanded", "false");
+    var flag = document.createElement("span");
+    flag.className = "lang-btn-flag";
+    var label = document.createElement("span");
+    label.className = "lang-btn-label";
+    var caret = document.createElement("span");
+    caret.className = "lang-caret";
+    caret.setAttribute("aria-hidden", "true");
+    button.appendChild(flag);
+    button.appendChild(label);
+    button.appendChild(caret);
+
+    var menu = document.createElement("ul");
+    menu.className = "lang-menu";
+    menu.setAttribute("role", "listbox");
+    menu.hidden = true;
+
+    var options = Object.keys(LANGS).map(function (code) {
+      var item = document.createElement("li");
+      item.setAttribute("role", "option");
+      item.setAttribute("data-lang", code);
+      item.setAttribute("aria-selected", "false");
+      item.tabIndex = -1;
+      item.lang = code;
+      item.innerHTML = FLAGS[code];
+      var name = document.createElement("span");
+      name.className = "lang-name";
+      name.textContent = LANGS[code].label;
+      var check = document.createElement("span");
+      check.className = "lang-check";
+      check.setAttribute("aria-hidden", "true");
+      check.textContent = "✓";
+      item.appendChild(name);
+      item.appendChild(check);
+      item.addEventListener("click", function () {
+        closeMenu(true);
+        setLang(code, { user: true });
+      });
+      menu.appendChild(item);
+      return item;
     });
-    select.value = current;
-    select.addEventListener("change", function () {
-      setLang(select.value, { user: true });
+
+    button.addEventListener("click", function () {
+      if (menu.hidden) openMenu();
+      else closeMenu(false);
     });
-    wrap.appendChild(globe);
-    wrap.appendChild(select);
+    wrap.addEventListener("keydown", function (e) {
+      var idx = options.indexOf(document.activeElement);
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeMenu(true);
+      } else if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        if (menu.hidden) return openMenu();
+        var next = e.key === "ArrowDown" ? idx + 1 : idx - 1;
+        next = (next + options.length) % options.length;
+        options[next].focus();
+      } else if ((e.key === "Enter" || e.key === " ") && idx >= 0) {
+        e.preventDefault();
+        options[idx].click();
+      }
+    });
+    document.addEventListener("click", function (e) {
+      if (!menu.hidden && !wrap.contains(e.target)) closeMenu(false);
+    });
+
+    wrap.appendChild(button);
+    wrap.appendChild(menu);
     nav.appendChild(wrap);
+    switcher = { button: button, label: label, flag: flag, menu: menu, options: options };
+    updateSwitcher();
   }
 
   // ---------- public API (used by script.js for dynamic strings) ----------
