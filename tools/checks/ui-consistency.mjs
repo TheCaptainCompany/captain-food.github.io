@@ -28,7 +28,12 @@ const browser = await chromium.launch(executablePath ? { executablePath } : {});
 const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
 const consoleErrors = [];
 page.on("console", (m) => {
-  if (m.type() === "error" && !/https?:\/\/(?!localhost)/.test(m.text())) {
+  // Only same-origin failures count: external resources (Cloudflare beacon,
+  // Google Fonts) are routinely blocked in sandboxes/adblockers and say
+  // nothing about our code. Resource errors carry the URL in location().
+  const url = (m.location() && m.location().url) || "";
+  if (m.type() === "error" && (url === "" || url.startsWith(BASE))) {
+    if (url === "" && /Failed to load resource/.test(m.text())) return; // URL-less external fetch
     consoleErrors.push(m.text());
   }
 });
@@ -39,18 +44,28 @@ for (const file of pages) {
   await page.goto(`${BASE}/${file}`, { waitUntil: "networkidle" });
   await page.waitForTimeout(250);
 
-  const captain = await page.evaluate(() => {
+  const captain = await page.evaluate(async () => {
     const img = document.querySelector(".faq-figure img, .faq-topper img");
     if (!img) return null;
-    // Measure natural render, even inside a closed <details>.
+    // The Captain images are loading="lazy": scroll them into view and wait
+    // for decode so the measured height is the real rendered one.
+    img.scrollIntoView({ block: "center" });
+    try {
+      await img.decode();
+    } catch (e) {}
+    await new Promise((resolve) => setTimeout(resolve, 120));
     return Math.round(img.getBoundingClientRect().height);
   });
   if (captain !== null) captainHeights[file] = captain;
 
-  const hasHeaderSwitch = await page.$(".site-header .lang-switch");
-  const hasFooterSwitch = await page.$(".footer-lang-slot .lang-switch");
-  if (!hasHeaderSwitch) failures.push(`${file}: missing header language switcher`);
-  if (!hasFooterSwitch) failures.push(`${file}: missing footer language switcher`);
+  // 404.html is deliberately chrome-less (no partials.js footer, no header
+  // nav) — the switcher requirement doesn't apply there.
+  if (file !== "404.html") {
+    const hasHeaderSwitch = await page.$(".site-header .lang-switch");
+    const hasFooterSwitch = await page.$(".footer-lang-slot .lang-switch");
+    if (!hasHeaderSwitch) failures.push(`${file}: missing header language switcher`);
+    if (!hasFooterSwitch) failures.push(`${file}: missing footer language switcher`);
+  }
   if (consoleErrors.length) {
     failures.push(`${file}: console errors: ${consoleErrors.slice(0, 3).join(" | ")}`);
   }

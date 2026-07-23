@@ -10,7 +10,7 @@ framework, no build step (`.nojekyll` disables Jekyll). A shared footer and
 floating WhatsApp button are injected on every page by `partials.js` (single
 source of truth). All source comments and docs are in English; all visible
 page copy is in French, by design (tutoiement, direct tone, maritime
-"Captain" identity). The **homepage additionally self-translates client-side
+"Captain" identity). **Every page additionally self-translates client-side
 into 16 more languages** (see "Internationalization" below); French stays the
 canonical, indexed content.
 
@@ -107,7 +107,7 @@ aren't held for verification.
 
 ## Internationalization (i18n)
 
-The **homepage** (`index.html`) + the shared chrome (`partials.js` footer,
+**Every page of the site** + the shared chrome (`partials.js` footer,
 WhatsApp bubble) are translated into **17 languages**: French (source) + English, Spanish,
 Italian, Portuguese, German, Turkish, Greek, Romanian, Chinese (Mandarin),
 Japanese, Thai, Hindi, Tamil (widely spoken languages in France) and
@@ -146,13 +146,14 @@ states that the future product itself will speak these 17 languages
   whether to remember the choice; only "yes" writes the `cf_lang` cookie
   (1 year, first-party, SameSite=Lax). Refusal = sessionStorage only.
   Browser auto-detection never writes anything, so no banner on landing.
-- **Scope**: homepage only for now. Sub-pages (tarifs, manifeste, SEO intent
-  pages, legal) stay French — the SEO pages target French queries by design
-  and legal pages should remain French. To translate another page: annotate
-  it with `data-i18n` keys, add the keys + 17 translations to
-  `translations.yaml`, include `/i18n.js` before its scripts, add the page to
-  `HTML_SOURCES` in `tools/i18n/i18n.py`, run `build`, and add hreflang
-  `?lang=` alternates to its `<head>` + `sitemap.xml`.
+- **Scope**: the WHOLE site — every page in `tools/i18n/i18n.py` `HTML_SOURCES`
+  is annotated and translated (legal pages carry a translated "the French
+  version prevails" notice; `demo/` mockups are excluded on purpose:
+  noindex throwaways). To translate a NEW page: annotate it with `data-i18n`
+  keys, add it to `HTML_SOURCES`, add the keys + 17 translations to
+  `translations.yaml`, include `/i18n.js`, add hreflang alternates to its
+  head + `sitemap.xml`, run `build`.
+
 
 ## UI consistency rule (learned the hard way)
 
