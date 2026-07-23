@@ -1,0 +1,2501 @@
+version: 1
+description: >
+  Captain.Food MARKETING-SITE translation catalog — same conventions as
+  specs/translations.yaml in TheCaptainCompany/captain-food (errors.yaml-style):
+  one dotted KEY per string, optional typed `params` ({placeholder} tokens the
+  client interpolates), and a `messages` map that MUST cover every language
+  declared under `languages` (the validator, tools/i18n/i18n.py, fails
+  otherwise). French is the SOURCE language: for keys annotated in index.html
+  the fr message must match the page copy exactly (drift-checked); the other
+  languages are the most spoken in France (INSEE) + Arabic and Hebrew (RTL).
+  Generated artifacts: i18n/generated/<lang>.json (run `make`-less:
+  python3 tools/i18n/i18n.py build) — consumed at runtime by /i18n.js.
+  NEVER hand-edit the generated JSON; edit THIS file and rebuild.
+
+languages:
+  fr: { label: "Français", dir: ltr }
+  en: { label: "English", dir: ltr }
+  es: { label: "Español", dir: ltr }
+  it: { label: "Italiano", dir: ltr }
+  pt: { label: "Português", dir: ltr }
+  ar: { label: "العربية", dir: rtl }
+  he: { label: "עברית", dir: rtl }
+
+keys:
+
+  # ---- a11y ----
+  a11y.skip_link:
+    messages:
+      fr: "Aller au contenu"
+      en: "Skip to content"
+      es: "Ir al contenido"
+      it: "Vai al contenuto"
+      pt: "Saltar para o conteúdo"
+      ar: "الانتقال إلى المحتوى"
+      he: "דילוג לתוכן"
+
+  # ---- ask ----
+  ask.intro:
+    messages:
+      fr: "Moins que tu ne crois."
+      en: "Less than you think."
+      es: "Menos de lo que crees."
+      it: "Meno di quanto credi."
+      pt: "Menos do que pensas."
+      ar: "أقل مما تظن."
+      he: "פחות ממה שאתה חושב."
+  ask.item1:
+    messages:
+      fr: "<strong>L'inscription est gratuite et sans engagement.</strong> Tu gardes tes plateformes actuelles."
+      en: "<strong>Signing up is free, with no commitment.</strong> You keep your current platforms."
+      es: "<strong>El alta es gratis y sin permanencia.</strong> Te quedas con tus plataformas actuales."
+      it: "<strong>L'iscrizione è gratuita e senza vincoli.</strong> Tieni le tue piattaforme attuali."
+      pt: "<strong>A inscrição é gratuita e sem compromisso.</strong> Ficas com as tuas plataformas atuais."
+      ar: "<strong>التسجيل مجاني وبدون التزام.</strong> تحتفظ بمنصاتك الحالية."
+      he: "<strong>ההרשמה חינם ובלי התחייבות.</strong> אתה שומר על הפלטפורמות הנוכחיות שלך."
+  ask.item2:
+    messages:
+      fr: "<strong>On s'occupe de la mise en place.</strong> Synchronisation de ta carte, mise en ligne de ta page : on t'accompagne. Si tu n'as pas encore d'outil de synchronisation (type HubRise), on t'aide à le mettre en place — un service standard que tu gardes en main."
+      en: "<strong>We handle the setup.</strong> Syncing your menu, putting your page online: we walk you through it. If you don't have a sync tool yet (like HubRise), we'll help you set one up — a standard service that stays in your hands."
+      es: "<strong>De la puesta en marcha nos ocupamos nosotros.</strong> Sincronización de tu carta, publicación de tu página: te acompañamos. Si aún no tienes una herramienta de sincronización (tipo HubRise), te ayudamos a montarla — un servicio estándar que queda en tus manos."
+      it: "<strong>Della configurazione ci occupiamo noi.</strong> Sincronizzazione del tuo menu, messa online della tua pagina: ti accompagniamo. Se non hai ancora uno strumento di sincronizzazione (tipo HubRise), ti aiutiamo a metterlo in piedi — un servizio standard che resta nelle tue mani."
+      pt: "<strong>Nós tratamos da instalação.</strong> Sincronização do teu menu, publicação da tua página: acompanhamos-te. Se ainda não tens uma ferramenta de sincronização (tipo HubRise), ajudamos-te a montá-la — um serviço padrão que fica nas tuas mãos."
+      ar: "<strong>نتكفل نحن بالتجهيز.</strong> مزامنة قائمتك، ونشر صفحتك: نرافقك خطوة بخطوة. وإن لم تكن تملك بعد أداة مزامنة (مثل HubRise)، نساعدك على تركيبها — خدمة قياسية تبقى بين يديك أنت."
+      he: "<strong>אנחנו דואגים להקמה.</strong> סנכרון התפריט, העלאת העמוד שלך לאוויר: אנחנו מלווים אותך. אם עוד אין לך כלי סנכרון (כמו HubRise), נעזור לך להקים אחד — שירות סטנדרטי שנשאר בשליטתך."
+  ask.item3:
+    messages:
+      fr: "<strong>Pas de nouvelle machine à apprendre dans l'urgence.</strong> On avance à ton rythme."
+      en: "<strong>No new machine to learn in a rush.</strong> We go at your pace."
+      es: "<strong>Nada de aprender otra máquina a toda prisa.</strong> Avanzamos a tu ritmo."
+      it: "<strong>Nessuna nuova macchina da imparare di corsa.</strong> Andiamo al tuo ritmo."
+      pt: "<strong>Nenhuma máquina nova para aprender à pressa.</strong> Avançamos ao teu ritmo."
+      ar: "<strong>لا جهاز جديدًا عليك تعلّمه على عجل.</strong> نتقدم على إيقاعك."
+      he: "<strong>אין מכונה חדשה ללמוד בלחץ.</strong> מתקדמים בקצב שלך."
+  ask.title:
+    messages:
+      fr: "Et concrètement, ça me demande quoi ?"
+      en: "So what does it actually ask of me?"
+      es: "Y en la práctica, ¿qué me pide esto?"
+      it: "E in pratica, cosa mi chiede?"
+      pt: "E, na prática, o que é que isto me pede?"
+      ar: "وعمليًا، ماذا يُطلب مني؟"
+      he: "ובתכל'ס, מה זה דורש ממני?"
+
+  # ---- calc ----
+  calc.ca_label:
+    messages:
+      fr: "Ton chiffre d'affaires mensuel sur cette plateforme"
+      en: "Your monthly revenue on this platform"
+      es: "Tu facturación mensual en esta plataforma"
+      it: "Il tuo fatturato mensile su questa piattaforma"
+      pt: "A tua faturação mensal nesta plataforma"
+      ar: "رقم مبيعاتك الشهري على هذه المنصة"
+      he: "המחזור החודשי שלך בפלטפורמה הזאת"
+  calc.ca_unit:
+    messages:
+      fr: "€ / mois"
+      en: "€ / month"
+      es: "€ / mes"
+      it: "€ / mese"
+      pt: "€ / mês"
+      ar: "€ / الشهر"
+      he: "€ / חודש"
+  calc.cta:
+    messages:
+      fr: "Je reprends mes commandes"
+      en: "I'm taking back my orders"
+      es: "Recupero mis pedidos"
+      it: "Mi riprendo i miei ordini"
+      pt: "Retomo as minhas encomendas"
+      ar: "أستعيد زمام طلباتي"
+      he: "אני לוקח בחזרה את ההזמנות שלי"
+  calc.fine:
+    messages:
+      fr: "Le calcul de commission est factuel : ton chiffre d'affaires × le taux. Taux indicatifs et modifiables : Uber Eats ~25-35 %, Deliveroo ~25-30 % (fourchettes indicatives, sources publiques, 2024). « SMIC brut employeur » : coût mensuel employeur d'un SMIC temps plein — SMIC brut 1 867,02 € au 1ᵉʳ janvier 2026 (<a href=\"https://www.service-public.gouv.fr/particuliers/vosdroits/F2300\" target=\"_blank\" rel=\"noopener\">service-public.gouv.fr</a>), charges patronales résiduelles comprises (~1 933 €). Ordre de grandeur, pas un relevé."
+      en: "The commission math is factual: your revenue × the rate. Rates are indicative and editable: Uber Eats ~25-35%, Deliveroo ~25-30% (indicative ranges, public sources, 2024). “Employer-cost SMIC”: the monthly employer cost of a full-time SMIC (the French minimum wage) — gross SMIC of €1,867.02 as of January 1, 2026 (<a href=\"https://www.service-public.gouv.fr/particuliers/vosdroits/F2300\" target=\"_blank\" rel=\"noopener\">service-public.gouv.fr</a>), residual employer contributions included (~€1,933). An order of magnitude, not an invoice."
+      es: "El cálculo de la comisión es puro hecho: tu facturación × la tasa. Tasas orientativas y modificables: Uber Eats ~25-35 %, Deliveroo ~25-30 % (horquillas orientativas, fuentes públicas, 2024). «SMIC bruto para el empleador»: coste mensual para el empleador de un SMIC (el salario mínimo francés) a jornada completa — SMIC bruto de 1 867,02 € a 1 de enero de 2026 (<a href=\"https://www.service-public.gouv.fr/particuliers/vosdroits/F2300\" target=\"_blank\" rel=\"noopener\">service-public.gouv.fr</a>), cotizaciones patronales residuales incluidas (~1 933 €). Un orden de magnitud, no un extracto."
+      it: "Il calcolo della commissione è fattuale: il tuo fatturato × la percentuale. Percentuali indicative e modificabili: Uber Eats ~25-35%, Deliveroo ~25-30% (forchette indicative, fonti pubbliche, 2024). «SMIC lordo per il datore»: costo mensile per il datore di lavoro di uno SMIC (il salario minimo legale francese) a tempo pieno — SMIC lordo 1 867,02 € al 1º gennaio 2026 (<a href=\"https://www.service-public.gouv.fr/particuliers/vosdroits/F2300\" target=\"_blank\" rel=\"noopener\">service-public.gouv.fr</a>), contributi datoriali residui inclusi (~1 933 €). Un ordine di grandezza, non un estratto conto."
+      pt: "O cálculo da comissão é factual: a tua faturação × a taxa. Taxas indicativas e ajustáveis: Uber Eats ~25-35%, Deliveroo ~25-30% (intervalos indicativos, fontes públicas, 2024). «SMIC bruto para o empregador»: custo mensal, para o empregador, de um SMIC (o salário mínimo francês) a tempo inteiro — SMIC bruto de 1 867,02 € a 1 de janeiro de 2026 (<a href=\"https://www.service-public.gouv.fr/particuliers/vosdroits/F2300\" target=\"_blank\" rel=\"noopener\">service-public.gouv.fr</a>), encargos patronais residuais incluídos (~1 933 €). Uma ordem de grandeza, não um extrato."
+      ar: "حساب العمولة حساب واقعي: رقم مبيعاتك × النسبة. نسب استرشادية قابلة للتعديل: Uber Eats ~25-35%، وDeliveroo ~25-30% (نطاقات استرشادية، مصادر عامة، 2024). «SMIC الإجمالي على صاحب العمل»: التكلفة الشهرية على صاحب العمل لأجر SMIC بدوام كامل — وهو الحد الأدنى القانوني للأجور في فرنسا، 1 867,02 € إجماليًا في 1 يناير 2026 (<a href=\"https://www.service-public.gouv.fr/particuliers/vosdroits/F2300\" target=\"_blank\" rel=\"noopener\">service-public.gouv.fr</a>)، متضمنةً الأعباء الاجتماعية المتبقية على صاحب العمل (~1 933 €). ترتيب حجم تقريبي، وليس كشف حساب."
+      he: "חישוב העמלה הוא עובדתי: המחזור שלך × השיעור. השיעורים משוערים וניתנים לשינוי: Uber Eats כ-25-35%, Deliveroo כ-25-30% (טווחים משוערים, מקורות פומביים, 2024). ״SMIC ברוטו למעסיק״: SMIC הוא שכר המינימום החוקי בצרפת — העלות החודשית למעסיק של משרה מלאה בשכר מינימום — SMIC ברוטו 1,867.02 € נכון ל-1 בינואר 2026 (<a href=\"https://www.service-public.gouv.fr/particuliers/vosdroits/F2300\" target=\"_blank\" rel=\"noopener\">service-public.gouv.fr</a>), כולל יתרת הפרשות המעסיק (כ-1,933 €). סדר גודל, לא תלוש שכר."
+  calc.habitues:
+    messages:
+      fr: "Tes habitués, eux, peuvent commander en direct : <strong>sans commission</strong>."
+      en: "Your regulars, though, can order direct: <strong>commission-free</strong>."
+      es: "Tus habituales, en cambio, pueden pedirte en directo: <strong>sin comisión</strong>."
+      it: "I tuoi clienti abituali, invece, possono ordinare direttamente da te: <strong>senza commissioni</strong>."
+      pt: "Os teus clientes habituais, esses, podem encomendar em direto: <strong>sem comissão</strong>."
+      ar: "أما زبائنك الأوفياء، فيمكنهم الطلب منك مباشرة: <strong>بدون عمولة</strong>."
+      he: "והלקוחות הקבועים שלך? הם יכולים להזמין ישירות: <strong>בלי עמלה</strong>."
+  calc.intro:
+    messages:
+      fr: "Choisis ta plateforme, entre ton chiffre d'affaires mensuel — et vois où part chaque euro, chaque mois et chaque année."
+      en: "Pick your platform, enter your monthly revenue — and see where every euro goes, every month and every year."
+      es: "Elige tu plataforma, introduce tu facturación mensual — y mira adónde va cada euro, cada mes y cada año."
+      it: "Scegli la tua piattaforma, inserisci il tuo fatturato mensile — e guarda dove finisce ogni euro, ogni mese e ogni anno."
+      pt: "Escolhe a tua plataforma, indica a tua faturação mensal — e vê para onde vai cada euro, todos os meses e todos os anos."
+      ar: "اختر منصتك، وأدخل رقم مبيعاتك الشهري — وشاهد أين يذهب كل يورو، كل شهر وكل سنة."
+      he: "בחר את הפלטפורמה שלך, הקלד את המחזור החודשי — ותראה לאן הולך כל יורו, כל חודש וכל שנה."
+  calc.lead_title:
+    messages:
+      fr: "La commission ronge ta marge."
+      en: "Commission eats your margin."
+      es: "La comisión se come tu margen."
+      it: "La commissione ti divora il margine."
+      pt: "A comissão corrói a tua margem."
+      ar: "العمولة تلتهم هامش ربحك."
+      he: "העמלה מכרסמת לך את הרווח."
+  calc.loss_empty:
+    messages:
+      fr: "Entre ton chiffre d'affaires mensuel pour voir ce que la commission t'arrache."
+      en: "Enter your monthly revenue to see what the commission strips from you."
+      es: "Introduce tu facturación mensual para ver lo que te arranca la comisión."
+      it: "Inserisci il tuo fatturato mensile per vedere quanto ti strappa la commissione."
+      pt: "Indica a tua faturação mensal para veres o que a comissão te arranca."
+      ar: "أدخل رقم مبيعاتك الشهري لترى ما تنتزعه منك العمولة."
+      he: "הקלד את המחזור החודשי שלך כדי לראות מה העמלה חוטפת ממך."
+  calc.loss_lead:
+    messages:
+      fr: "Cette plateforme t'arrache"
+      en: "This platform strips you of"
+      es: "Esta plataforma te arranca"
+      it: "Questa piattaforma ti strappa"
+      pt: "Esta plataforma arranca-te"
+      ar: "هذه المنصة تنتزع منك"
+      he: "הפלטפורמה הזאת חוטפת ממך"
+  calc.loss_sub:
+    params:
+      perMonth: "formatted monthly commission, e.g. « 1 500 € »"
+    messages:
+      fr: "soit {perMonth} / mois — souvent plus que toute ta marge."
+      en: "that's {perMonth} / month — often more than your entire margin."
+      es: "es decir, {perMonth} / mes — a menudo más que todo tu margen."
+      it: "cioè {perMonth} / mese — spesso più di tutto il tuo margine."
+      pt: "ou seja {perMonth} / mês — muitas vezes mais do que toda a tua margem."
+      ar: "أي {perMonth} / الشهر — غالبًا أكثر من كل هامش ربحك."
+      he: "כלומר {perMonth} / חודש — לעיתים קרובות יותר מכל הרווח שלך."
+  calc.loss_year_unit:
+    messages:
+      fr: "/ an"
+      en: "/ year"
+      es: "/ año"
+      it: "/ anno"
+      pt: "/ ano"
+      ar: "/ السنة"
+      he: "/ שנה"
+  calc.platforms_aria:
+    messages:
+      fr: "Choisis ta plateforme"
+      en: "Pick your platform"
+      es: "Elige tu plataforma"
+      it: "Scegli la tua piattaforma"
+      pt: "Escolhe a tua plataforma"
+      ar: "اختر منصتك"
+      he: "בחר את הפלטפורמה שלך"
+  calc.prefill:
+    params:
+      ca: "formatted monthly revenue"
+      rate: "commission rate in percent"
+      perMonth: "formatted monthly commission"
+      perYear: "formatted yearly commission"
+    messages:
+      fr: "Via le calculateur : CA {ca}/mois sur la plateforme, commission ~{rate} % = {perMonth}/mois ({perYear}/an)."
+      en: "Via the calculator: {ca}/month in revenue on the platform, ~{rate}% commission = {perMonth}/month ({perYear}/year)."
+      es: "Vía la calculadora: facturación de {ca}/mes en la plataforma, comisión ~{rate} % = {perMonth}/mes ({perYear}/año)."
+      it: "Dal calcolatore: fatturato {ca}/mese sulla piattaforma, commissione ~{rate}% = {perMonth}/mese ({perYear}/anno)."
+      pt: "Via calculadora: faturação de {ca}/mês na plataforma, comissão ~{rate}% = {perMonth}/mês ({perYear}/ano)."
+      ar: "عبر الحاسبة: مبيعات {ca}/الشهر على المنصة، عمولة ~{rate}% = {perMonth}/الشهر ({perYear}/السنة)."
+      he: "דרך המחשבון: מחזור {ca}/חודש בפלטפורמה, עמלה של כ-{rate}% = {perMonth}/חודש ({perYear}/שנה)."
+  calc.rate_hint:
+    messages:
+      fr: "(modifiable)"
+      en: "(editable)"
+      es: "(modificable)"
+      it: "(modificabile)"
+      pt: "(ajustável)"
+      ar: "(قابلة للتعديل)"
+      he: "(ניתן לשינוי)"
+  calc.rate_label:
+    messages:
+      fr: "Taux de commission"
+      en: "Commission rate"
+      es: "Tasa de comisión"
+      it: "Percentuale di commissione"
+      pt: "Taxa de comissão"
+      ar: "نسبة العمولة"
+      he: "שיעור העמלה"
+  calc.reassure:
+    messages:
+      fr: "0 € pour toi, dans tous les cas — <strong>c'est le client qui contribue, pas toi.</strong> <a href=\"financement.html\">Comment on se finance →</a>"
+      en: "€0 for you, no matter what — <strong>the customer contributes, not you.</strong> <a href=\"financement.html\">How we fund ourselves →</a>"
+      es: "0 € para ti, en todos los casos — <strong>contribuye el cliente, no tú.</strong> <a href=\"financement.html\">Cómo nos financiamos →</a>"
+      it: "0 € per te, in ogni caso — <strong>è il cliente che contribuisce, non tu.</strong> <a href=\"financement.html\">Come ci finanziamo →</a>"
+      pt: "0 € para ti, em qualquer caso — <strong>é o cliente que contribui, não tu.</strong> <a href=\"financement.html\">Como nos financiamos →</a>"
+      ar: "0 € عليك، في كل الحالات — <strong>الزبون هو من يساهم، لا أنت.</strong> <a href=\"financement.html\">كيف نموّل أنفسنا ←</a>"
+      he: "0 € בשבילך, בכל מקרה — <strong>הלקוח הוא שתורם, לא אתה.</strong> <a href=\"financement.html\">איך אנחנו מממנים את עצמנו →</a>"
+  calc.smic:
+    params:
+      months: "number of SMIC salary-months the yearly commission equals, e.g. « 9,3 »"
+    messages:
+      fr: "C'est ≈ <strong>{months} mois de salaire</strong> au SMIC (charges comprises). Chaque année."
+      en: "That's ≈ <strong>{months} months of salary</strong> at the SMIC, the French minimum wage (employer costs included). Every single year."
+      es: "Eso son ≈ <strong>{months} meses de sueldo</strong> al SMIC, el salario mínimo francés (cotizaciones incluidas). Cada año."
+      it: "Sono ≈ <strong>{months} mensilità</strong> allo SMIC, il salario minimo francese (contributi inclusi). Ogni anno."
+      pt: "É ≈ <strong>{months} meses de salário</strong> ao SMIC (o salário mínimo francês, encargos incluídos). Todos os anos."
+      ar: "هذا يعادل ≈ <strong>{months} شهرًا من الراتب</strong> بالحد الأدنى الفرنسي للأجور SMIC (شاملًا الأعباء). كل سنة."
+      he: "זה ≈ <strong>{months} חודשי משכורת</strong> לפי SMIC, שכר המינימום הצרפתי (כולל הפרשות מעסיק). כל שנה."
+
+  # ---- channel ----
+  channel.delivery_body:
+    messages:
+      fr: "Tes clients commandent en ligne sur ton site, à ton nom. Pas d'intermédiaire qui se sert au passage."
+      en: "Your customers order online on your site, under your name. No middleman helping themselves along the way."
+      es: "Tus clientes piden online en tu web, con tu nombre. Sin intermediarios que se sirvan por el camino."
+      it: "I tuoi clienti ordinano online sul tuo sito, a tuo nome. Nessun intermediario che si serve al passaggio."
+      pt: "Os teus clientes encomendam online no teu site, com o teu nome. Sem intermediário a servir-se pelo caminho."
+      ar: "زبائنك يطلبون أونلاين من موقعك، وباسمك. لا وسيط يقتطع نصيبه في الطريق."
+      he: "הלקוחות שלך מזמינים אונליין באתר שלך, על שמך. בלי מתווך שגוזר קופון בדרך."
+  channel.delivery_cue:
+    messages:
+      fr: "Comment on paie la livraison →"
+      en: "How we pay for delivery →"
+      es: "Cómo pagamos el reparto →"
+      it: "Come paghiamo la consegna →"
+      pt: "Como pagamos a entrega →"
+      ar: "كيف ندفع أجر التوصيل ←"
+      he: "איך משלמים על המשלוח →"
+  channel.delivery_title:
+    messages:
+      fr: "En livraison"
+      en: "Delivery"
+      es: "A domicilio"
+      it: "In consegna"
+      pt: "Entrega ao domicílio"
+      ar: "بالتوصيل"
+      he: "במשלוח"
+  channel.pickup_body:
+    messages:
+      fr: "Le client commande à l'avance et récupère sur place. Simple, direct, sans matériel en plus."
+      en: "Customers order ahead and pick up on site. Simple, direct, no extra hardware."
+      es: "El cliente pide con antelación y recoge en el local. Simple, directo, sin equipamiento extra."
+      it: "Il cliente ordina in anticipo e ritira sul posto. Semplice, diretto, senza attrezzatura in più."
+      pt: "O cliente encomenda com antecedência e levanta no local. Simples, direto, sem equipamento extra."
+      ar: "الزبون يطلب مسبقًا ويستلم من المحل. بسيط، مباشر، وبدون أي معدات إضافية."
+      he: "הלקוח מזמין מראש ואוסף במקום. פשוט, ישיר, בלי ציוד נוסף."
+  channel.pickup_title:
+    messages:
+      fr: "À emporter (click and collect)"
+      en: "Takeaway (click and collect)"
+      es: "Para llevar (click and collect)"
+      it: "Da asporto (click and collect)"
+      pt: "Para levar (click and collect)"
+      ar: "للاستلام (كليك آند كوليكت)"
+      he: "באיסוף עצמי (Click & Collect)"
+  channel.qr_body:
+    messages:
+      fr: "Le client scanne, commande depuis sa place. La commande part en cuisine, et <strong>le paiement reste dans ta caisse habituelle</strong> — on ne touche pas à ton encaissement. C'est inclus, sans commission."
+      en: "Customers scan and order from their seat. The order goes straight to the kitchen, and <strong>the payment stays in your usual till</strong> — we don't touch your checkout. Included, commission-free."
+      es: "El cliente escanea y pide desde su sitio. El pedido sale hacia cocina, y <strong>el pago se queda en tu caja de siempre</strong> — no tocamos tu cobro. Va incluido, sin comisión."
+      it: "Il cliente scansiona e ordina dal suo posto. La comanda parte in cucina, e <strong>il pagamento resta nella tua cassa abituale</strong> — il tuo incasso non lo tocchiamo. È incluso, senza commissioni."
+      pt: "O cliente faz scan e encomenda do seu lugar. A comanda segue para a cozinha, e <strong>o pagamento fica na tua caixa habitual</strong> — não tocamos na tua cobrança. Está incluído, sem comissão."
+      ar: "الزبون يمسح الرمز ويطلب من مكانه. الطلب ينطلق إلى المطبخ، و<strong>الدفع يبقى في صندوقك المعتاد</strong> — لا نمسّ تحصيلك. مشمول في الخدمة، وبدون عمولة."
+      he: "הלקוח סורק ומזמין מהמקום שלו. ההזמנה יוצאת למטבח, ו<strong>התשלום נשאר בקופה הרגילה שלך</strong> — אנחנו לא נוגעים בסליקה שלך. זה כלול, בלי עמלה."
+  channel.qr_title:
+    messages:
+      fr: "À table, par QR code"
+      en: "At the table, via QR code"
+      es: "En mesa, por código QR"
+      it: "Al tavolo, con QR code"
+      pt: "À mesa, por código QR"
+      ar: "على الطاولة، برمز QR"
+      he: "ליד השולחן, בסריקת QR"
+
+  # ---- channels ----
+  channels.intro:
+    messages:
+      fr: "Ton site à toi : <code>tonresto.captain.food</code> (ou ton propre <code>tonresto.fr</code>). Les commandes arriveront en direct depuis ton site — de trois manières, toutes sans commission sur tes plats. À terme, l'annuaire <strong>captain.food</strong> aidera les clients à découvrir les indépendants du coin (bénéfice collectif à venir, pas un canal actif aujourd'hui)."
+      en: "Your own site: <code>yourresto.captain.food</code> (or your own <code>yourresto.fr</code>). Orders will come in direct from your site — in three ways, all commission-free on your dishes. Down the line, the <strong>captain.food</strong> directory will help customers discover the independents nearby (a collective benefit to come, not an active channel today)."
+      es: "Tu web propia: <code>turesto.captain.food</code> (o tu propio <code>turesto.fr</code>). Los pedidos te llegarán en directo desde tu web — de tres maneras, todas sin comisión sobre tus platos. Más adelante, el directorio <strong>captain.food</strong> ayudará a los clientes a descubrir a los independientes de la zona (beneficio colectivo por llegar, no un canal activo hoy)."
+      it: "Il tuo sito tutto tuo: <code>iltuoristorante.captain.food</code> (o il tuo <code>iltuoristorante.fr</code>). Gli ordini arriveranno direttamente dal tuo sito — in tre modi, tutti senza commissioni sui tuoi piatti. Col tempo, l'elenco <strong>captain.food</strong> aiuterà i clienti a scoprire gli indipendenti della zona (beneficio collettivo in arrivo, non un canale attivo oggi)."
+      pt: "O teu site, teu: <code>oteuresto.captain.food</code> (ou o teu próprio <code>oteuresto.fr</code>). As encomendas chegarão em direto a partir do teu site — de três maneiras, todas sem comissão sobre os teus pratos. Mais adiante, o diretório <strong>captain.food</strong> ajudará os clientes a descobrir os independentes da zona (benefício coletivo a chegar, não um canal ativo hoje)."
+      ar: "موقعك الخاص: <code>matamak.captain.food</code> (أو نطاقك الخاص <code>matamak.fr</code>). ستصلك الطلبات مباشرة من موقعك — بثلاث طرق، كلها بدون عمولة على أطباقك. ولاحقًا، سيساعد دليل <strong>captain.food</strong> الزبائن على اكتشاف المستقلين في المنطقة (فائدة جماعية قادمة، وليست قناة نشطة اليوم)."
+      he: "אתר משלך: <code>hamisada.captain.food</code> (או דומיין משלך, <code>hamisada.fr</code>). ההזמנות יגיעו ישירות מהאתר שלך — בשלוש דרכים, כולן בלי עמלה על המנות. בהמשך, המדריך <strong>captain.food</strong> יעזור ללקוחות לגלות את העצמאים באזור (תועלת קהילתית עתידית, לא ערוץ פעיל כיום)."
+  channels.note:
+    messages:
+      fr: "Un outil pour tout ton service, au lieu d'un canal de plus à gérer."
+      en: "One tool for your whole service, instead of one more channel to manage."
+      es: "Una herramienta para todo tu servicio, en lugar de un canal más que gestionar."
+      it: "Uno strumento per tutto il tuo servizio, invece di un canale in più da gestire."
+      pt: "Uma ferramenta para todo o teu serviço, em vez de mais um canal para gerir."
+      ar: "أداة واحدة لكل خدمتك، بدل قناة إضافية عليك إدارتها."
+      he: "כלי אחד לכל השירות שלך, במקום עוד ערוץ לנהל."
+  channels.title:
+    messages:
+      fr: "Un seul QG, trois façons de recevoir tes commandes"
+      en: "One HQ, three ways to receive your orders"
+      es: "Un solo puesto de mando, tres formas de recibir tus pedidos"
+      it: "Un solo quartier generale, tre modi di ricevere i tuoi ordini"
+      pt: "Um só posto de comando, três formas de receber as tuas encomendas"
+      ar: "مقرّ قيادة واحد، وثلاث طرق لاستقبال طلباتك"
+      he: "מפקדה אחת, שלוש דרכים לקבל הזמנות"
+
+  # ---- combat ----
+  combat.aria:
+    messages:
+      fr: "Captain.Food met la commission à terre"
+      en: "Captain.Food pins the commission to the ground"
+      es: "Captain.Food derriba la comisión"
+      it: "Captain.Food mette al tappeto la commissione"
+      pt: "A Captain.Food deita a comissão ao chão"
+      ar: "Captain.Food يطرح العمولة أرضًا"
+      he: "Captain.Food מפיל את העמלה לקרשים"
+  combat.cue:
+    messages:
+      fr: "Je reprends mes commandes →"
+      en: "I'm taking back my orders →"
+      es: "Recupero mis pedidos →"
+      it: "Mi riprendo i miei ordini →"
+      pt: "Retomo as minhas encomendas →"
+      ar: "أستعيد زمام طلباتي ←"
+      he: "אני לוקח בחזרה את ההזמנות שלי →"
+  combat.img_alt:
+    messages:
+      fr: "Le Capitaine Food embroche de sa fourchette dorée le parasite « commission » et le cloue au sol"
+      en: "Captain Food skewers the “commission” parasite with his golden fork and pins it to the ground"
+      es: "El Capitán Food ensarta con su tenedor dorado al parásito «comisión» y lo clava al suelo"
+      it: "Il Capitan Food infilza con la sua forchetta dorata il parassita «commissione» e lo inchioda al suolo"
+      pt: "O Capitão Food espeta com o seu garfo dourado o parasita «comissão» e prega-o ao chão"
+      ar: "الكابتن فود يطعن بشوكته الذهبية طفيليّ «العمولة» ويسمّره في الأرض"
+      he: "קפטן פוד משפד במזלג הזהוב שלו את הטפיל ״עמלה״ ומצמיד אותו לרצפה"
+  combat.sub:
+    messages:
+      fr: "0 % sur tes plats, toujours. Ta marge reste dans ta poche — pas dans celle d'une plateforme."
+      en: "0% on your dishes, always. Your margin stays in your pocket — not a platform's."
+      es: "0 % sobre tus platos, siempre. Tu margen se queda en tu bolsillo — no en el de una plataforma."
+      it: "0% sui tuoi piatti, sempre. Il tuo margine resta nelle tue tasche — non in quelle di una piattaforma."
+      pt: "0% sobre os teus pratos, sempre. A tua margem fica no teu bolso — não no de uma plataforma."
+      ar: "0% على أطباقك، دائمًا. هامشك يبقى في جيبك — لا في جيب منصة."
+      he: "0% על המנות שלך, תמיד. הרווח נשאר בכיס שלך — לא בכיס של פלטפורמה."
+  combat.title:
+    messages:
+      fr: "La commission ? On la met à terre."
+      en: "The commission? We're taking it down."
+      es: "¿La comisión? La mandamos a pique."
+      it: "La commissione? La mettiamo al tappeto."
+      pt: "A comissão? Vamos deitá-la ao chão."
+      ar: "العمولة؟ نطرحها أرضًا."
+      he: "העמלה? שולחים אותה לקרשים."
+
+  # ---- esus ----
+  esus.eyebrow:
+    messages:
+      fr: "Un cap qui ne dérive pas"
+      en: "A course that won't drift"
+      es: "Un rumbo que no se desvía"
+      it: "Una rotta che non devia"
+      pt: "Um rumo que não deriva"
+      ar: "وجهة لا تنحرف"
+      he: "כיוון שלא נסחף עם הזרם"
+  esus.p1:
+    messages:
+      fr: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> part d'une conviction simple : le numérique doit être un <strong>outil d'utilité publique</strong>, pas un péage aux mains de quelques géants de la tech. Le problème n'est pas qu'ils gagnent de l'argent — c'est qu'une fois que tu en dépends, ils peuvent presser, et rien ne les en empêche."
+      en: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> starts from a simple conviction: digital tools should serve the <strong>public good</strong>, not be a tollbooth in the hands of a few tech giants. The problem isn't that they make money — it's that once you depend on them, they can squeeze, and nothing stops them."
+      es: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> parte de una convicción simple: lo digital debe ser una <strong>herramienta de utilidad pública</strong>, no un peaje en manos de unos cuantos gigantes tecnológicos. El problema no es que ganen dinero — es que, en cuanto dependes de ellos, pueden apretar, y nada se lo impide."
+      it: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> parte da una convinzione semplice: il digitale deve essere uno <strong>strumento di utilità pubblica</strong>, non un casello nelle mani di pochi giganti della tech. Il problema non è che guadagnino — è che una volta che dipendi da loro, possono spremerti, e niente glielo impedisce."
+      pt: "A <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> parte de uma convicção simples: o digital deve ser uma <strong>ferramenta de utilidade pública</strong>, não uma portagem nas mãos de meia dúzia de gigantes tecnológicos. O problema não é ganharem dinheiro — é que, quando dependes deles, podem apertar, e nada os impede."
+      ar: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> ينطلق من قناعة بسيطة: يجب أن يكون العالم الرقمي <strong>أداة نفع عام</strong>، لا بوابة رسوم بيد حفنة من عمالقة التكنولوجيا. المشكلة ليست في أنهم يكسبون المال — بل في أنك حين تعتمد عليهم، يمكنهم الضغط عليك، ولا شيء يمنعهم."
+      he: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> נולד מתוך אמונה פשוטה: הדיגיטל צריך להיות <strong>כלי לתועלת הציבור</strong>, לא מחסום גבייה בידיים של כמה ענקיות טק. הבעיה היא לא שהן מרוויחות כסף — אלא שברגע שאתה תלוי בהן, הן יכולות לסחוט, ואין שום דבר שעוצר אותן."
+  esus.p2:
+    messages:
+      fr: "Alors on se donne des garde-fous qui tiendront. On vise l'agrément d'<strong>entreprise solidaire d'utilité sociale (ESUS)</strong> — un cadre juridique qui encadre la lucrativité et la raison d'être — avec pour cap une <strong>coopérative (SCIC)</strong>, où restaurateurs, livreurs et citoyens auront voix au chapitre. L'objectif : par construction, ne pas pouvoir devenir ce qu'on combat."
+      en: "So we're building in safeguards that will hold. We're aiming for accreditation as a <strong>solidarity-based social utility enterprise (ESUS, a French legal status)</strong> — a legal framework that caps profit-taking and locks in the mission — with a <strong>cooperative (SCIC)</strong> as our destination, where restaurateurs, riders and citizens will have a say. The goal: to be, by design, unable to become what we're fighting."
+      es: "Así que nos ponemos salvaguardas que aguanten. Aspiramos a la acreditación de <strong>empresa solidaria de utilidad social (ESUS, un estatuto legal francés)</strong> — un marco jurídico que limita el lucro y fija la razón de ser — con rumbo a una <strong>cooperativa (SCIC, la cooperativa de interés colectivo francesa)</strong>, donde hosteleros, repartidores y ciudadanos tendrán voz y voto. El objetivo: que, por construcción, no podamos convertirnos en lo que combatimos."
+      it: "Allora ci diamo dei paletti destinati a reggere. Puntiamo all'abilitazione <strong>ESUS («entreprise solidaire d'utilité sociale», impresa solidale di utilità sociale — uno status giuridico francese)</strong> — un quadro che limita la lucratività e vincola la missione — con rotta verso una <strong>cooperativa (SCIC, la cooperativa di interesse collettivo francese)</strong>, dove ristoratori, rider e cittadini avranno voce in capitolo. L'obiettivo: per costruzione, non poter diventare ciò che combattiamo."
+      pt: "Por isso, criamos salvaguardas feitas para durar. Visamos a acreditação de <strong>empresa solidária de utilidade social (ESUS)</strong> — um estatuto legal francês que limita a lucratividade e fixa a razão de ser — com rumo a uma <strong>cooperativa (SCIC)</strong>, uma cooperativa de interesse coletivo, também um estatuto francês, onde restauradores, estafetas e cidadãos terão voz. O objetivo: por construção, não podermos tornar-nos naquilo que combatemos."
+      ar: "لذلك نضع لأنفسنا ضمانات صامدة. نستهدف اعتماد <strong>المؤسسة التضامنية ذات المنفعة الاجتماعية (ESUS)</strong> — وهو وضع قانوني فرنسي يقيّد الربحية ويحدد الغاية — ووجهتنا <strong>تعاونية (SCIC)</strong>، شكل تعاوني فرنسي يمنح أصحاب المطاعم والسائقين والمواطنين صوتًا في القرار. الهدف: أن يستحيل علينا، بحكم البناء نفسه، أن نصبح ما نحاربه."
+      he: "אז אנחנו קובעים לעצמנו מעקות בטיחות שיחזיקו מעמד. אנחנו שואפים להכרה כ<strong>עסק סולידרי לתועלת חברתית (ESUS)</strong> — מעמד משפטי צרפתי שמגביל את הרווחיות ומעגן את הייעוד — כשהיעד הוא <strong>קואופרטיב (SCIC, מעמד קואופרטיבי צרפתי)</strong>, שבו למסעדנים, לשליחים ולאזרחים יהיה קול. המטרה: שמעצם המבנה, לא נוכל להפוך למה שאנחנו נלחמים בו."
+  esus.p3:
+    messages:
+      fr: "Et pour que tu n'aies pas à nous croire sur parole : on ouvre nos comptes en public sur <a href=\"https://opencollective.com/captain-food\" target=\"_blank\" rel=\"noopener\">Open Collective</a> — chaque euro reçu et dépensé, destiné à être visible par tous. La transparence radicale, pas le slogan."
+      en: "And so you don't have to take our word for it: we're opening our books in public on <a href=\"https://opencollective.com/captain-food\" target=\"_blank\" rel=\"noopener\">Open Collective</a> — every euro received and spent, meant to be visible to everyone. Radical transparency, not a slogan."
+      es: "Y para que no tengas que fiarte de nuestra palabra: abrimos nuestras cuentas en público en <a href=\"https://opencollective.com/captain-food\" target=\"_blank\" rel=\"noopener\">Open Collective</a> — cada euro recibido y gastado, pensado para que lo vea todo el mundo. Transparencia radical, no un eslogan."
+      it: "E perché tu non debba crederci sulla parola: apriamo i nostri conti in pubblico su <a href=\"https://opencollective.com/captain-food\" target=\"_blank\" rel=\"noopener\">Open Collective</a> — ogni euro ricevuto e speso, destinato a essere visibile da tutti. Trasparenza radicale, non uno slogan."
+      pt: "E para não teres de acreditar só na nossa palavra: abrimos as nossas contas em público no <a href=\"https://opencollective.com/captain-food\" target=\"_blank\" rel=\"noopener\">Open Collective</a> — cada euro recebido e gasto, destinado a ser visível por todos. Transparência radical, não um slogan."
+      ar: "وحتى لا تضطر إلى تصديقنا على الكلام: نفتح حساباتنا للعموم على <a href=\"https://opencollective.com/captain-food\" target=\"_blank\" rel=\"noopener\">Open Collective</a> — كل يورو نستلمه وننفقه، معدّ ليكون مرئيًا للجميع. شفافية جذرية، لا شعارات."
+      he: "וכדי שלא תצטרך להאמין לנו על סמך מילה: אנחנו פותחים את החשבונות שלנו לציבור ב-<a href=\"https://opencollective.com/captain-food\" target=\"_blank\" rel=\"noopener\">Open Collective</a> — כל יורו שנכנס ויוצא, מיועד להיות גלוי לכולם. שקיפות רדיקלית, לא סיסמה."
+  esus.p4:
+    messages:
+      fr: "Notre horizon : que <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> soit un <strong>bien commun numérique</strong>, pas un actif privé. <strong>Le code est ouvert</strong> — <a href=\"https://github.com/TheCaptainCompany/captain-food\" target=\"_blank\" rel=\"noopener\">sur GitHub</a> — sous licence <strong><span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> Coopyleft</strong> (copyleft basé sur l'AGPL v3, dans l'esprit de CoopCycle), dont l'usage commercial est réservé aux structures de l'<strong>économie sociale et solidaire</strong> — coopératives et organisations à but non lucratif. Notre cap : le faire reconnaître comme <strong>bien public numérique</strong> <em>(digital public good)</em> — pour qu'il soit vérifiable, et surtout <strong>réplicable</strong> : d'autres villes, d'autres coopératives pourront le reprendre. Un outil d'intérêt général, ça se partage — ça ne se revend pas. <a href=\"manifeste.html\">Lire le manifeste →</a>"
+      en: "Our horizon: for <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> to be a <strong>digital commons</strong>, not a private asset. <strong>The code is open</strong> — <a href=\"https://github.com/TheCaptainCompany/captain-food\" target=\"_blank\" rel=\"noopener\">on GitHub</a> — under the <strong><span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> Coopyleft</strong> license (a copyleft based on AGPL v3, in the spirit of CoopCycle), whose commercial use is reserved for <strong>social and solidarity economy</strong> structures — cooperatives and non-profits. Our course: getting it recognized as a <strong>digital public good</strong> <em>(DPG)</em> — so it's verifiable, and above all <strong>replicable</strong>: other cities, other cooperatives will be able to take it up. A tool for the common good is meant to be shared — not sold off. <a href=\"manifeste.html\">Read the manifesto →</a>"
+      es: "Nuestro horizonte: que <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> sea un <strong>bien común digital</strong>, no un activo privado. <strong>El código es abierto</strong> — <a href=\"https://github.com/TheCaptainCompany/captain-food\" target=\"_blank\" rel=\"noopener\">en GitHub</a> — bajo licencia <strong><span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> Coopyleft</strong> (copyleft basado en la AGPL v3, en el espíritu de CoopCycle), cuyo uso comercial queda reservado a las estructuras de la <strong>economía social y solidaria</strong> — cooperativas y organizaciones sin ánimo de lucro. Nuestro rumbo: lograr que se reconozca como <strong>bien público digital</strong> <em>(digital public good)</em> — para que sea verificable y, sobre todo, <strong>replicable</strong>: otras ciudades, otras cooperativas podrán retomarlo. Una herramienta de interés general se comparte — no se revende. <a href=\"manifeste.html\">Leer el manifiesto →</a>"
+      it: "Il nostro orizzonte: che <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> sia un <strong>bene comune digitale</strong>, non un asset privato. <strong>Il codice è aperto</strong> — <a href=\"https://github.com/TheCaptainCompany/captain-food\" target=\"_blank\" rel=\"noopener\">su GitHub</a> — con licenza <strong><span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> Coopyleft</strong> (copyleft basato su AGPL v3, nello spirito di CoopCycle), il cui uso commerciale è riservato alle realtà dell'<strong>economia sociale e solidale</strong> — cooperative e organizzazioni no profit. La nostra rotta: farlo riconoscere come <strong>bene pubblico digitale</strong> <em>(digital public good)</em> — perché sia verificabile e soprattutto <strong>replicabile</strong>: altre città, altre cooperative potranno riprenderlo. Uno strumento d'interesse generale si condivide — non si rivende. <a href=\"manifeste.html\">Leggi il manifesto →</a>"
+      pt: "O nosso horizonte: que a <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> seja um <strong>bem comum digital</strong>, não um ativo privado. <strong>O código é aberto</strong> — <a href=\"https://github.com/TheCaptainCompany/captain-food\" target=\"_blank\" rel=\"noopener\">no GitHub</a> — sob a licença <strong><span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> Coopyleft</strong> (copyleft baseado na AGPL v3, no espírito da CoopCycle), cujo uso comercial está reservado às estruturas da <strong>economia social e solidária</strong> — cooperativas e organizações sem fins lucrativos. O nosso rumo: fazê-lo reconhecer como <strong>bem público digital</strong> <em>(digital public good)</em> — para que seja verificável e, sobretudo, <strong>replicável</strong>: outras cidades, outras cooperativas poderão retomá-lo. Uma ferramenta de interesse geral partilha-se — não se revende. <a href=\"manifeste.html\">Ler o manifesto →</a>"
+      ar: "أفقنا: أن يكون <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> <strong>مشاعًا رقميًا</strong>، لا أصلًا خاصًا. <strong>الكود مفتوح</strong> — <a href=\"https://github.com/TheCaptainCompany/captain-food\" target=\"_blank\" rel=\"noopener\">على GitHub</a> — برخصة <strong><span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> Coopyleft</strong> (كوبيليفت مبنية على AGPL v3، على نهج CoopCycle)، يقتصر استخدامها التجاري على هياكل <strong>الاقتصاد الاجتماعي والتضامني</strong> — التعاونيات والمنظمات غير الربحية. وجهتنا: أن يُعترف به <strong>منفعة عامة رقمية</strong> <em>(digital public good)</em> — ليكون قابلًا للتحقق، وقبل كل شيء <strong>قابلًا للاستنساخ</strong>: مدن أخرى وتعاونيات أخرى ستتمكن من تبنّيه. أداة النفع العام تُشارَك — ولا تُباع. <a href=\"manifeste.html\">اقرأ البيان ←</a>"
+      he: "האופק שלנו: ש-<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> יהיה <strong>נכס דיגיטלי משותף</strong>, לא נכס פרטי. <strong>הקוד פתוח</strong> — <a href=\"https://github.com/TheCaptainCompany/captain-food\" target=\"_blank\" rel=\"noopener\">ב-GitHub</a> — ברישיון <strong><span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> Coopyleft</strong> (קופילפט מבוסס AGPL v3, ברוח CoopCycle), שהשימוש המסחרי בו שמור לארגוני <strong>הכלכלה החברתית והסולידרית</strong> — קואופרטיבים וארגונים ללא מטרות רווח. היעד שלנו: להביא להכרה בו כ<strong>נכס ציבורי דיגיטלי</strong> <em>(digital public good)</em> — כדי שיהיה ניתן לאימות, ובעיקר <strong>ניתן לשכפול</strong>: ערים אחרות, קואופרטיבים אחרים יוכלו לאמץ אותו. כלי לתועלת הכלל משתפים — לא מוכרים. <a href=\"manifeste.html\">לקריאת המניפסט →</a>"
+  esus.rider_body:
+    messages:
+      fr: "Dans l'ubérisation, le livreur est une variable qu'on presse — précaire, sans protection. On a fait le choix inverse : <strong>payer nos livreurs mieux que quiconque</strong>, ici à Tours, avec l'ambition, à terme, de <strong>les salarier</strong>. Un service juste commence par des gens correctement traités."
+      en: "In the gig economy, the rider is a variable to squeeze — precarious, unprotected. We made the opposite choice: <strong>pay our riders better than anyone</strong>, here in Tours, with the ambition, in time, to <strong>hire them as employees</strong>. A fair service starts with people treated right."
+      es: "En la uberización, el repartidor es una variable que se exprime — precario, sin protección. Nosotros hemos elegido lo contrario: <strong>pagar a nuestros repartidores mejor que nadie</strong>, aquí en Tours, con la ambición, a la larga, de <strong>contratarlos en plantilla</strong>. Un servicio justo empieza por personas bien tratadas."
+      it: "Nell'uberizzazione, il rider è una variabile da spremere — precario, senza tutele. Noi abbiamo fatto la scelta opposta: <strong>pagare i nostri rider meglio di chiunque altro</strong>, qui a Tours, con l'ambizione, col tempo, di <strong>assumerli</strong>. Un servizio giusto comincia da persone trattate come si deve."
+      pt: "Na uberização, o estafeta é uma variável que se espreme — precário, sem proteção. Fizemos a escolha inversa: <strong>pagar aos nossos estafetas melhor do que ninguém</strong>, aqui em Tours, com a ambição de, a prazo, <strong>os contratar como assalariados</strong>. Um serviço justo começa por pessoas bem tratadas."
+      ar: "في اقتصاد المنصات، السائق مجرد رقم يُضغَط عليه — هشّ، وبلا حماية. نحن اخترنا العكس: <strong>أن ندفع لسائقينا أفضل من أي جهة أخرى</strong>، هنا في Tours، مع طموح <strong>توظيفهم بعقود عمل</strong> على المدى البعيد. الخدمة العادلة تبدأ بأناس يُعامَلون باحترام."
+      he: "באוברזציה, השליח הוא משתנה שסוחטים — פגיע, בלי הגנה. אנחנו בחרנו בכיוון ההפוך: <strong>לשלם לשליחים שלנו יותר טוב מכולם</strong>, כאן ב-Tours, עם שאיפה, בהמשך, <strong>להעסיק אותם כשכירים</strong>. שירות הוגן מתחיל באנשים שמתייחסים אליהם כמו שצריך."
+  esus.rider_link:
+    messages:
+      fr: "→ Comment on paie la livraison, en clair (exemple à l'appui)"
+      en: "→ How we pay for delivery, in plain words (worked example included)"
+      es: "→ Cómo pagamos el reparto, bien claro (con ejemplo incluido)"
+      it: "→ Come paghiamo la consegna, in chiaro (esempio alla mano)"
+      pt: "→ Como pagamos a entrega, às claras (com exemplo)"
+      ar: "← كيف ندفع أجر التوصيل، بوضوح (مع مثال عملي)"
+      he: "→ איך אנחנו משלמים על המשלוח, בגובה העיניים (כולל דוגמה)"
+  esus.rider_title:
+    messages:
+      fr: "Le deuxième combat : le livreur, payé dignement"
+      en: "The second fight: riders, paid decently"
+      es: "El segundo combate: el repartidor, pagado con dignidad"
+      it: "La seconda battaglia: il rider, pagato dignitosamente"
+      pt: "O segundo combate: o estafeta, pago com dignidade"
+      ar: "المعركة الثانية: السائق، بأجر كريم"
+      he: "המאבק השני: שליח שמקבל שכר בכבוד"
+  esus.title:
+    messages:
+      fr: "Une alternative qui ne pourra pas se transformer en péage"
+      en: "An alternative that can never turn into a tollbooth"
+      es: "Una alternativa que no podrá convertirse en peaje"
+      it: "Un'alternativa che non potrà trasformarsi in un casello"
+      pt: "Uma alternativa que não poderá transformar-se numa portagem"
+      ar: "بديل لن يستطيع أبدًا أن يتحول إلى بوابة رسوم"
+      he: "אלטרנטיבה שלא תוכל להפוך למחסום גבייה"
+
+  # ---- example ----
+  example.compare:
+    messages:
+      fr: "Sur une plateforme à ~30 % de commission, il ne te resterait qu'environ <strong>21 €</strong> sur la même commande."
+      en: "On a platform charging ~30% commission, you'd be left with only about <strong>€21</strong> on the same order."
+      es: "En una plataforma con ~30 % de comisión, del mismo pedido te quedarían solo unos <strong>21 €</strong>."
+      it: "Su una piattaforma con ~30% di commissione, dello stesso ordine ti resterebbero solo <strong>21 €</strong> circa."
+      pt: "Numa plataforma com ~30% de comissão, sobrar-te-iam apenas cerca de <strong>21 €</strong> na mesma encomenda."
+      ar: "على منصة بعمولة ~30%، لن يبقى لك سوى نحو <strong>21 €</strong> من الطلب نفسه."
+      he: "בפלטפורמה עם כ-30% עמלה, היו נשארים לך רק בערך <strong>21 €</strong> מאותה הזמנה."
+  example.delivery:
+    messages:
+      fr: "S'il s'agit d'une commande <strong>livrée</strong> (canal à venir), un coût de service s'ajoutera pour payer le livreur dignement — partagé avec le client et plafonné par la marge que tu fixes, jamais une commission. <a href=\"livraison.html\">Voir comment on paiera la livraison →</a>"
+      en: "If it's a <strong>delivered</strong> order (a channel to come), a service cost will be added to pay the rider decently — shared with the customer and capped by the margin you set, never a commission. <a href=\"livraison.html\">See how we'll pay for delivery →</a>"
+      es: "Si es un pedido <strong>a domicilio</strong> (canal por llegar), se añadirá un coste de servicio para pagar dignamente al repartidor — compartido con el cliente y limitado por el margen que tú fijes, nunca una comisión. <a href=\"livraison.html\">Ver cómo pagaremos el reparto →</a>"
+      it: "Se si tratta di un ordine <strong>consegnato</strong> (canale in arrivo), si aggiungerà un costo di servizio per pagare dignitosamente il rider — condiviso con il cliente e limitato dal margine che fissi tu, mai una commissione. <a href=\"livraison.html\">Guarda come pagheremo la consegna →</a>"
+      pt: "Se for uma encomenda <strong>entregue</strong> (canal a chegar), acrescentar-se-á um custo de serviço para pagar dignamente ao estafeta — partilhado com o cliente e limitado pela margem que tu defines, nunca uma comissão. <a href=\"livraison.html\">Ver como pagaremos a entrega →</a>"
+      ar: "إذا كان الطلب <strong>مع التوصيل</strong> (قناة قادمة)، ستُضاف تكلفة خدمة لدفع أجر كريم للسائق — تُتقاسم مع الزبون وتُسقَّف بالهامش الذي تحدده أنت، وليست عمولة أبدًا. <a href=\"livraison.html\">شاهد كيف سندفع أجر التوصيل ←</a>"
+      he: "אם מדובר בהזמנה <strong>במשלוח</strong> (ערוץ שעוד יגיע), תתווסף עלות שירות כדי לשלם לשליח בכבוד — מתחלקת עם הלקוח ומוגבלת לפי הרווח שאתה קובע, לעולם לא עמלה. <a href=\"livraison.html\">איך נשלם על המשלוח →</a>"
+  example.detail:
+    messages:
+      fr: "30 € pour tes plats + 2,99 € de contribution libre du client (exemple)"
+      en: "€30 for your dishes + a €2.99 pay-what-you-want customer contribution (example)"
+      es: "30 € por tus platos + 2,99 € de contribución libre del cliente (ejemplo)"
+      it: "30 € per i tuoi piatti + 2,99 € di contributo libero del cliente (esempio)"
+      pt: "30 € pelos teus pratos + 2,99 € de contribuição livre do cliente (exemplo)"
+      ar: "30 € لأطباقك + 2,99 € مساهمة حرة من الزبون (مثال)"
+      he: "30 € על המנות שלך + 2.99 € תרומה חופשית של הלקוח (דוגמה)"
+  example.fine:
+    messages:
+      fr: "Montants donnés à titre d'exemple pour illustrer le principe, pas une grille tarifaire."
+      en: "Amounts shown as an example to illustrate the principle, not a price list."
+      es: "Importes a título de ejemplo para ilustrar el principio, no una tabla de tarifas."
+      it: "Importi dati a titolo di esempio per illustrare il principio, non un listino."
+      pt: "Montantes dados a título de exemplo para ilustrar o princípio, não uma tabela de preços."
+      ar: "المبالغ معروضة كمثال لتوضيح المبدأ، وليست جدول أسعار."
+      he: "הסכומים ניתנים כדוגמה להמחשת העיקרון, לא מחירון."
+  example.note:
+    messages:
+      fr: "Le client ne souhaite pas contribuer ? C'est OK, sans jugement : pas de contribution sur cette commande. <strong>Toi, tu ne verses aucune commission sur tes plats, dans tous les cas.</strong>"
+      en: "The customer doesn't want to contribute? That's fine, no judgment: no contribution on that order. <strong>You never pay any commission on your dishes, no matter what.</strong>"
+      es: "¿El cliente no quiere contribuir? No pasa nada, sin juicios: sin contribución en ese pedido. <strong>Tú no pagas ninguna comisión sobre tus platos, en ningún caso.</strong>"
+      it: "Il cliente non vuole contribuire? Va bene, senza giudizi: nessun contributo su quell'ordine. <strong>Tu, in ogni caso, non versi nessuna commissione sui tuoi piatti.</strong>"
+      pt: "O cliente não quer contribuir? Tudo bem, sem julgamentos: não há contribuição nessa encomenda. <strong>Tu não pagas nenhuma comissão sobre os teus pratos, em qualquer caso.</strong>"
+      ar: "الزبون لا يرغب في المساهمة؟ لا بأس، وبلا أي إحراج: لا مساهمة على هذا الطلب. <strong>أما أنت، فلا تدفع أي عمولة على أطباقك، في كل الحالات.</strong>"
+      he: "הלקוח לא רוצה לתרום? זה בסדר, בלי שיפוטיות: אין תרומה על ההזמנה הזאת. <strong>אתה לא משלם שום עמלה על המנות שלך, בכל מקרה.</strong>"
+  example.row1_label:
+    messages:
+      fr: "Ce que tu touches, toi"
+      en: "What you get, you"
+      es: "Lo que te llevas tú"
+      it: "Quello che incassi tu"
+      pt: "O que recebes tu"
+      ar: "ما تحصل عليه أنت"
+      he: "מה שאתה מקבל"
+  example.row1_value:
+    messages:
+      fr: "30 € <em>0 commission</em>"
+      en: "€30 <em>0% commission</em>"
+      es: "30 € <em>0 comisión</em>"
+      it: "30 € <em>0 commissioni</em>"
+      pt: "30 € <em>0 comissão</em>"
+      ar: "30 € <em>بدون عمولة</em>"
+      he: "30 € <em>0 עמלה</em>"
+  example.row2_label:
+    messages:
+      fr: "Ce que le client paie"
+      en: "What the customer pays"
+      es: "Lo que paga el cliente"
+      it: "Quello che paga il cliente"
+      pt: "O que o cliente paga"
+      ar: "ما يدفعه الزبون"
+      he: "מה שהלקוח משלם"
+  example.tag:
+    messages:
+      fr: "Exemple illustratif — une commande de 30 €"
+      en: "An illustrative example — a €30 order"
+      es: "Ejemplo ilustrativo — un pedido de 30 €"
+      it: "Esempio illustrativo — un ordine da 30 €"
+      pt: "Exemplo ilustrativo — uma encomenda de 30 €"
+      ar: "مثال توضيحي — طلب بقيمة 30 €"
+      he: "דוגמה להמחשה — הזמנה של 30 €"
+
+  # ---- faq ----
+  faq.a1:
+    messages:
+      fr: "Pour toi : 0 % de commission sur tes plats, inscription gratuite, dans tous les cas. Le service est financé par une <strong>contribution libre du client</strong>, ajoutée à sa commande en toute transparence (0 € possible, sans jugement) — jamais par toi. Les frais de paiement par carte sont les frais bancaires standards de tout encaissement en ligne, jamais une surcharge ajoutée au client. <a href=\"financement.html\">Voir le détail complet, exemple à l'appui.</a>"
+      en: "For you: 0% commission on your dishes, free signup, no matter what. The service is funded by a <strong>pay-what-you-want customer contribution</strong>, added to their order in full transparency (€0 is fine, no judgment) — never by you. Card payment fees are the standard banking fees of any online payment, never a surcharge added for the customer. <a href=\"financement.html\">See the full details, worked example included.</a>"
+      es: "Para ti: 0 % de comisión sobre tus platos, alta gratuita, en todos los casos. El servicio se financia con una <strong>contribución libre del cliente</strong>, añadida a su pedido con total transparencia (0 € posible, sin juicios) — nunca la pagas tú. Las comisiones de pago con tarjeta son las bancarias estándar de cualquier cobro online, nunca un recargo añadido al cliente. <a href=\"financement.html\">Ver el detalle completo, con ejemplo incluido.</a>"
+      it: "Per te: 0% di commissioni sui tuoi piatti, iscrizione gratuita, in ogni caso. Il servizio si finanzia con un <strong>contributo libero del cliente</strong>, aggiunto al suo ordine in piena trasparenza (0 € possibile, senza giudizi) — mai da te. Le spese di pagamento con carta sono i costi bancari standard di qualsiasi incasso online, mai un sovrapprezzo aggiunto al cliente. <a href=\"financement.html\">Guarda il dettaglio completo, esempio alla mano.</a>"
+      pt: "Para ti: 0% de comissão sobre os teus pratos, inscrição gratuita, em qualquer caso. O serviço é financiado por uma <strong>contribuição livre do cliente</strong>, adicionada à encomenda com toda a transparência (0 € possível, sem julgamentos) — nunca por ti. As taxas de pagamento por cartão são as taxas bancárias padrão de qualquer cobrança online, nunca uma sobretaxa cobrada ao cliente. <a href=\"financement.html\">Ver o detalhe completo, com exemplo.</a>"
+      ar: "بالنسبة لك: عمولة 0% على أطباقك، وتسجيل مجاني، في كل الحالات. الخدمة تُموَّل من <strong>مساهمة حرة من الزبون</strong>، تُضاف إلى طلبه بكل شفافية (0 € خيار وارد، وبلا إحراج) — ولا تُموَّل منك أبدًا. رسوم الدفع بالبطاقة هي الرسوم البنكية القياسية لأي تحصيل عبر الإنترنت، وليست أبدًا رسمًا إضافيًا على الزبون. <a href=\"financement.html\">اطّلع على التفاصيل كاملة، مع مثال عملي.</a>"
+      he: "בשבילך: 0% עמלה על המנות, הרשמה חינם, בכל מקרה. השירות ממומן על ידי <strong>תרומה חופשית של הלקוח</strong>, שמתווספת להזמנה שלו בשקיפות מלאה (גם 0 € זה בסדר, בלי שיפוטיות) — אף פעם לא על ידך. עמלות הסליקה בכרטיס הן העמלות הבנקאיות הסטנדרטיות של כל תשלום אונליין, אף פעם לא תוספת שמגולגלת על הלקוח. <a href=\"financement.html\">לפירוט המלא, כולל דוגמה.</a>"
+  faq.a2:
+    messages:
+      fr: "Ce qui se paie dans ta caisse habituelle (sur place, au comptoir), on n'y touche pas : c'est <strong>gratuit, point</strong>, hors de notre flux. La contribution ne concerne que les commandes <strong>payées en ligne</strong> via <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      en: "Whatever goes through your usual till (on site, at the counter), we don't touch: it's <strong>free, full stop</strong> — outside our flow. The contribution only applies to orders <strong>paid online</strong> through <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      es: "Lo que se paga en tu caja de siempre (en el local, en barra) no lo tocamos: es <strong>gratis, y punto</strong>, fuera de nuestro flujo. La contribución solo afecta a los pedidos <strong>pagados online</strong> vía <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      it: "Quello che si paga nella tua cassa abituale (sul posto, al banco) non lo tocchiamo: è <strong>gratis, punto</strong>, fuori dal nostro flusso. Il contributo riguarda solo gli ordini <strong>pagati online</strong> tramite <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      pt: "No que se paga na tua caixa habitual (no local, ao balcão), não tocamos: é <strong>grátis, ponto final</strong>, fora do nosso fluxo. A contribuição só diz respeito às encomendas <strong>pagas online</strong> via <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      ar: "ما يُدفع في صندوقك المعتاد (في المحل، عند الكاونتر) لا نمسّه: إنه <strong>مجاني، نقطة</strong>، وخارج تدفقنا تمامًا. المساهمة تخص فقط الطلبات <strong>المدفوعة أونلاين</strong> عبر <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      he: "מה שמשולם בקופה הרגילה שלך (במקום, בדלפק) — אנחנו לא נוגעים בו: זה <strong>חינם, נקודה</strong>, מחוץ לזרימה שלנו. התרומה נוגעת רק להזמנות <strong>שמשולמות אונליין</strong> דרך <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+  faq.a3:
+    messages:
+      fr: "La livraison sera un <strong>canal à venir</strong>, pas encore actif. L'idée : payer correctement le livreur (on vise au moins 7 € la course). Tu y participerais uniquement sur tes commandes livrées, à hauteur de ce que ta marge permet — tu fixerais ton plancher, on ne descendrait jamais dessous. Le client paierait la différence, en transparence. Jamais une commission sur tes plats. <a href=\"livraison.html\">Voir le calcul en détail, exemple à l'appui.</a>"
+      en: "Delivery will be a <strong>future channel</strong>, not active yet. The idea: pay the rider properly (we're aiming for at least €7 per ride). You'd only chip in on your delivered orders, up to what your margin allows — you'd set your floor, and we'd never go below it. The customer would pay the difference, transparently. Never a commission on your dishes. <a href=\"livraison.html\">See the math in detail, worked example included.</a>"
+      es: "El reparto será un <strong>canal por llegar</strong>, aún no activo. La idea: pagar bien al repartidor (apuntamos a 7 € mínimo por carrera). Tú participarías solo en tus pedidos entregados, en la medida que tu margen permita — fijarías tu suelo y nunca bajaríamos de ahí. El cliente pagaría la diferencia, con transparencia. Nunca una comisión sobre tus platos. <a href=\"livraison.html\">Ver el cálculo en detalle, con ejemplo incluido.</a>"
+      it: "La consegna sarà un <strong>canale in arrivo</strong>, non ancora attivo. L'idea: pagare bene il rider (puntiamo ad almeno 7 € a corsa). Tu parteciperesti solo sui tuoi ordini consegnati, nei limiti di quanto il tuo margine permette — fisseresti la tua soglia, e sotto non si scenderebbe mai. Il cliente pagherebbe la differenza, in trasparenza. Mai una commissione sui tuoi piatti. <a href=\"livraison.html\">Guarda il calcolo nel dettaglio, esempio alla mano.</a>"
+      pt: "A entrega será um <strong>canal a chegar</strong>, ainda não ativo. A ideia: pagar corretamente ao estafeta (visamos pelo menos 7 € por corrida). Só participarias nas tuas encomendas entregues, na medida do que a tua margem permitir — fixarias o teu mínimo, e nunca desceríamos abaixo dele. O cliente pagaria a diferença, com transparência. Nunca uma comissão sobre os teus pratos. <a href=\"livraison.html\">Ver o cálculo em detalhe, com exemplo.</a>"
+      ar: "التوصيل سيكون <strong>قناة قادمة</strong>، غير نشطة بعد. الفكرة: دفع أجر عادل للسائق (نستهدف 7 € على الأقل للتوصيلة الواحدة). ستشارك فيها فقط على طلباتك الموصَّلة، وبقدر ما يسمح به هامشك — أنت من سيحدد حدّك الأدنى، ولن ننزل تحته أبدًا. والزبون سيدفع الفرق، بكل شفافية. وليست أبدًا عمولة على أطباقك. <a href=\"livraison.html\">شاهد الحساب بالتفصيل، مع مثال عملي.</a>"
+      he: "המשלוח יהיה <strong>ערוץ עתידי</strong>, עוד לא פעיל. הרעיון: לשלם לשליח כמו שצריך (אנחנו שואפים ל-7 € לפחות לנסיעה). אתה תשתתף רק על ההזמנות שלך במשלוח, ורק כמה שהרווח שלך מאפשר — אתה תקבע את הרצפה שלך, ולעולם לא נרד מתחתיה. הלקוח ישלם את ההפרש, בשקיפות. אף פעם לא עמלה על המנות שלך. <a href=\"livraison.html\">לחישוב המפורט, כולל דוגמה.</a>"
+  faq.a4:
+    messages:
+      fr: "Non. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> vient en plus, sans exclusivité. Beaucoup de restaurants gardent les deux et voient <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> comme leur canal direct, celui qu'ils maîtrisent."
+      en: "No. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> comes on top, with no exclusivity. Many restaurants keep both and see <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> as their direct channel — the one they control."
+      es: "No. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> viene a sumar, sin exclusividad. Muchos restaurantes mantienen ambos y ven <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> como su canal directo, el que controlan ellos."
+      it: "No. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> si aggiunge, senza esclusiva. Molti ristoranti tengono entrambi e vedono <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> come il loro canale diretto, quello che controllano."
+      pt: "Não. A <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> vem por acréscimo, sem exclusividade. Muitos restaurantes ficam com os dois e veem a <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> como o seu canal direto, aquele que controlam."
+      ar: "لا. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> يأتي كإضافة، بدون حصرية. كثير من المطاعم تحتفظ بالاثنين وترى في <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> قناتها المباشرة، تلك التي تتحكم فيها بنفسها."
+      he: "לא. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> מגיע כתוספת, בלי בלעדיות. הרבה מסעדות שומרות על שניהם ורואות ב-<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> את הערוץ הישיר שלהן — זה שבשליטתן."
+  faq.a5:
+    messages:
+      fr: "Parce que ça ne te coûte rien et que tu n'as aucune exclusivité à donner. Tu es référencé, tu récupères ta base clients dès tes premières commandes directes, et tu façonnes l'outil pendant qu'on démarre. Les premiers embarqués sont ceux qui pèsent le plus."
+      en: "Because it costs you nothing and you give up no exclusivity. You get listed, you recover your customer base from your first direct orders, and you shape the tool while we're starting out. The first ones aboard are the ones who weigh the most."
+      es: "Porque no te cuesta nada y no cedes ninguna exclusividad. Apareces en el directorio, recuperas tu base de clientes desde tus primeros pedidos directos y das forma a la herramienta mientras arrancamos. Los primeros a bordo son los que más pesan."
+      it: "Perché non ti costa niente e non dai nessuna esclusiva. Sei in vetrina, recuperi la tua base clienti dai primi ordini diretti, e plasmi lo strumento mentre partiamo. I primi a salire a bordo sono quelli che contano di più."
+      pt: "Porque não te custa nada e não tens nenhuma exclusividade a dar. Ficas referenciado, recuperas a tua base de clientes desde as primeiras encomendas em direto, e moldas a ferramenta enquanto arrancamos. Os primeiros a embarcar são os que mais pesam."
+      ar: "لأن ذلك لا يكلفك شيئًا، ولا حصرية عليك تقديمها. تكون مدرَجًا منذ البداية، وتسترجع قاعدة زبائنك من أول طلباتك المباشرة، وتصوغ الأداة ونحن ننطلق. أوائل من يصعدون على المتن هم أصحاب الوزن الأكبر."
+      he: "כי זה לא עולה לך כלום ואתה לא נותן שום בלעדיות. אתה מופיע במדריך, אתה מקבל את מאגר הלקוחות שלך כבר מההזמנות הישירות הראשונות, ואתה מעצב את הכלי בזמן שאנחנו יוצאים לדרך. הראשונים שעולים לסיפון הם אלה שמשפיעים הכי הרבה."
+  faq.a6:
+    messages:
+      fr: "Chaque commande passée en direct sur ta page t'appartient : tu accèdes aux coordonnées de tes clients (avec leur consentement) pour les fidéliser toi-même. Contrairement aux grandes plateformes, on ne confisque pas ta clientèle."
+      en: "Every order placed directly on your page belongs to you: you get access to your customers' contact details (with their consent) to build loyalty yourself. Unlike the big platforms, we don't confiscate your customer base."
+      es: "Cada pedido hecho en directo en tu página te pertenece: accedes a los datos de contacto de tus clientes (con su consentimiento) para fidelizarlos tú mismo. A diferencia de las grandes plataformas, no confiscamos tu clientela."
+      it: "Ogni ordine fatto direttamente sulla tua pagina ti appartiene: accedi ai contatti dei tuoi clienti (con il loro consenso) per fidelizzarli tu stesso. A differenza delle grandi piattaforme, la tua clientela non te la confischiamo."
+      pt: "Cada encomenda feita em direto na tua página pertence-te: acedes aos contactos dos teus clientes (com o consentimento deles) para os fidelizares tu mesmo. Ao contrário das grandes plataformas, não confiscamos a tua clientela."
+      ar: "كل طلب يمرّ مباشرة عبر صفحتك ملك لك: تصل إلى بيانات تواصل زبائنك (بموافقتهم) لتكسب ولاءهم بنفسك. على عكس المنصات الكبرى، نحن لا نصادر زبائنك."
+      he: "כל הזמנה שמתבצעת ישירות בעמוד שלך שייכת לך: אתה מקבל גישה לפרטי הלקוחות שלך (בהסכמתם) כדי לשמר אותם בעצמך. בניגוד לפלטפורמות הגדולות, אנחנו לא מחרימים את קהל הלקוחות שלך."
+  faq.a7:
+    messages:
+      fr: "« Entreprise solidaire d'utilité sociale » : un agrément qui encadre juridiquement la lucrativité et impose une finalité sociale. C'est le cap qu'on vise — une garantie, à terme, que <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> ne pourra pas dériver vers ce qu'on dénonce."
+      en: "ESUS stands for “entreprise solidaire d'utilité sociale” — a solidarity-based social utility enterprise, a French accreditation that legally caps profit-taking and requires a social purpose. It's the course we're aiming for — a guarantee, in time, that <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> can never drift into what we denounce."
+      es: "«Empresa solidaria de utilidad social», por sus siglas en francés: una acreditación legal francesa que limita jurídicamente el lucro e impone una finalidad social. Es el rumbo que nos hemos marcado — una garantía, a la larga, de que <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> no podrá derivar hacia lo que denunciamos."
+      it: "«Entreprise solidaire d'utilité sociale», cioè impresa solidale di utilità sociale: un'abilitazione francese che limita giuridicamente la lucratività e impone una finalità sociale. È la rotta che puntiamo a seguire — una garanzia, col tempo, che <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> non potrà deviare verso ciò che denunciamo."
+      pt: "«Empresa solidária de utilidade social»: uma acreditação legal francesa que enquadra juridicamente a lucratividade e impõe uma finalidade social. É o rumo que visamos — uma garantia, a prazo, de que a <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> não poderá derivar para aquilo que denunciamos."
+      ar: "«المؤسسة التضامنية ذات المنفعة الاجتماعية»: اعتماد قانوني فرنسي يقيّد الربحية ويفرض غاية اجتماعية. هذه هي الوجهة التي نستهدفها — ضمانة، على المدى البعيد، بأن <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> لن يستطيع الانحراف نحو ما نندد به."
+      he: "ESUS — ״עסק סולידרי לתועלת חברתית״ — הוא מעמד משפטי צרפתי שמגביל את הרווחיות ומחייב ייעוד חברתי. זה היעד שאנחנו שואפים אליו — ערובה, בהמשך הדרך, לכך ש-<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> לא יוכל לסטות אל מה שאנחנו יוצאים נגדו."
+  faq.a8:
+    messages:
+      fr: "Deux cas. Si le client <strong>paie en caisse</strong> ou sur place, c'est <strong>hors de notre flux</strong> : 100 % gratuit, on n'y touche pas. S'il <strong>paie en ligne</strong> via le QR, une contribution libre peut s'ajouter, comme pour une commande en ligne. Dans tous les cas, sous ton nom, et 0 commission sur tes plats."
+      en: "Two cases. If the customer <strong>pays at the till</strong> or on site, it's <strong>outside our flow</strong>: 100% free, we don't touch it. If they <strong>pay online</strong> via the QR code, a pay-what-you-want contribution can be added, just like for an online order. In every case, under your name, and 0% commission on your dishes."
+      es: "Dos casos. Si el cliente <strong>paga en caja</strong> o en el local, queda <strong>fuera de nuestro flujo</strong>: 100 % gratis, no lo tocamos. Si <strong>paga online</strong> vía el QR, puede añadirse una contribución libre, como en un pedido online. En todos los casos, con tu nombre, y 0 comisión sobre tus platos."
+      it: "Due casi. Se il cliente <strong>paga in cassa</strong> o sul posto, è <strong>fuori dal nostro flusso</strong>: 100% gratis, non lo tocchiamo. Se <strong>paga online</strong> tramite il QR, può aggiungersi un contributo libero, come per un ordine online. In ogni caso, a tuo nome, e 0 commissioni sui tuoi piatti."
+      pt: "Dois casos. Se o cliente <strong>paga na caixa</strong> ou no local, fica <strong>fora do nosso fluxo</strong>: 100% grátis, não lhe tocamos. Se <strong>paga online</strong> via QR, pode acrescentar-se uma contribuição livre, como numa encomenda online. Em qualquer caso, com o teu nome, e 0 comissão sobre os teus pratos."
+      ar: "حالتان. إذا <strong>دفع الزبون في الصندوق</strong> أو في المحل، فهذا <strong>خارج تدفقنا</strong>: مجاني 100%، ولا نمسّه. أما إذا <strong>دفع أونلاين</strong> عبر رمز QR، فقد تُضاف مساهمة حرة، كما في أي طلب أونلاين. وفي كل الحالات، باسمك أنت، وعمولة 0% على أطباقك."
+      he: "שני מצבים. אם הלקוח <strong>משלם בקופה</strong> או במקום, זה <strong>מחוץ לזרימה שלנו</strong>: 100% חינם, אנחנו לא נוגעים בזה. אם הוא <strong>משלם אונליין</strong> דרך ה-QR, תרומה חופשית יכולה להתווסף, כמו בהזמנה אונליין. בכל מקרה — על שמך, ו-0 עמלה על המנות שלך."
+  faq.img_alt:
+    messages:
+      fr: "Le Capitaine Food, l'index sur la tempe, invite à réfléchir aux questions"
+      en: "Captain Food, finger to his temple, inviting you to think it over"
+      es: "El Capitán Food, con el índice en la sien, invita a reflexionar sobre las preguntas"
+      it: "Il Capitan Food, con l'indice sulla tempia, invita a riflettere sulle domande"
+      pt: "O Capitão Food, com o indicador na têmpora, convida a refletir sobre as perguntas"
+      ar: "الكابتن فود واضعًا سبابته على صدغه، يدعوك للتفكير في الأسئلة"
+      he: "קפטן פוד, אצבע על הרקה, מזמין לחשוב על השאלות"
+  faq.intro:
+    messages:
+      fr: "Tout ce que les restaurateurs nous demandent — en clair, sans détour."
+      en: "Everything restaurateurs ask us — in plain words, no dodging."
+      es: "Todo lo que los hosteleros nos preguntan — claro y sin rodeos."
+      it: "Tutto quello che i ristoratori ci chiedono — in chiaro, senza giri di parole."
+      pt: "Tudo o que os restauradores nos perguntam — às claras, sem rodeios."
+      ar: "كل ما يسألنا عنه أصحاب المطاعم — بوضوح وبلا مواربة."
+      he: "כל מה שמסעדנים שואלים אותנו — ברור, בלי סיבובים."
+  faq.q1:
+    messages:
+      fr: "C'est gratuit pour moi — et vous vivez de quoi ?"
+      en: "It's free for me — so what do you live on?"
+      es: "Es gratis para mí — ¿y vosotros de qué vivís?"
+      it: "Per me è gratis — e voi di cosa vivete?"
+      pt: "É grátis para mim — então vivem de quê?"
+      ar: "مجاني بالنسبة لي — إذن ممّ تعيشون؟"
+      he: "זה חינם בשבילי — אז ממה אתם חיים?"
+  faq.q2:
+    messages:
+      fr: "Et ce que mes clients paient en caisse ?"
+      en: "What about what my customers pay at the till?"
+      es: "¿Y lo que mis clientes pagan en caja?"
+      it: "E quello che i miei clienti pagano in cassa?"
+      pt: "E o que os meus clientes pagam na caixa?"
+      ar: "وماذا عمّا يدفعه زبائني في الصندوق؟"
+      he: "ומה עם מה שהלקוחות שלי משלמים בקופה?"
+  faq.q3:
+    messages:
+      fr: "Et le coût de la livraison, qui le paiera ?"
+      en: "And the cost of delivery — who'll pay for it?"
+      es: "¿Y el coste del reparto, quién lo pagará?"
+      it: "E il costo della consegna, chi lo pagherà?"
+      pt: "E o custo da entrega, quem o vai pagar?"
+      ar: "وتكلفة التوصيل، من سيدفعها؟"
+      he: "ועלות המשלוח, מי ישלם אותה?"
+  faq.q4:
+    messages:
+      fr: "Je dois quitter Uber Eats / Deliveroo ?"
+      en: "Do I have to leave Uber Eats / Deliveroo?"
+      es: "¿Tengo que dejar Uber Eats / Deliveroo?"
+      it: "Devo lasciare Uber Eats / Deliveroo?"
+      pt: "Tenho de deixar o Uber Eats / Deliveroo?"
+      ar: "هل يجب أن أغادر Uber Eats / Deliveroo؟"
+      he: "אני חייב לעזוב את Uber Eats / Deliveroo?"
+  faq.q5:
+    messages:
+      fr: "Il n'y a pas encore de clients sur la plateforme, pourquoi m'inscrire maintenant ?"
+      en: "There are no customers on the platform yet — why sign up now?"
+      es: "Todavía no hay clientes en la plataforma, ¿por qué apuntarme ya?"
+      it: "Non ci sono ancora clienti sulla piattaforma: perché iscrivermi adesso?"
+      pt: "Ainda não há clientes na plataforma, porquê inscrever-me agora?"
+      ar: "لا يوجد زبائن على المنصة بعد، فلماذا أسجّل الآن؟"
+      he: "עוד אין לקוחות בפלטפורמה, למה להירשם עכשיו?"
+  faq.q6:
+    messages:
+      fr: "Comment je récupère mes clients ?"
+      en: "How do I get my customers back?"
+      es: "¿Cómo recupero a mis clientes?"
+      it: "Come recupero i miei clienti?"
+      pt: "Como é que recupero os meus clientes?"
+      ar: "كيف أسترجع زبائني؟"
+      he: "איך אני מקבל את הלקוחות שלי?"
+  faq.q7:
+    messages:
+      fr: "C'est quoi, une entreprise ESUS ?"
+      en: "What's an ESUS company?"
+      es: "¿Qué es eso de una empresa ESUS?"
+      it: "Cos'è un'impresa ESUS?"
+      pt: "O que é uma empresa ESUS?"
+      ar: "ما معنى مؤسسة ESUS؟"
+      he: "מה זה בכלל עסק ESUS?"
+  faq.q8:
+    messages:
+      fr: "Et pour la commande à table (QR code) ?"
+      en: "What about ordering at the table (QR code)?"
+      es: "¿Y el pedido en mesa (código QR)?"
+      it: "E per l'ordine al tavolo (QR code)?"
+      pt: "E a encomenda à mesa (código QR)?"
+      ar: "وماذا عن الطلب على الطاولة (رمز QR)؟"
+      he: "ומה עם הזמנה ליד השולחן (QR)?"
+  faq.title:
+    messages:
+      fr: "Les questions qu'on nous pose"
+      en: "The questions we get asked"
+      es: "Las preguntas que nos hacen"
+      it: "Le domande che ci fanno"
+      pt: "As perguntas que nos fazem"
+      ar: "الأسئلة التي تصلنا"
+      he: "השאלות ששואלים אותנו"
+
+  # ---- feature ----
+  feature.clients_body:
+    messages:
+      fr: "Dès la première commande en direct, tu accèdes à ta base clients — pour les fidéliser et les faire revenir. C'est à toi."
+      en: "From the very first direct order, you get access to your customer base — to build loyalty and bring them back. It's yours."
+      es: "Desde el primer pedido directo, accedes a tu base de clientes — para fidelizarlos y hacer que vuelvan. Es tuya."
+      it: "Dal primo ordine diretto, accedi alla tua base clienti — per fidelizzarli e farli tornare. È tua."
+      pt: "Desde a primeira encomenda em direto, acedes à tua base de clientes — para os fidelizar e os fazer voltar. É tua."
+      ar: "من أول طلب مباشر، تصل إلى قاعدة زبائنك — لتكسب ولاءهم وتجعلهم يعودون. إنها ملكك."
+      he: "מההזמנה הישירה הראשונה יש לך גישה למאגר הלקוחות שלך — כדי לשמר אותם ולהחזיר אותם. זה שלך."
+  feature.clients_title:
+    messages:
+      fr: "Ta clientèle t'appartient."
+      en: "Your customer base belongs to you."
+      es: "Tu clientela te pertenece."
+      it: "La tua clientela appartiene a te."
+      pt: "A tua clientela pertence-te."
+      ar: "زبائنك ملك لك."
+      he: "קהל הלקוחות שייך לך."
+  feature.commission_body:
+    messages:
+      fr: "Tu gardes 100 % du prix de ce que tu vends. Toujours."
+      en: "You keep 100% of the price of what you sell. Always."
+      es: "Te quedas con el 100 % del precio de lo que vendes. Siempre."
+      it: "Tieni il 100% del prezzo di quello che vendi. Sempre."
+      pt: "Ficas com 100% do preço do que vendes. Sempre."
+      ar: "تحتفظ بـ100% من سعر ما تبيعه. دائمًا."
+      he: "אתה שומר 100% מהמחיר של מה שאתה מוכר. תמיד."
+  feature.commission_title:
+    messages:
+      fr: "0 % de commission sur tes plats."
+      en: "0% commission on your dishes."
+      es: "0 % de comisión sobre tus platos."
+      it: "0% di commissioni sui tuoi piatti."
+      pt: "0% de comissão sobre os teus pratos."
+      ar: "عمولة 0% على أطباقك."
+      he: "0% עמלה על המנות שלך."
+  feature.prices_body:
+    messages:
+      fr: "Les mêmes prix qu'en salle. Rien à gonfler, rien à cacher."
+      en: "The same prices as dine-in. Nothing to inflate, nothing to hide."
+      es: "Los mismos precios que en sala. Nada que hinchar, nada que esconder."
+      it: "Gli stessi prezzi che in sala. Niente da gonfiare, niente da nascondere."
+      pt: "Os mesmos preços da sala. Nada a inflacionar, nada a esconder."
+      ar: "الأسعار نفسها كما في الصالة. لا شيء ترفعه، ولا شيء تخفيه."
+      he: "אותם מחירים כמו במסעדה. אין מה לנפח, אין מה להסתיר."
+  feature.prices_title:
+    messages:
+      fr: "Tes prix, sans double carte."
+      en: "Your prices, no double menu."
+      es: "Tus precios, sin carta doble."
+      it: "I tuoi prezzi, senza doppio listino."
+      pt: "Os teus preços, sem menus a dobrar."
+      ar: "أسعارك، بدون قائمة مزدوجة."
+      he: "המחירים שלך, בלי תפריט כפול."
+  feature.site_body:
+    messages:
+      fr: "Pas une fiche noyée dans l'annuaire d'un autre : un vrai site de commande à toi, <code>tonresto.captain.food</code>, ta vitrine en ligne. Inclus. (Ton propre domaine <code>tonresto.fr</code> ? On te le met en place, en option.)"
+      en: "Not a listing drowned in someone else's directory: a real ordering site of your own, <code>yourresto.captain.food</code>, your online storefront. Included. (Want your own domain, <code>yourresto.fr</code>? We'll set it up for you, as an option.)"
+      es: "No una ficha perdida en el directorio de otro: una web de pedidos de verdad, tuya, <code>turesto.captain.food</code>, tu escaparate online. Incluida. (¿Tu propio dominio <code>turesto.fr</code>? Te lo montamos, como opción.)"
+      it: "Non una scheda affogata nell'elenco di qualcun altro: un vero sito di ordini tutto tuo, <code>iltuoristorante.captain.food</code>, la tua vetrina online. Incluso. (Vuoi il tuo dominio <code>iltuoristorante.fr</code>? Te lo configuriamo noi, come opzione.)"
+      pt: "Nada de seres uma ficha afogada no diretório de outro: um verdadeiro site de encomendas teu, <code>oteuresto.captain.food</code>, a tua montra online. Incluído. (O teu próprio domínio <code>oteuresto.fr</code>? Configuramo-lo por ti, como opção.)"
+      ar: "ليست بطاقة تعريف غارقة في دليل غيرك: موقع طلب حقيقي خاص بك، <code>matamak.captain.food</code>، واجهتك على الإنترنت. مشمول في الخدمة. (تريد نطاقك الخاص <code>matamak.fr</code>؟ نجهّزه لك، كخيار إضافي.)"
+      he: "לא עוד כרטיס שטובע במדריך של מישהו אחר: אתר הזמנות אמיתי משלך, <code>hamisada.captain.food</code>, חלון הראווה שלך אונליין. כלול במחיר. (רוצה דומיין משלך, <code>hamisada.fr</code>? נקים לך אותו, כאופציה.)"
+  feature.site_title:
+    messages:
+      fr: "Ton site à ton nom."
+      en: "Your own site, under your name."
+      es: "Tu web con tu nombre."
+      it: "Il tuo sito, a tuo nome."
+      pt: "O teu site com o teu nome."
+      ar: "موقعك باسمك."
+      he: "אתר משלך, על שמך."
+
+  # ---- finance ----
+  finance.cue:
+    messages:
+      fr: "Comment on se finance, en clair →"
+      en: "How we fund ourselves, in plain words →"
+      es: "Cómo nos financiamos, bien claro →"
+      it: "Come ci finanziamo, in chiaro →"
+      pt: "Como nos financiamos, às claras →"
+      ar: "كيف نموّل أنفسنا، بوضوح ←"
+      he: "איך אנחנו מממנים את עצמנו, בגובה העיניים →"
+  finance.p1:
+    messages:
+      fr: "Question légitime — et voici la réponse, en clair."
+      en: "Fair question — and here's the answer, in plain words."
+      es: "Pregunta legítima — y aquí va la respuesta, bien clara."
+      it: "Domanda legittima — ed ecco la risposta, in chiaro."
+      pt: "Pergunta legítima — e aqui está a resposta, às claras."
+      ar: "سؤال مشروع — وهذا هو الجواب، بكل وضوح."
+      he: "שאלה לגיטימית — והנה התשובה, בגובה העיניים."
+  finance.p2:
+    messages:
+      fr: "D'abord l'essentiel : <strong>toi, restaurateur, tu ne paies jamais de commission sur tes plats — 0 €, dans tous les cas.</strong> Le service n'est pas financé sur ton dos."
+      en: "First, the essential: <strong>you, the restaurateur, never pay a commission on your dishes — €0, no matter what.</strong> The service isn't funded on your back."
+      es: "Primero lo esencial: <strong>tú, hostelero, no pagas nunca comisión sobre tus platos — 0 €, en todos los casos.</strong> El servicio no se financia a tu costa."
+      it: "Prima l'essenziale: <strong>tu, ristoratore, non paghi mai commissioni sui tuoi piatti — 0 €, in ogni caso.</strong> Il servizio non si finanzia sulle tue spalle."
+      pt: "Primeiro, o essencial: <strong>tu, restaurador, nunca pagas comissão sobre os teus pratos — 0 €, em qualquer caso.</strong> O serviço não é financiado à tua custa."
+      ar: "أولًا الأهم: <strong>أنت، صاحب المطعم، لا تدفع أبدًا أي عمولة على أطباقك — 0 €، في كل الحالات.</strong> الخدمة لا تُموَّل على حسابك."
+      he: "קודם כול העיקר: <strong>אתה, המסעדן, לא משלם אף פעם עמלה על המנות שלך — 0 €, בכל מקרה.</strong> השירות לא ממומן על הגב שלך."
+  finance.p3:
+    messages:
+      fr: "Il est financé par une <strong>contribution du client</strong> en <strong>prix libre</strong>, ajoutée à sa commande : chacun donne ce qu'il veut pour faire vivre une alternative juste. Un pari — celui que des clients informés préfèrent soutenir leur commerce local plutôt qu'une multinationale."
+      en: "It's funded by a <strong>customer contribution</strong> at a <strong>pay-what-you-want</strong> price, added to their order: everyone gives what they want to keep a fair alternative alive. It's a bet — that informed customers would rather support their local businesses than a multinational."
+      es: "Se financia con una <strong>contribución del cliente</strong> de <strong>precio libre</strong>, añadida a su pedido: cada uno da lo que quiere para sostener una alternativa justa. Una apuesta — la de que un cliente informado prefiere apoyar a su comercio local antes que a una multinacional."
+      it: "Si finanzia con un <strong>contributo del cliente</strong> a <strong>prezzo libero</strong>, aggiunto al suo ordine: ognuno dà quello che vuole per far vivere un'alternativa giusta. Una scommessa — quella che clienti informati preferiscano sostenere il commercio locale piuttosto che una multinazionale."
+      pt: "É financiado por uma <strong>contribuição do cliente</strong> de <strong>valor livre</strong>, adicionada à encomenda: cada um dá o que quiser para fazer viver uma alternativa justa. Uma aposta — a de que clientes informados preferem apoiar o comércio local a uma multinacional."
+      ar: "تُموَّل من <strong>مساهمة الزبون</strong> بمبدأ <strong>الدفع الحر</strong>، تُضاف إلى طلبه: كلٌّ يعطي ما يشاء لإحياء بديل عادل. إنه رهان — أن الزبائن الواعين يفضّلون دعم متجرهم المحلي على دعم شركة متعددة الجنسيات."
+      he: "הוא ממומן על ידי <strong>תרומת הלקוח</strong> ב<strong>סכום חופשי</strong>, שמתווספת להזמנה שלו: כל אחד נותן כמה שהוא רוצה כדי לקיים אלטרנטיבה הוגנת. הימור — שלקוחות מודעים יעדיפו לתמוך בעסק המקומי שלהם ולא בתאגיד רב-לאומי."
+  finance.p4:
+    messages:
+      fr: "Un client ne contribue pas cette fois ? C'est OK : pas de contribution sur cette commande, et toujours 0 commission pour toi. Les frais de paiement par carte sont ceux, standards, de tout encaissement en ligne — <strong>jamais un pourcentage sur tes plats, jamais une surcharge ajoutée au client.</strong>"
+      en: "A customer doesn't contribute this time? That's fine: no contribution on that order, and still 0% commission for you. Card payment fees are the standard fees of any online payment — <strong>never a percentage on your dishes, never a surcharge added for the customer.</strong>"
+      es: "¿Un cliente no contribuye esta vez? No pasa nada: sin contribución en ese pedido, y siempre 0 comisión para ti. Las comisiones de pago con tarjeta son las estándar de cualquier cobro online — <strong>nunca un porcentaje sobre tus platos, nunca un recargo añadido al cliente.</strong>"
+      it: "Un cliente stavolta non contribuisce? Va bene così: nessun contributo su quell'ordine, e sempre 0 commissioni per te. Le spese di pagamento con carta sono quelle standard di qualsiasi incasso online — <strong>mai una percentuale sui tuoi piatti, mai un sovrapprezzo aggiunto al cliente.</strong>"
+      pt: "Um cliente não contribui desta vez? Tudo bem: não há contribuição nessa encomenda, e continua a haver 0 comissão para ti. As taxas de pagamento por cartão são as taxas padrão de qualquer cobrança online — <strong>nunca uma percentagem sobre os teus pratos, nunca uma sobretaxa cobrada ao cliente.</strong>"
+      ar: "زبون لم يساهم هذه المرة؟ لا بأس: لا مساهمة على هذا الطلب، وتبقى العمولة عليك 0. رسوم الدفع بالبطاقة هي الرسوم القياسية لأي تحصيل عبر الإنترنت — <strong>وليست أبدًا نسبة من أطباقك، ولا رسمًا إضافيًا يُحمَّل على الزبون.</strong>"
+      he: "לקוח לא תרם הפעם? זה בסדר: אין תרומה על ההזמנה הזאת, ועדיין 0 עמלה בשבילך. עמלות הסליקה בכרטיס הן העמלות הסטנדרטיות של כל תשלום אונליין — <strong>אף פעם לא אחוז מהמנות שלך, אף פעם לא תוספת שמגולגלת על הלקוח.</strong>"
+  finance.title:
+    messages:
+      fr: "« 0 commission, alors vous vivez de quoi ? »"
+      en: "“0% commission — so what do you live on?”"
+      es: "«¿0 comisión? ¿Y entonces de qué vivís?»"
+      it: "«0 commissioni: e voi di cosa vivete?»"
+      pt: "«0 comissão? Então vivem de quê?»"
+      ar: "«عمولة 0%، إذن ممّ تعيشون؟»"
+      he: "״0 עמלה — אז ממה אתם חיים?״"
+
+  # ---- footer ----
+  footer.around_cc:
+    messages:
+      fr: "Click and collect"
+      en: "Click and collect"
+      es: "Click and collect"
+      it: "Click and collect"
+      pt: "Click and collect"
+      ar: "كليك آند كوليكت"
+      he: "איסוף עצמי (Click & Collect)"
+  footer.around_deliveroo:
+    messages:
+      fr: "Alternative à Deliveroo"
+      en: "Alternative to Deliveroo"
+      es: "Alternativa a Deliveroo"
+      it: "Alternativa a Deliveroo"
+      pt: "Alternativa ao Deliveroo"
+      ar: "بديل لـDeliveroo"
+      he: "אלטרנטיבה ל-Deliveroo"
+  footer.around_ethical:
+    messages:
+      fr: "Livraison éthique"
+      en: "Ethical delivery"
+      es: "Reparto ético"
+      it: "Consegna etica"
+      pt: "Entrega ética"
+      ar: "توصيل أخلاقي"
+      he: "משלוחים אתיים"
+  footer.around_h:
+    messages:
+      fr: "Autour de Tours"
+      en: "Around Tours"
+      es: "Por Tours"
+      it: "Intorno a Tours"
+      pt: "À volta de Tours"
+      ar: "حول Tours"
+      he: "סביב Tours"
+  footer.around_nocommission:
+    messages:
+      fr: "Restaurant sans commission"
+      en: "Commission-free restaurant"
+      es: "Restaurante sin comisión"
+      it: "Ristorante senza commissioni"
+      pt: "Restaurante sem comissão"
+      ar: "مطعم بدون عمولة"
+      he: "מסעדה בלי עמלה"
+  footer.around_online:
+    messages:
+      fr: "Commande en ligne"
+      en: "Online ordering"
+      es: "Pedidos online"
+      it: "Ordini online"
+      pt: "Encomendas online"
+      ar: "طلب أونلاين"
+      he: "הזמנות אונליין"
+  footer.around_tours:
+    messages:
+      fr: "Tours & Indre-et-Loire"
+      en: "Tours & Indre-et-Loire"
+      es: "Tours e Indre-et-Loire"
+      it: "Tours & Indre-et-Loire"
+      pt: "Tours & Indre-et-Loire"
+      ar: "Tours وIndre-et-Loire"
+      he: "Tours ו-Indre-et-Loire"
+  footer.around_uber:
+    messages:
+      fr: "Alternative à Uber Eats"
+      en: "Alternative to Uber Eats"
+      es: "Alternativa a Uber Eats"
+      it: "Alternativa a Uber Eats"
+      pt: "Alternativa ao Uber Eats"
+      ar: "بديل لـUber Eats"
+      he: "אלטרנטיבה ל-Uber Eats"
+  footer.contact_chat:
+    messages:
+      fr: "Chat direct avec Captain.Food"
+      en: "Direct chat with Captain.Food"
+      es: "Chat directo con Captain.Food"
+      it: "Chat diretta con Captain.Food"
+      pt: "Chat direto com a Captain.Food"
+      ar: "دردشة مباشرة مع Captain.Food"
+      he: "צ'אט ישיר עם Captain.Food"
+  footer.contact_community:
+    messages:
+      fr: "Communauté WhatsApp"
+      en: "WhatsApp community"
+      es: "Comunidad de WhatsApp"
+      it: "Community WhatsApp"
+      pt: "Comunidade WhatsApp"
+      ar: "مجتمع WhatsApp"
+      he: "קהילת WhatsApp"
+  footer.contact_h:
+    messages:
+      fr: "Contact"
+      en: "Contact"
+      es: "Contacto"
+      it: "Contatti"
+      pt: "Contacto"
+      ar: "التواصل"
+      he: "יצירת קשר"
+  footer.copyright:
+    messages:
+      fr: "© 2026 Captain.Food — Projet indépendant en construction à Tours."
+      en: "© 2026 Captain.Food — An independent project under construction in Tours."
+      es: "© 2026 Captain.Food — Proyecto independiente en construcción en Tours."
+      it: "© 2026 Captain.Food — Progetto indipendente in costruzione a Tours."
+      pt: "© 2026 Captain.Food — Projeto independente em construção em Tours."
+      ar: "© 2026 Captain.Food — مشروع مستقل قيد البناء في Tours."
+      he: "© 2026 Captain.Food — פרויקט עצמאי בבנייה ב-Tours."
+  footer.legal_h:
+    messages:
+      fr: "Légal"
+      en: "Legal"
+      es: "Legal"
+      it: "Legale"
+      pt: "Legal"
+      ar: "قانوني"
+      he: "משפטי"
+  footer.legal_mentions:
+    messages:
+      fr: "Mentions légales"
+      en: "Legal notice"
+      es: "Aviso legal"
+      it: "Note legali"
+      pt: "Aviso legal"
+      ar: "الإشعارات القانونية"
+      he: "מידע משפטי"
+  footer.legal_privacy:
+    messages:
+      fr: "Politique de confidentialité"
+      en: "Privacy policy"
+      es: "Política de privacidad"
+      it: "Informativa sulla privacy"
+      pt: "Política de privacidade"
+      ar: "سياسة الخصوصية"
+      he: "מדיניות פרטיות"
+  footer.nav.accounts:
+    messages:
+      fr: "Nos comptes (Open Collective)"
+      en: "Our accounts (Open Collective)"
+      es: "Nuestras cuentas (Open Collective)"
+      it: "I nostri conti (Open Collective)"
+      pt: "As nossas contas (Open Collective)"
+      ar: "حساباتنا (Open Collective)"
+      he: "החשבונות שלנו (Open Collective)"
+  footer.nav.delivery:
+    messages:
+      fr: "La livraison, payée juste"
+      en: "Delivery, paid fairly"
+      es: "El reparto, pagado con justicia"
+      it: "La consegna, pagata il giusto"
+      pt: "A entrega, paga com justiça"
+      ar: "التوصيل، بأجر عادل"
+      he: "משלוח בתשלום הוגן"
+  footer.nav.faq:
+    messages:
+      fr: "FAQ"
+      en: "FAQ"
+      es: "FAQ"
+      it: "FAQ"
+      pt: "FAQ"
+      ar: "الأسئلة الشائعة"
+      he: "שאלות ותשובות"
+  footer.nav.funding:
+    messages:
+      fr: "Comment on se finance ?"
+      en: "How we fund ourselves"
+      es: "¿Cómo nos financiamos?"
+      it: "Come ci finanziamo?"
+      pt: "Como nos financiamos?"
+      ar: "كيف نموّل أنفسنا؟"
+      he: "איך אנחנו מממנים את עצמנו?"
+  footer.nav.how:
+    messages:
+      fr: "Comment"
+      en: "How it works"
+      es: "Cómo funciona"
+      it: "Come funziona"
+      pt: "Como"
+      ar: "كيف يعمل"
+      he: "איך זה עובד"
+  footer.nav.join:
+    messages:
+      fr: "Rejoindre"
+      en: "Join"
+      es: "Unirse"
+      it: "Unisciti"
+      pt: "Embarcar"
+      ar: "انضم"
+      he: "להצטרפות"
+  footer.nav.manifesto:
+    messages:
+      fr: "Le manifeste"
+      en: "The manifesto"
+      es: "El manifiesto"
+      it: "Il manifesto"
+      pt: "O manifesto"
+      ar: "البيان"
+      he: "המניפסט"
+  footer.nav.mockups:
+    messages:
+      fr: "Voir les maquettes"
+      en: "See the mockups"
+      es: "Ver las maquetas"
+      it: "Guarda i mockup"
+      pt: "Ver as maquetes"
+      ar: "شاهد النماذج"
+      he: "לצפייה במוקאפים"
+  footer.nav.pricing:
+    messages:
+      fr: "Tarifs (c'est gratuit)"
+      en: "Pricing (it's free)"
+      es: "Tarifas (es gratis)"
+      it: "Prezzi (è gratis)"
+      pt: "Preços (é grátis)"
+      ar: "الأسعار (إنه مجاني)"
+      he: "מחירים (זה חינם)"
+  footer.nav.problem:
+    messages:
+      fr: "Constat"
+      en: "The problem"
+      es: "Diagnóstico"
+      it: "Il problema"
+      pt: "Diagnóstico"
+      ar: "الواقع"
+      he: "המצב בשטח"
+  footer.nav.solution:
+    messages:
+      fr: "Solution"
+      en: "Solution"
+      es: "Solución"
+      it: "Soluzione"
+      pt: "Solução"
+      ar: "الحل"
+      he: "הפתרון"
+  footer.nav.source:
+    messages:
+      fr: "Code source (open source)"
+      en: "Source code (open source)"
+      es: "Código fuente (open source)"
+      it: "Codice sorgente (open source)"
+      pt: "Código-fonte (open source)"
+      ar: "الكود المصدري (مفتوح المصدر)"
+      he: "קוד המקור (קוד פתוח)"
+  footer.tagline:
+    messages:
+      fr: "<em>« Reprenons les commandes ! »</em><br><em>Une alternative locale et solidaire, à Tours.</em>"
+      en: "<em>“Take back your orders!”</em><br><em>A local, solidarity-driven alternative, in Tours.</em>"
+      es: "<em>«¡Recuperemos el mando!»</em><br><em>Una alternativa local y solidaria, en Tours.</em>"
+      it: "<em>«Riprendiamoci le comande!»</em><br><em>Un'alternativa locale e solidale, a Tours.</em>"
+      pt: "<em>«Retomemos as comandas!»</em><br><em>Uma alternativa local e solidária, em Tours.</em>"
+      ar: "<em>«لنستعيد زمام الطلبات!»</em><br><em>بديل محلي وتضامني، في Tours.</em>"
+      he: "<em>״לוקחים בחזרה את ההגה!״</em><br><em>אלטרנטיבה מקומית וסולידרית, ב-Tours.</em>"
+
+  # ---- form ----
+  form.consent:
+    messages:
+      fr: "J'accepte que mes coordonnées soient utilisées par <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> pour me recontacter au sujet de ce projet. Elles ne seront ni revendues, ni partagées. Je peux demander leur suppression à tout moment. <a href=\"confidentialite.html\">Voir la politique de confidentialité</a>. <span class=\"req\" aria-hidden=\"true\">*</span>"
+      en: "I agree that my contact details may be used by <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> to get back to me about this project. They will never be sold or shared. I can ask for them to be deleted at any time. <a href=\"confidentialite.html\">See the privacy policy</a>. <span class=\"req\" aria-hidden=\"true\">*</span>"
+      es: "Acepto que <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> use mis datos de contacto para escribirme sobre este proyecto. No se venderán ni se compartirán. Puedo pedir que se eliminen en cualquier momento. <a href=\"confidentialite.html\">Ver la política de privacidad</a>. <span class=\"req\" aria-hidden=\"true\">*</span>"
+      it: "Accetto che i miei dati di contatto siano usati da <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> per ricontattarmi riguardo a questo progetto. Non saranno né rivenduti né condivisi. Posso chiederne la cancellazione in qualsiasi momento. <a href=\"confidentialite.html\">Leggi l'informativa sulla privacy</a>. <span class=\"req\" aria-hidden=\"true\">*</span>"
+      pt: "Aceito que os meus dados de contacto sejam utilizados pela <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> para me contactar sobre este projeto. Não serão revendidos nem partilhados. Posso pedir a sua eliminação a qualquer momento. <a href=\"confidentialite.html\">Ver a política de privacidade</a>. <span class=\"req\" aria-hidden=\"true\">*</span>"
+      ar: "أوافق على أن تستخدم <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> بياناتي للتواصل معي بخصوص هذا المشروع. لن تُباع ولن تُشارَك مع أي جهة. ويمكنني طلب حذفها في أي وقت. <a href=\"confidentialite.html\">اطّلع على سياسة الخصوصية</a>. <span class=\"req\" aria-hidden=\"true\">*</span>"
+      he: "אני מאשר ש-<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> ישתמש בפרטים שלי כדי לחזור אליי בנוגע לפרויקט הזה. הם לא יימכרו ולא ישותפו. אני יכול לבקש למחוק אותם בכל רגע. <a href=\"confidentialite.html\">למדיניות הפרטיות</a>. <span class=\"req\" aria-hidden=\"true\">*</span>"
+  form.contact_label:
+    messages:
+      fr: "Ton nom"
+      en: "Your name"
+      es: "Tu nombre"
+      it: "Il tuo nome"
+      pt: "O teu nome"
+      ar: "اسمك"
+      he: "השם שלך"
+  form.email_label:
+    messages:
+      fr: "Email"
+      en: "Email"
+      es: "Email"
+      it: "Email"
+      pt: "Email"
+      ar: "البريد الإلكتروني"
+      he: "אימייל"
+  form.err_consent:
+    messages:
+      fr: "Tu dois accepter la politique de confidentialité pour continuer."
+      en: "You need to accept the privacy policy to continue."
+      es: "Tienes que aceptar la política de privacidad para continuar."
+      it: "Per continuare devi accettare l'informativa sulla privacy."
+      pt: "Tens de aceitar a política de privacidade para continuar."
+      ar: "عليك الموافقة على سياسة الخصوصية للمتابعة."
+      he: "כדי להמשיך צריך לאשר את מדיניות הפרטיות."
+  form.err_contact:
+    messages:
+      fr: "Dis-nous ton nom."
+      en: "Tell us your name."
+      es: "Dinos tu nombre."
+      it: "Dicci il tuo nome."
+      pt: "Diz-nos o teu nome."
+      ar: "قل لنا اسمك."
+      he: "ספר לנו איך קוראים לך."
+  form.err_email:
+    messages:
+      fr: "Adresse email invalide."
+      en: "Invalid email address."
+      es: "Dirección de email no válida."
+      it: "Indirizzo email non valido."
+      pt: "Endereço de email inválido."
+      ar: "عنوان البريد الإلكتروني غير صحيح."
+      he: "כתובת האימייל לא תקינה."
+  form.err_failed:
+    messages:
+      fr: "Oups, l'envoi a échoué. Réessaie ou écris-nous à miam@captain.food."
+      en: "Oops, sending failed. Try again or write to us at miam@captain.food."
+      es: "Vaya, el envío ha fallado. Inténtalo de nuevo o escríbenos a miam@captain.food."
+      it: "Ops, l'invio non è andato a buon fine. Riprova o scrivici a miam@captain.food."
+      pt: "Ups, o envio falhou. Tenta de novo ou escreve-nos para miam@captain.food."
+      ar: "عذرًا، فشل الإرسال. حاول مجددًا أو راسلنا على miam@captain.food."
+      he: "אופס, השליחה נכשלה. נסה שוב או כתוב לנו אל miam@captain.food."
+  form.err_fix:
+    messages:
+      fr: "Corrige les champs signalés ci-dessus."
+      en: "Fix the fields flagged above."
+      es: "Corrige los campos marcados arriba."
+      it: "Correggi i campi segnalati qui sopra."
+      pt: "Corrige os campos assinalados acima."
+      ar: "صحّح الحقول المشار إليها أعلاه."
+      he: "תקן את השדות המסומנים למעלה."
+  form.err_notconnected:
+    messages:
+      fr: "Le formulaire n'est pas encore connecté. Écris-nous à miam@captain.food."
+      en: "The form isn't connected yet. Write to us at miam@captain.food."
+      es: "El formulario aún no está conectado. Escríbenos a miam@captain.food."
+      it: "Il modulo non è ancora collegato. Scrivici a miam@captain.food."
+      pt: "O formulário ainda não está ligado. Escreve-nos para miam@captain.food."
+      ar: "الاستمارة غير متصلة بعد. راسلنا على miam@captain.food."
+      he: "הטופס עדיין לא מחובר. כתוב לנו אל miam@captain.food."
+  form.err_resto:
+    messages:
+      fr: "Indique le nom de ton restaurant ou food truck."
+      en: "Tell us the name of your restaurant or food truck."
+      es: "Indica el nombre de tu restaurante o food truck."
+      it: "Indica il nome del tuo ristorante o food truck."
+      pt: "Indica o nome do teu restaurante ou food truck."
+      ar: "اذكر اسم مطعمك أو شاحنة طعامك."
+      he: "כתוב את שם המסעדה או הפודטראק שלך."
+  form.message_label:
+    messages:
+      fr: "Un mot pour nous"
+      en: "A word for us"
+      es: "Unas palabras para nosotros"
+      it: "Due righe per noi"
+      pt: "Uma palavra para nós"
+      ar: "كلمة لنا"
+      he: "כמה מילים בשבילנו"
+  form.message_placeholder:
+    messages:
+      fr: "Ta cuisine, tes volumes, tes questions…"
+      en: "Your cuisine, your volumes, your questions…"
+      es: "Tu cocina, tus volúmenes, tus preguntas…"
+      it: "La tua cucina, i tuoi volumi, le tue domande…"
+      pt: "A tua cozinha, os teus volumes, as tuas dúvidas…"
+      ar: "مطبخك، أحجام طلباتك، أسئلتك…"
+      he: "המטבח שלך, נפחי ההזמנות, השאלות שלך…"
+  form.note:
+    messages:
+      fr: "Tes données ne sont jamais revendues. On te recontacte, c'est tout."
+      en: "Your data is never sold. We get back to you, that's all."
+      es: "Tus datos no se venden nunca. Te contactamos, y punto."
+      it: "I tuoi dati non vengono mai rivenduti. Ti ricontattiamo, punto."
+      pt: "Os teus dados nunca são revendidos. Voltamos a contactar-te, e mais nada."
+      ar: "بياناتك لا تُباع أبدًا. نتواصل معك، هذا كل شيء."
+      he: "הפרטים שלך אף פעם לא נמכרים. נחזור אליך, וזהו."
+  form.optional:
+    messages:
+      fr: "(facultatif)"
+      en: "(optional)"
+      es: "(opcional)"
+      it: "(facoltativo)"
+      pt: "(opcional)"
+      ar: "(اختياري)"
+      he: "(לא חובה)"
+  form.phone_label:
+    messages:
+      fr: "Téléphone / WhatsApp"
+      en: "Phone / WhatsApp"
+      es: "Teléfono / WhatsApp"
+      it: "Telefono / WhatsApp"
+      pt: "Telefone / WhatsApp"
+      ar: "الهاتف / WhatsApp"
+      he: "טלפון / WhatsApp"
+  form.reassure_inline:
+    messages:
+      fr: "0 € · sans engagement · tu gardes Uber Eats & Deliveroo · rien à installer dans l'urgence"
+      en: "€0 · no commitment · you keep Uber Eats & Deliveroo · nothing to install in a rush"
+      es: "0 € · sin permanencia · te quedas con Uber Eats y Deliveroo · nada que instalar a toda prisa"
+      it: "0 € · senza vincoli · tieni Uber Eats & Deliveroo · niente da installare di corsa"
+      pt: "0 € · sem compromisso · manténs o Uber Eats & o Deliveroo · nada para instalar à pressa"
+      ar: "0 € · بدون التزام · تحتفظ بـUber Eats وDeliveroo · لا شيء تركّبه على عجل"
+      he: "0 € · בלי התחייבות · אתה שומר על Uber Eats ו-Deliveroo · אין מה להתקין בלחץ"
+  form.resto_label:
+    messages:
+      fr: "Nom du restaurant / food truck"
+      en: "Restaurant / food truck name"
+      es: "Nombre del restaurante / food truck"
+      it: "Nome del ristorante / food truck"
+      pt: "Nome do restaurante / food truck"
+      ar: "اسم المطعم / شاحنة الطعام"
+      he: "שם המסעדה / הפודטראק"
+  form.sending:
+    messages:
+      fr: "Envoi"
+      en: "Sending"
+      es: "Enviando"
+      it: "Invio"
+      pt: "A enviar"
+      ar: "جارٍ الإرسال"
+      he: "שולחים"
+  form.sending_status:
+    messages:
+      fr: "Envoi en cours…"
+      en: "Sending…"
+      es: "Enviando…"
+      it: "Invio in corso…"
+      pt: "Envio em curso…"
+      ar: "الإرسال جارٍ…"
+      he: "השליחה מתבצעת…"
+  form.submit:
+    messages:
+      fr: "Je rejoins les restaurateurs libres"
+      en: "Join the free restaurateurs"
+      es: "Me uno a los hosteleros libres"
+      it: "Mi unisco ai ristoratori liberi"
+      pt: "Junto-me aos restauradores livres"
+      ar: "أنضمّ إلى أصحاب المطاعم الأحرار"
+      he: "אני מצטרף למסעדנים החופשיים"
+
+  # ---- hero ----
+  hero.cta_explain:
+    messages:
+      fr: "On t'explique tout"
+      en: "We'll explain everything"
+      es: "Te lo contamos todo"
+      it: "Ti spieghiamo tutto"
+      pt: "Explicamos-te tudo"
+      ar: "نشرح لك كل شيء"
+      he: "בוא נסביר לך הכול"
+  hero.cta_join:
+    messages:
+      fr: "Je rejoins les restaurateurs libres"
+      en: "Join the free restaurateurs"
+      es: "Me uno a los hosteleros libres"
+      it: "Mi unisco ai ristoratori liberi"
+      pt: "Junto-me aos restauradores livres"
+      ar: "أنضمّ إلى أصحاب المطاعم الأحرار"
+      he: "אני מצטרף למסעדנים החופשיים"
+  hero.eyebrow:
+    messages:
+      fr: "Cap sur Tours — restaurants & food trucks indépendants"
+      en: "Setting course for Tours — independent restaurants & food trucks"
+      es: "Rumbo a Tours — restaurantes y food trucks independientes"
+      it: "Rotta su Tours — ristoranti & food truck indipendenti"
+      pt: "Rumo a Tours — restaurantes & food trucks independentes"
+      ar: "الوجهة: Tours — المطاعم وشاحنات الطعام المستقلة"
+      he: "קובעים מסלול ל-Tours — מסעדות ופודטראקים עצמאיים"
+  hero.note:
+    messages:
+      fr: "Une plateforme de commande locale à but non lucratif, portée par une association — construite pour ne <strong>jamais</strong> pouvoir se transformer en péage. Pour les indépendants de Tours. On démarre : rien n'est encore construit, c'est maintenant qu'on l'écrit ensemble."
+      en: "A local, non-profit ordering platform carried by an association — built so it can <strong>never</strong> turn into a tollbooth. For the independents of Tours. We're just starting out: nothing is built yet, and it's right now that we write it together."
+      es: "Una plataforma de pedidos local y sin ánimo de lucro, impulsada por una asociación — construida para no poder convertirse <strong>jamás</strong> en un peaje. Para los independientes de Tours. Estamos empezando: aún no hay nada construido, y es ahora cuando lo escribimos juntos."
+      it: "Una piattaforma di ordini locale e no profit, portata avanti da un'associazione — costruita per non potersi <strong>mai</strong> trasformare in un casello. Per gli indipendenti di Tours. Stiamo partendo: non c'è ancora niente di costruito, è adesso che lo scriviamo insieme."
+      pt: "Uma plataforma de encomendas local e sem fins lucrativos, criada por uma associação — construída para <strong>nunca</strong> se poder transformar numa portagem. Para os independentes de Tours. Estamos a começar: ainda nada está construído, é agora que o escrevemos juntos."
+      ar: "منصة طلب محلية غير ربحية تحملها جمعية — بُنيت بحيث لا تستطيع <strong>أبدًا</strong> أن تتحول إلى بوابة رسوم. للمستقلين في Tours. نحن في البداية: لم يُبنَ شيء بعد، والآن بالضبط نكتبه معًا."
+      he: "פלטפורמת הזמנות מקומית ללא מטרות רווח, בהובלת עמותה — בנויה כך שהיא <strong>לעולם</strong> לא תוכל להפוך למחסום גבייה. לעצמאים של Tours. אנחנו רק בתחילת הדרך: עוד לא בנינו כלום, ועכשיו זה הרגע לכתוב את זה יחד."
+  hero.portrait_alt:
+    messages:
+      fr: "Le Capitaine Food, chef à la toque et à la grande moustache blanche, brandissant une fourchette dorée"
+      en: "Captain Food, a chef with a tall hat and a big white moustache, brandishing a golden fork"
+      es: "El Capitán Food, chef con gorro y gran bigote blanco, blandiendo un tenedor dorado"
+      it: "Il Capitan Food, chef con toque e grandi baffi bianchi, che brandisce una forchetta dorata"
+      pt: "O Capitão Food, chef de barrete e grande bigode branco, a brandir um garfo dourado"
+      ar: "الكابتن فود، طاهٍ بقبعة الشيف وشارب أبيض كبير، يرفع شوكة ذهبية"
+      he: "קפטן פוד, שף עם כובע שף ושפם לבן גדול, מניף מזלג זהוב"
+  hero.quote.1:
+    messages:
+      fr: "« Tes plats, tes prix, tes clients. »"
+      en: "“Your dishes, your prices, your customers.”"
+      es: "«Tus platos, tus precios, tus clientes.»"
+      it: "«I tuoi piatti, i tuoi prezzi, i tuoi clienti.»"
+      pt: "«Os teus pratos, os teus preços, os teus clientes.»"
+      ar: "«أطباقك، أسعارك، زبائنك.»"
+      he: "״המנות שלך, המחירים שלך, הלקוחות שלך.״"
+  hero.quote.2:
+    messages:
+      fr: "« 0 % de commission. Toujours. »"
+      en: "“0% commission. Always.”"
+      es: "«0 % de comisión. Siempre.»"
+      it: "«0% di commissioni. Sempre.»"
+      pt: "«0% de comissão. Sempre.»"
+      ar: "«عمولة 0%. دائمًا.»"
+      he: "״0% עמלה. תמיד.״"
+  hero.quote.3:
+    messages:
+      fr: "« Ici, c'est toi le capitaine. »"
+      en: "“Here, you're the captain.”"
+      es: "«Aquí, el capitán eres tú.»"
+      it: "«Qui il capitano sei tu.»"
+      pt: "«Aqui, o capitão és tu.»"
+      ar: "«هنا، أنت القبطان.»"
+      he: "״כאן אתה הקפטן.״"
+  hero.quote.4:
+    messages:
+      fr: "« Reprends la barre de ton affaire. »"
+      en: "“Take back the helm of your business.”"
+      es: "«Retoma el timón de tu negocio.»"
+      it: "«Riprendi il timone della tua attività.»"
+      pt: "«Retoma o leme do teu negócio.»"
+      ar: "«استعد دفة مشروعك.»"
+      he: "״קח בחזרה את ההגה של העסק שלך.״"
+  hero.quote.5:
+    messages:
+      fr: "« Ta cuisine mérite mieux qu'un péage. »"
+      en: "“Your kitchen deserves better than a tollbooth.”"
+      es: "«Tu cocina merece algo mejor que un peaje.»"
+      it: "«La tua cucina merita di meglio di un casello.»"
+      pt: "«A tua cozinha merece mais do que uma portagem.»"
+      ar: "«مطبخك يستحق أفضل من بوابة رسوم.»"
+      he: "״המטבח שלך שווה יותר ממחסום גבייה.״"
+  hero.quote.6:
+    messages:
+      fr: "« Le client est à toi — qu'il le reste. »"
+      en: "“The customer is yours — keep it that way.”"
+      es: "«El cliente es tuyo — que lo siga siendo.»"
+      it: "«Il cliente è tuo — e deve restarlo.»"
+      pt: "«O cliente é teu — e assim deve ficar.»"
+      ar: "«الزبون زبونك — فليبقَ كذلك.»"
+      he: "״הלקוח שלך — שיישאר שלך.״"
+  hero.quote.7:
+    messages:
+      fr: "« On rame pour les indépendants, pas contre eux. »"
+      en: "“We row for the independents, not against them.”"
+      es: "«Remamos por los independientes, no contra ellos.»"
+      it: "«Remiamo per gli indipendenti, non contro di loro.»"
+      pt: "«Remamos pelos independentes, não contra eles.»"
+      ar: "«نجدّف مع المستقلين، لا ضدهم.»"
+      he: "״אנחנו חותרים בשביל העצמאים, לא נגדם.״"
+  hero.quote.8:
+    messages:
+      fr: "« Garde ta marge. On s'occupe du reste. »"
+      en: "“Keep your margin. We'll handle the rest.”"
+      es: "«Quédate tu margen. Del resto nos ocupamos nosotros.»"
+      it: "«Tieniti il margine. Al resto pensiamo noi.»"
+      pt: "«Guarda a tua margem. Nós tratamos do resto.»"
+      ar: "«احتفظ بهامشك. ونحن نتكفل بالباقي.»"
+      he: "״שמור על הרווח שלך. אנחנו נדאג לשאר.״"
+  hero.quote.9:
+    messages:
+      fr: "« Cuisine. Encaisse. Recommence. »"
+      en: "“Cook. Get paid. Repeat.”"
+      es: "«Cocina. Cobra. Repite.»"
+      it: "«Cucina. Incassa. Ricomincia.»"
+      pt: "«Cozinha. Recebe. Repete.»"
+      ar: "«اطبخ. حصّل. وكرّر.»"
+      he: "״לבשל. לגבות. לחזור על זה.״"
+  hero.reassure:
+    messages:
+      fr: "Sans engagement · 0 commission sur tes plats · tu gardes tes clients — et tes plateformes actuelles."
+      en: "No commitment · 0% commission on your dishes · you keep your customers — and your current platforms."
+      es: "Sin permanencia · 0 comisión sobre tus platos · te quedas con tus clientes — y con tus plataformas actuales."
+      it: "Senza vincoli · 0 commissioni sui tuoi piatti · i tuoi clienti restano tuoi — e tieni le tue piattaforme attuali."
+      pt: "Sem compromisso · 0 comissão sobre os teus pratos · ficas com os teus clientes — e com as tuas plataformas atuais."
+      ar: "بدون التزام · عمولة 0% على أطباقك · تحتفظ بزبائنك — وبمنصاتك الحالية."
+      he: "בלי התחייבות · 0 עמלה על המנות שלך · הלקוחות נשארים שלך — וגם הפלטפורמות הנוכחיות שלך."
+  hero.stat.clients:
+    messages:
+      fr: "de tes clients, à toi"
+      en: "of your customers — yours"
+      es: "de tus clientes, para ti"
+      it: "dei tuoi clienti, tutti tuoi"
+      pt: "dos teus clientes, só teus"
+      ar: "من زبائنك، ملك لك"
+      he: "מהלקוחות שלך — שייכים לך"
+  hero.stat.commission:
+    messages:
+      fr: "de commission sur tes plats"
+      en: "commission on your dishes"
+      es: "de comisión sobre tus platos"
+      it: "di commissioni sui tuoi piatti"
+      pt: "de comissão sobre os teus pratos"
+      ar: "عمولة على أطباقك"
+      he: "עמלה על המנות שלך"
+  hero.stat.prices:
+    messages:
+      fr: "les mêmes qu'en salle"
+      en: "the same as dine-in"
+      es: "los mismos que en sala"
+      it: "gli stessi che in sala"
+      pt: "os mesmos da sala"
+      ar: "نفسها كما في الصالة"
+      he: "אותם מחירים כמו במסעדה"
+  hero.stat.prices_b:
+    messages:
+      fr: "Tes prix"
+      en: "Your prices"
+      es: "Tus precios"
+      it: "I tuoi prezzi"
+      pt: "Os teus preços"
+      ar: "أسعارك"
+      he: "המחירים שלך"
+  hero.stat.signup:
+    messages:
+      fr: "inscription, sans engagement"
+      en: "signup, no strings attached"
+      es: "de alta, sin permanencia"
+      it: "d'iscrizione, senza vincoli"
+      pt: "inscrição, sem compromisso"
+      ar: "للتسجيل، وبدون التزام"
+      he: "דמי הרשמה, בלי התחייבות"
+  hero.stats_aria:
+    messages:
+      fr: "Ce que Captain.Food te rend"
+      en: "What Captain.Food gives you back"
+      es: "Lo que Captain.Food te devuelve"
+      it: "Quello che Captain.Food ti restituisce"
+      pt: "O que a Captain.Food te devolve"
+      ar: "ما يعيده إليك Captain.Food"
+      he: "מה ש-Captain.Food מחזיר לך"
+  hero.sub:
+    messages:
+      fr: "Tes plats à tes prix, tes clients à toi. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> veut te rendre ce que les grandes plateformes t'ont pris."
+      en: "Your dishes at your prices, your customers as your own. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> is here to give you back what the big platforms took from you."
+      es: "Tus platos a tus precios, tus clientes para ti. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> quiere devolverte lo que las grandes plataformas te han quitado."
+      it: "I tuoi piatti ai tuoi prezzi, i tuoi clienti tutti tuoi. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> vuole restituirti quello che le grandi piattaforme ti hanno preso."
+      pt: "Os teus pratos aos teus preços, os teus clientes só teus. A <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> quer devolver-te o que as grandes plataformas te tiraram."
+      ar: "أطباقك بأسعارك، وزبائنك ملك لك. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> يريد أن يعيد إليك ما أخذته منك المنصات الكبرى."
+      he: "המנות שלך במחירים שלך, והלקוחות — שלך בלבד. <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> רוצה להחזיר לך את מה שהפלטפורמות הגדולות לקחו ממך."
+  hero.title:
+    messages:
+      fr: "Reprends 100 % de tes commandes.<br>0 % de commission, pour de vrai."
+      en: "Take back 100% of your orders.<br>0% commission, for real."
+      es: "Recupera el 100 % de tus pedidos.<br>0 % de comisión, de verdad."
+      it: "Riprenditi il 100% dei tuoi ordini.<br>0% di commissioni, sul serio."
+      pt: "Recupera 100% das tuas encomendas.<br>0% de comissão, a sério."
+      ar: "استعد 100% من طلباتك.<br>عمولة 0%، بكل صدق."
+      he: "קח בחזרה 100% מההזמנות שלך.<br>0% עמלה, על אמת."
+
+  # ---- join ----
+  join.captain_alt:
+    messages:
+      fr: "Le Capitaine Food, prêt à embarquer de nouveaux restaurateurs"
+      en: "Captain Food, ready to welcome new restaurateurs aboard"
+      es: "El Capitán Food, listo para embarcar a nuevos hosteleros"
+      it: "Il Capitan Food, pronto a far salire a bordo nuovi ristoratori"
+      pt: "O Capitão Food, pronto a embarcar novos restauradores"
+      ar: "الكابتن فود، مستعد لاستقبال أصحاب مطاعم جدد على المتن"
+      he: "קפטן פוד, מוכן להעלות לסיפון מסעדנים חדשים"
+  join.intro:
+    messages:
+      fr: "Laisse-nous ton contact : on te recontacte pour te présenter <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>, sans engagement."
+      en: "Leave us your contact details: we'll get back to you to walk you through <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>, no commitment."
+      es: "Déjanos tu contacto: te llamamos para presentarte <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>, sin compromiso."
+      it: "Lasciaci il tuo contatto: ti richiamiamo per presentarti <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>, senza impegno."
+      pt: "Deixa-nos o teu contacto: falamos contigo para te apresentar a <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>, sem compromisso."
+      ar: "اترك لنا وسيلة للتواصل معك: نتصل بك لنعرض عليك <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>، بدون التزام."
+      he: "השאר לנו פרטים: נחזור אליך כדי להציג לך את <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>, בלי התחייבות."
+  join.point1_body:
+    messages:
+      fr: "0 commission sur tes plats, inscription gratuite. Tu ne paies rien."
+      en: "0% commission on your dishes, free signup. You pay nothing."
+      es: "0 comisión sobre tus platos, alta gratuita. No pagas nada."
+      it: "0 commissioni sui tuoi piatti, iscrizione gratuita. Non paghi niente."
+      pt: "0 comissão sobre os teus pratos, inscrição gratuita. Não pagas nada."
+      ar: "عمولة 0% على أطباقك، والتسجيل مجاني. لا تدفع شيئًا."
+      he: "0 עמלה על המנות שלך, הרשמה חינם. אתה לא משלם כלום."
+  join.point1_title:
+    messages:
+      fr: "Pour toi, c'est 0 €"
+      en: "For you, it's €0"
+      es: "Para ti, son 0 €"
+      it: "Per te sono 0 €"
+      pt: "Para ti, são 0 €"
+      ar: "بالنسبة لك، الكلفة 0 €"
+      he: "בשבילך זה 0 €"
+  join.point2_body:
+    messages:
+      fr: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> vient en plus, sans aucune exclusivité."
+      en: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> comes on top, with no exclusivity whatsoever."
+      es: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> viene a sumar, sin ninguna exclusividad."
+      it: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> si aggiunge, senza nessuna esclusiva."
+      pt: "A <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> vem por acréscimo, sem qualquer exclusividade."
+      ar: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> يأتي كإضافة، بدون أي حصرية."
+      he: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> מגיע כתוספת, בלי שום בלעדיות."
+  join.point2_title:
+    messages:
+      fr: "Tu gardes Uber Eats & Deliveroo"
+      en: "You keep Uber Eats & Deliveroo"
+      es: "Te quedas con Uber Eats y Deliveroo"
+      it: "Tieni Uber Eats & Deliveroo"
+      pt: "Manténs o Uber Eats & o Deliveroo"
+      ar: "تحتفظ بـUber Eats وDeliveroo"
+      he: "אתה שומר על Uber Eats ו-Deliveroo"
+  join.point3_body:
+    messages:
+      fr: "On s'occupe de la mise en place, à ton rythme."
+      en: "We handle the setup, at your pace."
+      es: "De la puesta en marcha nos ocupamos nosotros, a tu ritmo."
+      it: "Della configurazione ci occupiamo noi, al tuo ritmo."
+      pt: "Nós tratamos da instalação, ao teu ritmo."
+      ar: "نتكفل نحن بالتجهيز، على إيقاعك."
+      he: "אנחנו דואגים להקמה, בקצב שלך."
+  join.point3_title:
+    messages:
+      fr: "Rien à installer dans l'urgence"
+      en: "Nothing to install in a rush"
+      es: "Nada que instalar a toda prisa"
+      it: "Niente da installare di corsa"
+      pt: "Nada para instalar à pressa"
+      ar: "لا شيء تركّبه على عجل"
+      he: "אין מה להתקין בלחץ"
+  join.title:
+    messages:
+      fr: "Rejoins les restaurateurs libres"
+      en: "Join the free restaurateurs"
+      es: "Únete a los hosteleros libres"
+      it: "Unisciti ai ristoratori liberi"
+      pt: "Junta-te aos restauradores livres"
+      ar: "انضم إلى أصحاب المطاعم الأحرار"
+      he: "הצטרף למסעדנים החופשיים"
+
+  # ---- lang ----
+  lang.consent_accept:
+    messages:
+      fr: "Oui, retenir ma langue"
+      en: "Yes, remember my language"
+      es: "Sí, recordar mi idioma"
+      it: "Sì, ricorda la mia lingua"
+      pt: "Sim, guardar o meu idioma"
+      ar: "نعم، احفظوا لغتي"
+      he: "כן, זכרו את השפה שלי"
+  lang.consent_decline:
+    messages:
+      fr: "Non merci"
+      en: "No thanks"
+      es: "No, gracias"
+      it: "No, grazie"
+      pt: "Não, obrigado"
+      ar: "لا، شكرًا"
+      he: "לא תודה"
+  lang.consent_text:
+    messages:
+      fr: "On retient ta langue pour tes prochaines visites ? Ça dépose un petit cookie — rien d'autre, promis."
+      en: "Remember your language for your next visits? That sets one small cookie — nothing else, promise."
+      es: "¿Recordamos tu idioma para tus próximas visitas? Eso deja una pequeña cookie — nada más, prometido."
+      it: "Ricordiamo la tua lingua per le prossime visite? Salviamo un piccolo cookie — nient'altro, promesso."
+      pt: "Guardamos o teu idioma para as próximas visitas? Isso deixa um pequeno cookie — nada mais, prometido."
+      ar: "نحفظ لغتك لزياراتك القادمة؟ سيضع ذلك كوكي صغيرًا — لا شيء آخر، وعدٌ منا."
+      he: "שנזכור את השפה שלך לביקורים הבאים? זה שומר עוגייה קטנה אחת — שום דבר מעבר, מבטיחים."
+  lang.switch_label:
+    messages:
+      fr: "Choisir la langue"
+      en: "Choose your language"
+      es: "Elegir idioma"
+      it: "Scegli la lingua"
+      pt: "Escolher o idioma"
+      ar: "اختيار اللغة"
+      he: "בחירת שפה"
+
+  # ---- meta ----
+  meta.description:
+    messages:
+      fr: "Commande en ligne 0 commission pour les restaurants et food trucks indépendants de Tours. Tes plats, tes prix, tes clients. Projet local à but non lucratif (cap coopératif SCIC, agrément ESUS visés)."
+      en: "0% commission online ordering for independent restaurants and food trucks in Tours. Your dishes, your prices, your customers. Local non-profit, aiming for SCIC/ESUS."
+      es: "Pedidos online con 0 % de comisión para los independientes de Tours. Tus platos, tus precios, tus clientes. Proyecto local sin ánimo de lucro (rumbo SCIC/ESUS)."
+      it: "Ordini online senza commissioni per ristoranti e food truck indipendenti di Tours. I tuoi piatti, i tuoi prezzi, i tuoi clienti. Progetto locale no profit."
+      pt: "Encomendas online com 0% de comissão para restaurantes e food trucks independentes de Tours. Os teus pratos, os teus preços, os teus clientes. Sem fins lucrativos."
+      ar: "طلب أونلاين بدون أي عمولة لمطاعم وشاحنات الطعام المستقلة في Tours. أطباقك، أسعارك، زبائنك. مشروع محلي غير ربحي يستهدف وضع SCIC التعاوني واعتماد ESUS الفرنسيين."
+      he: "הזמנות אונליין בלי עמלות למסעדות ולפודטראקים עצמאיים ב-Tours שבצרפת. המנות שלך, המחירים שלך, הלקוחות שלך. מיזם מקומי ללא מטרות רווח (יעד: מעמד SCIC קואופרטיבי והכרת ESUS)."
+  meta.og.description:
+    messages:
+      fr: "0 commission, tes plats à tes prix, tes clients. La commande locale et solidaire pour les indépendants de Tours."
+      en: "0% commission, your dishes at your prices, your customers. Local, solidarity-driven ordering for the independents of Tours."
+      es: "0 % de comisión, tus platos a tus precios, tus clientes. Pedidos locales y solidarios para los independientes de Tours."
+      it: "0 commissioni, i tuoi piatti ai tuoi prezzi, i tuoi clienti. L'ordine online locale e solidale per gli indipendenti di Tours."
+      pt: "0% de comissão, os teus pratos aos teus preços, os teus clientes. As encomendas locais e solidárias para os independentes de Tours."
+      ar: "عمولة 0%، أطباقك بأسعارك، وزبائنك ملك لك. منصة الطلب المحلية والتضامنية للمستقلين في Tours."
+      he: "0% עמלה, המנות שלך במחירים שלך, הלקוחות שלך. הזמנות מקומיות וסולידריות לעצמאים של Tours."
+  meta.og.image_alt:
+    messages:
+      fr: "Captain.Food — Reprenons les commandes ! 0 commission, à Tours."
+      en: "Captain.Food — Take back your orders! 0% commission, in Tours."
+      es: "Captain.Food — ¡Recuperemos el mando! 0 % de comisión, en Tours."
+      it: "Captain.Food — Riprendiamoci le comande! 0 commissioni, a Tours."
+      pt: "Captain.Food — Retomemos as comandas! 0% de comissão, em Tours."
+      ar: "Captain.Food — لنستعيد زمام الطلبات! عمولة 0%، في Tours."
+      he: "Captain.Food — לוקחים בחזרה את ההגה! 0% עמלה, ב-Tours."
+  meta.og.title:
+    messages:
+      fr: "Captain.Food — Reprenons les commandes !"
+      en: "Captain.Food — Take back your orders!"
+      es: "Captain.Food — ¡Recuperemos el mando!"
+      it: "Captain.Food — Riprendiamoci le comande!"
+      pt: "Captain.Food — Retomemos as comandas!"
+      ar: "Captain.Food — لنستعيد زمام الطلبات!"
+      he: "Captain.Food — לוקחים בחזרה את ההגה!"
+  meta.title:
+    messages:
+      fr: "Captain.Food — Commande en ligne 0 commission, à Tours"
+      en: "Captain.Food — 0% commission online ordering in Tours"
+      es: "Captain.Food — Pedidos online con 0 % de comisión, en Tours"
+      it: "Captain.Food — Ordini online 0 commissioni, a Tours"
+      pt: "Captain.Food — Encomendas online com 0% de comissão, em Tours"
+      ar: "Captain.Food — طلب أونلاين بعمولة 0%، في Tours"
+      he: "Captain.Food — הזמנות אונליין ב-0% עמלה, ב-Tours"
+
+  # ---- mockups ----
+  mockups.client_desc:
+    messages:
+      fr: "Commander chez un resto, contribution libre, 0 commission."
+      en: "Order from a restaurant, pay-what-you-want contribution, 0% commission."
+      es: "Pedir en un resto, contribución libre, 0 comisión."
+      it: "Ordinare da un ristorante, contributo libero, 0 commissioni."
+      pt: "Encomendar num restaurante, contribuição livre, 0 comissão."
+      ar: "الطلب من مطعم، مساهمة حرة، عمولة 0%."
+      he: "להזמין ממסעדה, תרומה חופשית, 0 עמלה."
+  mockups.client_role:
+    messages:
+      fr: "Client"
+      en: "Customer"
+      es: "Cliente"
+      it: "Cliente"
+      pt: "Cliente"
+      ar: "الزبون"
+      he: "לקוח"
+  mockups.cta_community:
+    messages:
+      fr: "Je rejoins la communauté"
+      en: "Join the community"
+      es: "Me uno a la comunidad"
+      it: "Mi unisco alla community"
+      pt: "Junto-me à comunidade"
+      ar: "أنضمّ إلى المجتمع"
+      he: "אני מצטרף לקהילה"
+  mockups.cta_view:
+    messages:
+      fr: "Voir les maquettes →"
+      en: "See the mockups →"
+      es: "Ver las maquetas →"
+      it: "Guarda i mockup →"
+      pt: "Ver as maquetes →"
+      ar: "شاهد النماذج ←"
+      he: "לצפייה במוקאפים →"
+  mockups.eyebrow:
+    messages:
+      fr: "Maquettes · développement communautaire"
+      en: "Mockups · community-driven development"
+      es: "Maquetas · desarrollo comunitario"
+      it: "Mockup · sviluppo comunitario"
+      pt: "Maquetes · desenvolvimento comunitário"
+      ar: "نماذج · تطوير مجتمعي"
+      he: "מוקאפים · פיתוח קהילתי"
+  mockups.intro:
+    messages:
+      fr: "Voici la maquette du produit qu'on veut mettre en place. <strong>Rien n'est encore construit</strong> — c'est là qu'on a besoin de toi. Teste les vues client, restaurateur et livreur, puis fais tes retours sur le WhatsApp de la communauté ou via le formulaire sous chaque maquette."
+      en: "Here's the mockup of the product we want to build. <strong>Nothing is built yet</strong> — and that's exactly where we need you. Try out the customer, restaurateur and rider views, then share your feedback on the community WhatsApp or via the form under each mockup."
+      es: "Esta es la maqueta del producto que queremos levantar. <strong>Aún no hay nada construido</strong> — y ahí es donde te necesitamos. Prueba las vistas de cliente, hostelero y repartidor, y cuéntanos qué te parece en el WhatsApp de la comunidad o en el formulario bajo cada maqueta."
+      it: "Ecco il mockup del prodotto che vogliamo realizzare. <strong>Non c'è ancora niente di costruito</strong> — ed è qui che abbiamo bisogno di te. Prova le viste cliente, ristoratore e rider, poi facci sapere sul WhatsApp della community o tramite il modulo sotto ogni mockup."
+      pt: "Aqui está a maquete do produto que queremos pôr de pé. <strong>Ainda nada está construído</strong> — é aí que precisamos de ti. Testa as vistas de cliente, restaurador e estafeta, e depois dá-nos a tua opinião no WhatsApp da comunidade ou no formulário por baixo de cada maquete."
+      ar: "هذا نموذج المنتج الذي نريد إطلاقه. <strong>لم يُبنَ شيء بعد</strong> — وهنا بالضبط نحتاج إليك. جرّب واجهات الزبون وصاحب المطعم والسائق، ثم شاركنا ملاحظاتك على مجموعة WhatsApp الخاصة بالمجتمع أو عبر الاستمارة أسفل كل نموذج."
+      he: "הנה המוקאפ של המוצר שאנחנו רוצים להקים. <strong>עוד לא בנינו כלום</strong> — ובדיוק בגלל זה אנחנו צריכים אותך. נסה את תצוגות הלקוח, המסעדן והשליח, ואז שתף פידבק ב-WhatsApp של הקהילה או בטופס שמתחת לכל מוקאפ."
+  mockups.note:
+    messages:
+      fr: "Sous chaque maquette, un formulaire pour laisser ton avis. On avance ensemble. ⚓"
+      en: "Under each mockup, a form to leave your feedback. We move forward together. ⚓"
+      es: "Bajo cada maqueta, un formulario para dejar tu opinión. Avanzamos juntos. ⚓"
+      it: "Sotto ogni mockup, un modulo per lasciare la tua opinione. Andiamo avanti insieme. ⚓"
+      pt: "Por baixo de cada maquete, um formulário para deixares a tua opinião. Avançamos juntos. ⚓"
+      ar: "أسفل كل نموذج، استمارة لترك رأيك. نتقدم معًا. ⚓"
+      he: "מתחת לכל מוקאפ יש טופס להשארת פידבק. מתקדמים יחד. ⚓"
+  mockups.resto_desc:
+    messages:
+      fr: "Recevoir les commandes, gérer sa carte, voir sa journée."
+      en: "Receive orders, manage your menu, see your day at a glance."
+      es: "Recibir los pedidos, gestionar la carta, ver el día de un vistazo."
+      it: "Ricevere gli ordini, gestire il menu, vedere la propria giornata."
+      pt: "Receber as encomendas, gerir o menu, ver o dia num relance."
+      ar: "استقبال الطلبات، إدارة القائمة، ومتابعة يومه."
+      he: "לקבל הזמנות, לנהל את התפריט, לראות את היום שלך."
+  mockups.resto_role:
+    messages:
+      fr: "Restaurateur"
+      en: "Restaurateur"
+      es: "Hostelero"
+      it: "Ristoratore"
+      pt: "Restaurador"
+      ar: "صاحب المطعم"
+      he: "מסעדן"
+  mockups.rider_badge:
+    messages:
+      fr: "à venir"
+      en: "coming soon"
+      es: "por llegar"
+      it: "in arrivo"
+      pt: "a chegar"
+      ar: "قريبًا"
+      he: "בקרוב"
+  mockups.rider_desc:
+    messages:
+      fr: "La livraison payée juste — l'intention, en clair."
+      en: "Delivery paid fairly — the intention, in plain words."
+      es: "El reparto pagado con justicia — la intención, bien clara."
+      it: "La consegna pagata il giusto — l'intenzione, in chiaro."
+      pt: "A entrega paga com justiça — a intenção, às claras."
+      ar: "توصيل بأجر عادل — النيّة، بوضوح."
+      he: "משלוח בתשלום הוגן — הכוונה, בגובה העיניים."
+  mockups.rider_role:
+    messages:
+      fr: "Livreur"
+      en: "Rider"
+      es: "Repartidor"
+      it: "Rider"
+      pt: "Estafeta"
+      ar: "السائق"
+      he: "שליח"
+  mockups.title:
+    messages:
+      fr: "Regarde à quoi ça ressemble — et construis-le avec nous"
+      en: "See what it looks like — and build it with us"
+      es: "Mira qué pinta tiene — y constrúyelo con nosotros"
+      it: "Guarda come sarà — e costruiscilo con noi"
+      pt: "Vê como vai ficar — e constrói-o connosco"
+      ar: "شاهد كيف سيبدو — وابنِه معنا"
+      he: "בוא לראות איך זה נראה — ולבנות את זה איתנו"
+
+  # ---- models ----
+  models.caption:
+    messages:
+      fr: "Comparaison entre une plateforme à commission et <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      en: "Comparison between a commission-based platform and <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      es: "Comparación entre una plataforma con comisión y <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      it: "Confronto tra una piattaforma a commissione e <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      pt: "Comparação entre uma plataforma com comissão e a <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      ar: "مقارنة بين منصة بعمولة و<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      he: "השוואה בין פלטפורמת עמלות לבין <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+  models.col_criteria:
+    messages:
+      fr: "Critère"
+      en: "Criteria"
+      es: "Criterio"
+      it: "Criterio"
+      pt: "Critério"
+      ar: "المعيار"
+      he: "קריטריון"
+  models.col_platform:
+    messages:
+      fr: "Plateforme à commission"
+      en: "Commission-based platform"
+      es: "Plataforma con comisión"
+      it: "Piattaforma a commissione"
+      pt: "Plataforma com comissão"
+      ar: "منصة بعمولة"
+      he: "פלטפורמת עמלות"
+  models.eyebrow:
+    messages:
+      fr: "Deux logiques, un choix"
+      en: "Two logics, one choice"
+      es: "Dos lógicas, una elección"
+      it: "Due logiche, una scelta"
+      pt: "Duas lógicas, uma escolha"
+      ar: "منطقان، وخيار واحد"
+      he: "שתי גישות, בחירה אחת"
+  models.fine:
+    messages:
+      fr: "Comparaison des modèles économiques, pas d'un acteur en particulier."
+      en: "A comparison of business models, not of any particular company."
+      es: "Comparación de modelos económicos, no de un actor en concreto."
+      it: "Confronto tra modelli economici, non su un attore in particolare."
+      pt: "Comparação de modelos económicos, não de um operador em particular."
+      ar: "مقارنة بين نموذجين اقتصاديين، لا بين جهات بعينها."
+      he: "השוואה בין מודלים כלכליים, לא בין שחקן מסוים."
+  models.img_alt:
+    messages:
+      fr: "Le Capitaine Food tend deux pilules — une orange, une bleue — le choix entre deux modèles"
+      en: "Captain Food holds out two pills — one orange, one blue — the choice between two models"
+      es: "El Capitán Food tiende dos píldoras — una naranja, una azul — la elección entre dos modelos"
+      it: "Il Capitan Food porge due pillole — una arancione, una blu — la scelta tra due modelli"
+      pt: "O Capitão Food estende dois comprimidos — um laranja, um azul — a escolha entre dois modelos"
+      ar: "الكابتن فود يمدّ حبتين — واحدة برتقالية وواحدة زرقاء — الخيار بين نموذجين"
+      he: "קפטן פוד מושיט שתי גלולות — כתומה וכחולה — הבחירה בין שני מודלים"
+  models.intro:
+    messages:
+      fr: "D'un côté, la commission qui te ronge. De l'autre, 0 % et le contrôle de ton affaire. À toi de choisir ta voie."
+      en: "On one side, the commission gnawing at you. On the other, 0% and control of your business. You choose your course."
+      es: "A un lado, la comisión que te devora. Al otro, 0 % y el control de tu negocio. Tú eliges tu rumbo."
+      it: "Da una parte, la commissione che ti divora. Dall'altra, 0% e il controllo della tua attività. A te scegliere la rotta."
+      pt: "De um lado, a comissão que te corrói. Do outro, 0% e o controlo do teu negócio. A ti cabe escolher o rumo."
+      ar: "من جهة، العمولة التي تنهشك. ومن جهة أخرى، 0% والتحكم الكامل في مشروعك. لك أن تختار وجهتك."
+      he: "מצד אחד, העמלה שמכרסמת בך. מהצד השני, 0% ושליטה מלאה בעסק שלך. ההגה בידיים שלך."
+  models.row1_h:
+    messages:
+      fr: "Commission sur tes plats"
+      en: "Commission on your dishes"
+      es: "Comisión sobre tus platos"
+      it: "Commissioni sui tuoi piatti"
+      pt: "Comissão sobre os teus pratos"
+      ar: "العمولة على أطباقك"
+      he: "עמלה על המנות שלך"
+  models.row1_them:
+    messages:
+      fr: "25 à 35 % par commande"
+      en: "25 to 35% per order"
+      es: "Del 25 al 35 % por pedido"
+      it: "Dal 25 al 35% per ordine"
+      pt: "25 a 35% por encomenda"
+      ar: "25 إلى 35% على كل طلب"
+      he: "25 עד 35% על כל הזמנה"
+  models.row2_h:
+    messages:
+      fr: "Tes prix"
+      en: "Your prices"
+      es: "Tus precios"
+      it: "I tuoi prezzi"
+      pt: "Os teus preços"
+      ar: "أسعارك"
+      he: "המחירים שלך"
+  models.row2_them:
+    messages:
+      fr: "Gonflés pour absorber la commission"
+      en: "Inflated to absorb the commission"
+      es: "Hinchados para absorber la comisión"
+      it: "Gonfiati per assorbire la commissione"
+      pt: "Inflacionados para absorver a comissão"
+      ar: "مرفوعة لامتصاص العمولة"
+      he: "מנופחים כדי לספוג את העמלה"
+  models.row2_us:
+    messages:
+      fr: "Les mêmes qu'en salle"
+      en: "The same as dine-in"
+      es: "Los mismos que en sala"
+      it: "Gli stessi che in sala"
+      pt: "Os mesmos da sala"
+      ar: "نفسها كما في الصالة"
+      he: "אותם מחירים כמו במסעדה"
+  models.row3_h:
+    messages:
+      fr: "Ta clientèle"
+      en: "Your customer base"
+      es: "Tu clientela"
+      it: "La tua clientela"
+      pt: "A tua clientela"
+      ar: "زبائنك"
+      he: "הלקוחות שלך"
+  models.row3_them:
+    messages:
+      fr: "Confisquée : tu ne sais pas qui commande"
+      en: "Confiscated: you don't know who's ordering"
+      es: "Confiscada: no sabes quién pide"
+      it: "Confiscata: non sai chi ordina"
+      pt: "Confiscada: não sabes quem encomenda"
+      ar: "مُصادَرون: لا تعرف من يطلب"
+      he: "מוחרמים: אתה לא יודע מי מזמין"
+  models.row3_us:
+    messages:
+      fr: "À toi, dès la première commande directe"
+      en: "Yours, from the very first direct order"
+      es: "Tuya, desde el primer pedido directo"
+      it: "Tua, dal primo ordine diretto"
+      pt: "Tua, desde a primeira encomenda direta"
+      ar: "ملك لك، من أول طلب مباشر"
+      he: "שלך, מההזמנה הישירה הראשונה"
+  models.row4_h:
+    messages:
+      fr: "Ton canal"
+      en: "Your channel"
+      es: "Tu canal"
+      it: "Il tuo canale"
+      pt: "O teu canal"
+      ar: "قناتك"
+      he: "הערוץ שלך"
+  models.row4_them:
+    messages:
+      fr: "Le leur, tu suis leurs règles"
+      en: "Theirs — you play by their rules"
+      es: "El suyo: sigues sus reglas"
+      it: "Il loro: segui le loro regole"
+      pt: "O deles, segues as regras deles"
+      ar: "قناتهم، وأنت تتبع قواعدهم"
+      he: "שלהם — אתה משחק לפי הכללים שלהם"
+  models.row4_us:
+    messages:
+      fr: "Le tien, sous ton nom"
+      en: "Yours, under your name"
+      es: "El tuyo, con tu nombre"
+      it: "Il tuo, a tuo nome"
+      pt: "O teu, com o teu nome"
+      ar: "قناتك أنت، وباسمك"
+      he: "שלך, על שמך"
+  models.row5_h:
+    messages:
+      fr: "Les règles du jeu"
+      en: "The rules of the game"
+      es: "Las reglas del juego"
+      it: "Le regole del gioco"
+      pt: "As regras do jogo"
+      ar: "قواعد اللعبة"
+      he: "כללי המשחק"
+  models.row5_them:
+    messages:
+      fr: "Elles changent, tu subis"
+      en: "They change, you take the hit"
+      es: "Cambian, y tú te aguantas"
+      it: "Cambiano, e tu subisci"
+      pt: "Mudam, e tu aguentas"
+      ar: "تتغير، وأنت تتحمّل"
+      he: "הם משתנים, אתה סופג"
+  models.row5_us:
+    messages:
+      fr: "Cadrées par un statut solidaire (cap ESUS/SCIC)"
+      en: "Locked in by a solidarity-based status (aiming for ESUS/SCIC)"
+      es: "Blindadas por un estatuto solidario (rumbo ESUS/SCIC)"
+      it: "Blindate da uno statuto solidale (rotta ESUS/SCIC)"
+      pt: "Enquadradas por um estatuto solidário (rumo a ESUS/SCIC)"
+      ar: "مؤطَّرة بوضع قانوني تضامني (وجهتنا ESUS/SCIC الفرنسيان)"
+      he: "מעוגנים במעמד סולידרי (יעד: ESUS/SCIC, מעמדות משפטיים צרפתיים)"
+  models.title:
+    messages:
+      fr: "Deux modèles, deux logiques"
+      en: "Two models, two logics"
+      es: "Dos modelos, dos lógicas"
+      it: "Due modelli, due logiche"
+      pt: "Dois modelos, duas lógicas"
+      ar: "نموذجان، منطقان"
+      he: "שני מודלים, שתי גישות"
+
+  # ---- nav ----
+  nav.brand_aria:
+    messages:
+      fr: "Captain.Food, accueil"
+      en: "Captain.Food, home"
+      es: "Captain.Food, inicio"
+      it: "Captain.Food, home"
+      pt: "Captain.Food, página inicial"
+      ar: "Captain.Food، الصفحة الرئيسية"
+      he: "Captain.Food, דף הבית"
+  nav.chip.commission:
+    messages:
+      fr: "0 % commission"
+      en: "0% commission"
+      es: "0 % de comisión"
+      it: "0% commissioni"
+      pt: "0% de comissão"
+      ar: "عمولة 0%"
+      he: "0% עמלה"
+  nav.chip.faq:
+    messages:
+      fr: "FAQ"
+      en: "FAQ"
+      es: "FAQ"
+      it: "FAQ"
+      pt: "FAQ"
+      ar: "الأسئلة الشائعة"
+      he: "שאלות ותשובות"
+  nav.chip.how:
+    messages:
+      fr: "Comment ça marche"
+      en: "How it works"
+      es: "Cómo funciona"
+      it: "Come funziona"
+      pt: "Como funciona"
+      ar: "كيف يعمل"
+      he: "איך זה עובד"
+  nav.chip.join:
+    messages:
+      fr: "Je rejoins"
+      en: "Join us"
+      es: "Me apunto"
+      it: "Mi unisco"
+      pt: "Quero embarcar"
+      ar: "أنضمّ الآن"
+      he: "אני מצטרף"
+  nav.chip.mockups:
+    messages:
+      fr: "Maquettes"
+      en: "Mockups"
+      es: "Maquetas"
+      it: "Mockup"
+      pt: "Maquetes"
+      ar: "النماذج"
+      he: "מוקאפים"
+  nav.chip.pricing:
+    messages:
+      fr: "Tarifs"
+      en: "Pricing"
+      es: "Tarifas"
+      it: "Prezzi"
+      pt: "Preços"
+      ar: "الأسعار"
+      he: "מחירים"
+  nav.chip.problem:
+    messages:
+      fr: "Le constat"
+      en: "The problem"
+      es: "El diagnóstico"
+      it: "Il problema"
+      pt: "O diagnóstico"
+      ar: "الواقع"
+      he: "המצב בשטח"
+  nav.join:
+    messages:
+      fr: "Je rejoins"
+      en: "Join us"
+      es: "Me apunto"
+      it: "Mi unisco"
+      pt: "Quero embarcar"
+      ar: "أنضمّ الآن"
+      he: "אני מצטרף"
+  nav.menu_aria:
+    messages:
+      fr: "Menu"
+      en: "Menu"
+      es: "Menú"
+      it: "Menu"
+      pt: "Menu"
+      ar: "القائمة"
+      he: "תפריט"
+
+  # ---- problem ----
+  problem.card1_body:
+    messages:
+      fr: "Impossible de les fidéliser : pas de carte de fidélité utilisable, et tu deviens dépendant de la plateforme pour avoir des commandes."
+      en: "No way to build loyalty: no usable loyalty scheme, and you end up depending on the platform to get orders at all."
+      es: "Imposible fidelizarlos: sin tarjeta de fidelidad que valga, y acabas dependiendo de la plataforma para tener pedidos."
+      it: "Impossibile fidelizzarli: niente carta fedeltà utilizzabile, e per avere ordini diventi dipendente dalla piattaforma."
+      pt: "Impossível fidelizá-los: nenhum cartão de fidelidade utilizável, e ficas dependente da plataforma para teres encomendas."
+      ar: "لا سبيل لكسب ولائهم: لا بطاقة وفاء يمكنك استخدامها، وتصبح معتمدًا على المنصة لكي تصلك الطلبات."
+      he: "אי אפשר לשמר אותם: אין תוכנית נאמנות שאפשר להפעיל, ואתה נהיה תלוי בפלטפורמה כדי לקבל הזמנות."
+  problem.card1_title:
+    messages:
+      fr: "Tes clients ne sont pas tes clients."
+      en: "Your customers aren't your customers."
+      es: "Tus clientes no son tus clientes."
+      it: "I tuoi clienti non sono tuoi clienti."
+      pt: "Os teus clientes não são teus clientes."
+      ar: "زبائنك ليسوا زبائنك."
+      he: "הלקוחות שלך הם לא הלקוחות שלך."
+  problem.card2_body:
+    messages:
+      fr: "Pour absorber leur commission, tu gonfles tes tarifs en ligne. Et tu subis les promotions forcées et les changements d'algorithme dont tu dépends — qui impactent ta position."
+      en: "To absorb their commission, you inflate your online prices. And you're stuck with forced promotions and algorithm changes you depend on — which hit your ranking."
+      es: "Para absorber su comisión, hinchas tus tarifas online. Y sufres las promociones forzadas y los cambios de algoritmo de los que dependes — y que afectan a tu posición."
+      it: "Per assorbire la loro commissione, gonfi il listino online. E subisci le promozioni forzate e i cambi di algoritmo da cui dipendi — che decidono la tua posizione."
+      pt: "Para absorver a comissão deles, inflacionas os teus preços online. E sofres as promoções forçadas e as mudanças de algoritmo de que dependes — e que afetam a tua posição."
+      ar: "لامتصاص عمولتهم، ترفع أسعارك على الإنترنت. وتتحمّل العروض الإجبارية وتغييرات الخوارزمية التي تعتمد عليها — والتي تؤثر على ترتيبك."
+      he: "כדי לספוג את העמלה שלהן, אתה מנפח את המחירים אונליין. ואתה סופג מבצעים כפויים ושינויי אלגוריתם שאתה תלוי בהם — והם משפיעים על המיקום שלך."
+  problem.card2_title:
+    messages:
+      fr: "Tu ne fixes pas tes prix."
+      en: "You don't set your prices."
+      es: "No fijas tus precios."
+      it: "I prezzi non li decidi tu."
+      pt: "Não és tu que fixas os teus preços."
+      ar: "أنت لا تحدد أسعارك."
+      he: "אתה לא קובע את המחירים שלך."
+  problem.eyebrow:
+    messages:
+      fr: "Le constat"
+      en: "The problem"
+      es: "El diagnóstico"
+      it: "Il problema"
+      pt: "O diagnóstico"
+      ar: "الواقع"
+      he: "המצב בשטח"
+  problem.intro:
+    messages:
+      fr: "Sur les grandes plateformes, chaque commande te coûte plus cher que tu ne le crois."
+      en: "On the big platforms, every order costs you more than you think."
+      es: "En las grandes plataformas, cada pedido te cuesta más de lo que crees."
+      it: "Sulle grandi piattaforme, ogni ordine ti costa più di quanto credi."
+      pt: "Nas grandes plataformas, cada encomenda custa-te mais do que pensas."
+      ar: "على المنصات الكبرى، كل طلب يكلفك أكثر مما تظن."
+      he: "בפלטפורמות הגדולות, כל הזמנה עולה לך יותר ממה שנדמה לך."
+  problem.ratio_punch:
+    messages:
+      fr: "Sur une commande livrée, la commission (~30 %) pèse <b>jusqu'à 10×</b> ta marge nette (~3 %). Tu travailles, elle encaisse."
+      en: "On a delivered order, the commission (~30%) weighs <b>up to 10×</b> your net margin (~3%). You do the work, they cash in."
+      es: "En un pedido a domicilio, la comisión (~30 %) pesa <b>hasta 10×</b> tu margen neto (~3 %). Tú trabajas, ella cobra."
+      it: "Su un ordine consegnato, la commissione (~30%) pesa <b>fino a 10×</b> il tuo margine netto (~3%). Tu lavori, lei incassa."
+      pt: "Numa encomenda entregue, a comissão (~30%) pesa <b>até 10×</b> a tua margem líquida (~3%). Tu trabalhas, ela embolsa."
+      ar: "في الطلب مع التوصيل، تعادل العمولة (~30%) <b>حتى 10 أضعاف</b> هامش ربحك الصافي (~3%). أنت تشتغل، وهي تُحصّل."
+      he: "בהזמנה במשלוח, העמלה (כ-30%) גדולה <b>עד פי 10</b> מהרווח הנקי שלך (כ-3%). אתה עובד, היא גובה."
+  problem.sources:
+    messages:
+      fr: "Sources : marge nette moyenne ~3 % (Observatoire Fiducial, communiqué UMIH/GHR/SNARR, juin 2025) ; défaillances 2024 et +80 % sur deux ans (Altares 2024, via L'Hôtellerie-Restauration/GHR). Une défaillance = sauvegarde, redressement ou liquidation ; environ 2 sur 3 finissent en liquidation."
+      en: "Sources: ~3% average net margin (Observatoire Fiducial, UMIH/GHR/SNARR press release, June 2025); 2024 insolvencies and +80% over two years (Altares 2024, via L'Hôtellerie-Restauration/GHR). An insolvency = safeguard proceedings, receivership or liquidation; about 2 in 3 end in liquidation."
+      es: "Fuentes: margen neto medio ~3 % (Observatoire Fiducial, comunicado UMIH/GHR/SNARR, junio de 2025); concursos 2024 y +80 % en dos años (Altares 2024, vía L'Hôtellerie-Restauration/GHR). Un concurso = salvaguarda, administración judicial o liquidación; unos 2 de cada 3 acaban en liquidación."
+      it: "Fonti: margine netto medio ~3% (Observatoire Fiducial, comunicato UMIH/GHR/SNARR, giugno 2025); procedure concorsuali 2024 e +80% in due anni (Altares 2024, via L'Hôtellerie-Restauration/GHR). Una procedura concorsuale = salvaguardia, amministrazione controllata o liquidazione; circa 2 su 3 finiscono in liquidazione."
+      pt: "Fontes: margem líquida média ~3% (Observatoire Fiducial, comunicado UMIH/GHR/SNARR, junho de 2025); insolvências de 2024 e +80% em dois anos (Altares 2024, via L'Hôtellerie-Restauration/GHR). Uma insolvência = salvaguarda, recuperação judicial ou liquidação; cerca de 2 em cada 3 acabam em liquidação."
+      ar: "المصادر: متوسط الهامش الصافي ~3% (مرصد Fiducial، بيان UMIH/GHR/SNARR، يونيو 2025)؛ حالات التعثر 2024 و+80% خلال سنتين (Altares 2024، عبر L'Hôtellerie-Restauration/GHR). التعثر = إجراء حماية أو تسوية قضائية أو تصفية؛ ونحو 2 من كل 3 تنتهي بالتصفية."
+      he: "מקורות: רווח נקי ממוצע כ-3% (Observatoire Fiducial, הודעת UMIH/GHR/SNARR, יוני 2025); קריסות 2024 ועלייה של 80%+ בשנתיים (Altares 2024, דרך L'Hôtellerie-Restauration/GHR). ״קריסה״ = הליך הגנה, הבראה או פירוק; בערך 2 מכל 3 מסתיימות בפירוק."
+  problem.stat_failures:
+    messages:
+      fr: "<strong>établissements de restauration en défaillance</strong> en France en 2024, soit <strong>+80 %</strong> en deux ans."
+      en: "<strong>restaurant businesses in insolvency</strong> in France in 2024 — that's <strong>+80%</strong> in two years."
+      es: "<strong>establecimientos de restauración en concurso</strong> en Francia en 2024, es decir, <strong>+80 %</strong> en dos años."
+      it: "<strong>attività di ristorazione in procedura concorsuale</strong> in Francia nel 2024, ovvero <strong>+80%</strong> in due anni."
+      pt: "<strong>estabelecimentos de restauração em insolvência</strong> em França em 2024, ou seja, <strong>+80%</strong> em dois anos."
+      ar: "<strong>مؤسسة مطاعم في حالة تعثّر</strong> في فرنسا سنة 2024، أي <strong>+80%</strong> خلال سنتين."
+      he: "<strong>עסקי מסעדנות בקריסה כלכלית</strong> בצרפת ב-2024 — זינוק של <strong>80%+</strong> בתוך שנתיים."
+  problem.stat_margin:
+    messages:
+      fr: "c'est la <strong>marge nette moyenne</strong> d'un restaurant — bien moins que la commission (~30 %) prélevée sur chaque commande livrée."
+      en: "is the <strong>average net margin</strong> of a restaurant — far less than the ~30% commission taken on every delivered order."
+      es: "es el <strong>margen neto medio</strong> de un restaurante — mucho menos que la comisión (~30 %) que se llevan de cada pedido entregado."
+      it: "è il <strong>margine netto medio</strong> di un ristorante — molto meno della commissione (~30%) prelevata su ogni ordine consegnato."
+      pt: "é a <strong>margem líquida média</strong> de um restaurante — muito menos do que a comissão (~30%) cobrada em cada encomenda entregue."
+      ar: "هو <strong>متوسط هامش الربح الصافي</strong> للمطعم — أقل بكثير من العمولة (~30%) المقتطعة من كل طلب مع التوصيل."
+      he: "זה <strong>הרווח הנקי הממוצע</strong> של מסעדה — הרבה פחות מהעמלה (כ-30%) שנגבית על כל הזמנה במשלוח."
+  problem.title:
+    messages:
+      fr: "Elles abusent !"
+      en: "They've gone too far!"
+      es: "¡Se están pasando!"
+      it: "Esagerano!"
+      pt: "Elas abusam!"
+      ar: "إنها تستغلّك!"
+      he: "הן פשוט מגזימות!"
+
+  # ---- quote ----
+  quote.body:
+    messages:
+      fr: "C'est ce que beaucoup se disent. Mais tes prix gonflent, le client commande moins — ou ailleurs. Ces commandes perdues, tu ne les vois jamais."
+      en: "That's what a lot of owners tell themselves. But your prices swell, customers order less — or somewhere else. Those lost orders? You never see them."
+      es: "Es lo que muchos se dicen. Pero tus precios se hinchan, el cliente pide menos — o en otro sitio. Esos pedidos perdidos no los ves nunca."
+      it: "È quello che si dicono in molti. Ma i tuoi prezzi lievitano, il cliente ordina meno — o altrove. Quegli ordini persi, tu non li vedi mai."
+      pt: "É o que muitos pensam. Mas os teus preços incham, o cliente encomenda menos — ou noutro sítio. Essas encomendas perdidas, nunca as chegas a ver."
+      ar: "هذا ما يقوله كثيرون لأنفسهم. لكن أسعارك ترتفع، فيطلب الزبون أقل — أو من مكان آخر. وتلك الطلبات الضائعة، لن تراها أبدًا."
+      he: "ככה הרבה אומרים לעצמם. אבל המחירים שלך מתנפחים, הלקוח מזמין פחות — או במקום אחר. את ההזמנות האבודות האלה אתה אף פעם לא רואה."
+  quote.kicker:
+    messages:
+      fr: "Répercuter la commission, ce n'est pas l'annuler. C'est la faire payer à ton chiffre d'affaires."
+      en: "Passing the commission on doesn't cancel it. It just makes your revenue pay for it."
+      es: "Repercutir la comisión no es anularla. Es hacérsela pagar a tu facturación."
+      it: "Scaricare la commissione non significa annullarla. Significa farla pagare al tuo fatturato."
+      pt: "Repercutir a comissão não é anulá-la. É fazê-la pagar pela tua faturação."
+      ar: "تحميل العمولة على الأسعار لا يلغيها، بل يجعل رقم مبيعاتك هو من يدفعها."
+      he: "לגלגל את העמלה זה לא לבטל אותה. זה לגרום למחזור שלך לשלם אותה."
+  quote.lead:
+    messages:
+      fr: "« Je m'en moque, je répercute la commission sur mes prix. »"
+      en: "“I don't care, I just pass the commission on in my prices.”"
+      es: "«Me da igual: repercuto la comisión en mis precios.»"
+      it: "«Chi se ne frega, la commissione la scarico sui prezzi.»"
+      pt: "«Tanto faz, repercuto a comissão nos meus preços.»"
+      ar: "«لا يهمني، أُحمّل العمولة على أسعاري.»"
+      he: "״לא אכפת לי, אני מגלגל את העמלה על המחירים שלי.״"
+
+  # ---- repercuss ----
+  repercuss.aria:
+    messages:
+      fr: "Part de la commission répercutée sur tes prix"
+      en: "Share of the commission passed on to your prices"
+      es: "Parte de la comisión repercutida en tus precios"
+      it: "Quota della commissione scaricata sui tuoi prezzi"
+      pt: "Parte da comissão repercutida nos teus preços"
+      ar: "نسبة العمولة المحمَّلة على أسعارك"
+      he: "חלק העמלה שמגולגל על המחירים שלך"
+  repercuss.msg100:
+    messages:
+      fr: "Tes prix en ligne gonflent nettement. Le client compare, te trouve plus cher, et commande moins — ou ailleurs. Ta marge est sauve sur le papier, mais les ventes perdues, tu ne les vois jamais."
+      en: "Your online prices swell noticeably. Customers compare, find you more expensive, and order less — or somewhere else. Your margin looks safe on paper, but the lost sales? You never see them."
+      es: "Tus precios online se disparan. El cliente compara, te ve más caro y pide menos — o en otro sitio. Tu margen se salva sobre el papel, pero las ventas perdidas no las ves nunca."
+      it: "I tuoi prezzi online lievitano parecchio. Il cliente confronta, ti trova più caro e ordina meno — o altrove. Il tuo margine è salvo sulla carta, ma le vendite perse non le vedi mai."
+      pt: "Os teus preços online incham a olhos vistos. O cliente compara, acha-te mais caro e encomenda menos — ou noutro sítio. A tua margem salva-se no papel, mas as vendas perdidas, nunca as chegas a ver."
+      ar: "أسعارك على الإنترنت ترتفع بوضوح. الزبون يقارن، يجدك أغلى، فيطلب أقل — أو من مكان آخر. هامشك سليم على الورق، لكن المبيعات الضائعة لن تراها أبدًا."
+      he: "המחירים שלך אונליין מזנקים. הלקוח משווה, מוצא אותך יקר יותר, ומזמין פחות — או במקום אחר. הרווח שלך ניצל על הנייר, אבל את המכירות שאבדו אתה אף פעם לא רואה."
+  repercuss.msg50:
+    messages:
+      fr: "Tu perds sur les deux tableaux : tes prix montent quand même (donc du volume en moins), <strong>et</strong> tu absorbes l'autre moitié (donc de la marge en moins)."
+      en: "You lose on both fronts: your prices still go up (so less volume), <strong>and</strong> you swallow the other half (so less margin)."
+      es: "Pierdes por partida doble: tus precios suben igualmente (menos volumen), <strong>y</strong> absorbes la otra mitad (menos margen)."
+      it: "Perdi su entrambi i fronti: i tuoi prezzi salgono comunque (quindi meno volume), <strong>e</strong> l'altra metà la assorbi tu (quindi meno margine)."
+      pt: "Perdes dos dois lados: os teus preços sobem na mesma (logo, menos volume), <strong>e</strong> absorves a outra metade (logo, menos margem)."
+      ar: "تخسر على الجبهتين: أسعارك ترتفع رغم ذلك (أي مبيعات أقل)، <strong>و</strong>تتحمل أنت النصف الآخر (أي هامش أقل)."
+      he: "אתה מפסיד בשתי החזיתות: המחירים שלך עדיין עולים (כלומר פחות מכירות), <strong>וגם</strong> אתה סופג את החצי השני (כלומר פחות רווח)."
+  repercuss.opt100:
+    messages:
+      fr: "Je répercute 100 %"
+      en: "I pass on 100%"
+      es: "Repercuto el 100 %"
+      it: "Scarico il 100%"
+      pt: "Repercuto 100%"
+      ar: "أحمّل 100%"
+      he: "אני מגלגל 100%"
+  repercuss.opt50:
+    messages:
+      fr: "Je répercute 50 %"
+      en: "I pass on 50%"
+      es: "Repercuto el 50 %"
+      it: "Scarico il 50%"
+      pt: "Repercuto 50%"
+      ar: "أحمّل 50%"
+      he: "אני מגלגל 50%"
+  repercuss.q:
+    messages:
+      fr: "Et si tu la répercutes ? Regarde :"
+      en: "And if you do pass it on? Look:"
+      es: "¿Y si la repercutes? Mira:"
+      it: "E se la scarichi sui prezzi? Guarda:"
+      pt: "E se a repercutires? Olha:"
+      ar: "وإذا حمّلتها على أسعارك؟ انظر:"
+      he: "ואם תגלגל אותה הלאה? תסתכל:"
+
+  # ---- solution ----
+  solution.dish_caption:
+    messages:
+      fr: "Qu'est-ce qu'on met sur la table ?"
+      en: "So, what's on the table?"
+      es: "¿Qué ponemos sobre la mesa?"
+      it: "Cosa mettiamo in tavola?"
+      pt: "O que é que pomos na mesa?"
+      ar: "ماذا نضع على الطاولة؟"
+      he: "אז מה שמים על השולחן?"
+  solution.eyebrow:
+    messages:
+      fr: "Ton pavillon, tes règles"
+      en: "Your flag, your rules"
+      es: "Tu pabellón, tus reglas"
+      it: "La tua bandiera, le tue regole"
+      pt: "O teu pavilhão, as tuas regras"
+      ar: "رايتك أنت، وقواعدك أنت"
+      he: "הדגל שלך, החוקים שלך"
+  solution.img_alt:
+    messages:
+      fr: "Le Capitaine Food présente une assiette lumineuse — steak, salade, tomates : la valeur que tu gardes"
+      en: "Captain Food presents a glowing plate — steak, salad, tomatoes: the value you keep"
+      es: "El Capitán Food presenta un plato luminoso — bistec, ensalada, tomates: el valor que te quedas"
+      it: "Il Capitan Food presenta un piatto luminoso — bistecca, insalata, pomodori: il valore che resta a te"
+      pt: "O Capitão Food apresenta um prato luminoso — bife, salada, tomate: o valor que guardas para ti"
+      ar: "الكابتن فود يقدّم طبقًا مضيئًا — ستيك وسلطة وطماطم: القيمة التي تحتفظ بها"
+      he: "קפטן פוד מגיש צלחת זוהרת — סטייק, סלט, עגבניות: הערך שנשאר אצלך"
+  solution.intro:
+    messages:
+      fr: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> est une plateforme de commande en ligne locale qui te redonne le contrôle. En ligne et à table, sous ton nom."
+      en: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> is a local online-ordering platform that puts you back in control. Online and at the table, under your name."
+      es: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> es una plataforma local de pedidos online que te devuelve el control. Online y en mesa, con tu nombre."
+      it: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> è una piattaforma di ordini online locale che ti ridà il controllo. Online e al tavolo, a tuo nome."
+      pt: "A <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> é uma plataforma local de encomendas online que te devolve o controlo. Online e à mesa, com o teu nome."
+      ar: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> منصة طلب أونلاين محلية تعيد إليك زمام التحكم. على الإنترنت وعلى الطاولة، وباسمك."
+      he: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> היא פלטפורמת הזמנות אונליין מקומית שמחזירה לך את השליטה. אונליין וליד השולחן, על שמך."
+  solution.title:
+    messages:
+      fr: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> : ton canal, tes règles"
+      en: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>: your channel, your rules"
+      es: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>: tu canal, tus reglas"
+      it: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>: il tuo canale, le tue regole"
+      pt: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>: o teu canal, as tuas regras"
+      ar: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>: قناتك، قواعدك"
+      he: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>: הערוץ שלך, החוקים שלך"
+
+  # ---- success ----
+  success.chat_cta:
+    messages:
+      fr: "Je chat avec <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>"
+      en: "Chat with <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>"
+      es: "Chateo con <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>"
+      it: "Chatto con <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>"
+      pt: "Falo com a <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>"
+      ar: "أدردش مع <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>"
+      he: "אני מצ'וטט עם <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>"
+  success.img_alt:
+    messages:
+      fr: "Le Capitaine Food lève le pouce pour saluer ton inscription"
+      en: "Captain Food gives a thumbs-up to salute your signup"
+      es: "El Capitán Food levanta el pulgar para celebrar tu inscripción"
+      it: "Il Capitan Food alza il pollice per salutare la tua iscrizione"
+      pt: "O Capitão Food levanta o polegar para saudar a tua inscrição"
+      ar: "الكابتن فود يرفع إبهامه ترحيبًا بتسجيلك"
+      he: "קפטן פוד מרים אגודל לכבוד ההרשמה שלך"
+  success.or_email:
+    messages:
+      fr: "Ou écris-nous à <a href=\"mailto:miam@captain.food\">miam@captain.food</a>."
+      en: "Or write to us at <a href=\"mailto:miam@captain.food\">miam@captain.food</a>."
+      es: "O escríbenos a <a href=\"mailto:miam@captain.food\">miam@captain.food</a>."
+      it: "Oppure scrivici a <a href=\"mailto:miam@captain.food\">miam@captain.food</a>."
+      pt: "Ou escreve-nos para <a href=\"mailto:miam@captain.food\">miam@captain.food</a>."
+      ar: "أو راسلنا على <a href=\"mailto:miam@captain.food\">miam@captain.food</a>."
+      he: "או כתוב לנו אל <a href=\"mailto:miam@captain.food\">miam@captain.food</a>."
+  success.text:
+    messages:
+      fr: "On te recontacte très vite. Envie d'échanger tout de suite ?"
+      en: "We'll get back to you very soon. Want to chat right away?"
+      es: "Te contactamos muy pronto. ¿Quieres hablar ya mismo?"
+      it: "Ti ricontattiamo prestissimo. Vuoi parlarne subito?"
+      pt: "Contactamos-te muito em breve. Queres falar já?"
+      ar: "سنتواصل معك قريبًا جدًا. تريد الحديث فورًا؟"
+      he: "נחזור אליך ממש בקרוב. בא לך לדבר כבר עכשיו?"
+  success.title:
+    messages:
+      fr: "Bien reçu ⚓ Bienvenue à bord !"
+      en: "Got it ⚓ Welcome aboard!"
+      es: "¡Recibido! ⚓ ¡Bienvenido a bordo!"
+      it: "Ricevuto ⚓ Benvenuto a bordo!"
+      pt: "Recebido ⚓ Bem-vindo a bordo!"
+      ar: "وصلنا طلبك ⚓ أهلًا بك على المتن!"
+      he: "התקבל ⚓ ברוך הבא לסיפון!"
+
+  # ---- tours ----
+  tours.eyebrow:
+    messages:
+      fr: "Port d'attache"
+      en: "Home port"
+      es: "Puerto base"
+      it: "Porto di casa"
+      pt: "Porto de abrigo"
+      ar: "ميناء الانطلاق"
+      he: "נמל הבית"
+  tours.p1:
+    messages:
+      fr: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> démarre ici, à Tours, avec un premier groupe de restaurateurs. Pas partout, pas tout de suite : un territoire, bien fait, entre indépendants qui se connaissent."
+      en: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> starts here, in Tours, with a first group of restaurateurs. Not everywhere, not all at once: one territory, done right, among independents who know each other."
+      es: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> zarpa aquí, en Tours, con un primer grupo de hosteleros. Ni en todas partes ni de golpe: un territorio, bien hecho, entre independientes que se conocen."
+      it: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> parte da qui, da Tours, con un primo gruppo di ristoratori. Non ovunque, non subito: un territorio, fatto bene, tra indipendenti che si conoscono."
+      pt: "A <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> arranca aqui, em Tours, com um primeiro grupo de restauradores. Não em todo o lado, não já: um território, bem feito, entre independentes que se conhecem."
+      ar: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> ينطلق من هنا، من مدينة Tours (تور)، مع مجموعة أولى من أصحاب المطاعم. ليس في كل مكان، وليس دفعة واحدة: منطقة واحدة، نتقنها جيدًا، بين مستقلين يعرفون بعضهم."
+      he: "<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> יוצא לדרך כאן, ב-Tours (טור) שבצרפת, עם קבוצה ראשונה של מסעדנים. לא בכל מקום, לא בבת אחת: טריטוריה אחת, שנעשית כמו שצריך, בין עצמאים שמכירים זה את זה."
+  tours.p2:
+    messages:
+      fr: "On construit la plateforme avec les premiers restaurants qui embarquent — leurs retours façonnent l'outil. Rejoindre maintenant, c'est peser sur ce que <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> deviendra."
+      en: "We're building the platform with the first restaurants to come aboard — their feedback shapes the tool. Joining now means weighing in on what <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> will become."
+      es: "Construimos la plataforma con los primeros restaurantes que suben a bordo — sus opiniones dan forma a la herramienta. Unirte ahora es influir en lo que <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> llegará a ser."
+      it: "Costruiamo la piattaforma con i primi ristoranti che salgono a bordo — i loro riscontri plasmano lo strumento. Unirti adesso significa pesare su ciò che <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> diventerà."
+      pt: "Construímos a plataforma com os primeiros restaurantes que embarcam — as suas opiniões moldam a ferramenta. Juntares-te agora é teres peso naquilo em que a <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> se vai tornar."
+      ar: "نبني المنصة مع أوائل المطاعم التي تصعد على المتن — ملاحظاتهم تصوغ الأداة. أن تنضم الآن يعني أن يكون لك وزن في ما سيصبح عليه <span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span>."
+      he: "אנחנו בונים את הפלטפורמה עם המסעדות הראשונות שעולות לסיפון — הפידבק שלהן מעצב את הכלי. להצטרף עכשיו זה להשפיע על מה ש-<span class=\"cf-name\">Captain<span class=\"cf-dot\">.</span>Food</span> יהפוך להיות."
+  tours.title:
+    messages:
+      fr: "On commence à Tours"
+      en: "We're starting in Tours"
+      es: "Empezamos en Tours"
+      it: "Si salpa da Tours"
+      pt: "Começamos em Tours"
+      ar: "نبدأ من Tours"
+      he: "מתחילים ב-Tours"
+
+  # ---- wa ----
+  wa.fab_aria:
+    messages:
+      fr: "Discuter avec Captain.Food sur WhatsApp"
+      en: "Chat with Captain.Food on WhatsApp"
+      es: "Hablar con Captain.Food por WhatsApp"
+      it: "Chatta con Captain.Food su WhatsApp"
+      pt: "Falar com a Captain.Food no WhatsApp"
+      ar: "الدردشة مع Captain.Food على WhatsApp"
+      he: "לצ'וטט עם Captain.Food ב-WhatsApp"
+  wa.hint:
+    messages:
+      fr: "👋 Discute directement avec Captain.Food"
+      en: "👋 Chat directly with Captain.Food"
+      es: "👋 Habla directamente con Captain.Food"
+      it: "👋 Chatta direttamente con Captain.Food"
+      pt: "👋 Fala diretamente com a Captain.Food"
+      ar: "👋 تحدّث مباشرة مع Captain.Food"
+      he: "👋 דבר ישירות עם Captain.Food"
+  wa.hint_close:
+    messages:
+      fr: "Fermer"
+      en: "Close"
+      es: "Cerrar"
+      it: "Chiudi"
+      pt: "Fechar"
+      ar: "إغلاق"
+      he: "סגירה"
+
+  # ---- who ----
+  who.card1_body:
+    messages:
+      fr: "qui en ont assez de travailler pour la commission des autres."
+      en: "tired of working to pay someone else's commission."
+      es: "que están hartos de trabajar para la comisión de otros."
+      it: "che ne hanno abbastanza di lavorare per le commissioni degli altri."
+      pt: "que estão fartos de trabalhar para a comissão dos outros."
+      ar: "التي سئمت العمل لتسديد عمولات الآخرين."
+      he: "שנמאס להן לעבוד בשביל העמלה של אחרים."
+  who.card1_title:
+    messages:
+      fr: "Les restaurants indépendants"
+      en: "Independent restaurants"
+      es: "Los restaurantes independientes"
+      it: "I ristoranti indipendenti"
+      pt: "Os restaurantes independentes"
+      ar: "المطاعم المستقلة"
+      he: "מסעדות עצמאיות"
+  who.card2_body:
+    messages:
+      fr: "qui veulent un canal de commande simple, à leur nom, sans matériel lourd."
+      en: "who want a simple ordering channel, under their name, without heavy gear."
+      es: "que quieren un canal de pedidos simple, con su nombre, sin equipamiento pesado."
+      it: "che vogliono un canale di ordini semplice, a loro nome, senza attrezzature pesanti."
+      pt: "que querem um canal de encomendas simples, com o seu nome, sem equipamento pesado."
+      ar: "التي تريد قناة طلب بسيطة، باسمها، وبدون معدات ثقيلة."
+      he: "שרוצים ערוץ הזמנות פשוט, על שמם, בלי ציוד כבד."
+  who.card2_title:
+    messages:
+      fr: "Les food trucks"
+      en: "Food trucks"
+      es: "Los food trucks"
+      it: "I food truck"
+      pt: "Os food trucks"
+      ar: "شاحنات الطعام"
+      he: "פודטראקים"
+  who.card3_body:
+    messages:
+      fr: "attachés à leur quartier, à leurs habitués, à leur métier."
+      en: "attached to their neighbourhood, their regulars, their craft."
+      es: "apegados a su barrio, a sus habituales, a su oficio."
+      it: "legati al loro quartiere, ai loro clienti abituali, al loro mestiere."
+      pt: "ligados ao seu bairro, aos seus habituais, ao seu ofício."
+      ar: "المتمسكون بحيّهم، وبزبائنهم الأوفياء، وبمهنتهم."
+      he: "שקשורים לשכונה שלהם, ללקוחות הקבועים, למקצוע שלהם."
+  who.card3_title:
+    messages:
+      fr: "Les artisans de la table"
+      en: "Artisans of the table"
+      es: "Los artesanos de la mesa"
+      it: "Gli artigiani della tavola"
+      pt: "Os artesãos da mesa"
+      ar: "حرفيّو المائدة"
+      he: "אומני המטבח"
+  who.close:
+    messages:
+      fr: "Si tu es une grande enseigne à la recherche du plus gros volume au moindre coût, on n'est probablement pas faits pour toi. Si tu veux reprendre la main sur ton affaire, <strong>embarque</strong>."
+      en: "If you're a big chain chasing maximum volume at minimum cost, we're probably not for you. If you want to take back the helm of your business, <strong>come aboard</strong>."
+      es: "Si eres una gran cadena en busca del máximo volumen al mínimo coste, probablemente no somos para ti. Si quieres recuperar el timón de tu negocio, <strong>súbete a bordo</strong>."
+      it: "Se sei una grande catena a caccia del massimo volume al minimo costo, probabilmente non siamo fatti per te. Se vuoi riprendere in mano la tua attività, <strong>sali a bordo</strong>."
+      pt: "Se és uma grande cadeia à procura do maior volume ao menor custo, provavelmente não somos para ti. Se queres retomar as rédeas do teu negócio, <strong>embarca</strong>."
+      ar: "إذا كنت علامة كبرى تبحث عن أكبر حجم بأقل تكلفة، فربما لسنا الخيار المناسب لك. أما إذا أردت استعادة زمام مشروعك، <strong>فاصعد على المتن</strong>."
+      he: "אם אתה רשת גדולה שמחפשת את הווליום הכי גדול בעלות הכי נמוכה, כנראה שאנחנו לא בשבילך. אם אתה רוצה לקחת בחזרה את השליטה בעסק שלך — <strong>עלה לסיפון</strong>."
+  who.title:
+    messages:
+      fr: "Pour qui ?"
+      en: "Who is it for?"
+      es: "¿Para quién?"
+      it: "Per chi?"
+      pt: "Para quem?"
+      ar: "لمن هذا؟"
+      he: "בשביל מי?"

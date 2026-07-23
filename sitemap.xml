@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://join.captain.food/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <!-- The homepage self-translates client-side (i18n.js); ?lang= variants
+         mirror the hreflang link tags in index.html. -->
+    <xhtml:link rel="alternate" hreflang="fr" href="https://join.captain.food/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://join.captain.food/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://join.captain.food/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://join.captain.food/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://join.captain.food/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://join.captain.food/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://join.captain.food/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://join.captain.food/?lang=el"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://join.captain.food/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://join.captain.food/?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://join.captain.food/"/>
   </url>
   <url>
     <loc>https://join.captain.food/tarifs.html</loc>

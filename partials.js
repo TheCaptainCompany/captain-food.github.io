@@ -35,58 +35,60 @@
   };
 
   // ---------- Footer (single source) ----------
+  // Translatable strings carry data-i18n keys (footer.*): i18n.js re-applies the
+  // active language after this footer is injected (it loads after partials.js).
   var FOOTER =
     '<div class="container footer-grid">' +
       '<div class="footer-col">' +
         '<p class="footer-brand"><img class="footer-logo" src="/assets/logo.png" alt="" width="30" height="30"><span class="footer-brand-name">Captain<span class="brand-dot">.</span>Food</span></p>' +
-        '<p class="footer-tagline"><em>&laquo;&nbsp;Reprenons les commandes&nbsp;!&nbsp;&raquo;</em><br><em>Une alternative locale et solidaire, à Tours.</em></p>' +
+        '<p class="footer-tagline" data-i18n-html="footer.tagline"><em>&laquo;&nbsp;Reprenons les commandes&nbsp;!&nbsp;&raquo;</em><br><em>Une alternative locale et solidaire, à Tours.</em></p>' +
         '<ul class="footer-list footer-nav">' +
-          '<li><a href="' + sec + '#probleme"><span class="fi" aria-hidden="true">🧭</span> Constat</a></li>' +
-          '<li><a href="' + sec + '#combat"><span class="fi" aria-hidden="true">🍴</span> Solution</a></li>' +
-          '<li><a href="' + sec + '#solution"><span class="fi" aria-hidden="true">⚙️</span> Comment</a></li>' +
-          '<li><a href="/demo/"><span class="fi" aria-hidden="true">📱</span> Voir les maquettes</a></li>' +
-          '<li><a href="' + sec + '#rejoindre"><span class="fi" aria-hidden="true">⚓</span> Rejoindre</a></li>' +
-          '<li><a href="' + faqHref + '"><span class="fi" aria-hidden="true">❓</span> FAQ</a></li>' +
-          '<li><a href="/tarifs.html"><span class="fi" aria-hidden="true">🏷️</span> Tarifs (c\'est gratuit)</a></li>' +
-          '<li><a href="/manifeste.html"><span class="fi" aria-hidden="true">📜</span> Le manifeste</a></li>' +
-          '<li><a href="/financement.html"><span class="fi" aria-hidden="true">🧾</span> Comment on se finance&nbsp;?</a></li>' +
-          '<li><a href="/livraison.html"><span class="fi" aria-hidden="true">🛵</span> La livraison, payée juste</a></li>' +
-          '<li><a href="https://opencollective.com/captain-food" target="_blank" rel="noopener">' + ICON.oc + ' Nos comptes (Open Collective)</a></li>' +
-          '<li><a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">' + ICON.github + ' Code source (open source)</a></li>' +
+          '<li><a href="' + sec + '#probleme"><span class="fi" aria-hidden="true">🧭</span> <span data-i18n="footer.nav.problem">Constat</span></a></li>' +
+          '<li><a href="' + sec + '#combat"><span class="fi" aria-hidden="true">🍴</span> <span data-i18n="footer.nav.solution">Solution</span></a></li>' +
+          '<li><a href="' + sec + '#solution"><span class="fi" aria-hidden="true">⚙️</span> <span data-i18n="footer.nav.how">Comment</span></a></li>' +
+          '<li><a href="/demo/"><span class="fi" aria-hidden="true">📱</span> <span data-i18n="footer.nav.mockups">Voir les maquettes</span></a></li>' +
+          '<li><a href="' + sec + '#rejoindre"><span class="fi" aria-hidden="true">⚓</span> <span data-i18n="footer.nav.join">Rejoindre</span></a></li>' +
+          '<li><a href="' + faqHref + '"><span class="fi" aria-hidden="true">❓</span> <span data-i18n="footer.nav.faq">FAQ</span></a></li>' +
+          '<li><a href="/tarifs.html"><span class="fi" aria-hidden="true">🏷️</span> <span data-i18n="footer.nav.pricing">Tarifs (c\'est gratuit)</span></a></li>' +
+          '<li><a href="/manifeste.html"><span class="fi" aria-hidden="true">📜</span> <span data-i18n="footer.nav.manifesto">Le manifeste</span></a></li>' +
+          '<li><a href="/financement.html"><span class="fi" aria-hidden="true">🧾</span> <span data-i18n="footer.nav.funding">Comment on se finance&nbsp;?</span></a></li>' +
+          '<li><a href="/livraison.html"><span class="fi" aria-hidden="true">🛵</span> <span data-i18n="footer.nav.delivery">La livraison, payée juste</span></a></li>' +
+          '<li><a href="https://opencollective.com/captain-food" target="_blank" rel="noopener">' + ICON.oc + ' <span data-i18n="footer.nav.accounts">Nos comptes (Open Collective)</span></a></li>' +
+          '<li><a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">' + ICON.github + ' <span data-i18n="footer.nav.source">Code source (open source)</span></a></li>' +
         '</ul>' +
       '</div>' +
       '<div class="footer-col">' +
-        '<h2 class="footer-h">Contact</h2>' +
+        '<h2 class="footer-h" data-i18n="footer.contact_h">Contact</h2>' +
         '<ul class="footer-list footer-contact">' +
           '<li><a href="mailto:miam@captain.food">' + ICON.mail + ' miam@captain.food</a></li>' +
-          '<li><a href="' + WA + '" target="_blank" rel="noopener">' + ICON.whatsapp + ' Chat direct avec Captain.Food</a></li>' +
-          '<li><a href="https://community.captain.food" target="_blank" rel="noopener">' + ICON.whatsapp + ' Communauté WhatsApp</a></li>' +
+          '<li><a href="' + WA + '" target="_blank" rel="noopener">' + ICON.whatsapp + ' <span data-i18n="footer.contact_chat">Chat direct avec Captain.Food</span></a></li>' +
+          '<li><a href="https://community.captain.food" target="_blank" rel="noopener">' + ICON.whatsapp + ' <span data-i18n="footer.contact_community">Communauté WhatsApp</span></a></li>' +
           '<li><a href="https://www.instagram.com/captain.food__" target="_blank" rel="noopener">' + ICON.instagram + ' Instagram</a></li>' +
           '<li><a href="https://www.linkedin.com/company/captain-food-coop/" target="_blank" rel="noopener">' + ICON.linkedin + ' LinkedIn</a></li>' +
           '<li><a href="https://facebook.com/captain.food.coop" target="_blank" rel="noopener">' + ICON.facebook + ' Facebook</a></li>' +
         '</ul>' +
       '</div>' +
       '<div class="footer-col">' +
-        '<h2 class="footer-h">Autour de Tours</h2>' +
+        '<h2 class="footer-h" data-i18n="footer.around_h">Autour de Tours</h2>' +
         '<ul class="footer-list">' +
-          '<li><a href="/alternative-uber-eats-tours.html">Alternative à Uber Eats</a></li>' +
-          '<li><a href="/alternative-deliveroo-tours.html">Alternative à Deliveroo</a></li>' +
-          '<li><a href="/restaurant-sans-commission-tours.html">Restaurant sans commission</a></li>' +
-          '<li><a href="/commande-en-ligne-restaurant-tours.html">Commande en ligne</a></li>' +
-          '<li><a href="/click-and-collect-tours.html">Click and collect</a></li>' +
-          '<li><a href="/livraison-ethique-tours.html">Livraison éthique</a></li>' +
-          '<li><a href="/restaurants-tours-indre-et-loire.html">Tours &amp; Indre-et-Loire</a></li>' +
+          '<li><a href="/alternative-uber-eats-tours.html" data-i18n="footer.around_uber">Alternative à Uber Eats</a></li>' +
+          '<li><a href="/alternative-deliveroo-tours.html" data-i18n="footer.around_deliveroo">Alternative à Deliveroo</a></li>' +
+          '<li><a href="/restaurant-sans-commission-tours.html" data-i18n="footer.around_nocommission">Restaurant sans commission</a></li>' +
+          '<li><a href="/commande-en-ligne-restaurant-tours.html" data-i18n="footer.around_online">Commande en ligne</a></li>' +
+          '<li><a href="/click-and-collect-tours.html" data-i18n="footer.around_cc">Click and collect</a></li>' +
+          '<li><a href="/livraison-ethique-tours.html" data-i18n="footer.around_ethical">Livraison éthique</a></li>' +
+          '<li><a href="/restaurants-tours-indre-et-loire.html" data-i18n="footer.around_tours">Tours &amp; Indre-et-Loire</a></li>' +
         '</ul>' +
       '</div>' +
       '<div class="footer-col">' +
-        '<h2 class="footer-h">Légal</h2>' +
+        '<h2 class="footer-h" data-i18n="footer.legal_h">Légal</h2>' +
         '<ul class="footer-list">' +
-          '<li><a href="/confidentialite.html">Politique de confidentialité</a></li>' +
-          '<li><a href="/mentions-legales.html">Mentions légales</a></li>' +
+          '<li><a href="/confidentialite.html" data-i18n="footer.legal_privacy">Politique de confidentialité</a></li>' +
+          '<li><a href="/mentions-legales.html" data-i18n="footer.legal_mentions">Mentions légales</a></li>' +
         '</ul>' +
       '</div>' +
     '</div>' +
-    '<div class="container footer-bottom"><p>© 2026 Captain.Food — Projet indépendant en construction à Tours.</p></div>';
+    '<div class="container footer-bottom"><p data-i18n="footer.copyright">© 2026 Captain.Food — Projet indépendant en construction à Tours.</p></div>';
 
   var slots = document.querySelectorAll("[data-shared-footer]");
   for (var i = 0; i < slots.length; i++) slots[i].innerHTML = FOOTER;
@@ -99,6 +101,7 @@
     fab.target = "_blank";
     fab.rel = "noopener";
     fab.setAttribute("aria-label", "Discuter avec Captain.Food sur WhatsApp");
+    fab.setAttribute("data-i18n-aria-label", "wa.fab_aria");
     fab.innerHTML =
       '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="' + WA_PATH + '"/></svg>';
     document.body.appendChild(fab);
@@ -111,8 +114,8 @@
       hint.className = "wa-hint";
       hint.setAttribute("role", "status");
       hint.innerHTML =
-        '<button class="wa-hint-close" type="button" aria-label="Fermer">&times;</button>' +
-        '<span>👋 Discute directement avec Captain.Food</span>';
+        '<button class="wa-hint-close" type="button" aria-label="Fermer" data-i18n-aria-label="wa.hint_close">&times;</button>' +
+        '<span data-i18n="wa.hint">👋 Discute directement avec Captain.Food</span>';
       document.body.appendChild(hint);
       requestAnimationFrame(function () { hint.classList.add("is-visible"); });
       var dismiss = function () {

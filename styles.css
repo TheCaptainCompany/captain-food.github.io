@@ -2389,3 +2389,136 @@ section[id],
   color: var(--good);
   line-height: 1;
 }
+
+/* =========================================================
+   i18n — language switcher, cookie-consent prompt, RTL
+   (runtime: i18n.js; catalog: i18n/translations.yaml)
+   ========================================================= */
+
+/* ---------- Language switcher (header) ---------- */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+.lang-globe {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 1.5rem 0.3rem 0.6rem;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%230e3a5f' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 0.6rem;
+}
+.lang-select:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+[dir="rtl"] .lang-select {
+  padding: 0.3rem 0.6rem 0.3rem 1.5rem;
+  background-position: left 0.5rem center;
+}
+@media (max-width: 560px) {
+  .lang-globe {
+    display: none;
+  }
+}
+
+/* ---------- Language cookie-consent prompt ---------- */
+/* Asked ONLY when the visitor actively switches language: may we remember
+   the choice in a first-party cookie? (Nothing is stored on refusal.) */
+.lang-consent {
+  position: fixed;
+  inset-inline: 1rem;
+  bottom: 1rem;
+  z-index: 90;
+  margin-inline: auto;
+  max-width: 30rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 1rem 1.2rem;
+}
+.lang-consent-text {
+  font-size: 0.95rem;
+  margin-bottom: 0.7rem;
+}
+.lang-consent-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ---------- RTL (Arabic, Hebrew) ---------- */
+/* Flex/grid follow the writing direction on their own; these rules flip the
+   remaining physical properties. Keep any new direction-sensitive CSS in
+   logical properties so this list stays short. */
+[dir="rtl"] .nav-cta {
+  margin-left: 0;
+  margin-right: auto;
+}
+[dir="rtl"] .nav-links {
+  margin-left: 0;
+  margin-right: auto;
+}
+[dir="rtl"] .read-progress > span {
+  transform-origin: 100% 50%;
+}
+[dir="rtl"] .section-split .split-text .eyebrow-center,
+[dir="rtl"] .section-split .split-text .section-title,
+[dir="rtl"] .section-split .split-text .section-intro {
+  text-align: right;
+}
+[dir="rtl"] .compare-table th,
+[dir="rtl"] .compare-table td {
+  text-align: right;
+}
+[dir="rtl"] .pull-quote {
+  border-left: 0;
+  border-right: 5px solid var(--gold);
+}
+[dir="rtl"] .rider-note {
+  border-left: 0;
+  border-right: 2px solid var(--gold);
+}
+[dir="rtl"] .fe-value em {
+  margin-left: 0;
+  margin-right: 0.3rem;
+}
+[dir="rtl"] .check-list li {
+  padding-left: 0;
+  padding-right: 2.2rem;
+}
+[dir="rtl"] .check-list li::before {
+  left: auto;
+  right: 0;
+}
+[dir="rtl"] .wa-fab {
+  right: auto;
+  left: 1.3rem;
+}
+[dir="rtl"] .wa-hint {
+  right: auto;
+  left: 1.3rem;
+}
+/* Keep euro amounts and latin numbers readable inside RTL sentences. */
+[dir="rtl"] .loss-big,
+[dir="rtl"] .calc-unit,
+[dir="rtl"] .stat-num {
+  direction: ltr;
+  unicode-bidi: isolate;
+}

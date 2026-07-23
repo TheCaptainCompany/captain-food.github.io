@@ -6,6 +6,9 @@ Ambition affichée comme cap (à terme, pas encore acquis) : faire de Captain.Fo
 
 Captain.Food recrute actuellement ses tout premiers restaurateurs à Tours. Pour le restaurateur, c'est gratuit : 0 % de commission sur les plats, sans exclusivité ni engagement — il garde ses plateformes actuelles, Captain.Food vient en plus. Le service se finance par une contribution libre des clients, jamais par une commission sur la marge du restaurateur. Seule la livraison a un coût de service, partagé entre le restaurateur (dans la limite d'une marge plancher qu'il fixe) et le client. Les comptes sont ouverts publiquement sur Open Collective (transparence radicale).
 
+## Langues
+La page d'accueil est disponible en 10 langues (français par défaut, puis anglais, espagnol, italien, portugais, allemand, turc, grec, arabe et hébreu — les langues les plus parlées en France) via le paramètre `?lang=` : par exemple https://join.captain.food/?lang=en. L'arabe et l'hébreu sont rendus en droite-à-gauche (RTL). Le catalogue de traductions est machine-lisible en JSON : https://join.captain.food/i18n/generated/en.json (remplacer `en` par fr/es/it/pt/de/tr/el/ar/he).
+
 ## Pages principales
 - [Accueil](https://join.captain.food/): présentation, calculateur de commission (perte estimée par mois et par an), formulaire pour rejoindre le pilote.
 - [Manifeste](https://join.captain.food/manifeste.html): pourquoi le fondateur a lancé Captain.Food, contre l'ubérisation et les commissions extractives.

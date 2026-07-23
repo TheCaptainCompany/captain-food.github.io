@@ -10,7 +10,9 @@ framework, no build step (`.nojekyll` disables Jekyll). A shared footer and
 floating WhatsApp button are injected on every page by `partials.js` (single
 source of truth). All source comments and docs are in English; all visible
 page copy is in French, by design (tutoiement, direct tone, maritime
-"Captain" identity).
+"Captain" identity). The **homepage additionally self-translates client-side
+into 9 more languages** (see "Internationalization" below); French stays the
+canonical, indexed content.
 
 ## Project status & honesty rules
 
@@ -103,9 +105,55 @@ instead" message) in case an ID is ever reset. After first deploy, submit each
 form once and confirm the address in the Formspree dashboard so submissions
 aren't held for verification.
 
+## Internationalization (i18n)
+
+The **homepage** (`index.html`) + the shared chrome (`partials.js` footer,
+WhatsApp bubble) are translated into **10 languages**: French (source) + English, Spanish,
+Italian, Portuguese, German, Turkish, Greek (widely spoken languages in
+France) and **Arabic + Hebrew (rendered RTL)**. How it works:
+
+- **Single source of truth**: [`i18n/translations.yaml`](../i18n/translations.yaml)
+  — same conventions as `specs/translations.yaml` in the product repo
+  (`TheCaptainCompany/captain-food`): one dotted key per string, optional
+  `params` ({placeholder} tokens), `messages` covering **every** declared
+  language.
+- **Annotation**: translatable elements carry `data-i18n` (textContent),
+  `data-i18n-html` (innerHTML, tags preserved by translators) or attribute
+  variants (`data-i18n-aria-label`, `data-i18n-alt`, `data-i18n-content`,
+  `data-i18n-placeholder`). The French in the page IS the fr catalog — the
+  validator extracts it and fails on any drift.
+- **Tooling**: `python3 tools/i18n/i18n.py check` validates (completeness
+  across all languages, placeholder consistency, key parity both ways, fr
+  drift, stale generated files); `… build` emits `i18n/generated/<lang>.json`
+  (committed, since GitHub Pages has no build step). CI runs the check on
+  every push (`.github/workflows/i18n.yml`). Bulk re-imports:
+  `tools/i18n/merge.py`.
+- **Runtime**: [`i18n.js`](../i18n.js) resolves the language
+  (`?lang=` → `cf_lang` cookie → sessionStorage → `navigator.languages` → fr),
+  fetches the JSON catalog when ≠ fr, translates in place, sets
+  `<html lang dir>` (RTL for ar/he — layout fixes live under `[dir="rtl"]`
+  in `styles.css`), and injects a language picker in the header.
+  Dynamic strings in `script.js` (calculator, form errors, Captain quotes)
+  go through `CF_I18N.t(key, frFallback, params)` — **keep the French
+  fallback literals in sync with the YAML fr messages**.
+- **Cookie consent**: switching language via the picker asks the visitor
+  whether to remember the choice; only "yes" writes the `cf_lang` cookie
+  (1 year, first-party, SameSite=Lax). Refusal = sessionStorage only.
+  Browser auto-detection never writes anything, so no banner on landing.
+- **Scope**: homepage only for now. Sub-pages (tarifs, manifeste, SEO intent
+  pages, legal) stay French — the SEO pages target French queries by design
+  and legal pages should remain French. To translate another page: annotate
+  it with `data-i18n` keys, add the keys + 10 translations to
+  `translations.yaml`, include `/i18n.js` before its scripts, add the page to
+  `HTML_SOURCES` in `tools/i18n/i18n.py`, run `build`, and add hreflang
+  `?lang=` alternates to its `<head>` + `sitemap.xml`.
+
 ## SEO & discovery
 
-- `sitemap.xml` lists every indexable page (URLs on `join.captain.food`).
+- `sitemap.xml` lists every indexable page (URLs on `join.captain.food`);
+  the homepage entry carries `xhtml:link` hreflang alternates (`?lang=xx`),
+  mirroring the `<link rel="alternate" hreflang>` tags in `index.html`
+  (+ `og:locale:alternate` and `knowsLanguage` in the JSON-LD).
 - `robots.txt` allows everyone, incl. named AI crawlers (GPTBot, ClaudeBot,
   PerplexityBot…), and points to the sitemap.
 - `llms.txt` gives LLMs a concise, linkable overview.

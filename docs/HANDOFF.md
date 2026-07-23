@@ -51,6 +51,19 @@
 
 ## 5. Ce qui a été fait récemment (cette session)
 
+- **i18n de l'accueil (session 2026-07-23)** : la page d'accueil + le chrome partagé
+  (footer `partials.js`, bulle WhatsApp, chaînes dynamiques de `script.js`) se traduisent
+  côté client en **10 langues** (fr source + en, es, it, pt, de, tr, el, ar, he — ar/he en **RTL**).
+  Source de vérité : `i18n/translations.yaml` (mêmes conventions que
+  `specs/translations.yaml` du repo produit) ; validation + génération :
+  `python3 tools/i18n/i18n.py check|build` (CI : `.github/workflows/i18n.yml` —
+  **échec si une clé manque dans une langue** ou si le fr du YAML dérive du HTML).
+  Runtime `/i18n.js` : détection `?lang=` → cookie `cf_lang` → navigateur, sélecteur de
+  langue dans le header, **consentement demandé avant de poser le cookie** (rien n'est
+  écrit si refus ; l'auto-détection n'écrit jamais rien). SEO : hreflang `?lang=xx`
+  (+ x-default) dans le `<head>` et `sitemap.xml`, `og:locale:alternate`,
+  `knowsLanguage` dans le JSON-LD, section « Langues » dans `llms.txt`.
+  Détail complet : section « Internationalization » de `SITE.md`.
 - Maquettes `/demo` : identité de marque (Poppins/Inter, logo dans le gate), **code partagé** `demo.css`/`demo.js`, **accessibilité clavier**, cadre téléphone responsive, **scroll interne corrigé** (`min-height:0` → le menu défile puis enchaîne vers le formulaire).
 - **Menu haut (`chip-nav`)** ajouté sur **les 13 pages satellites** (version conversion de Yan : 4 repères discrets, un seul CTA « Je rejoins » dominant, FAQ en ancre locale `#faq`).
 - **Maillage interne** : chaque réponse de FAQ des 7 pages SEO se termine par un lien « prochaine étape » vers la page qui répond (`.faq-more`).
