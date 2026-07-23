@@ -2592,3 +2592,11 @@ section[id],
   opacity: 0.85;
   margin-bottom: 0.9rem;
 }
+
+/* Multi-flag languages (Arabic = Maghreb trio, Tamil = India + Sri Lanka):
+   the flag slot lays several small SVGs side by side. */
+.lang-btn-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}

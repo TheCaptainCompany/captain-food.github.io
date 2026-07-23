@@ -39,6 +39,7 @@
     ja: { label: "日本語", dir: "ltr", locale: "ja-JP", og: "ja_JP" },
     th: { label: "ไทย", dir: "ltr", locale: "th-TH", og: "th_TH" },
     hi: { label: "हिन्दी", dir: "ltr", locale: "hi-IN", og: "hi_IN" },
+    ta: { label: "தமிழ்", dir: "ltr", locale: "ta", og: "ta_IN" },
     ar: { label: "العربية", dir: "rtl", locale: "ar", og: "ar_MA" },
     "ar-lb": { label: "عربي لبناني", dir: "rtl", locale: "ar-LB", og: "ar_LB" },
     he: { label: "עברית", dir: "rtl", locale: "he", og: "he_IL" }
@@ -54,8 +55,10 @@
   var originals = null; // snapshot of the French DOM values
 
   // Inline SVG flags (self-contained — no external requests, and emoji flags
-  // don't render on Windows). Simplified civil flags; ar uses Morocco (the
-  // largest Arabic-speaking community in France, matching og:locale ar_MA).
+  // don't render on Windows). Simplified civil flags. Languages spanning
+  // several countries show several flags: standard Arabic groups the Maghreb
+  // (Algeria + Tunisia + Morocco — same written MSA), Tamil shows India +
+  // Sri Lanka. Lebanese Arabic is its own entry with the Lebanese flag.
   function flagSvg(body) {
     return (
       '<svg class="lang-flag" viewBox="0 0 3 2" aria-hidden="true" focusable="false">' +
@@ -72,7 +75,15 @@
     de: flagSvg('<rect width="3" height="2" fill="#000"/><rect y=".667" width="3" height="1.333" fill="#D00"/><rect y="1.333" width="3" height=".667" fill="#FFCE00"/>'),
     tr: flagSvg('<rect width="3" height="2" fill="#E30A17"/><circle cx="1.2" cy="1" r=".5" fill="#fff"/><circle cx="1.32" cy="1" r=".4" fill="#E30A17"/><polygon fill="#fff" points="2.1,1 1.893,.932 1.893,.715 1.764,.891 1.557,.824 1.685,1 1.557,1.176 1.764,1.109 1.893,1.285 1.893,1.068"/>'),
     el: flagSvg('<rect width="3" height="2" fill="#0D5EAF"/><path d="M0,.333H3M0,.778H3M0,1.222H3M0,1.667H3" stroke="#fff" stroke-width=".222"/><rect width="1" height="1.111" fill="#0D5EAF"/><path d="M.5,0 V1.111 M0,.556 H1" stroke="#fff" stroke-width=".222"/>'),
-    ar: flagSvg('<rect width="3" height="2" fill="#C1272D"/><path fill="none" stroke="#006233" stroke-width=".1" d="M1.5,.55 1.236,1.364 1.928,.861 1.072,.861 1.764,1.364 Z"/>'),
+    ar:
+      // Algeria + Tunisia + Morocco — one written Arabic, three flags.
+      flagSvg('<rect width="3" height="2" fill="#fff"/><rect width="1.5" height="2" fill="#006233"/><path fill="#D21034" d="M1.62,.45 A.55,.55 0 1,0 1.62,1.55 A.68,.68 0 1,1 1.62,.45 Z"/><polygon fill="#D21034" points="1.98,1 1.75,1.08 1.8,.85 1.62,.7 1.86,.68 1.95,.45 2.04,.68 2.28,.7 2.1,.85 2.15,1.08"/>') +
+      flagSvg('<rect width="3" height="2" fill="#E70013"/><circle cx="1.5" cy="1" r=".62" fill="#fff"/><path fill="#E70013" d="M1.62,.52 A.5,.5 0 1,0 1.62,1.48 A.6,.6 0 1,1 1.62,.52 Z"/><polygon fill="#E70013" points="1.92,1 1.7,1.08 1.75,.86 1.58,.72 1.8,.7 1.89,.48 1.98,.7 2.2,.72 2.03,.86 2.08,1.08"/>') +
+      flagSvg('<rect width="3" height="2" fill="#C1272D"/><path fill="none" stroke="#006233" stroke-width=".1" d="M1.5,.55 1.236,1.364 1.928,.861 1.072,.861 1.764,1.364 Z"/>'),
+    ta:
+      // Tamil spans India and Sri Lanka.
+      flagSvg('<rect width="3" height="2" fill="#FF9933"/><rect y=".667" width="3" height=".666" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#138808"/><circle cx="1.5" cy="1" r=".26" fill="none" stroke="#000080" stroke-width=".07"/><circle cx="1.5" cy="1" r=".05" fill="#000080"/>') +
+      flagSvg('<rect width="3" height="2" fill="#FFB700"/><rect x=".16" y=".16" width=".55" height="1.68" fill="#00534E"/><rect x=".75" y=".16" width=".55" height="1.68" fill="#FF7900"/><rect x="1.44" y=".16" width="1.4" height="1.68" fill="#8D153A"/>'),
     he: flagSvg('<rect width="3" height="2" fill="#fff"/><rect y=".22" width="3" height=".26" fill="#0038B8"/><rect y="1.52" width="3" height=".26" fill="#0038B8"/><path fill="none" stroke="#0038B8" stroke-width=".1" d="M1.5,.6 1.85,1.2 1.15,1.2 Z M1.5,1.4 1.15,.8 1.85,.8 Z"/>'),
     ro: flagSvg('<rect width="3" height="2" fill="#FCD116"/><rect width="1" height="2" fill="#002B7F"/><rect x="2" width="1" height="2" fill="#CE1126"/>'),
     zh: flagSvg('<rect width="3" height="2" fill="#EE1C25"/><polygon fill="#FFFF00" points=".6,.26 .676,.495 .923,.495 .724,.64 .8,.875 .6,.73 .4,.875 .476,.64 .277,.495 .524,.495"/>'),

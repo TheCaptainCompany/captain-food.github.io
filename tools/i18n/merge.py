@@ -35,6 +35,7 @@ LANGUAGES = {
     "ja": {"label": "日本語", "dir": "ltr"},
     "th": {"label": "ไทย", "dir": "ltr"},
     "hi": {"label": "हिन्दी", "dir": "ltr"},
+    "ta": {"label": "தமிழ்", "dir": "ltr"},
     "ar": {"label": "العربية", "dir": "rtl"},
     "ar-lb": {"label": "عربي لبناني", "dir": "rtl"},
     "he": {"label": "עברית", "dir": "rtl"},
