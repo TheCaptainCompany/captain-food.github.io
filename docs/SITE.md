@@ -152,7 +152,7 @@ license. You may study, run, modify and redistribute it, but **commercial use is
 reserved to social-and-solidarity-economy organisations** (cooperatives,
 non-profit and limited-profit entities). See [`LICENSE.md`](../LICENSE.md) and
 [`LICENSES/AGPL-3.0.txt`](../LICENSES/AGPL-3.0.txt); the canonical text lives in the
-product repo [`Captain-Food/captain-food`](https://github.com/Captain-Food/captain-food).
+product repo [`TheCaptainCompany/captain-food`](https://github.com/TheCaptainCompany/captain-food).
 
 ### Brand reservation
 

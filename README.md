@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Captain-Food/captain-food/main/.github/assets/logo.png" alt="Captain.Food — a mustachioed chef-hatted skull over a crossed golden fork and knife, on a white card" width="190">
+<img src="https://raw.githubusercontent.com/TheCaptainCompany/captain-food/main/.github/assets/logo.png" alt="Captain.Food — a mustachioed chef-hatted skull over a crossed golden fork and knife, on a white card" width="190">
 
 # Captain.Food
 
@@ -11,7 +11,7 @@ The public landing page of Captain.Food — the flag planted at
 independent restaurants and food trucks in **Tours, France**.
 **100 % of your orders. 0 % commission — for real.**
 
-[![indexnow](https://github.com/Captain-Food/captain-food.github.io/actions/workflows/indexnow.yml/badge.svg?branch=main)](https://github.com/Captain-Food/captain-food.github.io/actions/workflows/indexnow.yml)
+[![indexnow](https://github.com/TheCaptainCompany/captain-food.github.io/actions/workflows/indexnow.yml/badge.svg?branch=main)](https://github.com/TheCaptainCompany/captain-food.github.io/actions/workflows/indexnow.yml)
 [![github pages](https://img.shields.io/website?url=https%3A%2F%2Fjoin.captain.food&up_message=live&down_message=down&label=github%20pages&labelColor=0e3a5f&up_color=1c7a4d)](https://join.captain.food)
 
 [![join the crew](https://img.shields.io/badge/join.captain.food-%E2%9A%93%20come%20aboard-e8613a?labelColor=0e3a5f)](https://join.captain.food)
@@ -32,13 +32,13 @@ governed by the social and solidarity economy.
 This repo is the **landing page that opens that conversation**: written in **French**, speaking
 directly to restaurateurs in Tours (tutoiement, maritime "Captain" voice), it explains the model
 honestly and collects contact requests from the restaurants who want in. The platform itself is
-being built next door in [`Captain-Food/captain-food`](https://github.com/Captain-Food/captain-food).
+being built next door in [`TheCaptainCompany/captain-food`](https://github.com/TheCaptainCompany/captain-food).
 
 | Ports of call | |
 | --- | --- |
 | ⚓ [join.captain.food](https://join.captain.food) | the live page — the pitch, the commission calculator, the FAQ, the join form |
-| 🗺️ [`Captain-Food/captain-food`](https://github.com/Captain-Food/captain-food) | the platform repo — specs, backend, the whole ship |
-| 🧭 [`CONTRIBUTING.md`](https://github.com/Captain-Food/captain-food/blob/main/CONTRIBUTING.md) | how to come aboard as a contributor |
+| 🗺️ [`TheCaptainCompany/captain-food`](https://github.com/TheCaptainCompany/captain-food) | the platform repo — specs, backend, the whole ship |
+| 🧭 [`CONTRIBUTING.md`](https://github.com/TheCaptainCompany/captain-food/blob/main/CONTRIBUTING.md) | how to come aboard as a contributor |
 | 📜 [`docs/SITE.md`](docs/SITE.md) | the operating guide — deploy, forms, SEO, analytics, honesty rules |
 | 🏴‍☠️ [`docs/HANDOFF.md`](docs/HANDOFF.md) | project state & pending decisions, for picking work back up |
 

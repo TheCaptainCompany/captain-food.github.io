@@ -52,7 +52,7 @@
           '<li><a href="/financement.html"><span class="fi" aria-hidden="true">🧾</span> Comment on se finance&nbsp;?</a></li>' +
           '<li><a href="/livraison.html"><span class="fi" aria-hidden="true">🛵</span> La livraison, payée juste</a></li>' +
           '<li><a href="https://opencollective.com/captain-food" target="_blank" rel="noopener">' + ICON.oc + ' Nos comptes (Open Collective)</a></li>' +
-          '<li><a href="https://github.com/Captain-Food/captain-food" target="_blank" rel="noopener">' + ICON.github + ' Code source (open source)</a></li>' +
+          '<li><a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">' + ICON.github + ' Code source (open source)</a></li>' +
         '</ul>' +
       '</div>' +
       '<div class="footer-col">' +
