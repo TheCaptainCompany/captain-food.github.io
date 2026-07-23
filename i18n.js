@@ -34,7 +34,13 @@
     de: { label: "Deutsch", dir: "ltr", locale: "de-DE", og: "de_DE" },
     tr: { label: "Türkçe", dir: "ltr", locale: "tr-TR", og: "tr_TR" },
     el: { label: "Ελληνικά", dir: "ltr", locale: "el-GR", og: "el_GR" },
+    ro: { label: "Română", dir: "ltr", locale: "ro-RO", og: "ro_RO" },
+    zh: { label: "中文", dir: "ltr", locale: "zh-CN", og: "zh_CN" },
+    ja: { label: "日本語", dir: "ltr", locale: "ja-JP", og: "ja_JP" },
+    th: { label: "ไทย", dir: "ltr", locale: "th-TH", og: "th_TH" },
+    hi: { label: "हिन्दी", dir: "ltr", locale: "hi-IN", og: "hi_IN" },
     ar: { label: "العربية", dir: "rtl", locale: "ar", og: "ar_MA" },
+    "ar-lb": { label: "عربي لبناني", dir: "rtl", locale: "ar-LB", og: "ar_LB" },
     he: { label: "עברית", dir: "rtl", locale: "he", og: "he_IL" }
   };
   var DEFAULT_LANG = "fr";
@@ -67,7 +73,13 @@
     tr: flagSvg('<rect width="3" height="2" fill="#E30A17"/><circle cx="1.2" cy="1" r=".5" fill="#fff"/><circle cx="1.32" cy="1" r=".4" fill="#E30A17"/><polygon fill="#fff" points="2.1,1 1.893,.932 1.893,.715 1.764,.891 1.557,.824 1.685,1 1.557,1.176 1.764,1.109 1.893,1.285 1.893,1.068"/>'),
     el: flagSvg('<rect width="3" height="2" fill="#0D5EAF"/><path d="M0,.333H3M0,.778H3M0,1.222H3M0,1.667H3" stroke="#fff" stroke-width=".222"/><rect width="1" height="1.111" fill="#0D5EAF"/><path d="M.5,0 V1.111 M0,.556 H1" stroke="#fff" stroke-width=".222"/>'),
     ar: flagSvg('<rect width="3" height="2" fill="#C1272D"/><path fill="none" stroke="#006233" stroke-width=".1" d="M1.5,.55 1.236,1.364 1.928,.861 1.072,.861 1.764,1.364 Z"/>'),
-    he: flagSvg('<rect width="3" height="2" fill="#fff"/><rect y=".22" width="3" height=".26" fill="#0038B8"/><rect y="1.52" width="3" height=".26" fill="#0038B8"/><path fill="none" stroke="#0038B8" stroke-width=".1" d="M1.5,.6 1.85,1.2 1.15,1.2 Z M1.5,1.4 1.15,.8 1.85,.8 Z"/>')
+    he: flagSvg('<rect width="3" height="2" fill="#fff"/><rect y=".22" width="3" height=".26" fill="#0038B8"/><rect y="1.52" width="3" height=".26" fill="#0038B8"/><path fill="none" stroke="#0038B8" stroke-width=".1" d="M1.5,.6 1.85,1.2 1.15,1.2 Z M1.5,1.4 1.15,.8 1.85,.8 Z"/>'),
+    ro: flagSvg('<rect width="3" height="2" fill="#FCD116"/><rect width="1" height="2" fill="#002B7F"/><rect x="2" width="1" height="2" fill="#CE1126"/>'),
+    zh: flagSvg('<rect width="3" height="2" fill="#EE1C25"/><polygon fill="#FFFF00" points=".6,.26 .676,.495 .923,.495 .724,.64 .8,.875 .6,.73 .4,.875 .476,.64 .277,.495 .524,.495"/>'),
+    ja: flagSvg('<rect width="3" height="2" fill="#fff"/><circle cx="1.5" cy="1" r=".55" fill="#BC002D"/>'),
+    th: flagSvg('<rect width="3" height="2" fill="#A51931"/><rect y=".333" width="3" height="1.334" fill="#F4F5F8"/><rect y=".667" width="3" height=".666" fill="#2D2A4A"/>'),
+    hi: flagSvg('<rect width="3" height="2" fill="#FF9933"/><rect y=".667" width="3" height=".666" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#138808"/><circle cx="1.5" cy="1" r=".26" fill="none" stroke="#000080" stroke-width=".07"/><circle cx="1.5" cy="1" r=".05" fill="#000080"/>'),
+    "ar-lb": flagSvg('<rect width="3" height="2" fill="#fff"/><rect width="3" height=".5" fill="#ED1C24"/><rect y="1.5" width="3" height=".5" fill="#ED1C24"/><path fill="#00A651" d="M1.5,.6 1.82,1.14 1.62,1.14 1.62,1.36 1.38,1.36 1.38,1.14 1.18,1.14 Z"/>')
   };
 
   // ---------- helpers ----------
@@ -76,7 +88,7 @@
   }
 
   function readCookie() {
-    var m = document.cookie.match(/(?:^|;\s*)cf_lang=([a-z]{2})/);
+    var m = document.cookie.match(/(?:^|;\s*)cf_lang=([a-z]{2}(?:-[a-z]{2})?)/);
     return m && isLang(m[1]) ? m[1] : null;
   }
 
@@ -88,14 +100,16 @@
   function fromNavigator() {
     var list = navigator.languages || [navigator.language || ""];
     for (var i = 0; i < list.length; i++) {
-      var primary = String(list[i]).toLowerCase().split("-")[0];
+      var tag = String(list[i]).toLowerCase();
+      if (isLang(tag)) return tag; // exact regional match (e.g. ar-lb)
+      var primary = tag.split("-")[0];
       if (isLang(primary)) return primary;
     }
     return null;
   }
 
   function fromQuery() {
-    var m = location.search.match(/[?&]lang=([a-z]{2})/);
+    var m = location.search.match(/[?&]lang=([a-z]{2}(?:-[a-z]{2})?)/);
     return m && isLang(m[1]) ? m[1] : null;
   }
 
@@ -304,49 +318,32 @@
     if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
   }
 
-  // ---------- language picker (custom listbox: flags + selected state) ----------
+  // ---------- language pickers (custom listbox: flags + selected state) ----------
   // A native <select> cannot render flag images (and emoji flags do not render
   // on Windows), so this is a small ARIA listbox: a button showing the current
   // flag + name, a popup listing every language with its flag, and a checkmark
   // on the active one. Keyboard: Enter/Space/arrows open & navigate, Esc closes.
-  var switcher = null; // { button, label, flag, menu, options }
-
-  function closeMenu(refocus) {
-    if (!switcher) return;
-    switcher.menu.hidden = true;
-    switcher.button.setAttribute("aria-expanded", "false");
-    if (refocus) switcher.button.focus();
-  }
-
-  function openMenu() {
-    if (!switcher) return;
-    switcher.menu.hidden = false;
-    switcher.button.setAttribute("aria-expanded", "true");
-    var active = switcher.menu.querySelector('[aria-selected="true"]') ||
-      switcher.options[0];
-    if (active) active.focus();
-  }
+  // Instantiated twice: header nav (drops down) and footer slot (drops up).
+  var switchers = []; // [{ button, label, flag, menu, options }]
 
   function updateSwitcher() {
-    if (!switcher) return;
-    switcher.flag.innerHTML = FLAGS[current] || "";
-    switcher.label.textContent = LANGS[current].label;
-    switcher.button.setAttribute(
-      "aria-label",
-      t("lang.switch_label", "Choisir la langue") + " — " + LANGS[current].label
-    );
-    switcher.options.forEach(function (option) {
-      var on = option.getAttribute("data-lang") === current;
-      option.setAttribute("aria-selected", on ? "true" : "false");
+    switchers.forEach(function (sw) {
+      sw.flag.innerHTML = FLAGS[current] || "";
+      sw.label.textContent = LANGS[current].label;
+      sw.button.setAttribute(
+        "aria-label",
+        t("lang.switch_label", "Choisir la langue") + " — " + LANGS[current].label
+      );
+      sw.options.forEach(function (option) {
+        var on = option.getAttribute("data-lang") === current;
+        option.setAttribute("aria-selected", on ? "true" : "false");
+      });
     });
   }
 
-  function buildSwitcher() {
-    var nav = document.querySelector(".site-header .nav");
-    if (!nav || nav.querySelector(".lang-switch")) return;
-
+  function createSwitcher(parent, dropUp) {
     var wrap = document.createElement("div");
-    wrap.className = "lang-switch";
+    wrap.className = "lang-switch" + (dropUp ? " lang-switch--up" : "");
 
     var button = document.createElement("button");
     button.type = "button";
@@ -368,6 +365,19 @@
     menu.className = "lang-menu";
     menu.setAttribute("role", "listbox");
     menu.hidden = true;
+
+    function closeMenu(refocus) {
+      menu.hidden = true;
+      button.setAttribute("aria-expanded", "false");
+      if (refocus) button.focus();
+    }
+    function openMenu() {
+      menu.hidden = false;
+      button.setAttribute("aria-expanded", "true");
+      var active =
+        menu.querySelector('[aria-selected="true"]') || options[0];
+      if (active) active.focus();
+    }
 
     var options = Object.keys(LANGS).map(function (code) {
       var item = document.createElement("li");
@@ -420,8 +430,18 @@
 
     wrap.appendChild(button);
     wrap.appendChild(menu);
-    nav.appendChild(wrap);
-    switcher = { button: button, label: label, flag: flag, menu: menu, options: options };
+    parent.appendChild(wrap);
+    switchers.push({ button: button, label: label, flag: flag, menu: menu, options: options });
+  }
+
+  function buildSwitchers() {
+    var nav = document.querySelector(".site-header .nav");
+    if (nav && !nav.querySelector(".lang-switch")) createSwitcher(nav, false);
+    // Footer slot(s), injected by partials.js before this script runs.
+    var slots = document.querySelectorAll("[data-lang-slot]");
+    Array.prototype.forEach.call(slots, function (slot) {
+      if (!slot.querySelector(".lang-switch")) createSwitcher(slot, true);
+    });
     updateSwitcher();
   }
 
@@ -450,6 +470,6 @@
   // ---------- boot ----------
   var initial =
     fromQuery() || readCookie() || fromSession() || fromNavigator() || DEFAULT_LANG;
-  buildSwitcher();
+  buildSwitchers();
   if (initial !== DEFAULT_LANG) setLang(initial, { user: false });
 })();

@@ -2570,3 +2570,25 @@ section[id],
   direction: ltr;
   unicode-bidi: isolate;
 }
+
+/* ---------- i18n additions: hero languages line + footer picker ---------- */
+.hero-langs {
+  margin-top: 0.65rem;
+  font-size: 0.88rem;
+  opacity: 0.85;
+}
+.footer-lang-slot {
+  margin: 0.8rem 0 0.5rem;
+}
+/* In the footer the menu drops UP (the picker sits at the bottom of the page). */
+.lang-switch--up .lang-menu {
+  top: auto;
+  bottom: calc(100% + 0.4rem);
+  inset-inline-end: auto;
+  inset-inline-start: 0;
+}
+.footer-langs {
+  font-size: 0.82rem;
+  opacity: 0.85;
+  margin-bottom: 0.9rem;
+}

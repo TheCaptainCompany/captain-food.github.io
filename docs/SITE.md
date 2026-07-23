@@ -11,7 +11,7 @@ floating WhatsApp button are injected on every page by `partials.js` (single
 source of truth). All source comments and docs are in English; all visible
 page copy is in French, by design (tutoiement, direct tone, maritime
 "Captain" identity). The **homepage additionally self-translates client-side
-into 9 more languages** (see "Internationalization" below); French stays the
+into 15 more languages** (see "Internationalization" below); French stays the
 canonical, indexed content.
 
 ## Project status & honesty rules
@@ -108,9 +108,13 @@ aren't held for verification.
 ## Internationalization (i18n)
 
 The **homepage** (`index.html`) + the shared chrome (`partials.js` footer,
-WhatsApp bubble) are translated into **10 languages**: French (source) + English, Spanish,
-Italian, Portuguese, German, Turkish, Greek (widely spoken languages in
-France) and **Arabic + Hebrew (rendered RTL)**. How it works:
+WhatsApp bubble) are translated into **16 languages**: French (source) + English, Spanish,
+Italian, Portuguese, German, Turkish, Greek, Romanian, Chinese (Mandarin),
+Japanese, Thai, Hindi (widely spoken languages in France) and **Arabic,
+Lebanese Arabic + Hebrew (rendered RTL)**. The language picker (flags +
+selected state) appears in the header AND in the footer (drop-up); the page
+states that the future product itself will speak these 16 languages
+(hero.langs / footer.langs keys). How it works:
 
 - **Single source of truth**: [`i18n/translations.yaml`](../i18n/translations.yaml)
   — same conventions as `specs/translations.yaml` in the product repo
@@ -143,7 +147,7 @@ France) and **Arabic + Hebrew (rendered RTL)**. How it works:
 - **Scope**: homepage only for now. Sub-pages (tarifs, manifeste, SEO intent
   pages, legal) stay French — the SEO pages target French queries by design
   and legal pages should remain French. To translate another page: annotate
-  it with `data-i18n` keys, add the keys + 10 translations to
+  it with `data-i18n` keys, add the keys + 16 translations to
   `translations.yaml`, include `/i18n.js` before its scripts, add the page to
   `HTML_SOURCES` in `tools/i18n/i18n.py`, run `build`, and add hreflang
   `?lang=` alternates to its `<head>` + `sitemap.xml`.

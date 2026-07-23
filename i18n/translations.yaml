@@ -1270,6 +1270,18 @@ keys:
       el: "© 2026 Captain.Food — Ανεξάρτητο project υπό κατασκευή στην Tours."
       ar: "© 2026 Captain.Food — مشروع مستقل قيد البناء في Tours."
       he: "© 2026 Captain.Food — פרויקט עצמאי בבנייה ב-Tours."
+  footer.langs:
+    messages:
+      fr: "Captain.Food parlera, à terme, les 16 langues de cette page : français, anglais, espagnol, italien, portugais, allemand, turc, grec, roumain, arabe, arabe libanais, hébreu, chinois (mandarin), japonais, thaï et hindi."
+      en: "In time, Captain.Food will speak this page's 16 languages: French, English, Spanish, Italian, Portuguese, German, Turkish, Greek, Romanian, Arabic, Lebanese Arabic, Hebrew, Chinese (Mandarin), Japanese, Thai and Hindi."
+      es: "Con el tiempo, Captain.Food hablará los 16 idiomas de esta página: francés, inglés, español, italiano, portugués, alemán, turco, griego, rumano, árabe, árabe libanés, hebreo, chino (mandarín), japonés, tailandés e hindi."
+      it: "Col tempo, Captain.Food parlerà le 16 lingue di questa pagina: francese, inglese, spagnolo, italiano, portoghese, tedesco, turco, greco, rumeno, arabo, arabo libanese, ebraico, cinese (mandarino), giapponese, thailandese e hindi."
+      pt: "A prazo, a Captain.Food falará as 16 línguas desta página: francês, inglês, espanhol, italiano, português, alemão, turco, grego, romeno, árabe, árabe libanês, hebraico, chinês (mandarim), japonês, tailandês e hindi."
+      de: "Mit der Zeit wird Captain.Food die 16 Sprachen dieser Seite sprechen: Französisch, Englisch, Spanisch, Italienisch, Portugiesisch, Deutsch, Türkisch, Griechisch, Rumänisch, Arabisch, Libanesisches Arabisch, Hebräisch, Chinesisch (Mandarin), Japanisch, Thailändisch und Hindi."
+      tr: "Zamanla Captain.Food bu sayfanın 16 dilini konuşacak: Fransızca, İngilizce, İspanyolca, İtalyanca, Portekizce, Almanca, Türkçe, Yunanca, Rumence, Arapça, Lübnan Arapçası, İbranice, Çince (Mandarin), Japonca, Tayca ve Hintçe."
+      el: "Με τον καιρό, το Captain.Food θα μιλά τις 16 γλώσσες αυτής της σελίδας: γαλλικά, αγγλικά, ισπανικά, ιταλικά, πορτογαλικά, γερμανικά, τουρκικά, ελληνικά, ρουμανικά, αραβικά, λιβανέζικα αραβικά, εβραϊκά, κινεζικά (μανδαρινικά), ιαπωνικά, ταϊλανδικά και χίντι."
+      ar: "مع الوقت، سيتحدث Captain.Food لغات هذه الصفحة الست عشرة: الفرنسية والإنجليزية والإسبانية والإيطالية والبرتغالية والألمانية والتركية واليونانية والرومانية والعربية والعربية اللبنانية والعبرية والصينية (الماندرين) واليابانية والتايلاندية والهندية."
+      he: "עם הזמן, Captain.Food ידבר את 16 השפות של הדף הזה: צרפתית, אנגלית, ספרדית, איטלקית, פורטוגזית, גרמנית, טורקית, יוונית, רומנית, ערבית, ערבית לבנונית, עברית, סינית (מנדרינית), יפנית, תאית והינדי."
   footer.legal_h:
     messages:
       fr: "Légal"
@@ -1742,6 +1754,18 @@ keys:
       el: "Πλώρη για Tours — ανεξάρτητα εστιατόρια & food trucks"
       ar: "الوجهة: Tours — المطاعم وشاحنات الطعام المستقلة"
       he: "קובעים מסלול ל-Tours — מסעדות ופודטראקים עצמאיים"
+  hero.langs:
+    messages:
+      fr: "Cette page parle 16 langues — et le produit fera pareil : Captain.Food s'adressera à tes clients dans leur langue."
+      en: "This page speaks 16 languages — and the product will too: Captain.Food will talk to your customers in their own language."
+      es: "Esta página habla 16 idiomas — y el producto hará lo mismo: Captain.Food se dirigirá a tus clientes en su idioma."
+      it: "Questa pagina parla 16 lingue — e il prodotto farà lo stesso: Captain.Food parlerà ai tuoi clienti nella loro lingua."
+      pt: "Esta página fala 16 línguas — e o produto fará o mesmo: a Captain.Food falará com os teus clientes na língua deles."
+      de: "Diese Seite spricht 16 Sprachen — und das Produkt wird es auch: Captain.Food spricht deine Gäste in ihrer Sprache an."
+      tr: "Bu sayfa 16 dil konuşuyor — ürün de öyle olacak: Captain.Food müşterilerinle kendi dillerinde konuşacak."
+      el: "Αυτή η σελίδα μιλά 16 γλώσσες — και το προϊόν θα κάνει το ίδιο: το Captain.Food θα μιλά στους πελάτες σου στη γλώσσα τους."
+      ar: "هذه الصفحة تتحدث 16 لغة — والمنتج سيفعل الشيء نفسه: Captain.Food سيخاطب زبائنك بلغتهم."
+      he: "הדף הזה מדבר 16 שפות — וכך גם המוצר: Captain.Food ידבר עם הלקוחות שלך בשפה שלהם."
   hero.note:
     messages:
       fr: "Une plateforme de commande locale à but non lucratif, portée par une association — construite pour ne <strong>jamais</strong> pouvoir se transformer en péage. Pour les indépendants de Tours. On démarre : rien n'est encore construit, c'est maintenant qu'on l'écrit ensemble."

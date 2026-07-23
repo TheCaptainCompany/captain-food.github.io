@@ -30,7 +30,13 @@ LANGUAGES = {
     "de": {"label": "Deutsch", "dir": "ltr"},
     "tr": {"label": "Türkçe", "dir": "ltr"},
     "el": {"label": "Ελληνικά", "dir": "ltr"},
+    "ro": {"label": "Română", "dir": "ltr"},
+    "zh": {"label": "中文", "dir": "ltr"},
+    "ja": {"label": "日本語", "dir": "ltr"},
+    "th": {"label": "ไทย", "dir": "ltr"},
+    "hi": {"label": "हिन्दी", "dir": "ltr"},
     "ar": {"label": "العربية", "dir": "rtl"},
+    "ar-lb": {"label": "عربي لبناني", "dir": "rtl"},
     "he": {"label": "עברית", "dir": "rtl"},
 }
 
@@ -68,7 +74,7 @@ def main():
 
     translations = {"fr": fr}
     for path in sources[1:]:
-        match = re.search(r"-([a-z]{2})\.json$", path.name)
+        match = re.search(r"trans-([a-z]{2}(?:-[a-z]{2})?)\.json$", path.name)
         if not match or match.group(1) not in LANGUAGES:
             sys.exit("cannot infer language from filename: %s" % path)
         translations[match.group(1)] = json.loads(path.read_text(encoding="utf-8"))

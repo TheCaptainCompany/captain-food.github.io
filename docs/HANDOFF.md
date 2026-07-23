@@ -53,7 +53,7 @@
 
 - **i18n de l'accueil (session 2026-07-23)** : la page d'accueil + le chrome partagé
   (footer `partials.js`, bulle WhatsApp, chaînes dynamiques de `script.js`) se traduisent
-  côté client en **10 langues** (fr source + en, es, it, pt, de, tr, el, ar, he — ar/he en **RTL**).
+  côté client en **16 langues** (fr source + en, es, it, pt, de, tr, el, ro, zh, ja, th, hi, ar, ar-lb, he — ar/ar-lb/he en **RTL**). Sélecteur de langue (drapeaux SVG + langue active cochée) dans le header ET le footer (menu vers le haut) ; la page annonce que le produit parlera, à terme, ces 16 langues (`hero.langs`, `footer.langs`).
   Source de vérité : `i18n/translations.yaml` (mêmes conventions que
   `specs/translations.yaml` du repo produit) ; validation + génération :
   `python3 tools/i18n/i18n.py check|build` (CI : `.github/workflows/i18n.yml` —

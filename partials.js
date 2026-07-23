@@ -42,6 +42,10 @@
       '<div class="footer-col">' +
         '<p class="footer-brand"><img class="footer-logo" src="/assets/logo.png" alt="" width="30" height="30"><span class="footer-brand-name">Captain<span class="brand-dot">.</span>Food</span></p>' +
         '<p class="footer-tagline" data-i18n-html="footer.tagline"><em>&laquo;&nbsp;Reprenons les commandes&nbsp;!&nbsp;&raquo;</em><br><em>Une alternative locale et solidaire, à Tours.</em></p>' +
+        // Language picker slot (filled by i18n.js on translated pages) + the
+        // promise that the PRODUCT will speak these languages too.
+        '<div class="footer-lang-slot" data-lang-slot></div>' +
+        '<p class="footer-langs" data-i18n="footer.langs">Captain.Food parlera, à terme, les 16 langues de cette page : français, anglais, espagnol, italien, portugais, allemand, turc, grec, roumain, arabe, arabe libanais, hébreu, chinois (mandarin), japonais, thaï et hindi.</p>' +
         '<ul class="footer-list footer-nav">' +
           '<li><a href="' + sec + '#probleme"><span class="fi" aria-hidden="true">🧭</span> <span data-i18n="footer.nav.problem">Constat</span></a></li>' +
           '<li><a href="' + sec + '#combat"><span class="fi" aria-hidden="true">🍴</span> <span data-i18n="footer.nav.solution">Solution</span></a></li>' +
