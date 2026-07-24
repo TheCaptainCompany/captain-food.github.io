@@ -11,8 +11,10 @@ description: >
   French keeps its historic URLs at the site root and stays x-default.
 
 # Languages whose generated pages are indexable (fr is always indexable at
-# its root URLs). Add a language here after human review of its copy.
-indexable: [en]
+# its root URLs). Product-owner decision 2026-07-24: publish ALL languages —
+# every translated page displays an honest machine-translation notice
+# (i18n.helpnote) with an invitation to help improve the copy.
+indexable: [en, es, it, pt, de, tr, el, ro, zh, ja, th, hi, ta, ar, ar-lb, he]
 
 # Per-page slugs. Key = the French source file; `en` doubles as the slug for
 # every non-Latin-script language. index.html maps to the language root /xx/.

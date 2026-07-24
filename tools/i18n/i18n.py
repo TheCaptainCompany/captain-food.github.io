@@ -56,7 +56,9 @@ HTML_SOURCES = [
         "404.html",
     )
 ]
-JS_SOURCES = [ROOT / "partials.js", ROOT / "i18n.js", ROOT / "script.js"]
+JS_SOURCES = [ROOT / "partials.js", ROOT / "i18n.js", ROOT / "script.js",
+              # the emitter injects catalog keys into generated pages
+              ROOT / "tools" / "i18n" / "emit.py"]
 
 I18N_ATTRS = (
     "data-i18n",

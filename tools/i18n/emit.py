@@ -226,6 +226,7 @@ def transform(source_html, page, lang, strings, slugs, indexable):
     direction, og_locale = LANG_META[lang]
 
     head = None
+    body = None
     for node in walk(doc):
         if node.kind != "element":
             continue
@@ -235,6 +236,8 @@ def transform(source_html, page, lang, strings, slugs, indexable):
             node.set_attr("data-static-lang", lang)
         elif node.tag == "head":
             head = node
+        elif node.tag == "body" and body is None:
+            body = node
 
         # Translations (annotations stay in place — harmless, and they let the
         # runtime re-apply the same language to the injected footer).
@@ -314,6 +317,14 @@ def transform(source_html, page, lang, strings, slugs, indexable):
         insert.append(robots)
     position = (canonical_index + 1) if canonical_index is not None else 0
     head.children[position:position] = insert
+
+    # Honest machine-translation notice at the top of every generated page,
+    # in the page's own language, inviting readers to help improve the copy.
+    if body is not None and "i18n.helpnote" in strings:
+        note = Node("element", "p", [("class", "translation-note")])
+        note.set_attr("data-i18n-html", "i18n.helpnote")
+        note.children = [Node("raw", text=strings["i18n.helpnote"])]
+        body.children[0:0] = [Node("text", text="\n  "), note]
 
     out = []
     serialize(doc, out)
