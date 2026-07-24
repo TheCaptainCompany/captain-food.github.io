@@ -155,6 +155,22 @@ states that the future product itself will speak these 17 languages
   head + `sitemap.xml`, run `build`.
 
 
+## Static per-language pages (SEO URLs)
+
+Every content page also EXISTS as a real per-language file, generated from
+the French source + the catalog by `python3 tools/i18n/i18n.py pages`:
+`/en/pricing.html`, `/ro/preturi.html`, `/ar/index.html`… (French keeps its
+historic root URLs; slug map + per-language `indexable` switch:
+[`i18n/slugs.yaml`](../i18n/slugs.yaml)). Generated pages are translated in
+the served HTML (no JS needed), self-canonical inside the hreflang cluster,
+statically RTL where relevant, internal links point to same-language
+siblings, and carry `noindex,follow` until their language is flipped into
+`indexable` after human review (currently: `en`). Never hand-edit anything
+under `/<lang>/` — CI runs `pages --check` and fails on drift. The runtime
+(`i18n.js`) redirects `?lang=`/cookie/browser-language arrivals on a French
+URL to the static sibling and the switcher navigates between siblings; the
+consent prompt follows the navigation.
+
 ## UI consistency rule (learned the hard way)
 
 A shared visual component must be sized/styled by **one** rule (or one CSS

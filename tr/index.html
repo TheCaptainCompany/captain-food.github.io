@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="tr" dir="ltr" data-static-lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Captain.Food — Tours'da %0 komisyonla online sipariş</title>
+  <meta name="description" data-i18n-content="meta.description" content="Tours'un bağımsız restoranları için %0 komisyonlu online sipariş. Yemeklerin, fiyatların, müşterilerin senin. Kâr amacı gütmeyen yerel proje (hedef: SCIC, ESUS).">
+  <meta name="theme-color" content="#0e3a5f">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="canonical" href="https://join.captain.food/tr/">
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/" />
+  <meta name="robots" content="noindex,follow">
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-content="meta.og.title" content="Captain.Food — Dümeni geri alalım!">
+  <meta property="og:description" data-i18n-content="meta.og.description" content="%0 komisyon, kendi fiyatlarınla kendi yemeklerin, kendi müşterilerin. Tours'un bağımsızları için yerel ve dayanışmacı sipariş.">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="pt_PT">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="el_GR">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="th_TH">
+  <meta property="og:locale:alternate" content="hi_IN">
+  <meta property="og:locale:alternate" content="ta_IN">
+  <meta property="og:locale:alternate" content="ar_MA">
+  <meta property="og:locale:alternate" content="ar_LB">
+  <meta property="og:locale:alternate" content="he_IL">
+  <meta property="og:url" content="https://join.captain.food/tr/">
+  <meta property="og:image" content="https://join.captain.food/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" data-i18n-content="meta.og.image_alt" content="Captain.Food — Dümeni geri alalım! Tours'da %0 komisyon.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-content="meta.og.title" content="Captain.Food — Dümeni geri alalım!">
+  <meta name="twitter:description" data-i18n-content="meta.og.description" content="%0 komisyon, kendi fiyatlarınla kendi yemeklerin, kendi müşterilerin. Tours'un bağımsızları için yerel ve dayanışmacı sipariş.">
+  <meta name="twitter:image" content="https://join.captain.food/assets/og.png">
+  <!-- Fonts: Inter (corps) + Poppins (titres) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Structured data: Organization + WebSite + FAQ (honest — no reviews/LocalBusiness we don't have) -->
+  <!-- Cloudflare Web Analytics (cookieless, aucun bandeau requis) -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;a9fe368f9d994cf6b874cf584aada144&quot;}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">İçeriğe atla</a>
+  <!-- Barre de progression de lecture (remplit au scroll) -->
+  <div class="read-progress" aria-hidden="true"><span></span></div>
+  <!-- ============ NAV ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#contenu" aria-label="Captain.Food, ana sayfa" data-i18n-aria-label="nav.brand_aria">
+        <img src="/assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark">
+        <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
+      </a>
+      <a class="btn btn-primary btn-sm nav-cta" href="#rejoindre" data-i18n="nav.join">Katılıyorum</a>
+    </div>
+    <!-- Menu (repères de la page) -->
+    <nav class="chip-nav" aria-label="Menü" data-i18n-aria-label="nav.menu_aria">
+      <div class="container chip-nav-inner">
+        <a class="chip" href="#probleme" data-i18n="nav.chip.problem">Gerçekler</a>
+        <a class="chip" href="#combat" data-i18n="nav.chip.commission">%0 komisyon</a>
+        <a class="chip" href="/tr/fiyatlar.html" data-i18n="nav.chip.pricing">Ücretler</a>
+        <a class="chip" href="#solution" data-i18n="nav.chip.how">Nasıl çalışır</a>
+        <a class="chip" href="#maquettes" data-i18n="nav.chip.mockups">Taslaklar</a>
+        <a class="chip chip-cta" href="#rejoindre" data-i18n="nav.chip.join">Katılıyorum</a>
+        <a class="chip" href="#faq" data-i18n="nav.chip.faq">SSS</a>
+      </div>
+    </nav>
+  </header>
+  <main id="contenu">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow"><span aria-hidden="true">⚓</span> <span data-i18n="hero.eyebrow">Rota: Tours — bağımsız restoranlar &amp; food truck'lar</span></p>
+          <h1 class="hero-title" data-i18n-html="hero.title">Siparişlerinin %100'ünü geri al.<br>%0 komisyon — hem de gerçekten.</h1>
+          <p class="hero-sub" data-i18n-html="hero.sub">Kendi fiyatlarınla kendi yemeklerin, kendi müşterilerin. <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>, büyük platformların senden aldığını sana geri vermek istiyor.</p>
+          <p class="hero-note" data-i18n-html="hero.note">Bir dernek tarafından yürütülen, kâr amacı gütmeyen yerel bir sipariş platformu — <strong>asla</strong> bir gişeye dönüşemesin diye kuruluyor. Tours'un bağımsızları için. Daha yeni başlıyoruz: henüz hiçbir şey inşa edilmedi, hikâyeyi tam şimdi birlikte yazıyoruz.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#rejoindre" data-i18n="hero.cta_join">Özgür restorancılara katılıyorum</a>
+            <a class="btn btn-ghost" href="https://wa.me/message/LTDD42WUFXINA1" target="_blank" rel="noopener" data-i18n="hero.cta_explain">Sana her şeyi anlatalım</a>
+          </div>
+          <p class="hero-reassure" data-i18n="hero.reassure">Taahhüt yok · yemeklerinde 0 komisyon · müşterilerin de mevcut platformların da sende kalır.</p>
+          <p class="hero-langs"><span aria-hidden="true">🌍</span> <span data-i18n="hero.langs">Bu sayfa 17 dil konuşuyor — ürün de öyle olacak: Captain.Food müşterilerinle kendi dillerinde konuşacak.</span></p>
+        </div>
+        <figure class="hero-portrait">
+          <img src="/assets/captain.png" alt="Kaptan Food: kocaman beyaz bıyıklı, aşçı şapkalı, altın çatalını havaya kaldırmış bir şef" data-i18n-alt="hero.portrait_alt" width="520" height="725">
+          <figcaption id="capitaine-quote" data-i18n="hero.quote.1">« Senin yemeklerin, senin fiyatların, senin müşterilerin. »</figcaption>
+        </figure>
+      </div>
+      <ul class="hero-stats" aria-label="Captain.Food'un sana geri verdikleri" data-i18n-aria-label="hero.stats_aria">
+        <li class="hero-stat"><b>0 %</b><span data-i18n="hero.stat.commission">yemeklerinden komisyon</span></li>
+        <li class="hero-stat"><b>100 %</b><span data-i18n="hero.stat.clients">müşterin, sana ait</span></li>
+        <li class="hero-stat"><b data-i18n="hero.stat.prices_b">Fiyatların</b><span data-i18n="hero.stat.prices">salonda neyse o</span></li>
+        <li class="hero-stat"><b>0 €</b><span data-i18n="hero.stat.signup">kayıt, taahhüt yok</span></li>
+      </ul>
+      <!-- wave divider -->
+      <div class="wave" aria-hidden="true">
+        <svg viewbox="0 0 1440 90" preserveaspectratio="none" focusable="false">
+          <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,45 L1440,90 L0,90 Z"></path>
+        </svg>
+      </div>
+    </section>
+    <!-- ============ PROBLÈME ============ -->
+    <section id="probleme" class="section" aria-labelledby="probleme-titre">
+      <div class="container">
+        <p class="eyebrow eyebrow-center"><span aria-hidden="true">📊</span> <span data-i18n="problem.eyebrow">Gerçekler</span></p>
+        <h2 id="probleme-titre" class="section-title" data-i18n="problem.title">Bu kadarı da fazla!</h2>
+        <p class="section-intro" data-i18n="problem.intro">Büyük platformlarda her sipariş sana sandığından daha pahalıya mal oluyor.</p>
+        <!-- Simulateur dynamique : combien la commission te coûte -->
+        <h3 class="calc-lead-title" data-i18n="calc.lead_title">Komisyon, kâr marjını kemiriyor.</h3>
+        <p class="section-intro" data-i18n="calc.intro">Platformunu seç, aylık cironu gir — her euronun her ay ve her yıl nereye gittiğini gör.</p>
+        <div class="calc" data-calc>
+          <div class="calc-plats" role="group" aria-label="Platformunu seç" data-i18n-aria-label="calc.platforms_aria">
+            <button type="button" class="calc-plat is-active" data-rate="30" aria-pressed="true" style="--plat: #06C167;">
+              <svg class="calc-plat-logo" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 2.8645v4.9972c0 1.8834 1.3315 3.1297 3.0835 3.1297a2.9652 2.9652 0 0 0 2.1502-.876v.7425H6.445V2.8645H5.223v4.9339c0 1.2642-.8696 2.1198-1.9954 2.122-1.1386-.0023-1.997-.834-1.997-2.122V2.8645zm7.3625 0v7.9934h1.163v-.7318a2.9915 2.9915 0 0 0 2.1177.876c1.714.048 3.1295-1.3283 3.1295-3.0429s-1.4155-3.091-3.1295-3.0429a2.9674 2.9674 0 0 0-2.107.876V2.8645zm9.8857 2.0561c-1.6752-.0074-3.0369 1.3492-3.0356 3.0245 0 1.7366 1.3732 3.0373 3.1537 3.0373a3.123 3.123 0 0 0 2.5578-1.2438l-.8495-.6177a2.0498 2.0498 0 0 1-1.7083.8585c-.9763.0126-1.8147-.6915-1.971-1.6553h4.818v-.379c0-1.734-1.254-3.0238-2.9638-3.0245zm6.1632.0667a1.5943 1.5943 0 0 0-1.376.7657v-.7186h-1.163v5.8235h1.1741V7.5465c0-.9023.5581-1.4847 1.3268-1.4847h.4949V4.9886c-.1576.0013-.3186-.0009-.4568-.0013zm-6.2034.944a1.844 1.844 0 0 1 1.8337 1.486H15.424a1.844 1.844 0 0 1 1.784-1.486zm-6.6589.0056c1.1223-.0084 2.0365.8992 2.0364 2.0215-.0026 1.1203-.914 2.0258-2.0343 2.021a2.0151 2.0151 0 0 1-1.4159-.5987A2.0152 2.0152 0 0 1 8.55 7.9592a2.0152 2.0152 0 0 1 .5838-1.422 2.0152 2.0152 0 0 1 1.4153-.6003zM0 12.9864v7.9716h5.7222v-1.3666H1.5458v-1.971h4.0647v-1.314H1.5458v-1.9556h4.1764v-1.3644zm14.5608.4097v1.6861h-1.1519v1.338h1.1545v3.143c0 .7927.5712 1.4209 1.6005 1.4209h1.6425L17.8 19.646h-1.1412c-.3482 0-.5714-.1509-.5714-.464v-2.7683H17.8v-1.3316h-1.7062v-1.686zm-5.2974 1.5275c-1.7348-.0103-3.141 1.4035-3.1214 3.1382.0196 1.7346 1.4575 3.1163 3.1915 3.0668a2.9915 2.9915 0 0 0 1.912-.6655v.532h1.5175v-5.9129h-1.509v.5257a3.0047 3.0047 0 0 0-1.9205-.6835c-.0244-.0007-.0492-.0006-.0701-.0008zm11.771.0077c-1.5855 0-2.7002.6437-2.7002 1.8854 0 .8607.6132 1.4213 1.936 1.695l1.4478.3286c.5694.1095.7224.2585.7224.4906 0 .3701-.438.6022-1.1279.6022-.876 0-1.3774-.1907-1.5723-.8477h-1.533c.219 1.2307 1.1563 2.05 3.0484 2.05h.0022c1.752 0 2.7422-.819 2.7422-1.9534 0-.8059-.5847-1.4084-1.8089-1.6668l-1.2943-.2605c-.7511-.1358-.988-.2738-.988-.5454 0-.357.3616-.5757 1.0295-.5757.7227 0 1.2527.1925 1.406.8473h1.5175c-.0854-1.2286-.9899-2.0497-2.8273-2.0497zM9.467 16.1815c1.0092.0096 1.8188.8369 1.8067 1.8461.0014 1.0046-.8198 1.816-1.8243 1.8025-1.0075-.0048-1.8203-.8256-1.8155-1.833.0048-1.0076.8255-1.8204 1.833-1.8156z"></path></svg>
+              <span class="calc-plat-name">Uber Eats</span>
+              <span class="calc-plat-rate">25-35 %</span>
+            </button>
+            <button type="button" class="calc-plat" data-rate="28" aria-pressed="false" style="--plat: #00CCBC;">
+              <svg class="calc-plat-logo" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.861 0l-1.127 10.584L13.81 1.66 7.777 2.926l1.924 8.922-8.695 1.822 1.535 7.127L17.832 24l3.498-7.744L22.994.636 16.861 0zM11.39 13.61a.755.755 0 01.322.066c.208.093.56.29.63.592.103.434.004.799-.312 1.084v.002c-.315.284-.732.258-1.174.113-.441-.145-.637-.672-.47-1.309.124-.473.71-.544 1.004-.549zm4.142.548c.447-.012.832.186 1.05.543.217.357.107.75-.122 1.143h-.002c-.229.392-.83.445-1.422.16-.399-.193-.397-.684-.353-.983a.922.922 0 01.193-.447c.142-.177.381-.408.656-.416Z"></path></svg>
+              <span class="calc-plat-name">Deliveroo</span>
+              <span class="calc-plat-rate">25-30 %</span>
+            </button>
+          </div>
+          <div class="calc-field calc-field-rate">
+            <label for="calc-rate"><span data-i18n="calc.rate_label">Komisyon oranı</span> <span class="calc-rate-hint" data-i18n="calc.rate_hint">(değiştirilebilir)</span></label>
+            <div class="calc-input-wrap">
+              <input type="number" id="calc-rate" inputmode="decimal" min="0" max="60" step="1" value="30">
+              <span class="calc-unit" aria-hidden="true">%</span>
+            </div>
+          </div>
+          <div class="calc-field calc-field-ca">
+            <label for="calc-ca" data-i18n="calc.ca_label">Bu platformdaki aylık ciron</label>
+            <div class="calc-input-wrap">
+              <input type="number" id="calc-ca" inputmode="numeric" min="0" step="100" value="5000">
+              <span class="calc-unit" aria-hidden="true" data-i18n="calc.ca_unit">€ / ay</span>
+            </div>
+          </div>
+          <div class="calc-loss" data-punch aria-live="polite"></div>
+          <p class="calc-smic" data-smic aria-live="polite"></p>
+          <p class="calc-habitues" data-i18n-html="calc.habitues">Müdavimlerin ise doğrudan sipariş verebilir: <strong>komisyonsuz</strong>.</p>
+          <a class="btn btn-primary btn-block calc-cta" href="#rejoindre" data-calc-cta data-i18n="calc.cta">Siparişlerimi geri alıyorum</a>
+          <p class="calc-reassure" data-i18n-html="calc.reassure">Her durumda sana maliyeti 0 € — <strong>katkıyı müşteri yapar, sen değil.</strong> <a href="financement.html">Nasıl finanse oluyoruz →</a></p>
+          <p class="calc-fine" data-i18n-html="calc.fine">Komisyon hesabı tamamen matematik: ciron × oran. Oranlar yaklaşıktır ve değiştirilebilir: Uber Eats ~%25-35, Deliveroo ~%25-30 (kamuya açık kaynaklara dayalı yaklaşık aralıklar, 2024). « İşverene brüt SMIC maliyeti »: tam zamanlı bir SMIC'in (Fransa'daki asgari ücret) aylık işveren maliyeti — 1 Ocak 2026 itibarıyla brüt SMIC 1.867,02 € (<a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2300" target="_blank" rel="noopener">service-public.gouv.fr</a>), kalan işveren primleri dahil (~1.933 €). Kabaca bir büyüklük, birebir hesap değil.</p>
+        </div>
+        <p class="ratio-punch" data-i18n-html="problem.ratio_punch">Teslim edilen bir siparişte komisyon (~%30), net kâr marjının (~%3) <b>10 katına kadar</b> çıkıyor. Sen çalışıyorsun, kasayı o dolduruyor.</p>
+        <div class="stat-tiles">
+          <div class="stat-tile">
+            <span class="stat-num">~3 %</span>
+            <span class="stat-lbl" data-i18n-html="problem.stat_margin">bir restoranın <strong>ortalama net kâr marjı</strong> bu — teslim edilen her siparişten kesilen komisyonun (~%30) çok altında.</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-num">~8 000</span>
+            <span class="stat-lbl" data-i18n-html="problem.stat_failures">2024'te Fransa'da <strong>batık duruma düşen restoran işletmesi</strong> — yani iki yılda <strong>+%80</strong> artış.</span>
+          </div>
+        </div>
+        <p class="fine-print" data-i18n="problem.sources">Kaynaklar: ortalama net kâr marjı ~%3 (Observatoire Fiducial, UMIH/GHR/SNARR bildirisi, Haziran 2025); 2024 batıkları ve iki yılda +%80 (Altares 2024, L'Hôtellerie-Restauration/GHR aracılığıyla). Batık = koruma, yeniden yapılandırma veya tasfiye süreci; yaklaşık her 3 işletmeden 2'si tasfiyeyle sonuçlanıyor.</p>
+        <blockquote class="pull-quote">
+          <p class="pull-quote-lead" data-i18n="quote.lead">« Bana ne, komisyonu fiyatlarıma yansıtırım olur biter. »</p>
+          <p data-i18n="quote.body">Çoğu kişi böyle düşünüyor. Ama fiyatların şişiyor, müşteri daha az sipariş veriyor — ya da başka yerden. O kaybedilen siparişleri hiçbir zaman görmüyorsun.</p>
+          <p class="pull-quote-kicker" data-i18n="quote.kicker">Komisyonu yansıtmak onu yok etmek değildir. Faturayı cirona kesmektir.</p>
+          <div class="repercuss-inline">
+            <p class="repercuss-q" data-i18n="repercuss.q">Peki ya yansıtırsan? Bak:</p>
+            <div class="repercuss-btns" role="group" aria-label="Fiyatlarına yansıttığın komisyon payı" data-i18n-aria-label="repercuss.aria">
+              <label>
+                <input type="radio" name="rep" value="100" checked>
+                <span data-i18n="repercuss.opt100">%100'ünü yansıtıyorum</span>
+              </label>
+              <label>
+                <input type="radio" name="rep" value="50">
+                <span data-i18n="repercuss.opt50">%50'sini yansıtıyorum</span>
+              </label>
+            </div>
+            <p class="rep-msg rep-100" data-i18n="repercuss.msg100">Online fiyatların iyice şişer. Müşteri karşılaştırır, seni pahalı bulur, daha az sipariş verir — ya da başka yerden. Kâğıt üzerinde marjın kurtulur ama kaybettiğin satışları asla görmezsin.</p>
+            <p class="rep-msg rep-50" data-i18n-html="repercuss.msg50">İki cephede birden kaybedersin: fiyatların yine de artar (yani satış kaybı), <strong>üstelik</strong> diğer yarısını da sen yutarsın (yani marj kaybı).</p>
+          </div>
+        </blockquote>
+        <div class="grid grid-2">
+          <article class="card problem-card">
+            <h3 data-i18n="problem.card1_title">Müşterilerin senin müşterin değil.</h3>
+            <p data-i18n="problem.card1_body">Onları sadık kılmak imkânsız: kullanabileceğin bir sadakat kartı yok ve sipariş alabilmek için platforma bağımlı hale geliyorsun.</p>
+          </article>
+          <article class="card problem-card">
+            <h3 data-i18n="problem.card2_title">Fiyatlarını sen belirlemiyorsun.</h3>
+            <p data-i18n="problem.card2_body">Komisyonlarını karşılamak için online fiyatlarını şişiriyorsun. Üstüne zorunlu promosyonlara ve bağımlı olduğun algoritma değişikliklerine katlanıyorsun — sıralamadaki yerini de bunlar belirliyor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ============ BANDEAU COMBAT — on écrase la commission ============ -->
+    <section id="combat" class="combat-band" aria-label="Captain.Food komisyonu yere seriyor" data-i18n-aria-label="combat.aria">
+      <div class="container combat-inner">
+        <div class="combat-text">
+          <p class="combat-title" data-i18n="combat.title">Komisyon mu? Yere seriyoruz.</p>
+          <p class="combat-sub" data-i18n="combat.sub">Yemeklerinde %0, her zaman. Marjın senin cebinde kalır — bir platformun cebinde değil.</p>
+          <a class="combat-cue" href="#rejoindre" data-i18n="combat.cue">Siparişlerimi geri alıyorum →</a>
+        </div>
+        <figure class="combat-figure">
+          <img src="/assets/captain-commission.webp" alt="Kaptan Food, altın çatalıyla « komisyon » asalağını şişleyip yere çiviliyor" data-i18n-alt="combat.img_alt" width="800" height="1354" loading="lazy">
+        </figure>
+      </div>
+    </section>
+    <!-- ============ DEUX MODÈLES (comparaison générique) ============ -->
+    <section id="modeles" class="section" aria-labelledby="modeles-titre">
+      <div class="container">
+        <div class="section-split">
+          <div class="split-text">
+            <p class="eyebrow eyebrow-center"><span aria-hidden="true">⚖️</span> <span data-i18n="models.eyebrow">İki mantık, tek seçim</span></p>
+            <h2 id="modeles-titre" class="section-title" data-i18n="models.title">İki model, iki mantık</h2>
+            <p class="section-intro" data-i18n="models.intro">Bir yanda seni kemiren komisyon. Diğer yanda %0 ve işinin kontrolü. Rotanı sen seç.</p>
+          </div>
+          <figure class="section-split-figure">
+            <img src="/assets/captain-pills.webp" alt="Kaptan Food iki hap uzatıyor — biri turuncu, biri mavi — iki model arasındaki seçim" data-i18n-alt="models.img_alt" width="900" height="1116" loading="lazy">
+          </figure>
+        </div>
+        <div class="table-scroll">
+          <table class="compare-table">
+            <caption class="sr-only" data-i18n-html="models.caption">Komisyonlu bir platform ile <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> karşılaştırması.</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only" data-i18n="models.col_criteria">Kriter</span></th>
+                <th scope="col" data-i18n="models.col_platform">Komisyonlu platform</th>
+                <th scope="col" class="col-us"><span class="th-brand"><img src="/assets/logo.png" alt="" width="22" height="22"> Captain<span class="brand-dot">.</span>Food</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="models.row1_h">Yemeklerindeki komisyon</th>
+                <td data-i18n="models.row1_them">Sipariş başına %25-35</td>
+                <td class="col-us"><strong class="us-zero">0 %</strong></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row2_h">Fiyatların</th>
+                <td data-i18n="models.row2_them">Komisyonu karşılamak için şişirilmiş</td>
+                <td class="col-us" data-i18n="models.row2_us">Salondakiyle aynı</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row3_h">Müşteri kitlen</th>
+                <td data-i18n="models.row3_them">El konulmuş: kimin sipariş verdiğini bilmiyorsun</td>
+                <td class="col-us" data-i18n="models.row3_us">İlk doğrudan siparişten itibaren senin</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row4_h">Kanalın</th>
+                <td data-i18n="models.row4_them">Onların; onların kurallarına uyarsın</td>
+                <td class="col-us" data-i18n="models.row4_us">Senin, senin adınla</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row5_h">Oyunun kuralları</th>
+                <td data-i18n="models.row5_them">Onlar değiştirir, sen katlanırsın</td>
+                <td class="col-us" data-i18n="models.row5_us">Dayanışma statüsüyle güvence altında (hedef: ESUS/SCIC)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine-print" data-i18n="models.fine">Karşılaştırma iş modelleri arasındadır, belirli bir şirketle değil.</p>
+      </div>
+    </section>
+    <!-- ============ SOLUTION ============ -->
+    <section id="solution" class="section section-alt" aria-labelledby="solution-titre">
+      <div class="container">
+        <div class="section-split">
+          <div class="split-text">
+            <p class="eyebrow eyebrow-center"><span aria-hidden="true">⚓</span> <span data-i18n="solution.eyebrow">Senin bayrağın, senin kuralların</span></p>
+            <h2 id="solution-titre" class="section-title" data-i18n-html="solution.title"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>: senin kanalın, senin kuralların</h2>
+            <p class="section-intro" data-i18n-html="solution.intro"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>, kontrolü sana geri veren yerel bir online sipariş platformu. Online'da da masada da, senin adınla.</p>
+          </div>
+          <figure class="section-split-figure">
+            <img src="/assets/captain-dish.webp" alt="Kaptan Food ışıl ışıl bir tabak sunuyor — biftek, salata, domates: sende kalan değer" data-i18n-alt="solution.img_alt" width="900" height="1124" loading="lazy">
+            <figcaption class="dish-caption" data-i18n="solution.dish_caption">Masaya ne koyuyoruz?</figcaption>
+          </figure>
+        </div>
+        <div class="grid grid-2">
+          <article class="card feature-card">
+            <h3 data-i18n="feature.commission_title">Yemeklerinde %0 komisyon.</h3>
+            <p data-i18n="feature.commission_body">Sattığın her şeyin fiyatının %100'ü sende kalır. Her zaman.</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="feature.site_title">Kendi adınla kendi siten.</h3>
+            <p data-i18n-html="feature.site_body">Başkasının rehberinde kaybolan bir kart değil: sana ait gerçek bir sipariş sitesi, <code>restoranin.captain.food</code> — online vitrinin. Dahil. (Kendi alan adın <code>restoranin.fr</code> mi olsun? İstersen onu da biz kurarız, opsiyonel.)</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="feature.clients_title">Müşteri kitlen sana ait.</h3>
+            <p data-i18n="feature.clients_body">İlk doğrudan siparişten itibaren müşteri veritabanına erişirsin — onlarla bağ kurmak ve geri getirmek için. Bu senin.</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="feature.prices_title">Fiyatların, çift menü derdi olmadan.</h3>
+            <p data-i18n="feature.prices_body">Salondakiyle aynı fiyatlar. Şişirecek bir şey yok, saklayacak bir şey yok.</p>
+          </article>
+        </div>
+        <!-- Financement — zone cliquable vers la page dédiée -->
+        <div class="finance-box">
+          <h3 data-i18n="finance.title">« %0 komisyon — peki siz neyle geçiniyorsunuz? »</h3>
+          <p data-i18n="finance.p1">Gayet haklı bir soru — işte cevabı, dobra dobra.</p>
+          <p data-i18n-html="finance.p2">Önce en önemlisi: <strong>sen, restorancı olarak, yemeklerin üzerinden asla komisyon ödemezsin — her durumda 0 €.</strong> Bu hizmet senin sırtından finanse edilmiyor.</p>
+          <p data-i18n-html="finance.p3">Hizmet, siparişe eklenen <strong>müşteri katkısıyla</strong> finanse ediliyor — <strong>dileyen dilediği kadar</strong>: herkes adil bir alternatifi yaşatmak için gönlünden geleni verir. Bir iddia bu — bilinçli müşterilerin, çok uluslu bir şirket yerine mahalledeki esnafı desteklemeyi tercih edeceği iddiası.</p>
+          <p data-i18n-html="finance.p4">Müşteri bu sefer katkı yapmadı mı? Sorun değil: o siparişte katkı olmaz, sana yine 0 komisyon. Kartla ödeme masrafları, her online tahsilatın standart banka masraflarıdır — <strong>asla yemeklerinden bir yüzde, asla müşteriye eklenen bir ek ücret değil.</strong></p>
+          <a class="card-cue" href="/tr/finansman.html" data-i18n="finance.cue">Nasıl finanse oluyoruz, açık açık →</a>
+        </div>
+        <!-- Exemple chiffré -->
+        <div class="finance-example">
+          <p class="finance-example-tag">
+            <span aria-hidden="true">🧾</span> <span data-i18n="example.tag">Açıklayıcı örnek — 30 €'luk bir sipariş</span>
+          </p>
+          <ul class="finance-example-rows">
+            <li>
+              <span class="fe-label" data-i18n="example.row1_label">Senin eline geçen</span>
+              <span class="fe-value" data-i18n-html="example.row1_value">30 € <em>0 komisyon</em></span>
+            </li>
+            <li>
+              <span class="fe-label" data-i18n="example.row2_label">Müşterinin ödediği</span>
+              <span class="fe-value">32,99 €</span>
+            </li>
+            <li class="fe-detail" data-i18n="example.detail">Yemeklerin için 30 € + müşterinin 2,99 € gönüllü katkısı (örnek)</li>
+          </ul>
+          <p class="finance-example-note" data-i18n-html="example.note">Müşteri katkı yapmak istemiyor mu? Sorun değil, yargı yok: o siparişte katkı olmaz. <strong>Sen ise her durumda yemeklerin üzerinden tek kuruş komisyon ödemezsin.</strong></p>
+          <p class="finance-example-compare" data-i18n-html="example.compare">~%30 komisyonlu bir platformda aynı siparişten eline yalnızca yaklaşık <strong>21 €</strong> geçerdi.</p>
+          <p class="finance-example-note" data-i18n-html="example.delivery"><strong>Teslimatlı</strong> bir siparişse (yakında gelecek kanal), kuryeye insanca ödeme yapmak için bir hizmet bedeli eklenecek — müşteriyle paylaşılan ve senin belirlediğin marjla sınırlanan bir bedel, asla bir komisyon değil. <a href="livraison.html">Teslimatı nasıl ödeyeceğimize bak →</a></p>
+          <p class="finance-example-fine" data-i18n="example.fine">Tutarlar ilkeyi göstermek için verilmiş örneklerdir, fiyat tarifesi değildir.</p>
+        </div>
+        <!-- Trois canaux -->
+        <div class="channels">
+          <figure class="channels-captain" aria-hidden="true">
+            <img src="/assets/captain-channels.webp" alt="" width="1100" height="642" loading="lazy">
+          </figure>
+          <h3 class="channels-title" data-i18n="channels.title">Tek karargâh, siparişlerini almanın üç yolu</h3>
+          <p class="channels-intro" data-i18n-html="channels.intro">Sana ait bir site: <code>restoranin.captain.food</code> (ya da kendi <code>restoranin.fr</code> alan adın). Siparişler doğrudan senin sitenden gelecek — üç şekilde, hepsi yemeklerinde komisyonsuz. Zamanla <strong>captain.food</strong> rehberi, müşterilerin civardaki bağımsızları keşfetmesine yardım edecek (ileride ortak kazanım — bugün aktif bir kanal değil).</p>
+          <div class="grid grid-3">
+            <a class="card channel-card channel-link" href="/tr/teslimat.html">
+              <p class="channel-icon" aria-hidden="true">🛵</p>
+              <h4 data-i18n="channel.delivery_title">Teslimatla</h4>
+              <p data-i18n="channel.delivery_body">Müşterilerin senin sitende, senin adınla online sipariş verir. Aradan pay alan aracı yok.</p>
+              <span class="card-cue" data-i18n="channel.delivery_cue">Teslimatı nasıl ödüyoruz →</span>
+            </a>
+            <article class="card channel-card">
+              <p class="channel-icon" aria-hidden="true">🥡</p>
+              <h4 data-i18n="channel.pickup_title">Gel-al (click and collect)</h4>
+              <p data-i18n="channel.pickup_body">Müşteri önceden sipariş verir, gelip yerinden alır. Basit, doğrudan, ekstra ekipman yok.</p>
+            </article>
+            <article class="card channel-card channel-highlight">
+              <p class="channel-icon" aria-hidden="true">📱</p>
+              <h4 data-i18n="channel.qr_title">Masada, QR kodla</h4>
+              <p data-i18n-html="channel.qr_body">Müşteri kodu okutur, oturduğu yerden sipariş verir. Sipariş mutfağa düşer ve <strong>ödeme her zamanki kasanda kalır</strong> — tahsilatına karışmayız. Dahildir, komisyonsuz.</p>
+            </article>
+          </div>
+          <p class="channels-note" data-i18n="channels.note">Yönetilecek bir kanal daha değil; tüm servisin için tek araç.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ============ MAQUETTES / CO-CONSTRUCTION ============ -->
+    <section id="maquettes" class="section section-alt" aria-labelledby="maquettes-titre">
+      <div class="container narrow">
+        <p class="eyebrow eyebrow-center">⚓ <span data-i18n="mockups.eyebrow">Taslaklar · toplulukla geliştirme</span></p>
+        <h2 id="maquettes-titre" class="section-title" data-i18n="mockups.title">Nasıl görüneceğine bak — ve bizimle birlikte inşa et</h2>
+        <p class="section-intro" data-i18n-html="mockups.intro">İşte kurmak istediğimiz ürünün taslağı. <strong>Henüz hiçbir şey inşa edilmedi</strong> — sana tam da bu yüzden ihtiyacımız var. Müşteri, restorancı ve kurye ekranlarını dene, sonra görüşlerini topluluğun WhatsApp grubunda ya da her taslağın altındaki formdan bize ilet.</p>
+        <div class="mockup-cards">
+          <a class="mockup-card" href="/demo/client.html">
+            <span class="mc-emo" aria-hidden="true">🍽️</span>
+            <span class="mc-role" data-i18n="mockups.client_role">Müşteri</span>
+            <span class="mc-desc" data-i18n="mockups.client_desc">Bir restorandan sipariş: gönüllü katkı, 0 komisyon.</span>
+          </a>
+          <a class="mockup-card" href="/demo/resto.html">
+            <span class="mc-emo" aria-hidden="true">👨‍🍳</span>
+            <span class="mc-role" data-i18n="mockups.resto_role">Restorancı</span>
+            <span class="mc-desc" data-i18n="mockups.resto_desc">Siparişleri al, menünü yönet, gününü gör.</span>
+          </a>
+          <a class="mockup-card" href="/demo/livreur.html">
+            <span class="mc-badge" data-i18n="mockups.rider_badge">yakında</span>
+            <span class="mc-emo" aria-hidden="true">🛵</span>
+            <span class="mc-role" data-i18n="mockups.rider_role">Kurye</span>
+            <span class="mc-desc" data-i18n="mockups.rider_desc">Adil ödenen teslimat — niyetimiz, açık açık.</span>
+          </a>
+        </div>
+        <div class="mockup-actions">
+          <a class="btn btn-primary" href="/demo/" data-i18n="mockups.cta_view">Taslaklara göz at →</a>
+          <a class="btn btn-wa" href="https://community.captain.food" target="_blank" rel="noopener">
+            <svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path>
+            </svg>
+            <span data-i18n="mockups.cta_community">Topluluğa katılıyorum</span>
+          </a>
+        </div>
+        <p class="mockup-note" data-i18n="mockups.note">Her taslağın altında görüşünü bırakabileceğin bir form var. Birlikte ilerliyoruz. ⚓</p>
+      </div>
+    </section>
+    <!-- ============ ESUS / ANTI-PÉAGE ============ -->
+    <section id="esus" class="section" aria-labelledby="esus-titre">
+      <div class="container narrow">
+        <p class="eyebrow eyebrow-center"><span aria-hidden="true">🛟</span> <span data-i18n="esus.eyebrow">Sapmayan bir rota</span></p>
+        <h2 id="esus-titre" class="section-title" data-i18n="esus.title">Asla gişeye dönüşemeyecek bir alternatif</h2>
+        <p class="lead" data-i18n-html="esus.p1"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> basit bir inançtan yola çıkıyor: dijital dünya bir <strong>kamu yararı aracı</strong> olmalı, birkaç teknoloji devinin elindeki bir gişe değil. Sorun para kazanmaları değil — onlara bağımlı hale geldiğinde seni sıkıştırabilmeleri ve onları durduracak hiçbir şeyin olmaması.</p>
+        <p class="lead" data-i18n-html="esus.p2">Bu yüzden kendimize kalıcı emniyet halatları bağlıyoruz. Hedefimiz <strong>toplumsal fayda amaçlı dayanışma şirketi (ESUS)</strong> statüsü — kâr dağıtımını ve varoluş amacını çerçeveye bağlayan bir Fransız yasal statüsü — ve rotamız bir <strong>kooperatif (SCIC)</strong>: restorancıların, kuryelerin ve yurttaşların söz sahibi olacağı bir yapı. Amaç: yapısı gereği, karşısında durduğumuz şeye dönüşememek.</p>
+        <p class="lead" data-i18n-html="esus.p3">Bize sözde güvenmek zorunda kalma diye: hesaplarımızı <a href="https://opencollective.com/captain-food" target="_blank" rel="noopener">Open Collective</a> üzerinde kamuya açıyoruz — alınan ve harcanan her euro herkes tarafından görülebilsin diye. Radikal şeffaflık; slogan değil.</p>
+        <p class="lead" data-i18n-html="esus.p4">Ufkumuz: <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>'un özel bir varlık değil, bir <strong>dijital ortak değer</strong> olması. <strong>Kod açık</strong> — <a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">GitHub'da</a> — <strong><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> Coopyleft</strong> lisansıyla (CoopCycle ruhunda, AGPL v3 tabanlı bir copyleft); ticari kullanımı <strong>sosyal ve dayanışma ekonomisi</strong> yapılarına — kooperatiflere ve kâr amacı gütmeyen kuruluşlara — ayrılmıştır. Rotamız: onu bir <strong>dijital kamu malı</strong> <em>(digital public good)</em> olarak tanıtmak — doğrulanabilir ve en önemlisi <strong>çoğaltılabilir</strong> olsun diye: başka şehirler, başka kooperatifler onu devralabilsin. Kamu yararına bir araç paylaşılır — satılmaz. <a href="manifeste.html">Manifestoyu oku →</a></p>
+        <!-- Problème sociétal n°2 : le livreur précarisé — notre choix : payer mieux, viser le salariat -->
+        <aside class="rider-note">
+          <p class="rider-note-title" data-i18n="esus.rider_title">İkinci mücadele: insanca ödeme alan kurye</p>
+          <p data-i18n-html="esus.rider_body">Uberleşme düzeninde kurye, sıkıştırılan bir değişkendir — güvencesiz, korumasız. Biz tam tersini seçtik: burada, Tours'da <strong>kuryelerimize herkesten iyi ödemek</strong> — ve zamanla onları <strong>maaşlı çalışan yapma</strong> hedefiyle. Adil bir hizmet, insanlara düzgün davranmakla başlar.</p>
+          <p style="margin-top:0.7rem;">
+            <a href="/tr/teslimat.html" data-i18n="esus.rider_link">→ Teslimatı nasıl ödüyoruz, açık açık (örnekli)</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+    <!-- ============ POUR QUI ============ -->
+    <section id="pour-qui" class="section section-alt" aria-labelledby="pourqui-titre">
+      <div class="container">
+        <h2 id="pourqui-titre" class="section-title" data-i18n="who.title">Kimin için?</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3 data-i18n="who.card1_title">Bağımsız restoranlar</h3>
+            <p data-i18n="who.card1_body">başkalarının komisyonu için çalışmaktan bıkanlar.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="who.card2_title">Food truck'lar</h3>
+            <p data-i18n="who.card2_body">kendi adına, ağır ekipman gerektirmeyen basit bir sipariş kanalı isteyenler.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="who.card3_title">Mutfağın zanaatkârları</h3>
+            <p data-i18n="who.card3_body">mahallesine, müdavimlerine, mesleğine bağlı olanlar.</p>
+          </article>
+        </div>
+        <p class="pour-qui-close" data-i18n-html="who.close">En düşük maliyetle en büyük hacmin peşindeki büyük bir zincirsen, muhtemelen birbirimize göre değiliz. Ama işinin dümenini geri almak istiyorsan, <strong>gemiye atla</strong>.</p>
+      </div>
+    </section>
+    <!-- ============ POURQUOI TOURS ============ -->
+    <section id="tours" class="section" aria-labelledby="tours-titre">
+      <div class="container narrow">
+        <p class="eyebrow eyebrow-center"><span aria-hidden="true">📍</span> <span data-i18n="tours.eyebrow">Ana liman</span></p>
+        <h2 id="tours-titre" class="section-title" data-i18n="tours.title">Tours'dan başlıyoruz</h2>
+        <p class="lead" data-i18n-html="tours.p1"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> burada, Tours'da, ilk restorancı grubuyla yola çıkıyor. Her yerde değil, hemen değil: tek bir bölge, hakkıyla, birbirini tanıyan bağımsızlar arasında.</p>
+        <p class="lead" data-i18n-html="tours.p2">Platformu gemiye ilk atlayan restoranlarla birlikte inşa ediyoruz — aracı onların geri bildirimleri şekillendiriyor. Şimdi katılmak, <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>'un ne olacağında söz sahibi olmak demek.</p>
+      </div>
+    </section>
+    <!-- ============ CE QUE ÇA DEMANDE ============ -->
+    <section id="demande" class="section section-alt" aria-labelledby="demande-titre">
+      <div class="container narrow">
+        <h2 id="demande-titre" class="section-title" data-i18n="ask.title">Peki somut olarak benden ne istiyor?</h2>
+        <p class="section-intro" data-i18n="ask.intro">Sandığından azını.</p>
+        <ul class="check-list">
+          <li data-i18n-html="ask.item1"><strong>Kayıt ücretsiz ve taahhütsüz.</strong> Mevcut platformların sende kalır.</li>
+          <li data-i18n-html="ask.item2"><strong>Kurulumu biz üstleniyoruz.</strong> Menünün senkronizasyonu, sayfanın yayına alınması: yanındayız. Henüz bir senkronizasyon aracın yoksa (HubRise gibi), kurmana yardım ederiz — kontrolü sende kalan standart bir hizmet.</li>
+          <li data-i18n-html="ask.item3"><strong>Aceleyle öğrenilecek yeni bir makine yok.</strong> Senin temponda ilerleriz.</li>
+        </ul>
+      </div>
+    </section>
+    <!-- ============ FORMULAIRE / CTA ============ -->
+    <section id="rejoindre" class="section section-cta" aria-labelledby="rejoindre-titre">
+      <div class="container cta-layout">
+        <div class="cta-body">
+          <figure class="cta-captain" aria-hidden="true">
+            <img src="/assets/captain-contact.webp" alt="Kaptan Food, yeni restorancıları gemiye almaya hazır" data-i18n-alt="join.captain_alt" width="900" height="1132" loading="lazy">
+          </figure>
+        <h2 id="rejoindre-titre" class="section-title" data-i18n="join.title">Özgür restorancılara katıl</h2>
+        <p class="section-intro" data-i18n-html="join.intro">Bize iletişim bilgini bırak: <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>'u tanıtmak için seni arayalım — taahhüt yok.</p>
+        <ul class="pre-embark">
+          <li>
+            <strong data-i18n="join.point1_title">Sana maliyeti: 0 €</strong>
+            <p data-i18n="join.point1_body">Yemeklerinde 0 komisyon, kayıt ücretsiz. Hiçbir şey ödemezsin.</p>
+          </li>
+          <li>
+            <strong data-i18n="join.point2_title">Uber Eats &amp; Deliveroo sende kalır</strong>
+            <p data-i18n-html="join.point2_body"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> bunların yanına gelir; hiçbir münhasırlık yok.</p>
+          </li>
+          <li>
+            <strong data-i18n="join.point3_title">Aceleyle kurulacak bir şey yok</strong>
+            <p data-i18n="join.point3_body">Kurulumu biz üstleniriz, senin temponda.</p>
+          </li>
+        </ul>
+        </div>
+        <!-- /.cta-body (stick zone) — the form is a sibling so the Captain stops here -->
+        <form id="pilot-form" class="form" action="https://formspree.io/f/xqevrjwp" method="POST">
+          <div class="field">
+            <label for="resto">
+              <span data-i18n="form.resto_label">Restoranın / food truck'ın adı</span> <span class="req" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="resto" name="resto" autocomplete="organization" required>
+            <p class="field-error" id="resto-error" hidden></p>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="contact"><span data-i18n="form.contact_label">Adın</span> <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="contact" name="contact" autocomplete="name" required>
+              <p class="field-error" id="contact-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email"><span data-i18n="form.email_label">E-posta</span> <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <p class="field-error" id="email-error" hidden></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="telephone"><span data-i18n="form.phone_label">Telefon / WhatsApp</span> <span class="opt" data-i18n="form.optional">(isteğe bağlı)</span></label>
+            <input type="tel" id="telephone" name="telephone" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="mot"><span data-i18n="form.message_label">Bize birkaç kelime</span> <span class="opt" data-i18n="form.optional">(isteğe bağlı)</span></label>
+            <textarea id="mot" name="mot" rows="4" placeholder="Mutfağın, hacimlerin, soruların…" data-i18n-placeholder="form.message_placeholder"></textarea>
+          </div>
+          <div class="field field-consent">
+            <label class="consent">
+              <input type="checkbox" id="consentement" name="consentement" required>
+              <span data-i18n-html="form.consent">İletişim bilgilerimin, bu proje hakkında benimle iletişime geçmek üzere <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> tarafından kullanılmasını kabul ediyorum. Bilgilerim satılmaz ve paylaşılmaz. Silinmelerini istediğim an talep edebilirim. <a href="confidentialite.html">Gizlilik politikasına bak</a>. <span class="req" aria-hidden="true">*</span></span>
+            </label>
+            <p class="field-error" id="consentement-error" hidden></p>
+          </div>
+          <!-- Provenance du lead : passe à "calculateur" via le CTA du calculateur -->
+          <input type="hidden" id="lead-source" name="source" value="site">
+          <!-- Honeypot anti-spam (invisible pour les humains) -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <p class="form-reassure-inline" data-i18n="form.reassure_inline">0 € · taahhüt yok · Uber Eats &amp; Deliveroo sende kalır · aceleyle kurulacak bir şey yok</p>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Özgür restorancılara katılıyorum</button>
+          <p class="form-note" data-i18n="form.note">Verilerin asla satılmaz. Sadece seni geri ararız, o kadar.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+        <!-- Panneau de succès : remplace le formulaire un moment, puis le formulaire revient -->
+        <div class="form-success" id="form-success" tabindex="-1" hidden>
+          <figure class="form-success-captain" aria-hidden="true">
+            <img src="/assets/captain-thumbsup.png" alt="Kaptan Food kaydını selamlamak için başparmağını kaldırıyor" data-i18n-alt="success.img_alt" width="200" height="295">
+          </figure>
+          <p class="form-success-title" role="status" data-i18n="success.title">Alındı ⚓ Gemiye hoş geldin!</p>
+          <p class="form-success-text" data-i18n="success.text">En kısa sürede seni arayacağız. Hemen sohbet etmek ister misin?</p>
+          <div class="form-success-actions">
+            <a class="btn btn-wa" href="https://wa.me/message/LTDD42WUFXINA1" target="_blank" rel="noopener" aria-label="Captain.Food ile WhatsApp'ta sohbet et" data-i18n-aria-label="wa.fab_aria">
+              <svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path>
+              </svg>
+              <span data-i18n-html="success.chat_cta"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> ile sohbet ediyorum</span>
+            </a>
+          </div>
+          <p class="form-success-text" data-i18n-html="success.or_email">Ya da bize yaz: <a href="mailto:miam@captain.food">miam@captain.food</a>.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section" aria-labelledby="faq-titre">
+      <div class="container faq-layout">
+        <figure class="faq-figure" aria-hidden="true">
+          <img src="/assets/captain-explain.webp" alt="Kaptan Food, işaret parmağı şakağında, soruları düşünmeye davet ediyor" data-i18n-alt="faq.img_alt" width="900" height="1123" loading="lazy">
+        </figure>
+        <div class="faq-body">
+          <h2 id="faq-titre" class="section-title" data-i18n="faq.title">Bize sorulan sorular</h2>
+          <p class="section-intro" data-i18n="faq.intro">Restorancıların bize sorduğu her şey — açık açık, lafı dolandırmadan.</p>
+          <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Benim için ücretsiz — peki siz neyle geçiniyorsunuz?</summary>
+            <p data-i18n-html="faq.a1">Senin için: yemeklerinde %0 komisyon, ücretsiz kayıt, her durumda. Hizmet, siparişe tam bir şeffaflıkla eklenen <strong>gönüllü müşteri katkısıyla</strong> finanse edilir (0 € da olabilir, yargı yok) — asla senin tarafından değil. Kartla ödeme masrafları her online tahsilatın standart banka masraflarıdır; müşteriye eklenen bir ek ücret asla değildir. <a href="financement.html">Örnekli tüm ayrıntıya bak.</a></p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Peki müşterilerimin kasada ödediği?</summary>
+            <p data-i18n-html="faq.a2">Her zamanki kasanda ödenen her şeye (yerinde, tezgâhta) karışmayız: <strong>ücretsizdir, nokta</strong> — akışımızın dışındadır. Katkı yalnızca <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> üzerinden <strong>online ödenen</strong> siparişler içindir.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">Ya teslimat maliyeti — onu kim ödeyecek?</summary>
+            <p data-i18n-html="faq.a3">Teslimat <strong>ileride gelecek bir kanal</strong>, henüz aktif değil. Fikir şu: kuryeye düzgün ödeme yapmak (sefer başına en az 7 € hedefliyoruz). Sen yalnızca teslim edilen siparişlerinde, marjının el verdiği kadar katılırdın — tabanını sen belirlerdin, altına asla inmezdik. Farkı müşteri öderdi, tam şeffaflıkla. Yemeklerinden asla komisyon alınmaz. <a href="livraison.html">Hesabı örnekli ayrıntısıyla gör.</a></p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Uber Eats / Deliveroo'dan çıkmam mı gerekiyor?</summary>
+            <p data-i18n-html="faq.a4">Hayır. <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> bunların yanına gelir, hiçbir münhasırlık yok. Birçok restoran ikisini birden tutuyor ve <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>'u kendi hâkim oldukları doğrudan kanal olarak görüyor.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Platformda henüz müşteri yok, neden şimdi kaydolayım?</summary>
+            <p data-i18n="faq.a5">Çünkü sana hiçbir maliyeti yok ve verecek hiçbir münhasırlığın yok. Listeye girersin, ilk doğrudan siparişlerinden itibaren müşteri veritabanını kazanırsın ve biz yola çıkarken aracı sen şekillendirirsin. Gemiye ilk atlayanlar, en çok söz sahibi olanlardır.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Müşterilerimi nasıl geri kazanırım?</summary>
+            <p data-i18n="faq.a6">Sayfanda doğrudan verilen her sipariş sana aittir: müşterilerinin iletişim bilgilerine (onların onayıyla) erişir, bağlılığı kendin kurarsın. Büyük platformların aksine, müşteri kitlene el koymayız.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q7">ESUS şirketi ne demek?</summary>
+            <p data-i18n-html="faq.a7">« Toplumsal fayda amaçlı dayanışma şirketi »: Fransa'da kâr dağıtımını yasal olarak sınırlayan ve sosyal bir amaç şart koşan bir statü. Hedeflediğimiz rota bu — <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>'un, karşı çıktığımız şeye zamanla savrulamayacağının güvencesi.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q8">Peki masada sipariş (QR kod)?</summary>
+            <p data-i18n-html="faq.a8">İki durum var. Müşteri <strong>kasada</strong> ya da yerinde ödüyorsa, bu <strong>akışımızın dışındadır</strong>: %100 ücretsiz, karışmayız. QR üzerinden <strong>online ödüyorsa</strong>, tıpkı bir online siparişte olduğu gibi gönüllü bir katkı eklenebilir. Her durumda senin adınla ve yemeklerinde 0 komisyon.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q9">Kaç dil konuşuyorsunuz — müşterilerim için, benim için, kuryeler için?</summary>
+            <p data-i18n-html="faq.a9"><strong>Başlangıç olarak 17</strong> — çevremizde konuşulan diller. Bu sayfa şimdiden hepsini konuşuyor (yukarıdaki dil seçiciyi dene). Ürün de aynı rotayı izleyecek: müşterilerinin sipariş sitesi, senin restorancı panelin ve zamanla kuryelerin uygulaması. Herkes kendi dilinde — müşterin Tayca ya da Arapça sipariş verir, sen kendi dilinde çalışırsın.</p>
+            <!-- Flag row filled by i18n.js from its language registry (single
+                 source of truth) — one chip per language, tooltip on hover. -->
+            <p class="faq-flags" data-lang-flags></p>
+          </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" data-shared-footer>
+    <noscript>
+      <div class="container footer-bottom">
+        <p><a href="/tr/">Accueil</a> · <a href="/tr/manifesto.html">Le manifeste</a> · <a href="/tr/finansman.html">Comment on se finance ?</a> · <a href="/tr/teslimat.html">La livraison, payée juste</a> · <a href="/tr/#faq">Questions fréquentes</a> · <a href="/tr/yasal-bildirim.html">Mentions légales</a> · <a href="/tr/gizlilik.html">Politique de confidentialité</a><br>© 2026 <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> — Projet indépendant en construction à Tours.</p>
+      </div>
+    </noscript>
+  </footer>
+  <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>

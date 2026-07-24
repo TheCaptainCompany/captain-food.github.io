@@ -67,7 +67,13 @@
   écrit si refus ; l'auto-détection n'écrit jamais rien). SEO : hreflang `?lang=xx`
   (+ x-default) dans le `<head>` et `sitemap.xml`, `og:locale:alternate`,
   `knowsLanguage` dans le JSON-LD, section « Langues » dans `llms.txt`.
-  Détail complet : section « Internationalization » de `SITE.md`.
+  **Pages statiques par langue (SEO)** : chaque page existe aussi en vrai fichier par langue
+  (`/en/pricing.html`, `/ro/preturi.html`…), générée par `python3 tools/i18n/i18n.py pages`
+  (slug map + interrupteur `indexable` par langue dans `i18n/slugs.yaml` — seul `en` est
+  indexable tant que les autres langues n'ont pas été relues par un natif ; les autres sont
+  `noindex,follow`). Canonique propre + cluster hreflang + sitemap ; `?lang=`/cookie
+  redirigent vers la page statique ; ne JAMAIS éditer `/<lang>/` à la main (CI `pages --check`).
+  Détail complet : sections « Internationalization » et « Static per-language pages » de `SITE.md`.
 - Maquettes `/demo` : identité de marque (Poppins/Inter, logo dans le gate), **code partagé** `demo.css`/`demo.js`, **accessibilité clavier**, cadre téléphone responsive, **scroll interne corrigé** (`min-height:0` → le menu défile puis enchaîne vers le formulaire).
 - **Menu haut (`chip-nav`)** ajouté sur **les 13 pages satellites** (version conversion de Yan : 4 repères discrets, un seul CTA « Je rejoins » dominant, FAQ en ancre locale `#faq`).
 - **Maillage interne** : chaque réponse de FAQ des 7 pages SEO se termine par un lien « prochaine étape » vers la page qui répond (`.faq-more`).

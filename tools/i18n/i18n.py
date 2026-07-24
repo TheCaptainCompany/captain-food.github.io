@@ -327,6 +327,9 @@ def main():
         sys.exit(check())
     elif command == "build":
         build()
+    elif command == "pages":
+        import emit
+        sys.exit(emit.run(check_only="--check" in sys.argv))
     elif command == "extract":
         errors = []
         print(json.dumps(extract_fr(errors), ensure_ascii=False, indent=2))

@@ -1,0 +1,113 @@
+version: 1
+description: >
+  URL scheme for the GENERATED per-language static pages (emitted by
+  `python3 tools/i18n/i18n.py pages` into /<lang>/<slug>.html — never
+  hand-edit the output). Latin-script languages get native slugs; non-Latin
+  scripts (el zh ja th hi ta ar ar-lb he) use the English slugs — cleaner
+  than percent-encoded URLs. `indexable` lists the languages whose generated
+  pages may be indexed (self-canonical, listed in hreflang + sitemap); every
+  other language is generated with noindex,follow until a native speaker has
+  reviewed it — flipping a language live is a one-line change here.
+  French keeps its historic URLs at the site root and stays x-default.
+
+# Languages whose generated pages are indexable (fr is always indexable at
+# its root URLs). Add a language here after human review of its copy.
+indexable: [en]
+
+# Per-page slugs. Key = the French source file; `en` doubles as the slug for
+# every non-Latin-script language. index.html maps to the language root /xx/.
+slugs:
+  index.html:
+    en: ""
+  tarifs.html:
+    en: pricing
+    es: precios
+    it: prezzi
+    pt: precos
+    de: preise
+    tr: fiyatlar
+    ro: preturi
+  manifeste.html:
+    en: manifesto
+    es: manifiesto
+    it: manifesto
+    pt: manifesto
+    de: manifest
+    tr: manifesto
+    ro: manifest
+  financement.html:
+    en: funding
+    es: financiacion
+    it: finanziamento
+    pt: financiamento
+    de: finanzierung
+    tr: finansman
+    ro: finantare
+  livraison.html:
+    en: delivery
+    es: reparto
+    it: consegna
+    pt: entrega
+    de: lieferung
+    tr: teslimat
+    ro: livrare
+  alternative-uber-eats-tours.html:
+    en: uber-eats-alternative-tours
+    es: alternativa-uber-eats-tours
+    it: alternativa-uber-eats-tours
+    pt: alternativa-uber-eats-tours
+    de: uber-eats-alternative-tours
+    tr: uber-eats-alternatifi-tours
+    ro: alternativa-uber-eats-tours
+  alternative-deliveroo-tours.html:
+    en: deliveroo-alternative-tours
+    es: alternativa-deliveroo-tours
+    it: alternativa-deliveroo-tours
+    pt: alternativa-deliveroo-tours
+    de: deliveroo-alternative-tours
+    tr: deliveroo-alternatifi-tours
+    ro: alternativa-deliveroo-tours
+  restaurant-sans-commission-tours.html:
+    en: commission-free-restaurant-tours
+    es: restaurante-sin-comision-tours
+    it: ristorante-senza-commissioni-tours
+    pt: restaurante-sem-comissao-tours
+    de: restaurant-ohne-provision-tours
+    tr: komisyonsuz-restoran-tours
+    ro: restaurant-fara-comision-tours
+  commande-en-ligne-restaurant-tours.html:
+    en: online-ordering-restaurant-tours
+    es: pedidos-online-restaurante-tours
+    it: ordini-online-ristorante-tours
+    pt: encomendas-online-restaurante-tours
+    de: online-bestellung-restaurant-tours
+    tr: online-siparis-restoran-tours
+    ro: comenzi-online-restaurant-tours
+  click-and-collect-tours.html:
+    en: click-and-collect-tours
+  livraison-ethique-tours.html:
+    en: ethical-delivery-tours
+    es: reparto-etico-tours
+    it: consegna-etica-tours
+    pt: entrega-etica-tours
+    de: faire-lieferung-tours
+    tr: etik-teslimat-tours
+    ro: livrare-etica-tours
+  restaurants-tours-indre-et-loire.html:
+    en: restaurants-tours-indre-et-loire
+  confidentialite.html:
+    en: privacy
+    es: privacidad
+    it: privacy
+    pt: privacidade
+    de: datenschutz
+    tr: gizlilik
+    ro: confidentialitate
+  mentions-legales.html:
+    en: legal-notice
+    es: aviso-legal
+    it: note-legali
+    pt: aviso-legal
+    de: impressum
+    tr: yasal-bildirim
+    ro: mentiuni-legale

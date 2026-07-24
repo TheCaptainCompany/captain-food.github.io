@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-static-lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="pricing.meta_title">الأسعار: إنه مجاني للمطاعم — Captain.Food</title>
+  <meta name="description" data-i18n-content="pricing.meta_description" content="تسعيرة Captain.Food للمطاعم وشاحنات الطعام: مجاني. عمولة 0%، اشتراك 0 €، ولا رسوم خفية. المنصة تعيش من المساهمة الطوعية للزبائن.">
+  <meta name="theme-color" content="#0e3a5f">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="canonical" href="https://join.captain.food/ar/pricing.html">
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/tarifs.html" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/en/pricing.html" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/tarifs.html" />
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-content="pricing.og_title" content="الأسعار: إنه مجاني للمطاعم">
+  <meta property="og:description" data-i18n-content="pricing.og_description" content="عمولة 0%، اشتراك 0 €، ولا رسوم خفية. Captain.Food مجاني للمطاعم؛ المنصة تعيش من المساهمة الطوعية للزبائن.">
+  <meta property="og:url" content="https://join.captain.food/ar/pricing.html">
+  <meta property="og:site_name" content="Captain.Food">
+  <meta property="og:locale" content="ar_MA">
+  <meta property="og:image" content="https://join.captain.food/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" data-i18n-content="meta.og.image_alt" content="Captain.Food — لنستعيد زمام الطلبات! عمولة 0%، في Tours.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-content="pricing.og_title" content="الأسعار: إنه مجاني للمطاعم">
+  <meta name="twitter:description" data-i18n-content="pricing.twitter_description" content="عمولة 0%، اشتراك 0 €، ولا رسوم خفية. المنصة تعيش من المساهمة الطوعية للزبائن.">
+  <meta name="twitter:image" content="https://join.captain.food/assets/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .tarif-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--good);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1.6rem, 4vw, 2.8rem);
+      text-align: center;
+      max-width: 540px;
+      margin: 2.2rem auto 0;
+    }
+    .tarif-for {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+    .tarif-price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(4.5rem, 17vw, 7.5rem);
+      color: var(--good);
+      line-height: 0.95;
+      margin: 0.5rem 0 0.2rem;
+    }
+    .tarif-price-sub {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+    .tarif-list {
+      list-style: none;
+      margin: 1.8rem 0 0;
+      padding: 0;
+      text-align: left;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .tarif-list li {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      color: var(--ink);
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+    .tarif-list li::before {
+      content: "✓";
+      color: var(--good);
+      font-weight: 800;
+      flex: none;
+      font-size: 1.1rem;
+    }
+    .tarif-list strong { color: var(--navy); }
+    .tarif-cta { margin-top: 1.9rem; }
+    .tarif-catch {
+      max-width: 640px;
+      margin: 2.6rem auto 0;
+      background: var(--parchment-alt);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+    }
+    .tarif-catch h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+    .tarif-catch p { color: var(--ink-soft); }
+    .tarif-catch p + p { margin-top: 0.7rem; }
+    .tarif-bet-list { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .tarif-bet-list li { color: var(--ink-soft); margin-bottom: 0.55rem; line-height: 1.5; }
+    .tarif-bet-list strong { color: var(--navy); }
+    .tarif-note {
+      background: rgba(232, 97, 58, 0.1);
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin: 1.4rem 0 0;
+      color: var(--ink);
+    }
+    .tarif-faq { max-width: 640px; margin: 2.6rem auto 0; }
+    .tarif-actions { text-align: center; margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    /* Le Capitaine casse la grille tarifaire (illustration) */
+    .killwall { max-width: 620px; margin: 2.2rem auto 0; text-align: center; }
+    .killwall img { width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: 0 10px 30px rgba(10, 30, 50, 0.14); }
+    .killwall figcaption { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-top: 1.1rem; }
+    .killwall figcaption strong { color: var(--navy); }
+  </style>
+  <!-- Cloudflare Web Analytics (cookieless) -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;a9fe368f9d994cf6b874cf584aada144&quot;}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">الانتقال إلى المحتوى</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/ar/" aria-label="Captain.Food، الصفحة الرئيسية" data-i18n-aria-label="nav.brand_aria">
+        <img src="/assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark">
+        <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
+      </a>
+      <a class="btn btn-primary btn-sm nav-cta" href="/ar/#rejoindre" data-i18n="nav.join">أنضمّ الآن</a>
+    </div>
+      <nav class="chip-nav" aria-label="القائمة" data-i18n-aria-label="nav.menu_aria">
+      <div class="container chip-nav-inner">
+        <a class="chip" href="/ar/#solution" data-i18n="nav.chip.how">كيف يعمل</a>
+        <a class="chip" href="/ar/pricing.html" data-i18n="nav.chip.pricing">الأسعار</a>
+        <a class="chip" href="/demo/" data-i18n="nav.chip.mockups">النماذج</a>
+        <a class="chip" href="#faq" data-i18n="nav.chip.faq">الأسئلة الشائعة</a>
+      </div>
+    </nav>
+  </header>
+  <main id="contenu" class="section">
+    <div class="container narrow">
+      <p class="eyebrow eyebrow-center"><span aria-hidden="true">🏷️</span> <span data-i18n="nav.chip.pricing">الأسعار</span></p>
+      <h1 class="section-title" data-i18n="pricing.h1">إنه مجاني. نقطة.</h1>
+      <p class="section-intro" data-i18n-html="pricing.intro">تبحث عن السعر؟ لا وجود له. <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> <strong>مجاني</strong> للمطاعم وشاحنات الطعام — لا عمولة، ولا اشتراك، ولا رسوم خفية.</p>
+      <p class="section-intro" style="margin-top:0.6rem;" data-i18n-html="pricing.intro2">ولن يكون هناك <strong>جدول أسعار</strong> أبدًا: هذا ليس منتجًا تجاريًا، بل <strong>مشاع رقمي مفتوح المصدر</strong> — نافع للجميع، ويبنيه الجميع. <a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">الكود مفتوح</a> (برخصة <strong><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> Coopyleft</strong> — كوبيليفت مبنية على AGPL، يقتصر استخدامها التجاري على الاقتصاد الاجتماعي والتضامني).</p>
+      <!-- Le Capitaine casse la grille tarifaire -->
+      <figure class="killwall">
+        <img src="/assets/captain-killgrid.webp" alt="الكابتن فود يهشّم بضربة شوكة جدول أسعار من ثلاث باقات مدفوعة (Starter وPro وPremium)." data-i18n-alt="pricing.killwall_alt" width="1402" height="1122" loading="lazy">
+        <figcaption data-i18n-html="pricing.killwall_caption">في أماكن أخرى، تختار باقة (وتدفع العمولة رغم ذلك). <strong>هنا، لا جدول أسعار أصلًا.</strong> مثال توضيحي — نقارن نماذج، ولا نستهدف أحدًا.</figcaption>
+      </figure>
+      <!-- La carte "tarif" : la réponse, tout de suite -->
+      <div class="tarif-card">
+        <p class="tarif-for" data-i18n="pricing.card_for">المطاعم وشاحنات الطعام المستقلة</p>
+        <p class="tarif-price">0 €<span class="tarif-price-sub" data-i18n="pricing.price_sub">لك، اليوم — ونقاتل ليدوم ذلك</span></p>
+        <ul class="tarif-list">
+          <li data-i18n-html="pricing.card_li1"><strong>عمولة 0%</strong> على أطباقك — لا نسبة من هامشك أبدًا.</li>
+          <li data-i18n-html="pricing.card_li2"><strong>اشتراك 0 €</strong>، لا باقة شهرية، ولا مستوى مدفوع.</li>
+          <li data-i18n-html="pricing.card_li3"><strong>تسجيل بـ0 €</strong> و0 رسوم تجهيز.</li>
+          <li data-i18n-html="pricing.card_li4"><strong>0 التزام</strong> — تحتفظ بـUber Eats &amp; Deliveroo بالتوازي.</li>
+          <li data-i18n-html="pricing.card_li5"><strong>زبائنك يبقون لك</strong>، منذ أول طلب مباشر.</li>
+        </ul>
+        <div class="tarif-cta">
+          <a class="btn btn-primary btn-block" href="/ar/#rejoindre" data-i18n="hero.cta_join">أنضمّ إلى أصحاب المطاعم الأحرار</a>
+        </div>
+      </div>
+      <p class="tarif-note" data-i18n-html="pricing.note">⚓ <strong>لم يُبنَ شيء بعد.</strong> <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> ينطلق من Tours، مع أوائل أصحاب المطاعم. والنموذج واضح منذ البداية: مجاني لك، وبكل صدق.</p>
+      <!-- Le "piège" : il n'y en a pas -->
+      <div class="tarif-catch">
+        <h2 data-i18n="pricing.catch_title">«مجاني… فأين الفخ؟»</h2>
+        <p data-i18n-html="pricing.catch_p1">لا فخ. المنصة تعيش من <strong>المساهمة الطوعية لمستخدميها</strong>: عند الطلب، يمكن للزبون أن يضيف مساهمة حرة إلى سلته إن رغب — <strong>0 € خيار وارد، وبلا إحراج</strong>. إنه رهان: أن الزبائن الواعين يفضّلون دعم تجارتهم المحلية على دعم شركة متعددة الجنسيات.</p>
+        <p data-i18n-html="pricing.catch_p2">أما أنت، فلا تدفع شيئًا: لا نسبة من هامشك أبدًا، ولا رسم إضافي يُضاف مكانك أبدًا. المشروع تحمله <strong>جمعية غير ربحية</strong>، بُني بحيث لا يستطيع أبدًا التحول إلى بوابة رسوم. <a href="financement.html">كيف نموّل أنفسنا، بوضوح ←</a></p>
+      </div>
+      <!-- Le pari + le plan B, en toute transparence -->
+      <div class="tarif-catch">
+        <h2 data-i18n="pricing.bet_title">رهاننا، بشفافية كاملة</h2>
+        <p data-i18n-html="pricing.bet_p1">المجانية تقوم على <strong>رهان</strong>: أن تكفي المساهمة الطوعية لتشغيل هذا المشاع. نحن نؤمن بذلك — ونقول لك بلا مواربة ما الذي سيحدث لو لم يتحقق.</p>
+        <p data-i18n-html="pricing.bet_p2">لن يكون الأمر أبدًا <strong>جدول أسعار ولا هامش ربح</strong>. في أسوأ الأحوال، سنتقاسم <strong>بسعر التكلفة</strong> الحد الأدنى اللازم لتغطية التشغيل:</p>
+        <ul class="tarif-bet-list">
+          <li data-i18n-html="pricing.bet_li1"><strong>من جهة الزبون</strong> — مشاركة صغيرة في مصاريف التشغيل عند الطلب. وكل ما يُدفع فوقها يبقى مساهمة.</li>
+          <li data-i18n-html="pricing.bet_li2"><strong>من جهة صاحب المطعم</strong> — حصة من التكاليف الفعلية، موزعة على عدد أصحاب المطاعم المنضمين: <strong>كلما زاد عددنا، قلّت الحصة</strong>. لا عمولة أبدًا، ولا نسبة من أطباقك أبدًا.</li>
+        </ul>
+        <p data-i18n-html="pricing.bet_p3"><strong>وبمجرد أن يسمح النموذج بذلك</strong>، <strong>يختفي</strong> كل هذا: عودة إلى المجانية. الهدف ليس بيع منتج، بل الحفاظ على مشاع مفتوح للجميع.</p>
+      </div>
+      <!-- Ancrage : pendant ce temps, une plateforme te prend combien ? -->
+      <p class="ratio-punch" style="margin-top:2.6rem;" data-i18n-html="pricing.ratio_punch">بينما تقتطع منصةٌ ما يصل إلى <b>10 أضعاف</b> هامشك، هنا المبلغ <b>0 €</b>. <a href="index.html#probleme">احسب خسارتك الحالية ←</a></p>
+      <!-- FAQ -->
+      <div class="tarif-faq">
+        <figure class="faq-topper" aria-hidden="true">
+          <img src="/assets/captain-explain.webp" alt="" width="900" height="1123" loading="lazy">
+        </figure>
+        <h2 id="faq" class="section-title" style="font-size:1.5rem;" data-i18n="faq.title">الأسئلة التي تصلنا</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="pricing.faq1_q">هل هو فعلًا مجاني 100% لمطعمي؟</summary>
+            <p data-i18n="pricing.faq1_a">نعم. عمولة 0% على أطباقك، اشتراك 0 €، 0 رسوم تسجيل أو تجهيز، وبدون التزام. والتسعيرة واحدة للجميع: مجاني.</p>
+          </details>
+          <details>
+            <summary data-i18n="pricing.faq2_q">هل هناك اشتراك أو باقة خفية؟</summary>
+            <p data-i18n="pricing.faq2_a">لا. لا اشتراك، ولا باقة، ولا مستوى «بريميوم» مدفوع. وما يُدفع في صندوقك المعتاد (في المحل، عند الكاونتر) لا نمسّه أيضًا.</p>
+          </details>
+          <details>
+            <summary data-i18n="pricing.faq3_q">إذن، ممّ تعيشون؟</summary>
+            <p data-i18n-html="pricing.faq3_a">من المساهمة الطوعية للزبائن (0 € خيار وارد). إنه رهان: إن لم يكفِ، فلا عمولة ولا جدول أسعار أبدًا — في أسوأ الأحوال تقاسمٌ بسعر التكلفة (مشاركة صغيرة في المصاريف من جهة الزبون، وحصة من التكاليف الفعلية من جهة صاحب المطعم)، مصيره الزوال بمجرد أن يسمح النموذج بذلك. ولن يكون على حسابك أبدًا. <a href="financement.html">اطّلع على التفاصيل كاملة.</a></p>
+          </details>
+        </div>
+      </div>
+      <div class="tarif-actions">
+        <a class="btn btn-primary" href="/ar/#rejoindre" data-i18n="hero.cta_join">أنضمّ إلى أصحاب المطاعم الأحرار</a>
+        <a class="btn btn-wa" href="https://community.captain.food" target="_blank" rel="noopener"><svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path></svg><span data-i18n="mockups.cta_community">أنضمّ إلى المجتمع</span></a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" data-shared-footer>
+    <noscript>
+      <div class="container footer-bottom">
+        <p><a href="/ar/">Accueil</a> · <a href="/ar/pricing.html">Tarifs</a> · <a href="/ar/funding.html">Comment on se finance ?</a> · <a href="/ar/manifesto.html">Le manifeste</a> · <a href="/ar/#faq">Questions fréquentes</a> · <a href="/ar/legal-notice.html">Mentions légales</a><br>© 2026 <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> — Projet indépendant en construction à Tours.</p>
+      </div>
+    </noscript>
+  </footer>
+  <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
+</body>
+</html>
