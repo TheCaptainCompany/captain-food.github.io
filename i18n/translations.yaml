@@ -13256,3 +13256,24 @@ keys:
       ar: "لمن هذا؟"
       ar-lb: "لمين هالشغلة؟"
       he: "בשביל מי?"
+
+  # ---- i18n (translation-quality notice on generated pages) ----
+  i18n.helpnote:
+    messages:
+      fr: "Cette page a été traduite automatiquement depuis le français — pardon si certaines tournures sonnent faux ! Aide-nous à améliorer la traduction : <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      en: "This page was machine-translated from French — apologies if some phrasing sounds off! Help us improve the translation: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      es: "Esta página se ha traducido automáticamente del francés — ¡perdona si algo suena raro! Ayúdanos a mejorar la traducción: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      it: "Questa pagina è stata tradotta automaticamente dal francese — scusa se qualche frase suona strana! Aiutaci a migliorare la traduzione: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      pt: "Esta página foi traduzida automaticamente do francês — desculpa se algo soar estranho! Ajuda-nos a melhorar a tradução: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      de: "Diese Seite wurde automatisch aus dem Französischen übersetzt — entschuldige, falls etwas holprig klingt! Hilf uns, die Übersetzung zu verbessern: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      tr: "Bu sayfa Fransızcadan otomatik çevrildi — bazı ifadeler kulağa tuhaf geliyorsa kusura bakma! Çeviriyi geliştirmemize yardım et: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      el: "Αυτή η σελίδα μεταφράστηκε αυτόματα από τα γαλλικά — συγγνώμη αν κάτι ακούγεται περίεργα! Βοήθησέ μας να βελτιώσουμε τη μετάφραση: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      ro: "Această pagină a fost tradusă automat din franceză — scuze dacă unele formulări sună ciudat! Ajută-ne să îmbunătățim traducerea: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      zh: "本页由法语自动翻译而来——如有生硬之处，敬请谅解！欢迎帮我们改进翻译：<a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      ja: "このページはフランス語から自動翻訳されています。不自然な表現があったらごめんなさい！翻訳の改善にご協力ください：<a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      th: "หน้านี้แปลอัตโนมัติจากภาษาฝรั่งเศส — ขออภัยหากบางประโยคฟังดูแปลก ช่วยเราปรับปรุงคำแปลได้ที่ <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      hi: "यह पेज फ़्रेंच से स्वचालित रूप से अनुवादित है — कोई वाक्य अटपटा लगे तो क्षमा करें! अनुवाद सुधारने में हमारी मदद करें: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      ta: "இந்தப் பக்கம் பிரெஞ்சிலிருந்து தானாக மொழிபெயர்க்கப்பட்டது — சில வாக்கியங்கள் இயல்பாக இல்லாவிட்டால் மன்னிக்கவும்! மொழிபெயர்ப்பை மேம்படுத்த உதவுங்கள்: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      ar: "تُرجمت هذه الصفحة آليًا من الفرنسية — نعتذر إن بدت بعض العبارات غريبة! ساعدنا على تحسين الترجمة: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      ar-lb: "هالصفحة مترجمة أوتوماتيكيًا من الفرنسي — سامحونا إذا في عبارات مش مزبوطة! ساعدونا نحسّن الترجمة: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
+      he: "העמוד הזה תורגם אוטומטית מצרפתית — סליחה אם משהו נשמע מוזר! עזרו לנו לשפר את התרגום: <a href=\"mailto:miam@captain.food\">miam@captain.food</a> ⚓"
