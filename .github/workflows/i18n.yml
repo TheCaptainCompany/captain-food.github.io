@@ -13,7 +13,7 @@ on:
     paths:
       - "i18n/**"
       - "tools/i18n/**"
-      - "index.html"
+      - "**/*.html"
       - "partials.js"
       - "i18n.js"
       - "script.js"
@@ -35,3 +35,6 @@ jobs:
 
       - name: Validate translations (completeness, drift, generated files)
         run: python3 tools/i18n/i18n.py check
+
+      - name: Validate generated per-language pages (drift gate)
+        run: python3 tools/i18n/i18n.py pages --check

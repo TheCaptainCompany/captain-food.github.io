@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="it" dir="ltr" data-static-lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Captain.Food — Ordini online 0 commissioni, a Tours</title>
+  <meta name="description" data-i18n-content="meta.description" content="Ordini online senza commissioni per ristoranti e food truck indipendenti di Tours. I tuoi piatti, i tuoi prezzi, i tuoi clienti. Progetto locale no profit.">
+  <meta name="theme-color" content="#0e3a5f">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="canonical" href="https://join.captain.food/it/">
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/" />
+  <meta name="robots" content="noindex,follow">
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-content="meta.og.title" content="Captain.Food — Riprendiamoci le comande!">
+  <meta property="og:description" data-i18n-content="meta.og.description" content="0 commissioni, i tuoi piatti ai tuoi prezzi, i tuoi clienti. L'ordine online locale e solidale per gli indipendenti di Tours.">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="pt_PT">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="el_GR">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="th_TH">
+  <meta property="og:locale:alternate" content="hi_IN">
+  <meta property="og:locale:alternate" content="ta_IN">
+  <meta property="og:locale:alternate" content="ar_MA">
+  <meta property="og:locale:alternate" content="ar_LB">
+  <meta property="og:locale:alternate" content="he_IL">
+  <meta property="og:url" content="https://join.captain.food/it/">
+  <meta property="og:image" content="https://join.captain.food/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" data-i18n-content="meta.og.image_alt" content="Captain.Food — Riprendiamoci le comande! 0 commissioni, a Tours.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-content="meta.og.title" content="Captain.Food — Riprendiamoci le comande!">
+  <meta name="twitter:description" data-i18n-content="meta.og.description" content="0 commissioni, i tuoi piatti ai tuoi prezzi, i tuoi clienti. L'ordine online locale e solidale per gli indipendenti di Tours.">
+  <meta name="twitter:image" content="https://join.captain.food/assets/og.png">
+  <!-- Fonts: Inter (corps) + Poppins (titres) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Structured data: Organization + WebSite + FAQ (honest — no reviews/LocalBusiness we don't have) -->
+  <!-- Cloudflare Web Analytics (cookieless, aucun bandeau requis) -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;a9fe368f9d994cf6b874cf584aada144&quot;}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">Vai al contenuto</a>
+  <!-- Barre de progression de lecture (remplit au scroll) -->
+  <div class="read-progress" aria-hidden="true"><span></span></div>
+  <!-- ============ NAV ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#contenu" aria-label="Captain.Food, home" data-i18n-aria-label="nav.brand_aria">
+        <img src="/assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark">
+        <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
+      </a>
+      <a class="btn btn-primary btn-sm nav-cta" href="#rejoindre" data-i18n="nav.join">Mi unisco</a>
+    </div>
+    <!-- Menu (repères de la page) -->
+    <nav class="chip-nav" aria-label="Menu" data-i18n-aria-label="nav.menu_aria">
+      <div class="container chip-nav-inner">
+        <a class="chip" href="#probleme" data-i18n="nav.chip.problem">Il problema</a>
+        <a class="chip" href="#combat" data-i18n="nav.chip.commission">0% commissioni</a>
+        <a class="chip" href="/it/prezzi.html" data-i18n="nav.chip.pricing">Prezzi</a>
+        <a class="chip" href="#solution" data-i18n="nav.chip.how">Come funziona</a>
+        <a class="chip" href="#maquettes" data-i18n="nav.chip.mockups">Mockup</a>
+        <a class="chip chip-cta" href="#rejoindre" data-i18n="nav.chip.join">Mi unisco</a>
+        <a class="chip" href="#faq" data-i18n="nav.chip.faq">FAQ</a>
+      </div>
+    </nav>
+  </header>
+  <main id="contenu">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow"><span aria-hidden="true">⚓</span> <span data-i18n="hero.eyebrow">Rotta su Tours — ristoranti &amp; food truck indipendenti</span></p>
+          <h1 class="hero-title" data-i18n-html="hero.title">Riprenditi il 100% dei tuoi ordini.<br>0% di commissioni, sul serio.</h1>
+          <p class="hero-sub" data-i18n-html="hero.sub">I tuoi piatti ai tuoi prezzi, i tuoi clienti tutti tuoi. <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> vuole restituirti quello che le grandi piattaforme ti hanno preso.</p>
+          <p class="hero-note" data-i18n-html="hero.note">Una piattaforma di ordini locale e no profit, portata avanti da un'associazione — costruita per non potersi <strong>mai</strong> trasformare in un casello. Per gli indipendenti di Tours. Stiamo partendo: non c'è ancora niente di costruito, è adesso che lo scriviamo insieme.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#rejoindre" data-i18n="hero.cta_join">Mi unisco ai ristoratori liberi</a>
+            <a class="btn btn-ghost" href="https://wa.me/message/LTDD42WUFXINA1" target="_blank" rel="noopener" data-i18n="hero.cta_explain">Ti spieghiamo tutto</a>
+          </div>
+          <p class="hero-reassure" data-i18n="hero.reassure">Senza vincoli · 0 commissioni sui tuoi piatti · i tuoi clienti restano tuoi — e tieni le tue piattaforme attuali.</p>
+          <p class="hero-langs"><span aria-hidden="true">🌍</span> <span data-i18n="hero.langs">Questa pagina parla 17 lingue — e il prodotto farà lo stesso: Captain.Food parlerà ai tuoi clienti nella loro lingua.</span></p>
+        </div>
+        <figure class="hero-portrait">
+          <img src="/assets/captain.png" alt="Il Capitan Food, chef con toque e grandi baffi bianchi, che brandisce una forchetta dorata" data-i18n-alt="hero.portrait_alt" width="520" height="725">
+          <figcaption id="capitaine-quote" data-i18n="hero.quote.1">«I tuoi piatti, i tuoi prezzi, i tuoi clienti.»</figcaption>
+        </figure>
+      </div>
+      <ul class="hero-stats" aria-label="Quello che Captain.Food ti restituisce" data-i18n-aria-label="hero.stats_aria">
+        <li class="hero-stat"><b>0 %</b><span data-i18n="hero.stat.commission">di commissioni sui tuoi piatti</span></li>
+        <li class="hero-stat"><b>100 %</b><span data-i18n="hero.stat.clients">dei tuoi clienti, tutti tuoi</span></li>
+        <li class="hero-stat"><b data-i18n="hero.stat.prices_b">I tuoi prezzi</b><span data-i18n="hero.stat.prices">gli stessi che in sala</span></li>
+        <li class="hero-stat"><b>0 €</b><span data-i18n="hero.stat.signup">d'iscrizione, senza vincoli</span></li>
+      </ul>
+      <!-- wave divider -->
+      <div class="wave" aria-hidden="true">
+        <svg viewbox="0 0 1440 90" preserveaspectratio="none" focusable="false">
+          <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,45 L1440,90 L0,90 Z"></path>
+        </svg>
+      </div>
+    </section>
+    <!-- ============ PROBLÈME ============ -->
+    <section id="probleme" class="section" aria-labelledby="probleme-titre">
+      <div class="container">
+        <p class="eyebrow eyebrow-center"><span aria-hidden="true">📊</span> <span data-i18n="problem.eyebrow">Il problema</span></p>
+        <h2 id="probleme-titre" class="section-title" data-i18n="problem.title">Esagerano!</h2>
+        <p class="section-intro" data-i18n="problem.intro">Sulle grandi piattaforme, ogni ordine ti costa più di quanto credi.</p>
+        <!-- Simulateur dynamique : combien la commission te coûte -->
+        <h3 class="calc-lead-title" data-i18n="calc.lead_title">La commissione ti divora il margine.</h3>
+        <p class="section-intro" data-i18n="calc.intro">Scegli la tua piattaforma, inserisci il tuo fatturato mensile — e guarda dove finisce ogni euro, ogni mese e ogni anno.</p>
+        <div class="calc" data-calc>
+          <div class="calc-plats" role="group" aria-label="Scegli la tua piattaforma" data-i18n-aria-label="calc.platforms_aria">
+            <button type="button" class="calc-plat is-active" data-rate="30" aria-pressed="true" style="--plat: #06C167;">
+              <svg class="calc-plat-logo" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 2.8645v4.9972c0 1.8834 1.3315 3.1297 3.0835 3.1297a2.9652 2.9652 0 0 0 2.1502-.876v.7425H6.445V2.8645H5.223v4.9339c0 1.2642-.8696 2.1198-1.9954 2.122-1.1386-.0023-1.997-.834-1.997-2.122V2.8645zm7.3625 0v7.9934h1.163v-.7318a2.9915 2.9915 0 0 0 2.1177.876c1.714.048 3.1295-1.3283 3.1295-3.0429s-1.4155-3.091-3.1295-3.0429a2.9674 2.9674 0 0 0-2.107.876V2.8645zm9.8857 2.0561c-1.6752-.0074-3.0369 1.3492-3.0356 3.0245 0 1.7366 1.3732 3.0373 3.1537 3.0373a3.123 3.123 0 0 0 2.5578-1.2438l-.8495-.6177a2.0498 2.0498 0 0 1-1.7083.8585c-.9763.0126-1.8147-.6915-1.971-1.6553h4.818v-.379c0-1.734-1.254-3.0238-2.9638-3.0245zm6.1632.0667a1.5943 1.5943 0 0 0-1.376.7657v-.7186h-1.163v5.8235h1.1741V7.5465c0-.9023.5581-1.4847 1.3268-1.4847h.4949V4.9886c-.1576.0013-.3186-.0009-.4568-.0013zm-6.2034.944a1.844 1.844 0 0 1 1.8337 1.486H15.424a1.844 1.844 0 0 1 1.784-1.486zm-6.6589.0056c1.1223-.0084 2.0365.8992 2.0364 2.0215-.0026 1.1203-.914 2.0258-2.0343 2.021a2.0151 2.0151 0 0 1-1.4159-.5987A2.0152 2.0152 0 0 1 8.55 7.9592a2.0152 2.0152 0 0 1 .5838-1.422 2.0152 2.0152 0 0 1 1.4153-.6003zM0 12.9864v7.9716h5.7222v-1.3666H1.5458v-1.971h4.0647v-1.314H1.5458v-1.9556h4.1764v-1.3644zm14.5608.4097v1.6861h-1.1519v1.338h1.1545v3.143c0 .7927.5712 1.4209 1.6005 1.4209h1.6425L17.8 19.646h-1.1412c-.3482 0-.5714-.1509-.5714-.464v-2.7683H17.8v-1.3316h-1.7062v-1.686zm-5.2974 1.5275c-1.7348-.0103-3.141 1.4035-3.1214 3.1382.0196 1.7346 1.4575 3.1163 3.1915 3.0668a2.9915 2.9915 0 0 0 1.912-.6655v.532h1.5175v-5.9129h-1.509v.5257a3.0047 3.0047 0 0 0-1.9205-.6835c-.0244-.0007-.0492-.0006-.0701-.0008zm11.771.0077c-1.5855 0-2.7002.6437-2.7002 1.8854 0 .8607.6132 1.4213 1.936 1.695l1.4478.3286c.5694.1095.7224.2585.7224.4906 0 .3701-.438.6022-1.1279.6022-.876 0-1.3774-.1907-1.5723-.8477h-1.533c.219 1.2307 1.1563 2.05 3.0484 2.05h.0022c1.752 0 2.7422-.819 2.7422-1.9534 0-.8059-.5847-1.4084-1.8089-1.6668l-1.2943-.2605c-.7511-.1358-.988-.2738-.988-.5454 0-.357.3616-.5757 1.0295-.5757.7227 0 1.2527.1925 1.406.8473h1.5175c-.0854-1.2286-.9899-2.0497-2.8273-2.0497zM9.467 16.1815c1.0092.0096 1.8188.8369 1.8067 1.8461.0014 1.0046-.8198 1.816-1.8243 1.8025-1.0075-.0048-1.8203-.8256-1.8155-1.833.0048-1.0076.8255-1.8204 1.833-1.8156z"></path></svg>
+              <span class="calc-plat-name">Uber Eats</span>
+              <span class="calc-plat-rate">25-35 %</span>
+            </button>
+            <button type="button" class="calc-plat" data-rate="28" aria-pressed="false" style="--plat: #00CCBC;">
+              <svg class="calc-plat-logo" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.861 0l-1.127 10.584L13.81 1.66 7.777 2.926l1.924 8.922-8.695 1.822 1.535 7.127L17.832 24l3.498-7.744L22.994.636 16.861 0zM11.39 13.61a.755.755 0 01.322.066c.208.093.56.29.63.592.103.434.004.799-.312 1.084v.002c-.315.284-.732.258-1.174.113-.441-.145-.637-.672-.47-1.309.124-.473.71-.544 1.004-.549zm4.142.548c.447-.012.832.186 1.05.543.217.357.107.75-.122 1.143h-.002c-.229.392-.83.445-1.422.16-.399-.193-.397-.684-.353-.983a.922.922 0 01.193-.447c.142-.177.381-.408.656-.416Z"></path></svg>
+              <span class="calc-plat-name">Deliveroo</span>
+              <span class="calc-plat-rate">25-30 %</span>
+            </button>
+          </div>
+          <div class="calc-field calc-field-rate">
+            <label for="calc-rate"><span data-i18n="calc.rate_label">Percentuale di commissione</span> <span class="calc-rate-hint" data-i18n="calc.rate_hint">(modificabile)</span></label>
+            <div class="calc-input-wrap">
+              <input type="number" id="calc-rate" inputmode="decimal" min="0" max="60" step="1" value="30">
+              <span class="calc-unit" aria-hidden="true">%</span>
+            </div>
+          </div>
+          <div class="calc-field calc-field-ca">
+            <label for="calc-ca" data-i18n="calc.ca_label">Il tuo fatturato mensile su questa piattaforma</label>
+            <div class="calc-input-wrap">
+              <input type="number" id="calc-ca" inputmode="numeric" min="0" step="100" value="5000">
+              <span class="calc-unit" aria-hidden="true" data-i18n="calc.ca_unit">€ / mese</span>
+            </div>
+          </div>
+          <div class="calc-loss" data-punch aria-live="polite"></div>
+          <p class="calc-smic" data-smic aria-live="polite"></p>
+          <p class="calc-habitues" data-i18n-html="calc.habitues">I tuoi clienti abituali, invece, possono ordinare direttamente da te: <strong>senza commissioni</strong>.</p>
+          <a class="btn btn-primary btn-block calc-cta" href="#rejoindre" data-calc-cta data-i18n="calc.cta">Mi riprendo i miei ordini</a>
+          <p class="calc-reassure" data-i18n-html="calc.reassure">0 € per te, in ogni caso — <strong>è il cliente che contribuisce, non tu.</strong> <a href="financement.html">Come ci finanziamo →</a></p>
+          <p class="calc-fine" data-i18n-html="calc.fine">Il calcolo della commissione è fattuale: il tuo fatturato × la percentuale. Percentuali indicative e modificabili: Uber Eats ~25-35%, Deliveroo ~25-30% (forchette indicative, fonti pubbliche, 2024). «SMIC lordo per il datore»: costo mensile per il datore di lavoro di uno SMIC (il salario minimo legale francese) a tempo pieno — SMIC lordo 1 867,02 € al 1º gennaio 2026 (<a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2300" target="_blank" rel="noopener">service-public.gouv.fr</a>), contributi datoriali residui inclusi (~1 933 €). Un ordine di grandezza, non un estratto conto.</p>
+        </div>
+        <p class="ratio-punch" data-i18n-html="problem.ratio_punch">Su un ordine consegnato, la commissione (~30%) pesa <b>fino a 10×</b> il tuo margine netto (~3%). Tu lavori, lei incassa.</p>
+        <div class="stat-tiles">
+          <div class="stat-tile">
+            <span class="stat-num">~3 %</span>
+            <span class="stat-lbl" data-i18n-html="problem.stat_margin">è il <strong>margine netto medio</strong> di un ristorante — molto meno della commissione (~30%) prelevata su ogni ordine consegnato.</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-num">~8 000</span>
+            <span class="stat-lbl" data-i18n-html="problem.stat_failures"><strong>attività di ristorazione in procedura concorsuale</strong> in Francia nel 2024, ovvero <strong>+80%</strong> in due anni.</span>
+          </div>
+        </div>
+        <p class="fine-print" data-i18n="problem.sources">Fonti: margine netto medio ~3% (Observatoire Fiducial, comunicato UMIH/GHR/SNARR, giugno 2025); procedure concorsuali 2024 e +80% in due anni (Altares 2024, via L'Hôtellerie-Restauration/GHR). Una procedura concorsuale = salvaguardia, amministrazione controllata o liquidazione; circa 2 su 3 finiscono in liquidazione.</p>
+        <blockquote class="pull-quote">
+          <p class="pull-quote-lead" data-i18n="quote.lead">«Chi se ne frega, la commissione la scarico sui prezzi.»</p>
+          <p data-i18n="quote.body">È quello che si dicono in molti. Ma i tuoi prezzi lievitano, il cliente ordina meno — o altrove. Quegli ordini persi, tu non li vedi mai.</p>
+          <p class="pull-quote-kicker" data-i18n="quote.kicker">Scaricare la commissione non significa annullarla. Significa farla pagare al tuo fatturato.</p>
+          <div class="repercuss-inline">
+            <p class="repercuss-q" data-i18n="repercuss.q">E se la scarichi sui prezzi? Guarda:</p>
+            <div class="repercuss-btns" role="group" aria-label="Quota della commissione scaricata sui tuoi prezzi" data-i18n-aria-label="repercuss.aria">
+              <label>
+                <input type="radio" name="rep" value="100" checked>
+                <span data-i18n="repercuss.opt100">Scarico il 100%</span>
+              </label>
+              <label>
+                <input type="radio" name="rep" value="50">
+                <span data-i18n="repercuss.opt50">Scarico il 50%</span>
+              </label>
+            </div>
+            <p class="rep-msg rep-100" data-i18n="repercuss.msg100">I tuoi prezzi online lievitano parecchio. Il cliente confronta, ti trova più caro e ordina meno — o altrove. Il tuo margine è salvo sulla carta, ma le vendite perse non le vedi mai.</p>
+            <p class="rep-msg rep-50" data-i18n-html="repercuss.msg50">Perdi su entrambi i fronti: i tuoi prezzi salgono comunque (quindi meno volume), <strong>e</strong> l'altra metà la assorbi tu (quindi meno margine).</p>
+          </div>
+        </blockquote>
+        <div class="grid grid-2">
+          <article class="card problem-card">
+            <h3 data-i18n="problem.card1_title">I tuoi clienti non sono tuoi clienti.</h3>
+            <p data-i18n="problem.card1_body">Impossibile fidelizzarli: niente carta fedeltà utilizzabile, e per avere ordini diventi dipendente dalla piattaforma.</p>
+          </article>
+          <article class="card problem-card">
+            <h3 data-i18n="problem.card2_title">I prezzi non li decidi tu.</h3>
+            <p data-i18n="problem.card2_body">Per assorbire la loro commissione, gonfi il listino online. E subisci le promozioni forzate e i cambi di algoritmo da cui dipendi — che decidono la tua posizione.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ============ BANDEAU COMBAT — on écrase la commission ============ -->
+    <section id="combat" class="combat-band" aria-label="Captain.Food mette al tappeto la commissione" data-i18n-aria-label="combat.aria">
+      <div class="container combat-inner">
+        <div class="combat-text">
+          <p class="combat-title" data-i18n="combat.title">La commissione? La mettiamo al tappeto.</p>
+          <p class="combat-sub" data-i18n="combat.sub">0% sui tuoi piatti, sempre. Il tuo margine resta nelle tue tasche — non in quelle di una piattaforma.</p>
+          <a class="combat-cue" href="#rejoindre" data-i18n="combat.cue">Mi riprendo i miei ordini →</a>
+        </div>
+        <figure class="combat-figure">
+          <img src="/assets/captain-commission.webp" alt="Il Capitan Food infilza con la sua forchetta dorata il parassita «commissione» e lo inchioda al suolo" data-i18n-alt="combat.img_alt" width="800" height="1354" loading="lazy">
+        </figure>
+      </div>
+    </section>
+    <!-- ============ DEUX MODÈLES (comparaison générique) ============ -->
+    <section id="modeles" class="section" aria-labelledby="modeles-titre">
+      <div class="container">
+        <div class="section-split">
+          <div class="split-text">
+            <p class="eyebrow eyebrow-center"><span aria-hidden="true">⚖️</span> <span data-i18n="models.eyebrow">Due logiche, una scelta</span></p>
+            <h2 id="modeles-titre" class="section-title" data-i18n="models.title">Due modelli, due logiche</h2>
+            <p class="section-intro" data-i18n="models.intro">Da una parte, la commissione che ti divora. Dall'altra, 0% e il controllo della tua attività. A te scegliere la rotta.</p>
+          </div>
+          <figure class="section-split-figure">
+            <img src="/assets/captain-pills.webp" alt="Il Capitan Food porge due pillole — una arancione, una blu — la scelta tra due modelli" data-i18n-alt="models.img_alt" width="900" height="1116" loading="lazy">
+          </figure>
+        </div>
+        <div class="table-scroll">
+          <table class="compare-table">
+            <caption class="sr-only" data-i18n-html="models.caption">Confronto tra una piattaforma a commissione e <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>.</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only" data-i18n="models.col_criteria">Criterio</span></th>
+                <th scope="col" data-i18n="models.col_platform">Piattaforma a commissione</th>
+                <th scope="col" class="col-us"><span class="th-brand"><img src="/assets/logo.png" alt="" width="22" height="22"> Captain<span class="brand-dot">.</span>Food</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="models.row1_h">Commissioni sui tuoi piatti</th>
+                <td data-i18n="models.row1_them">Dal 25 al 35% per ordine</td>
+                <td class="col-us"><strong class="us-zero">0 %</strong></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row2_h">I tuoi prezzi</th>
+                <td data-i18n="models.row2_them">Gonfiati per assorbire la commissione</td>
+                <td class="col-us" data-i18n="models.row2_us">Gli stessi che in sala</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row3_h">La tua clientela</th>
+                <td data-i18n="models.row3_them">Confiscata: non sai chi ordina</td>
+                <td class="col-us" data-i18n="models.row3_us">Tua, dal primo ordine diretto</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row4_h">Il tuo canale</th>
+                <td data-i18n="models.row4_them">Il loro: segui le loro regole</td>
+                <td class="col-us" data-i18n="models.row4_us">Il tuo, a tuo nome</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row5_h">Le regole del gioco</th>
+                <td data-i18n="models.row5_them">Cambiano, e tu subisci</td>
+                <td class="col-us" data-i18n="models.row5_us">Blindate da uno statuto solidale (rotta ESUS/SCIC)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine-print" data-i18n="models.fine">Confronto tra modelli economici, non su un attore in particolare.</p>
+      </div>
+    </section>
+    <!-- ============ SOLUTION ============ -->
+    <section id="solution" class="section section-alt" aria-labelledby="solution-titre">
+      <div class="container">
+        <div class="section-split">
+          <div class="split-text">
+            <p class="eyebrow eyebrow-center"><span aria-hidden="true">⚓</span> <span data-i18n="solution.eyebrow">La tua bandiera, le tue regole</span></p>
+            <h2 id="solution-titre" class="section-title" data-i18n-html="solution.title"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>: il tuo canale, le tue regole</h2>
+            <p class="section-intro" data-i18n-html="solution.intro"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> è una piattaforma di ordini online locale che ti ridà il controllo. Online e al tavolo, a tuo nome.</p>
+          </div>
+          <figure class="section-split-figure">
+            <img src="/assets/captain-dish.webp" alt="Il Capitan Food presenta un piatto luminoso — bistecca, insalata, pomodori: il valore che resta a te" data-i18n-alt="solution.img_alt" width="900" height="1124" loading="lazy">
+            <figcaption class="dish-caption" data-i18n="solution.dish_caption">Cosa mettiamo in tavola?</figcaption>
+          </figure>
+        </div>
+        <div class="grid grid-2">
+          <article class="card feature-card">
+            <h3 data-i18n="feature.commission_title">0% di commissioni sui tuoi piatti.</h3>
+            <p data-i18n="feature.commission_body">Tieni il 100% del prezzo di quello che vendi. Sempre.</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="feature.site_title">Il tuo sito, a tuo nome.</h3>
+            <p data-i18n-html="feature.site_body">Non una scheda affogata nell'elenco di qualcun altro: un vero sito di ordini tutto tuo, <code>iltuoristorante.captain.food</code>, la tua vetrina online. Incluso. (Vuoi il tuo dominio <code>iltuoristorante.fr</code>? Te lo configuriamo noi, come opzione.)</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="feature.clients_title">La tua clientela appartiene a te.</h3>
+            <p data-i18n="feature.clients_body">Dal primo ordine diretto, accedi alla tua base clienti — per fidelizzarli e farli tornare. È tua.</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="feature.prices_title">I tuoi prezzi, senza doppio listino.</h3>
+            <p data-i18n="feature.prices_body">Gli stessi prezzi che in sala. Niente da gonfiare, niente da nascondere.</p>
+          </article>
+        </div>
+        <!-- Financement — zone cliquable vers la page dédiée -->
+        <div class="finance-box">
+          <h3 data-i18n="finance.title">«0 commissioni: e voi di cosa vivete?»</h3>
+          <p data-i18n="finance.p1">Domanda legittima — ed ecco la risposta, in chiaro.</p>
+          <p data-i18n-html="finance.p2">Prima l'essenziale: <strong>tu, ristoratore, non paghi mai commissioni sui tuoi piatti — 0 €, in ogni caso.</strong> Il servizio non si finanzia sulle tue spalle.</p>
+          <p data-i18n-html="finance.p3">Si finanzia con un <strong>contributo del cliente</strong> a <strong>prezzo libero</strong>, aggiunto al suo ordine: ognuno dà quello che vuole per far vivere un'alternativa giusta. Una scommessa — quella che clienti informati preferiscano sostenere il commercio locale piuttosto che una multinazionale.</p>
+          <p data-i18n-html="finance.p4">Un cliente stavolta non contribuisce? Va bene così: nessun contributo su quell'ordine, e sempre 0 commissioni per te. Le spese di pagamento con carta sono quelle standard di qualsiasi incasso online — <strong>mai una percentuale sui tuoi piatti, mai un sovrapprezzo aggiunto al cliente.</strong></p>
+          <a class="card-cue" href="/it/finanziamento.html" data-i18n="finance.cue">Come ci finanziamo, in chiaro →</a>
+        </div>
+        <!-- Exemple chiffré -->
+        <div class="finance-example">
+          <p class="finance-example-tag">
+            <span aria-hidden="true">🧾</span> <span data-i18n="example.tag">Esempio illustrativo — un ordine da 30 €</span>
+          </p>
+          <ul class="finance-example-rows">
+            <li>
+              <span class="fe-label" data-i18n="example.row1_label">Quello che incassi tu</span>
+              <span class="fe-value" data-i18n-html="example.row1_value">30 € <em>0 commissioni</em></span>
+            </li>
+            <li>
+              <span class="fe-label" data-i18n="example.row2_label">Quello che paga il cliente</span>
+              <span class="fe-value">32,99 €</span>
+            </li>
+            <li class="fe-detail" data-i18n="example.detail">30 € per i tuoi piatti + 2,99 € di contributo libero del cliente (esempio)</li>
+          </ul>
+          <p class="finance-example-note" data-i18n-html="example.note">Il cliente non vuole contribuire? Va bene, senza giudizi: nessun contributo su quell'ordine. <strong>Tu, in ogni caso, non versi nessuna commissione sui tuoi piatti.</strong></p>
+          <p class="finance-example-compare" data-i18n-html="example.compare">Su una piattaforma con ~30% di commissione, dello stesso ordine ti resterebbero solo <strong>21 €</strong> circa.</p>
+          <p class="finance-example-note" data-i18n-html="example.delivery">Se si tratta di un ordine <strong>consegnato</strong> (canale in arrivo), si aggiungerà un costo di servizio per pagare dignitosamente il rider — condiviso con il cliente e limitato dal margine che fissi tu, mai una commissione. <a href="livraison.html">Guarda come pagheremo la consegna →</a></p>
+          <p class="finance-example-fine" data-i18n="example.fine">Importi dati a titolo di esempio per illustrare il principio, non un listino.</p>
+        </div>
+        <!-- Trois canaux -->
+        <div class="channels">
+          <figure class="channels-captain" aria-hidden="true">
+            <img src="/assets/captain-channels.webp" alt="" width="1100" height="642" loading="lazy">
+          </figure>
+          <h3 class="channels-title" data-i18n="channels.title">Un solo quartier generale, tre modi di ricevere i tuoi ordini</h3>
+          <p class="channels-intro" data-i18n-html="channels.intro">Il tuo sito tutto tuo: <code>iltuoristorante.captain.food</code> (o il tuo <code>iltuoristorante.fr</code>). Gli ordini arriveranno direttamente dal tuo sito — in tre modi, tutti senza commissioni sui tuoi piatti. Col tempo, l'elenco <strong>captain.food</strong> aiuterà i clienti a scoprire gli indipendenti della zona (beneficio collettivo in arrivo, non un canale attivo oggi).</p>
+          <div class="grid grid-3">
+            <a class="card channel-card channel-link" href="/it/consegna.html">
+              <p class="channel-icon" aria-hidden="true">🛵</p>
+              <h4 data-i18n="channel.delivery_title">In consegna</h4>
+              <p data-i18n="channel.delivery_body">I tuoi clienti ordinano online sul tuo sito, a tuo nome. Nessun intermediario che si serve al passaggio.</p>
+              <span class="card-cue" data-i18n="channel.delivery_cue">Come paghiamo la consegna →</span>
+            </a>
+            <article class="card channel-card">
+              <p class="channel-icon" aria-hidden="true">🥡</p>
+              <h4 data-i18n="channel.pickup_title">Da asporto (click and collect)</h4>
+              <p data-i18n="channel.pickup_body">Il cliente ordina in anticipo e ritira sul posto. Semplice, diretto, senza attrezzatura in più.</p>
+            </article>
+            <article class="card channel-card channel-highlight">
+              <p class="channel-icon" aria-hidden="true">📱</p>
+              <h4 data-i18n="channel.qr_title">Al tavolo, con QR code</h4>
+              <p data-i18n-html="channel.qr_body">Il cliente scansiona e ordina dal suo posto. La comanda parte in cucina, e <strong>il pagamento resta nella tua cassa abituale</strong> — il tuo incasso non lo tocchiamo. È incluso, senza commissioni.</p>
+            </article>
+          </div>
+          <p class="channels-note" data-i18n="channels.note">Uno strumento per tutto il tuo servizio, invece di un canale in più da gestire.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ============ MAQUETTES / CO-CONSTRUCTION ============ -->
+    <section id="maquettes" class="section section-alt" aria-labelledby="maquettes-titre">
+      <div class="container narrow">
+        <p class="eyebrow eyebrow-center">⚓ <span data-i18n="mockups.eyebrow">Mockup · sviluppo comunitario</span></p>
+        <h2 id="maquettes-titre" class="section-title" data-i18n="mockups.title">Guarda come sarà — e costruiscilo con noi</h2>
+        <p class="section-intro" data-i18n-html="mockups.intro">Ecco il mockup del prodotto che vogliamo realizzare. <strong>Non c'è ancora niente di costruito</strong> — ed è qui che abbiamo bisogno di te. Prova le viste cliente, ristoratore e rider, poi facci sapere sul WhatsApp della community o tramite il modulo sotto ogni mockup.</p>
+        <div class="mockup-cards">
+          <a class="mockup-card" href="/demo/client.html">
+            <span class="mc-emo" aria-hidden="true">🍽️</span>
+            <span class="mc-role" data-i18n="mockups.client_role">Cliente</span>
+            <span class="mc-desc" data-i18n="mockups.client_desc">Ordinare da un ristorante, contributo libero, 0 commissioni.</span>
+          </a>
+          <a class="mockup-card" href="/demo/resto.html">
+            <span class="mc-emo" aria-hidden="true">👨‍🍳</span>
+            <span class="mc-role" data-i18n="mockups.resto_role">Ristoratore</span>
+            <span class="mc-desc" data-i18n="mockups.resto_desc">Ricevere gli ordini, gestire il menu, vedere la propria giornata.</span>
+          </a>
+          <a class="mockup-card" href="/demo/livreur.html">
+            <span class="mc-badge" data-i18n="mockups.rider_badge">in arrivo</span>
+            <span class="mc-emo" aria-hidden="true">🛵</span>
+            <span class="mc-role" data-i18n="mockups.rider_role">Rider</span>
+            <span class="mc-desc" data-i18n="mockups.rider_desc">La consegna pagata il giusto — l'intenzione, in chiaro.</span>
+          </a>
+        </div>
+        <div class="mockup-actions">
+          <a class="btn btn-primary" href="/demo/" data-i18n="mockups.cta_view">Guarda i mockup →</a>
+          <a class="btn btn-wa" href="https://community.captain.food" target="_blank" rel="noopener">
+            <svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path>
+            </svg>
+            <span data-i18n="mockups.cta_community">Mi unisco alla community</span>
+          </a>
+        </div>
+        <p class="mockup-note" data-i18n="mockups.note">Sotto ogni mockup, un modulo per lasciare la tua opinione. Andiamo avanti insieme. ⚓</p>
+      </div>
+    </section>
+    <!-- ============ ESUS / ANTI-PÉAGE ============ -->
+    <section id="esus" class="section" aria-labelledby="esus-titre">
+      <div class="container narrow">
+        <p class="eyebrow eyebrow-center"><span aria-hidden="true">🛟</span> <span data-i18n="esus.eyebrow">Una rotta che non devia</span></p>
+        <h2 id="esus-titre" class="section-title" data-i18n="esus.title">Un'alternativa che non potrà trasformarsi in un casello</h2>
+        <p class="lead" data-i18n-html="esus.p1"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> parte da una convinzione semplice: il digitale deve essere uno <strong>strumento di utilità pubblica</strong>, non un casello nelle mani di pochi giganti della tech. Il problema non è che guadagnino — è che una volta che dipendi da loro, possono spremerti, e niente glielo impedisce.</p>
+        <p class="lead" data-i18n-html="esus.p2">Allora ci diamo dei paletti destinati a reggere. Puntiamo all'abilitazione <strong>ESUS («entreprise solidaire d'utilité sociale», impresa solidale di utilità sociale — uno status giuridico francese)</strong> — un quadro che limita la lucratività e vincola la missione — con rotta verso una <strong>cooperativa (SCIC, la cooperativa di interesse collettivo francese)</strong>, dove ristoratori, rider e cittadini avranno voce in capitolo. L'obiettivo: per costruzione, non poter diventare ciò che combattiamo.</p>
+        <p class="lead" data-i18n-html="esus.p3">E perché tu non debba crederci sulla parola: apriamo i nostri conti in pubblico su <a href="https://opencollective.com/captain-food" target="_blank" rel="noopener">Open Collective</a> — ogni euro ricevuto e speso, destinato a essere visibile da tutti. Trasparenza radicale, non uno slogan.</p>
+        <p class="lead" data-i18n-html="esus.p4">Il nostro orizzonte: che <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> sia un <strong>bene comune digitale</strong>, non un asset privato. <strong>Il codice è aperto</strong> — <a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">su GitHub</a> — con licenza <strong><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> Coopyleft</strong> (copyleft basato su AGPL v3, nello spirito di CoopCycle), il cui uso commerciale è riservato alle realtà dell'<strong>economia sociale e solidale</strong> — cooperative e organizzazioni no profit. La nostra rotta: farlo riconoscere come <strong>bene pubblico digitale</strong> <em>(digital public good)</em> — perché sia verificabile e soprattutto <strong>replicabile</strong>: altre città, altre cooperative potranno riprenderlo. Uno strumento d'interesse generale si condivide — non si rivende. <a href="manifeste.html">Leggi il manifesto →</a></p>
+        <!-- Problème sociétal n°2 : le livreur précarisé — notre choix : payer mieux, viser le salariat -->
+        <aside class="rider-note">
+          <p class="rider-note-title" data-i18n="esus.rider_title">La seconda battaglia: il rider, pagato dignitosamente</p>
+          <p data-i18n-html="esus.rider_body">Nell'uberizzazione, il rider è una variabile da spremere — precario, senza tutele. Noi abbiamo fatto la scelta opposta: <strong>pagare i nostri rider meglio di chiunque altro</strong>, qui a Tours, con l'ambizione, col tempo, di <strong>assumerli</strong>. Un servizio giusto comincia da persone trattate come si deve.</p>
+          <p style="margin-top:0.7rem;">
+            <a href="/it/consegna.html" data-i18n="esus.rider_link">→ Come paghiamo la consegna, in chiaro (esempio alla mano)</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+    <!-- ============ POUR QUI ============ -->
+    <section id="pour-qui" class="section section-alt" aria-labelledby="pourqui-titre">
+      <div class="container">
+        <h2 id="pourqui-titre" class="section-title" data-i18n="who.title">Per chi?</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3 data-i18n="who.card1_title">I ristoranti indipendenti</h3>
+            <p data-i18n="who.card1_body">che ne hanno abbastanza di lavorare per le commissioni degli altri.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="who.card2_title">I food truck</h3>
+            <p data-i18n="who.card2_body">che vogliono un canale di ordini semplice, a loro nome, senza attrezzature pesanti.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="who.card3_title">Gli artigiani della tavola</h3>
+            <p data-i18n="who.card3_body">legati al loro quartiere, ai loro clienti abituali, al loro mestiere.</p>
+          </article>
+        </div>
+        <p class="pour-qui-close" data-i18n-html="who.close">Se sei una grande catena a caccia del massimo volume al minimo costo, probabilmente non siamo fatti per te. Se vuoi riprendere in mano la tua attività, <strong>sali a bordo</strong>.</p>
+      </div>
+    </section>
+    <!-- ============ POURQUOI TOURS ============ -->
+    <section id="tours" class="section" aria-labelledby="tours-titre">
+      <div class="container narrow">
+        <p class="eyebrow eyebrow-center"><span aria-hidden="true">📍</span> <span data-i18n="tours.eyebrow">Porto di casa</span></p>
+        <h2 id="tours-titre" class="section-title" data-i18n="tours.title">Si salpa da Tours</h2>
+        <p class="lead" data-i18n-html="tours.p1"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> parte da qui, da Tours, con un primo gruppo di ristoratori. Non ovunque, non subito: un territorio, fatto bene, tra indipendenti che si conoscono.</p>
+        <p class="lead" data-i18n-html="tours.p2">Costruiamo la piattaforma con i primi ristoranti che salgono a bordo — i loro riscontri plasmano lo strumento. Unirti adesso significa pesare su ciò che <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> diventerà.</p>
+      </div>
+    </section>
+    <!-- ============ CE QUE ÇA DEMANDE ============ -->
+    <section id="demande" class="section section-alt" aria-labelledby="demande-titre">
+      <div class="container narrow">
+        <h2 id="demande-titre" class="section-title" data-i18n="ask.title">E in pratica, cosa mi chiede?</h2>
+        <p class="section-intro" data-i18n="ask.intro">Meno di quanto credi.</p>
+        <ul class="check-list">
+          <li data-i18n-html="ask.item1"><strong>L'iscrizione è gratuita e senza vincoli.</strong> Tieni le tue piattaforme attuali.</li>
+          <li data-i18n-html="ask.item2"><strong>Della configurazione ci occupiamo noi.</strong> Sincronizzazione del tuo menu, messa online della tua pagina: ti accompagniamo. Se non hai ancora uno strumento di sincronizzazione (tipo HubRise), ti aiutiamo a metterlo in piedi — un servizio standard che resta nelle tue mani.</li>
+          <li data-i18n-html="ask.item3"><strong>Nessuna nuova macchina da imparare di corsa.</strong> Andiamo al tuo ritmo.</li>
+        </ul>
+      </div>
+    </section>
+    <!-- ============ FORMULAIRE / CTA ============ -->
+    <section id="rejoindre" class="section section-cta" aria-labelledby="rejoindre-titre">
+      <div class="container cta-layout">
+        <div class="cta-body">
+          <figure class="cta-captain" aria-hidden="true">
+            <img src="/assets/captain-contact.webp" alt="Il Capitan Food, pronto a far salire a bordo nuovi ristoratori" data-i18n-alt="join.captain_alt" width="900" height="1132" loading="lazy">
+          </figure>
+        <h2 id="rejoindre-titre" class="section-title" data-i18n="join.title">Unisciti ai ristoratori liberi</h2>
+        <p class="section-intro" data-i18n-html="join.intro">Lasciaci il tuo contatto: ti richiamiamo per presentarti <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>, senza impegno.</p>
+        <ul class="pre-embark">
+          <li>
+            <strong data-i18n="join.point1_title">Per te sono 0 €</strong>
+            <p data-i18n="join.point1_body">0 commissioni sui tuoi piatti, iscrizione gratuita. Non paghi niente.</p>
+          </li>
+          <li>
+            <strong data-i18n="join.point2_title">Tieni Uber Eats &amp; Deliveroo</strong>
+            <p data-i18n-html="join.point2_body"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> si aggiunge, senza nessuna esclusiva.</p>
+          </li>
+          <li>
+            <strong data-i18n="join.point3_title">Niente da installare di corsa</strong>
+            <p data-i18n="join.point3_body">Della configurazione ci occupiamo noi, al tuo ritmo.</p>
+          </li>
+        </ul>
+        </div>
+        <!-- /.cta-body (stick zone) — the form is a sibling so the Captain stops here -->
+        <form id="pilot-form" class="form" action="https://formspree.io/f/xqevrjwp" method="POST">
+          <div class="field">
+            <label for="resto">
+              <span data-i18n="form.resto_label">Nome del ristorante / food truck</span> <span class="req" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="resto" name="resto" autocomplete="organization" required>
+            <p class="field-error" id="resto-error" hidden></p>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="contact"><span data-i18n="form.contact_label">Il tuo nome</span> <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="contact" name="contact" autocomplete="name" required>
+              <p class="field-error" id="contact-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email"><span data-i18n="form.email_label">Email</span> <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <p class="field-error" id="email-error" hidden></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="telephone"><span data-i18n="form.phone_label">Telefono / WhatsApp</span> <span class="opt" data-i18n="form.optional">(facoltativo)</span></label>
+            <input type="tel" id="telephone" name="telephone" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="mot"><span data-i18n="form.message_label">Due righe per noi</span> <span class="opt" data-i18n="form.optional">(facoltativo)</span></label>
+            <textarea id="mot" name="mot" rows="4" placeholder="La tua cucina, i tuoi volumi, le tue domande…" data-i18n-placeholder="form.message_placeholder"></textarea>
+          </div>
+          <div class="field field-consent">
+            <label class="consent">
+              <input type="checkbox" id="consentement" name="consentement" required>
+              <span data-i18n-html="form.consent">Accetto che i miei dati di contatto siano usati da <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> per ricontattarmi riguardo a questo progetto. Non saranno né rivenduti né condivisi. Posso chiederne la cancellazione in qualsiasi momento. <a href="confidentialite.html">Leggi l'informativa sulla privacy</a>. <span class="req" aria-hidden="true">*</span></span>
+            </label>
+            <p class="field-error" id="consentement-error" hidden></p>
+          </div>
+          <!-- Provenance du lead : passe à "calculateur" via le CTA du calculateur -->
+          <input type="hidden" id="lead-source" name="source" value="site">
+          <!-- Honeypot anti-spam (invisible pour les humains) -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <p class="form-reassure-inline" data-i18n="form.reassure_inline">0 € · senza vincoli · tieni Uber Eats &amp; Deliveroo · niente da installare di corsa</p>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Mi unisco ai ristoratori liberi</button>
+          <p class="form-note" data-i18n="form.note">I tuoi dati non vengono mai rivenduti. Ti ricontattiamo, punto.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+        <!-- Panneau de succès : remplace le formulaire un moment, puis le formulaire revient -->
+        <div class="form-success" id="form-success" tabindex="-1" hidden>
+          <figure class="form-success-captain" aria-hidden="true">
+            <img src="/assets/captain-thumbsup.png" alt="Il Capitan Food alza il pollice per salutare la tua iscrizione" data-i18n-alt="success.img_alt" width="200" height="295">
+          </figure>
+          <p class="form-success-title" role="status" data-i18n="success.title">Ricevuto ⚓ Benvenuto a bordo!</p>
+          <p class="form-success-text" data-i18n="success.text">Ti ricontattiamo prestissimo. Vuoi parlarne subito?</p>
+          <div class="form-success-actions">
+            <a class="btn btn-wa" href="https://wa.me/message/LTDD42WUFXINA1" target="_blank" rel="noopener" aria-label="Chatta con Captain.Food su WhatsApp" data-i18n-aria-label="wa.fab_aria">
+              <svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path>
+              </svg>
+              <span data-i18n-html="success.chat_cta">Chatto con <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span></span>
+            </a>
+          </div>
+          <p class="form-success-text" data-i18n-html="success.or_email">Oppure scrivici a <a href="mailto:miam@captain.food">miam@captain.food</a>.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section" aria-labelledby="faq-titre">
+      <div class="container faq-layout">
+        <figure class="faq-figure" aria-hidden="true">
+          <img src="/assets/captain-explain.webp" alt="Il Capitan Food, con l'indice sulla tempia, invita a riflettere sulle domande" data-i18n-alt="faq.img_alt" width="900" height="1123" loading="lazy">
+        </figure>
+        <div class="faq-body">
+          <h2 id="faq-titre" class="section-title" data-i18n="faq.title">Le domande che ci fanno</h2>
+          <p class="section-intro" data-i18n="faq.intro">Tutto quello che i ristoratori ci chiedono — in chiaro, senza giri di parole.</p>
+          <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">Per me è gratis — e voi di cosa vivete?</summary>
+            <p data-i18n-html="faq.a1">Per te: 0% di commissioni sui tuoi piatti, iscrizione gratuita, in ogni caso. Il servizio si finanzia con un <strong>contributo libero del cliente</strong>, aggiunto al suo ordine in piena trasparenza (0 € possibile, senza giudizi) — mai da te. Le spese di pagamento con carta sono i costi bancari standard di qualsiasi incasso online, mai un sovrapprezzo aggiunto al cliente. <a href="financement.html">Guarda il dettaglio completo, esempio alla mano.</a></p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">E quello che i miei clienti pagano in cassa?</summary>
+            <p data-i18n-html="faq.a2">Quello che si paga nella tua cassa abituale (sul posto, al banco) non lo tocchiamo: è <strong>gratis, punto</strong>, fuori dal nostro flusso. Il contributo riguarda solo gli ordini <strong>pagati online</strong> tramite <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">E il costo della consegna, chi lo pagherà?</summary>
+            <p data-i18n-html="faq.a3">La consegna sarà un <strong>canale in arrivo</strong>, non ancora attivo. L'idea: pagare bene il rider (puntiamo ad almeno 7 € a corsa). Tu parteciperesti solo sui tuoi ordini consegnati, nei limiti di quanto il tuo margine permette — fisseresti la tua soglia, e sotto non si scenderebbe mai. Il cliente pagherebbe la differenza, in trasparenza. Mai una commissione sui tuoi piatti. <a href="livraison.html">Guarda il calcolo nel dettaglio, esempio alla mano.</a></p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Devo lasciare Uber Eats / Deliveroo?</summary>
+            <p data-i18n-html="faq.a4">No. <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> si aggiunge, senza esclusiva. Molti ristoranti tengono entrambi e vedono <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> come il loro canale diretto, quello che controllano.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Non ci sono ancora clienti sulla piattaforma: perché iscrivermi adesso?</summary>
+            <p data-i18n="faq.a5">Perché non ti costa niente e non dai nessuna esclusiva. Sei in vetrina, recuperi la tua base clienti dai primi ordini diretti, e plasmi lo strumento mentre partiamo. I primi a salire a bordo sono quelli che contano di più.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">Come recupero i miei clienti?</summary>
+            <p data-i18n="faq.a6">Ogni ordine fatto direttamente sulla tua pagina ti appartiene: accedi ai contatti dei tuoi clienti (con il loro consenso) per fidelizzarli tu stesso. A differenza delle grandi piattaforme, la tua clientela non te la confischiamo.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q7">Cos'è un'impresa ESUS?</summary>
+            <p data-i18n-html="faq.a7">«Entreprise solidaire d'utilité sociale», cioè impresa solidale di utilità sociale: un'abilitazione francese che limita giuridicamente la lucratività e impone una finalità sociale. È la rotta che puntiamo a seguire — una garanzia, col tempo, che <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> non potrà deviare verso ciò che denunciamo.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q8">E per l'ordine al tavolo (QR code)?</summary>
+            <p data-i18n-html="faq.a8">Due casi. Se il cliente <strong>paga in cassa</strong> o sul posto, è <strong>fuori dal nostro flusso</strong>: 100% gratis, non lo tocchiamo. Se <strong>paga online</strong> tramite il QR, può aggiungersi un contributo libero, come per un ordine online. In ogni caso, a tuo nome, e 0 commissioni sui tuoi piatti.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q9">Quante lingue parlate — per i miei clienti, per me, per i rider?</summary>
+            <p data-i18n-html="faq.a9"><strong>17, per cominciare</strong> — quelle che si parlano intorno a noi. Questa pagina le parla già tutte (prova il selettore in alto). E il prodotto seguirà la stessa rotta: il sito di ordinazione dei tuoi clienti, il tuo spazio da ristoratore e, col tempo, l'app dei rider. Ognuno nella sua lingua — il tuo cliente ordina in thailandese o in arabo, tu lavori nella tua.</p>
+            <!-- Flag row filled by i18n.js from its language registry (single
+                 source of truth) — one chip per language, tooltip on hover. -->
+            <p class="faq-flags" data-lang-flags></p>
+          </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" data-shared-footer>
+    <noscript>
+      <div class="container footer-bottom">
+        <p><a href="/it/">Accueil</a> · <a href="/it/manifesto.html">Le manifeste</a> · <a href="/it/finanziamento.html">Comment on se finance ?</a> · <a href="/it/consegna.html">La livraison, payée juste</a> · <a href="/it/#faq">Questions fréquentes</a> · <a href="/it/note-legali.html">Mentions légales</a> · <a href="/it/privacy.html">Politique de confidentialité</a><br>© 2026 <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> — Projet indépendant en construction à Tours.</p>
+      </div>
+    </noscript>
+  </footer>
+  <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>

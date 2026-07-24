@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh" dir="ltr" data-static-lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="pricing.meta_title">费用：对餐厅完全免费 — Captain.Food</title>
+  <meta name="description" data-i18n-content="pricing.meta_description" content="Captain.Food 对餐厅和餐车的收费：免费。0%佣金、0 €订阅费、0隐藏费用。平台靠客人自愿添加的支持金运转。">
+  <meta name="theme-color" content="#0e3a5f">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="canonical" href="https://join.captain.food/zh/pricing.html">
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/tarifs.html" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/en/pricing.html" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/tarifs.html" />
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-content="pricing.og_title" content="费用：对餐厅完全免费">
+  <meta property="og:description" data-i18n-content="pricing.og_description" content="0%佣金、0 €订阅费、0隐藏费用。Captain.Food 对餐厅完全免费；平台靠客人自愿添加的支持金运转。">
+  <meta property="og:url" content="https://join.captain.food/zh/pricing.html">
+  <meta property="og:site_name" content="Captain.Food">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://join.captain.food/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" data-i18n-content="meta.og.image_alt" content="Captain.Food — 把订单夺回来！0%佣金，就在 Tours。">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-content="pricing.og_title" content="费用：对餐厅完全免费">
+  <meta name="twitter:description" data-i18n-content="pricing.twitter_description" content="0%佣金、0 €订阅费、0隐藏费用。平台靠客人自愿添加的支持金运转。">
+  <meta name="twitter:image" content="https://join.captain.food/assets/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .tarif-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--good);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1.6rem, 4vw, 2.8rem);
+      text-align: center;
+      max-width: 540px;
+      margin: 2.2rem auto 0;
+    }
+    .tarif-for {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+    .tarif-price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(4.5rem, 17vw, 7.5rem);
+      color: var(--good);
+      line-height: 0.95;
+      margin: 0.5rem 0 0.2rem;
+    }
+    .tarif-price-sub {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+    .tarif-list {
+      list-style: none;
+      margin: 1.8rem 0 0;
+      padding: 0;
+      text-align: left;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .tarif-list li {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      color: var(--ink);
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+    .tarif-list li::before {
+      content: "✓";
+      color: var(--good);
+      font-weight: 800;
+      flex: none;
+      font-size: 1.1rem;
+    }
+    .tarif-list strong { color: var(--navy); }
+    .tarif-cta { margin-top: 1.9rem; }
+    .tarif-catch {
+      max-width: 640px;
+      margin: 2.6rem auto 0;
+      background: var(--parchment-alt);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+    }
+    .tarif-catch h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+    .tarif-catch p { color: var(--ink-soft); }
+    .tarif-catch p + p { margin-top: 0.7rem; }
+    .tarif-bet-list { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .tarif-bet-list li { color: var(--ink-soft); margin-bottom: 0.55rem; line-height: 1.5; }
+    .tarif-bet-list strong { color: var(--navy); }
+    .tarif-note {
+      background: rgba(232, 97, 58, 0.1);
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin: 1.4rem 0 0;
+      color: var(--ink);
+    }
+    .tarif-faq { max-width: 640px; margin: 2.6rem auto 0; }
+    .tarif-actions { text-align: center; margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    /* Le Capitaine casse la grille tarifaire (illustration) */
+    .killwall { max-width: 620px; margin: 2.2rem auto 0; text-align: center; }
+    .killwall img { width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: 0 10px 30px rgba(10, 30, 50, 0.14); }
+    .killwall figcaption { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-top: 1.1rem; }
+    .killwall figcaption strong { color: var(--navy); }
+  </style>
+  <!-- Cloudflare Web Analytics (cookieless) -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;a9fe368f9d994cf6b874cf584aada144&quot;}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">跳转到正文</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/zh/" aria-label="Captain.Food，返回首页" data-i18n-aria-label="nav.brand_aria">
+        <img src="/assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark">
+        <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
+      </a>
+      <a class="btn btn-primary btn-sm nav-cta" href="/zh/#rejoindre" data-i18n="nav.join">我要加入</a>
+    </div>
+      <nav class="chip-nav" aria-label="菜单" data-i18n-aria-label="nav.menu_aria">
+      <div class="container chip-nav-inner">
+        <a class="chip" href="/zh/#solution" data-i18n="nav.chip.how">怎么运作</a>
+        <a class="chip" href="/zh/pricing.html" data-i18n="nav.chip.pricing">费用</a>
+        <a class="chip" href="/demo/" data-i18n="nav.chip.mockups">产品原型</a>
+        <a class="chip" href="#faq" data-i18n="nav.chip.faq">常见问题</a>
+      </div>
+    </nav>
+  </header>
+  <main id="contenu" class="section">
+    <div class="container narrow">
+      <p class="eyebrow eyebrow-center"><span aria-hidden="true">🏷️</span> <span data-i18n="nav.chip.pricing">费用</span></p>
+      <h1 class="section-title" data-i18n="pricing.h1">免费。就这么简单。</h1>
+      <p class="section-intro" data-i18n-html="pricing.intro">想找价格表？根本没有。<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> 对餐厅和餐车<strong>免费</strong>——没有佣金，没有订阅费，没有隐藏费用。</p>
+      <p class="section-intro" style="margin-top:0.6rem;" data-i18n-html="pricing.intro2">而且以后也<strong>不会有价目表</strong>：这不是一件商业产品，而是一件<strong>开源的数字公共财产</strong>——人人可用，人人共建。<a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">代码是开放的</a>（<strong><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> Coopyleft</strong> 许可证——基于 AGPL 的 copyleft，商业使用仅限社会互助经济组织）。</p>
+      <!-- Le Capitaine casse la grille tarifaire -->
+      <figure class="killwall">
+        <img src="/assets/captain-killgrid.webp" alt="Food 船长一叉子砸碎一张分三档付费套餐（Starter、Pro、Premium）的价目表。" data-i18n-alt="pricing.killwall_alt" width="1402" height="1122" loading="lazy">
+        <figcaption data-i18n-html="pricing.killwall_caption">在别处，你得选一个套餐（而且照样要付佣金）。<strong>在这里，根本没有价目表。</strong>示意图——我们比的是模式，不针对任何人。</figcaption>
+      </figure>
+      <!-- La carte "tarif" : la réponse, tout de suite -->
+      <div class="tarif-card">
+        <p class="tarif-for" data-i18n="pricing.card_for">独立餐厅 &amp; 餐车</p>
+        <p class="tarif-price">0 €<span class="tarif-price-sub" data-i18n="pricing.price_sub">对你来说，今天如此——我们会拼尽全力让它一直如此</span></p>
+        <ul class="tarif-list">
+          <li data-i18n-html="pricing.card_li1">菜品<strong>0%佣金</strong>——永远不从你的利润里抽百分比。</li>
+          <li data-i18n-html="pricing.card_li2"><strong>0 €订阅费</strong>，没有月费套餐，没有付费档位。</li>
+          <li data-i18n-html="pricing.card_li3"><strong>0 €注册费</strong>，0安装费。</li>
+          <li data-i18n-html="pricing.card_li4"><strong>0绑定</strong>——Uber Eats &amp; Deliveroo 照用不误。</li>
+          <li data-i18n-html="pricing.card_li5"><strong>你的客人归你自己</strong>，从第一笔直接订单起。</li>
+        </ul>
+        <div class="tarif-cta">
+          <a class="btn btn-primary btn-block" href="/zh/#rejoindre" data-i18n="hero.cta_join">加入自由餐饮人</a>
+        </div>
+      </div>
+      <p class="tarif-note" data-i18n-html="pricing.note">⚓ <strong>一切尚未建成。</strong><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> 正在 Tours 起步，与第一批餐饮人同行。模式从第一天起就清清楚楚：对你免费，是真的免费。</p>
+      <!-- Le "piège" : il n'y en a pas -->
+      <div class="tarif-catch">
+        <h2 data-i18n="pricing.catch_title">「免费……陷阱在哪？」</h2>
+        <p data-i18n-html="pricing.catch_p1">没有陷阱。平台靠<strong>用户的自愿支持</strong>运转：下单时，客人可以自愿往购物车里加一笔随心支持金——<strong>给0 €也可以，绝不评判</strong>。这是一场赌注：赌知情的客人更愿意支持本地小店，而不是跨国巨头。</p>
+        <p data-i18n-html="pricing.catch_p2">而你，一分钱都不用付：永远不从你的利润里抽百分比，也永远不会替你偷偷加价。项目由一家<strong>非营利协会</strong>承载，从根上设计成永远不可能变成收费站。<a href="financement.html">我们靠什么运转，明明白白 →</a></p>
+      </div>
+      <!-- Le pari + le plan B, en toute transparence -->
+      <div class="tarif-catch">
+        <h2 data-i18n="pricing.bet_title">我们的赌注，完全透明</h2>
+        <p data-i18n-html="pricing.bet_p1">免费背后是一场<strong>赌注</strong>：赌自愿支持金足以让这件公共财产运转下去。我们相信它——但如果不成会怎样，我们也直截了当告诉你。</p>
+        <p data-i18n-html="pricing.bet_p2">那也<strong>绝不会是价目表，更不会是加价赚差</strong>。最坏的情况，是按<strong>成本价</strong>分摊维持运转所必需的开销：</p>
+        <ul class="tarif-bet-list">
+          <li data-i18n-html="pricing.bet_li1"><strong>客人这边</strong>——下单时分摊一小笔运转费用。超出的部分，依然算作支持金。</li>
+          <li data-i18n-html="pricing.bet_li2"><strong>餐饮人这边</strong>——按登船餐饮人的数量分摊实际成本：<strong>人越多，每家出得越少</strong>。永远不是佣金，永远不从你的菜品里抽百分比。</li>
+        </ul>
+        <p data-i18n-html="pricing.bet_p3"><strong>而只要模式一转得动</strong>，这一切就<strong>统统取消</strong>：回到免费。我们的目的不是卖产品，而是守住一件向所有人开放的公共财产。</p>
+      </div>
+      <!-- Ancrage : pendant ce temps, une plateforme te prend combien ? -->
+      <p class="ratio-punch" style="margin-top:2.6rem;" data-i18n-html="pricing.ratio_punch">当别的平台最高抽走你利润 <b>10倍</b>的时候，这里是 <b>0 €</b>。<a href="index.html#probleme">算算你现在亏多少 →</a></p>
+      <!-- FAQ -->
+      <div class="tarif-faq">
+        <figure class="faq-topper" aria-hidden="true">
+          <img src="/assets/captain-explain.webp" alt="" width="900" height="1123" loading="lazy">
+        </figure>
+        <h2 id="faq" class="section-title" style="font-size:1.5rem;" data-i18n="faq.title">大家常问我们的问题</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="pricing.faq1_q">对我的餐厅真的100%免费吗？</summary>
+            <p data-i18n="pricing.faq1_a">是的。菜品0%佣金、0 €订阅费、0注册费和安装费，不绑定。费用对所有人都一样：免费。</p>
+          </details>
+          <details>
+            <summary data-i18n="pricing.faq2_q">有没有隐藏的订阅费或套餐？</summary>
+            <p data-i18n="pricing.faq2_a">没有。没有订阅费，没有套餐，没有「premium」付费档位。走你自家收银台的钱（堂食、柜台），我们同样一概不碰。</p>
+          </details>
+          <details>
+            <summary data-i18n="pricing.faq3_q">那你们靠什么活？</summary>
+            <p data-i18n-html="pricing.faq3_a">靠客人自愿添加的支持金（给0 €也可以）。这是一场赌注：万一不够，也永远不会有佣金和价目表——最坏是按成本价分摊（客人分摊一小笔费用，餐饮人分摊实际成本），并且模式一转得动就取消。永远不靠压榨你。<a href="financement.html">看完整说明。</a></p>
+          </details>
+        </div>
+      </div>
+      <div class="tarif-actions">
+        <a class="btn btn-primary" href="/zh/#rejoindre" data-i18n="hero.cta_join">加入自由餐饮人</a>
+        <a class="btn btn-wa" href="https://community.captain.food" target="_blank" rel="noopener"><svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path></svg><span data-i18n="mockups.cta_community">加入社区</span></a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" data-shared-footer>
+    <noscript>
+      <div class="container footer-bottom">
+        <p><a href="/zh/">Accueil</a> · <a href="/zh/pricing.html">Tarifs</a> · <a href="/zh/funding.html">Comment on se finance ?</a> · <a href="/zh/manifesto.html">Le manifeste</a> · <a href="/zh/#faq">Questions fréquentes</a> · <a href="/zh/legal-notice.html">Mentions légales</a><br>© 2026 <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> — Projet indépendant en construction à Tours.</p>
+      </div>
+    </noscript>
+  </footer>
+  <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
+</body>
+</html>

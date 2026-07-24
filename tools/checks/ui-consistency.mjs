@@ -17,15 +17,29 @@ import { chromium } from "playwright";
 const BASE = process.env.UI_CHECK_BASE || "http://localhost:8123";
 const executablePath = process.env.CHROMIUM_PATH || undefined;
 
-const pages = readdirSync(new URL("../../", import.meta.url).pathname)
+const root = new URL("../../", import.meta.url).pathname;
+const pages = readdirSync(root)
   .filter((f) => f.endsWith(".html"))
   .sort();
+// Generated per-language pages: cover the indexable set fully (en) plus one
+// RTL homepage as the canary for the statically-flipped layout.
+try {
+  for (const f of readdirSync(root + "en").sort()) {
+    if (f.endsWith(".html")) pages.push("en/" + f);
+  }
+  pages.push("ar/index.html");
+} catch (e) {}
 
 const failures = [];
 const captainHeights = {};
 
 const browser = await chromium.launch(executablePath ? { executablePath } : {});
-const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+// Hermetic run: abort every third-party request (fonts, analytics beacon).
+// The gate tests OUR code; external hosts only add flakiness and, in
+// sandboxes, hang the page lifecycle for tens of seconds per page.
+await context.route(/^https?:\/\/(?!localhost)/, (route) => route.abort());
+const page = await context.newPage();
 const consoleErrors = [];
 page.on("console", (m) => {
   // Only same-origin failures count: external resources (Cloudflare beacon,
@@ -45,8 +59,10 @@ page.on("pageerror", (e) => consoleErrors.push(String(e.message)));
 
 for (const file of pages) {
   consoleErrors.length = 0;
-  await page.goto(`${BASE}/${file}`, { waitUntil: "networkidle" });
-  await page.waitForTimeout(250);
+  // domcontentloaded, not networkidle: third-party requests (fonts, beacon)
+  // hang in sandboxes and would stall the whole run.
+  await page.goto(`${BASE}/${file}`, { waitUntil: "domcontentloaded" });
+  await page.waitForTimeout(450);
 
   const captain = await page.evaluate(async () => {
     const img = document.querySelector(".faq-figure img, .faq-topper img");
@@ -64,7 +80,7 @@ for (const file of pages) {
 
   // 404.html is deliberately chrome-less (no partials.js footer, no header
   // nav) — the switcher requirement doesn't apply there.
-  if (file !== "404.html") {
+  if (!file.endsWith("404.html")) {
     const hasHeaderSwitch = await page.$(".site-header .lang-switch");
     const hasFooterSwitch = await page.$(".footer-lang-slot .lang-switch");
     if (!hasHeaderSwitch) failures.push(`${file}: missing header language switcher`);
@@ -91,10 +107,11 @@ if (entries.length) {
   }
 }
 
-// 4. Spot-check that translation actually applies.
+// 4. Spot-check that ?lang= arrivals reach an English page (static redirect
+//    to the /en/ sibling, or in-place translation as the fallback).
 for (const file of ["index.html", "tarifs.html", "manifeste.html"]) {
-  await page.goto(`${BASE}/${file}?lang=en`, { waitUntil: "networkidle" });
-  await page.waitForTimeout(400);
+  await page.goto(`${BASE}/${file}?lang=en`, { waitUntil: "domcontentloaded" });
+  await page.waitForTimeout(1200);
   const lang = await page.evaluate(() => document.documentElement.lang);
   if (lang !== "en") failures.push(`${file}?lang=en: html[lang] is "${lang}", translation did not apply`);
 }

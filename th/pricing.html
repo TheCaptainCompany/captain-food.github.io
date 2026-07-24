@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="th" dir="ltr" data-static-lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="pricing.meta_title">ค่าบริการ: ฟรีสำหรับร้านอาหาร — Captain.Food</title>
+  <meta name="description" data-i18n-content="pricing.meta_description" content="ค่าบริการของ Captain.Food สำหรับร้านอาหารและฟู้ดทรัค: ฟรี ค่าคอมมิชชั่น 0% ค่าสมาชิก 0 € ไม่มีค่าใช้จ่ายแอบแฝง แพลตฟอร์มอยู่ได้ด้วยเงินสมทบตามใจสมัครของลูกค้า">
+  <meta name="theme-color" content="#0e3a5f">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="canonical" href="https://join.captain.food/th/pricing.html">
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/tarifs.html" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/en/pricing.html" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/tarifs.html" />
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-content="pricing.og_title" content="ค่าบริการ: ฟรีสำหรับร้านอาหาร">
+  <meta property="og:description" data-i18n-content="pricing.og_description" content="ค่าคอมมิชชั่น 0% ค่าสมาชิก 0 € ไม่มีค่าใช้จ่ายแอบแฝง Captain.Food ฟรีสำหรับร้านอาหาร แพลตฟอร์มอยู่ได้ด้วยเงินสมทบตามใจสมัครของลูกค้า">
+  <meta property="og:url" content="https://join.captain.food/th/pricing.html">
+  <meta property="og:site_name" content="Captain.Food">
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:image" content="https://join.captain.food/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" data-i18n-content="meta.og.image_alt" content="Captain.Food — ทวงคืนออร์เดอร์ของเรากันเถอะ! 0% ค่าคอมมิชชั่น ที่เมือง Tours">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-content="pricing.og_title" content="ค่าบริการ: ฟรีสำหรับร้านอาหาร">
+  <meta name="twitter:description" data-i18n-content="pricing.twitter_description" content="ค่าคอมมิชชั่น 0% ค่าสมาชิก 0 € ไม่มีค่าใช้จ่ายแอบแฝง แพลตฟอร์มอยู่ได้ด้วยเงินสมทบตามใจสมัครของลูกค้า">
+  <meta name="twitter:image" content="https://join.captain.food/assets/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .tarif-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--good);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1.6rem, 4vw, 2.8rem);
+      text-align: center;
+      max-width: 540px;
+      margin: 2.2rem auto 0;
+    }
+    .tarif-for {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+    .tarif-price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(4.5rem, 17vw, 7.5rem);
+      color: var(--good);
+      line-height: 0.95;
+      margin: 0.5rem 0 0.2rem;
+    }
+    .tarif-price-sub {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+    .tarif-list {
+      list-style: none;
+      margin: 1.8rem 0 0;
+      padding: 0;
+      text-align: left;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .tarif-list li {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      color: var(--ink);
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+    .tarif-list li::before {
+      content: "✓";
+      color: var(--good);
+      font-weight: 800;
+      flex: none;
+      font-size: 1.1rem;
+    }
+    .tarif-list strong { color: var(--navy); }
+    .tarif-cta { margin-top: 1.9rem; }
+    .tarif-catch {
+      max-width: 640px;
+      margin: 2.6rem auto 0;
+      background: var(--parchment-alt);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+    }
+    .tarif-catch h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+    .tarif-catch p { color: var(--ink-soft); }
+    .tarif-catch p + p { margin-top: 0.7rem; }
+    .tarif-bet-list { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .tarif-bet-list li { color: var(--ink-soft); margin-bottom: 0.55rem; line-height: 1.5; }
+    .tarif-bet-list strong { color: var(--navy); }
+    .tarif-note {
+      background: rgba(232, 97, 58, 0.1);
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin: 1.4rem 0 0;
+      color: var(--ink);
+    }
+    .tarif-faq { max-width: 640px; margin: 2.6rem auto 0; }
+    .tarif-actions { text-align: center; margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    /* Le Capitaine casse la grille tarifaire (illustration) */
+    .killwall { max-width: 620px; margin: 2.2rem auto 0; text-align: center; }
+    .killwall img { width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: 0 10px 30px rgba(10, 30, 50, 0.14); }
+    .killwall figcaption { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-top: 1.1rem; }
+    .killwall figcaption strong { color: var(--navy); }
+  </style>
+  <!-- Cloudflare Web Analytics (cookieless) -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;a9fe368f9d994cf6b874cf584aada144&quot;}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">ข้ามไปยังเนื้อหา</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/th/" aria-label="Captain.Food หน้าแรก" data-i18n-aria-label="nav.brand_aria">
+        <img src="/assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark">
+        <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
+      </a>
+      <a class="btn btn-primary btn-sm nav-cta" href="/th/#rejoindre" data-i18n="nav.join">ขอเข้าร่วม</a>
+    </div>
+      <nav class="chip-nav" aria-label="เมนู" data-i18n-aria-label="nav.menu_aria">
+      <div class="container chip-nav-inner">
+        <a class="chip" href="/th/#solution" data-i18n="nav.chip.how">วิธีการทำงาน</a>
+        <a class="chip" href="/th/pricing.html" data-i18n="nav.chip.pricing">ค่าบริการ</a>
+        <a class="chip" href="/demo/" data-i18n="nav.chip.mockups">แบบร่างหน้าจอ</a>
+        <a class="chip" href="#faq" data-i18n="nav.chip.faq">คำถามที่พบบ่อย</a>
+      </div>
+    </nav>
+  </header>
+  <main id="contenu" class="section">
+    <div class="container narrow">
+      <p class="eyebrow eyebrow-center"><span aria-hidden="true">🏷️</span> <span data-i18n="nav.chip.pricing">ค่าบริการ</span></p>
+      <h1 class="section-title" data-i18n="pricing.h1">ฟรี จบ</h1>
+      <p class="section-intro" data-i18n-html="pricing.intro">กำลังหาราคาอยู่ใช่ไหม? มันไม่มี <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> <strong>ฟรี</strong>สำหรับร้านอาหารและฟู้ดทรัค — ไม่มีค่าคอมมิชชั่น ไม่มีค่าสมาชิก ไม่มีค่าใช้จ่ายแอบแฝง</p>
+      <p class="section-intro" style="margin-top:0.6rem;" data-i18n-html="pricing.intro2">และจะ<strong>ไม่มีวันมีตารางราคา</strong>ด้วย: นี่ไม่ใช่สินค้าเชิงพาณิชย์ แต่เป็น<strong>สมบัติส่วนรวมทางดิจิทัล แบบโอเพนซอร์ส</strong> — มีประโยชน์กับทุกคน สร้างโดยทุกคน <a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">โค้ดของเราเปิดเผย</a> (ภายใต้สัญญาอนุญาต <strong><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> Coopyleft</strong> — copyleft ที่ต่อยอดจาก AGPL สงวนการใช้งานเชิงพาณิชย์ไว้ให้เฉพาะองค์กรในเศรษฐกิจเพื่อสังคมและความเป็นน้ำหนึ่งใจเดียวกัน)</p>
+      <!-- Le Capitaine casse la grille tarifaire -->
+      <figure class="killwall">
+        <img src="/assets/captain-killgrid.webp" alt="กัปตัน Food ใช้ส้อมฟาดตารางราคาสามแพ็กเกจ (Starter, Pro, Premium) แตกกระจายในทีเดียว" data-i18n-alt="pricing.killwall_alt" width="1402" height="1122" loading="lazy">
+        <figcaption data-i18n-html="pricing.killwall_caption">ที่อื่น คุณต้องเลือกแพ็กเกจ (แล้วก็ยังต้องจ่ายค่าคอมมิชชั่นอยู่ดี) <strong>ที่นี่ ไม่มีตารางราคา</strong> ตัวอย่างประกอบเพื่อให้เห็นภาพ — เราเปรียบเทียบโมเดล ไม่ได้พาดพิงใครเป็นการเฉพาะ</figcaption>
+      </figure>
+      <!-- La carte "tarif" : la réponse, tout de suite -->
+      <div class="tarif-card">
+        <p class="tarif-for" data-i18n="pricing.card_for">ร้านอาหาร &amp; ฟู้ดทรัคอิสระ</p>
+        <p class="tarif-price">0 €<span class="tarif-price-sub" data-i18n="pricing.price_sub">สำหรับคุณ วันนี้ — และเราจะสู้เพื่อให้มันเป็นแบบนี้ตลอดไป</span></p>
+        <ul class="tarif-list">
+          <li data-i18n-html="pricing.card_li1"><strong>ค่าคอมมิชชั่น 0 %</strong> จากอาหารของคุณ — ไม่มีวันหักเปอร์เซ็นต์จากกำไรของคุณ</li>
+          <li data-i18n-html="pricing.card_li2"><strong>ค่าสมาชิก 0 €</strong> ไม่มีแพ็กเกจรายเดือน ไม่มีขั้นบันไดราคาให้จ่ายเพิ่ม</li>
+          <li data-i18n-html="pricing.card_li3"><strong>ค่าสมัคร 0 €</strong> และไม่มีค่าติดตั้งใด ๆ</li>
+          <li data-i18n-html="pricing.card_li4"><strong>ข้อผูกมัด 0</strong> — คุณใช้ Uber Eats &amp; Deliveroo ควบคู่กันต่อได้</li>
+          <li data-i18n-html="pricing.card_li5"><strong>ลูกค้ายังเป็นของคุณ</strong> ตั้งแต่ออร์เดอร์ตรงแรก</li>
+        </ul>
+        <div class="tarif-cta">
+          <a class="btn btn-primary btn-block" href="/th/#rejoindre" data-i18n="hero.cta_join">ขอร่วมกลุ่มเจ้าของร้านผู้เป็นอิสระ</a>
+        </div>
+      </div>
+      <p class="tarif-note" data-i18n-html="pricing.note">⚓ <strong>ยังไม่มีอะไรถูกสร้างขึ้น</strong> <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> เพิ่งเริ่มต้นที่เมือง Tours กับเจ้าของร้านกลุ่มแรก แต่โมเดลชัดเจนตั้งแต่วันแรก: ฟรีสำหรับคุณ ของจริง</p>
+      <!-- Le "piège" : il n'y en a pas -->
+      <div class="tarif-catch">
+        <h2 data-i18n="pricing.catch_title">« ฟรี… แล้วกับดักอยู่ตรงไหน? »</h2>
+        <p data-i18n-html="pricing.catch_p1">ไม่มีเลย แพลตฟอร์มอยู่ได้ด้วย<strong>เงินสมทบตามใจสมัครของผู้ใช้</strong>: ตอนสั่งอาหาร ลูกค้าเลือกเพิ่มเงินสมทบตามใจสมัครลงในตะกร้าได้ถ้าต้องการ — <strong>ให้ 0 € ก็ได้ ไม่มีการตัดสิน</strong> นี่คือการเดิมพัน: ว่าลูกค้าที่รู้ข้อมูลจะเลือกสนับสนุนร้านค้าท้องถิ่นของตัวเองมากกว่าบริษัทข้ามชาติ</p>
+        <p data-i18n-html="pricing.catch_p2">ส่วนคุณ ไม่ต้องจ่ายอะไรเลย: ไม่มีวันหักเปอร์เซ็นต์จากกำไรของคุณ ไม่มีวันมีค่าบวกเพิ่มที่ใครแอบเพิ่มแทนคุณ โครงการนี้ดำเนินการโดย<strong>สมาคมไม่แสวงหากำไร</strong> ออกแบบมาให้ไม่มีวันกลายร่างเป็นด่านเก็บค่าผ่านทางได้ <a href="financement.html">เราหาทุนอย่างไร อ่านแบบชัด ๆ →</a></p>
+      </div>
+      <!-- Le pari + le plan B, en toute transparence -->
+      <div class="tarif-catch">
+        <h2 data-i18n="pricing.bet_title">การเดิมพันของเรา อย่างโปร่งใสที่สุด</h2>
+        <p data-i18n-html="pricing.bet_p1">ฟรี ตั้งอยู่บน<strong>การเดิมพัน</strong>: ว่าเงินสมทบตามใจสมัครจะเพียงพอหล่อเลี้ยงสมบัติส่วนรวมนี้ เราเชื่ออย่างนั้น — และเราบอกคุณตรง ๆ ว่าถ้าไม่เป็นอย่างนั้น จะเกิดอะไรขึ้น</p>
+        <p data-i18n-html="pricing.bet_p2">มันจะ<strong>ไม่มีวันเป็นตารางราคา และไม่มีวันเป็นการบวกกำไร</strong> อย่างแย่ที่สุด เราจะแบ่งกันจ่าย<strong>ตามต้นทุนจริง</strong> เท่าที่จำเป็นเพื่อให้ระบบเดินต่อได้:</p>
+        <ul class="tarif-bet-list">
+          <li data-i18n-html="pricing.bet_li1"><strong>ฝั่งลูกค้า</strong> — ค่าร่วมสมทบค่าดำเนินการเล็กน้อยต่อออร์เดอร์ ส่วนที่จ่ายเกินจากนั้นยังคงเป็นเงินสมทบ</li>
+          <li data-i18n-html="pricing.bet_li2"><strong>ฝั่งเจ้าของร้าน</strong> — ส่วนแบ่งของต้นทุนจริง หารตามจำนวนเจ้าของร้านที่ขึ้นเรือมา: <strong>ยิ่งเราเยอะ ยิ่งจ่ายน้อย</strong> ไม่มีวันเป็นค่าคอมมิชชั่น ไม่มีวันเป็นเปอร์เซ็นต์จากอาหารของคุณ</li>
+        </ul>
+        <p data-i18n-html="pricing.bet_p3"><strong>และทันทีที่โมเดลเอื้อ</strong> ทั้งหมดนี้จะ<strong>หายไป</strong>: กลับสู่ฟรี เป้าหมายไม่ใช่การขายสินค้า แต่คือการรักษาสมบัติส่วนรวมที่เปิดให้ทุกคน</p>
+      </div>
+      <!-- Ancrage : pendant ce temps, une plateforme te prend combien ? -->
+      <p class="ratio-punch" style="margin-top:2.6rem;" data-i18n-html="pricing.ratio_punch">ระหว่างที่แพลตฟอร์มอื่นหักเงินได้หนักถึง <b>10×</b> ของกำไรคุณ ที่นี่คือ <b>0 €</b> <a href="index.html#probleme">คำนวณดูว่าตอนนี้คุณเสียไปเท่าไหร่ →</a></p>
+      <!-- FAQ -->
+      <div class="tarif-faq">
+        <figure class="faq-topper" aria-hidden="true">
+          <img src="/assets/captain-explain.webp" alt="" width="900" height="1123" loading="lazy">
+        </figure>
+        <h2 id="faq" class="section-title" style="font-size:1.5rem;" data-i18n="faq.title">คำถามที่มีคนถามเราบ่อย ๆ</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="pricing.faq1_q">ฟรี 100 % สำหรับร้านของฉันจริง ๆ เหรอ?</summary>
+            <p data-i18n="pricing.faq1_a">จริง ค่าคอมมิชชั่น 0 % จากอาหารของคุณ ค่าสมาชิก 0 € ไม่มีค่าสมัครหรือค่าติดตั้ง และไม่มีข้อผูกมัด ค่าบริการเท่ากันสำหรับทุกคน: ฟรี</p>
+          </details>
+          <details>
+            <summary data-i18n="pricing.faq2_q">มีค่าสมาชิกหรือแพ็กเกจแอบแฝงไหม?</summary>
+            <p data-i18n="pricing.faq2_a">ไม่มี ไม่มีค่าสมาชิก ไม่มีแพ็กเกจ ไม่มีขั้น « พรีเมียม » ให้จ่ายเพิ่ม ส่วนเงินที่จ่ายเข้าเครื่องเก็บเงินตามปกติของคุณ (ที่ร้าน หน้าเคาน์เตอร์) เราก็ไม่ยุ่งเช่นกัน</p>
+          </details>
+          <details>
+            <summary data-i18n="pricing.faq3_q">แล้วพวกคุณอยู่ได้ด้วยอะไร?</summary>
+            <p data-i18n-html="pricing.faq3_a">ด้วยเงินสมทบตามใจสมัครของลูกค้า (ให้ 0 € ก็ได้) นี่คือการเดิมพัน: ถ้ามันไม่พอ ก็จะไม่มีวันมีค่าคอมมิชชั่นหรือตารางราคา — อย่างแย่ที่สุดคือแบ่งกันจ่ายตามต้นทุนจริง (ค่าร่วมสมทบเล็กน้อยฝั่งลูกค้า ส่วนแบ่งต้นทุนจริงฝั่งเจ้าของร้าน) และถูกออกแบบให้หายไปทันทีที่โมเดลเอื้อ ไม่มีวันอยู่บนหลังของคุณ <a href="financement.html">ดูรายละเอียดทั้งหมด</a></p>
+          </details>
+        </div>
+      </div>
+      <div class="tarif-actions">
+        <a class="btn btn-primary" href="/th/#rejoindre" data-i18n="hero.cta_join">ขอร่วมกลุ่มเจ้าของร้านผู้เป็นอิสระ</a>
+        <a class="btn btn-wa" href="https://community.captain.food" target="_blank" rel="noopener"><svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path></svg><span data-i18n="mockups.cta_community">ขอเข้าร่วมชุมชน</span></a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" data-shared-footer>
+    <noscript>
+      <div class="container footer-bottom">
+        <p><a href="/th/">Accueil</a> · <a href="/th/pricing.html">Tarifs</a> · <a href="/th/funding.html">Comment on se finance ?</a> · <a href="/th/manifesto.html">Le manifeste</a> · <a href="/th/#faq">Questions fréquentes</a> · <a href="/th/legal-notice.html">Mentions légales</a><br>© 2026 <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> — Projet indépendant en construction à Tours.</p>
+      </div>
+    </noscript>
+  </footer>
+  <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
+</body>
+</html>

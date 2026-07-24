@@ -54,6 +54,57 @@
   var cache = {}; // lang -> dict
   var originals = null; // snapshot of the French DOM values
 
+  // Generated per-language static pages (tools/i18n/i18n.py pages) mark
+  // themselves with <html data-static-lang>: their content is already
+  // translated server-side; the runtime only translates the JS-injected
+  // chrome (footer, WhatsApp hint) and drives navigation between siblings.
+  var staticLang = document.documentElement.getAttribute("data-static-lang");
+  var SESSION_ASK = "cf-lang-ask";
+
+  // French page -> per-language URL map (generated pages.json), used for the
+  // ?lang=/cookie redirects and for switcher navigation.
+  var pagesMap;
+  function withSiblings(done) {
+    if (pagesMap !== undefined) return done(pagesMap);
+    try {
+      var cached = sessionStorage.getItem("cf-pages-v1");
+      if (cached) {
+        pagesMap = JSON.parse(cached);
+        return done(pagesMap);
+      }
+    } catch (e) {}
+    fetch("/i18n/generated/pages.json")
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (map) {
+        pagesMap = map;
+        try { sessionStorage.setItem("cf-pages-v1", JSON.stringify(map)); } catch (e) {}
+        done(map);
+      })
+      .catch(function () {
+        pagesMap = null;
+        done(null);
+      });
+  }
+
+  function normPath(path) {
+    return path.replace(/index\.html$/, "");
+  }
+
+  function siblingFor(map, code) {
+    if (!map) return null;
+    var here = normPath(location.pathname);
+    for (var page in map) {
+      var variants = map[page];
+      for (var lang in variants) {
+        if (normPath(variants[lang]) === here) {
+          var target = variants[code === DEFAULT_LANG ? "fr" : code];
+          return target && normPath(target) !== here ? target : null;
+        }
+      }
+    }
+    return null;
+  }
+
   // Inline SVG flags (self-contained — no external requests, and emoji flags
   // don't render on Windows). Simplified civil flags. Languages spanning
   // several countries show several flags: standard Arabic groups the Maghreb
@@ -215,6 +266,13 @@
     document.dispatchEvent(
       new CustomEvent("cf:lang", { detail: { lang: current } })
     );
+
+    // A language switch that navigated to a sibling page parks the consent
+    // question in sessionStorage; ask it now that the strings are ready.
+    var ask = false;
+    try { ask = !!sessionStorage.getItem(SESSION_ASK); } catch (e) {}
+    if (ask && readCookie() === null) showConsent(current);
+    try { sessionStorage.removeItem(SESSION_ASK); } catch (e) {}
   }
 
   function load(code, done) {
@@ -258,11 +316,34 @@
       current = code;
       strings = dict;
       applyDom();
-      syncUrl();
+      if (!staticLang) syncUrl(); // static pages own their URL
       try {
         sessionStorage.setItem(SESSION_LANG, code);
       } catch (e) {}
       if (opts.user) persist(code);
+    });
+  }
+
+  // User picked a language: prefer navigating to the real per-language page
+  // (SEO URLs); translate in place only when no sibling exists (e.g. 404).
+  function chooseLang(code) {
+    try { sessionStorage.setItem(SESSION_LANG, code); } catch (e) {}
+    if (readCookie() !== null) {
+      writeCookie(code); // consent already given — keep the cookie current
+    } else {
+      var declined = false;
+      try { declined = !!sessionStorage.getItem(SESSION_DECLINED); } catch (e) {}
+      if (!declined) {
+        try { sessionStorage.setItem(SESSION_ASK, "1"); } catch (e) {}
+      }
+    }
+    withSiblings(function (map) {
+      var target = siblingFor(map, code);
+      if (target) {
+        location.href = target + location.hash;
+      } else if (!staticLang || code !== staticLang) {
+        setLang(code, { user: false });
+      }
     });
   }
 
@@ -451,7 +532,7 @@
       item.appendChild(check);
       item.addEventListener("click", function () {
         closeMenu(true);
-        setLang(code, { user: true });
+        chooseLang(code);
       });
       menu.appendChild(item);
       return item;
@@ -516,14 +597,27 @@
     dir: function () {
       return LANGS[current].dir;
     },
-    setLang: function (code) {
-      setLang(code, { user: true });
-    }
+    setLang: chooseLang
   };
 
   // ---------- boot ----------
-  var initial =
-    fromQuery() || readCookie() || fromSession() || fromNavigator() || DEFAULT_LANG;
   buildSwitchers();
-  if (initial !== DEFAULT_LANG) setLang(initial, { user: false });
+  if (staticLang && isLang(staticLang)) {
+    // Pre-translated page: adopt its language and translate the JS-injected
+    // chrome (footer, hints). applyDom is a no-op on the static content.
+    setLang(staticLang, { user: false });
+  } else {
+    var initial =
+      fromQuery() || readCookie() || fromSession() || fromNavigator() || DEFAULT_LANG;
+    if (initial !== DEFAULT_LANG) {
+      // A real per-language page exists for every content page: go there
+      // (SEO URL, no query string). In-place translation is the fallback
+      // for pages without siblings (404) or if the map fails to load.
+      withSiblings(function (map) {
+        var target = siblingFor(map, initial);
+        if (target) location.replace(target + location.hash);
+        else setLang(initial, { user: false });
+      });
+    }
+  }
 })();

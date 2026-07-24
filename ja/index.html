@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="ja" dir="ltr" data-static-lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Captain.Food — 手数料0%のオンライン注文、Tours（トゥール）発</title>
+  <meta name="description" data-i18n-content="meta.description" content="Toursの独立系レストラン＆フードトラックのための手数料0%オンライン注文。あなたの料理、あなたの価格、あなたのお客様。地域密着の非営利プロジェクト（フランスの協同組合SCIC・ESUS認定の取得を目指しています）。">
+  <meta name="theme-color" content="#0e3a5f">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="canonical" href="https://join.captain.food/ja/">
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/" />
+  <meta name="robots" content="noindex,follow">
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-content="meta.og.title" content="Captain.Food — 注文の舵を取り戻そう！">
+  <meta property="og:description" data-i18n-content="meta.og.description" content="手数料0%。あなたの料理をあなたの価格で、お客様はあなたのもの。Toursの独立系店舗のための、地域と連帯のオンライン注文。">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="pt_PT">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="el_GR">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="th_TH">
+  <meta property="og:locale:alternate" content="hi_IN">
+  <meta property="og:locale:alternate" content="ta_IN">
+  <meta property="og:locale:alternate" content="ar_MA">
+  <meta property="og:locale:alternate" content="ar_LB">
+  <meta property="og:locale:alternate" content="he_IL">
+  <meta property="og:url" content="https://join.captain.food/ja/">
+  <meta property="og:image" content="https://join.captain.food/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" data-i18n-content="meta.og.image_alt" content="Captain.Food — 注文の舵を取り戻そう！手数料0%、Toursから。">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-content="meta.og.title" content="Captain.Food — 注文の舵を取り戻そう！">
+  <meta name="twitter:description" data-i18n-content="meta.og.description" content="手数料0%。あなたの料理をあなたの価格で、お客様はあなたのもの。Toursの独立系店舗のための、地域と連帯のオンライン注文。">
+  <meta name="twitter:image" content="https://join.captain.food/assets/og.png">
+  <!-- Fonts: Inter (corps) + Poppins (titres) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Structured data: Organization + WebSite + FAQ (honest — no reviews/LocalBusiness we don't have) -->
+  <!-- Cloudflare Web Analytics (cookieless, aucun bandeau requis) -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;a9fe368f9d994cf6b874cf584aada144&quot;}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">本文へスキップ</a>
+  <!-- Barre de progression de lecture (remplit au scroll) -->
+  <div class="read-progress" aria-hidden="true"><span></span></div>
+  <!-- ============ NAV ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#contenu" aria-label="Captain.Food ホーム" data-i18n-aria-label="nav.brand_aria">
+        <img src="/assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark">
+        <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
+      </a>
+      <a class="btn btn-primary btn-sm nav-cta" href="#rejoindre" data-i18n="nav.join">乗船する</a>
+    </div>
+    <!-- Menu (repères de la page) -->
+    <nav class="chip-nav" aria-label="メニュー" data-i18n-aria-label="nav.menu_aria">
+      <div class="container chip-nav-inner">
+        <a class="chip" href="#probleme" data-i18n="nav.chip.problem">現状</a>
+        <a class="chip" href="#combat" data-i18n="nav.chip.commission">手数料0%</a>
+        <a class="chip" href="/ja/pricing.html" data-i18n="nav.chip.pricing">料金</a>
+        <a class="chip" href="#solution" data-i18n="nav.chip.how">仕組み</a>
+        <a class="chip" href="#maquettes" data-i18n="nav.chip.mockups">モックアップ</a>
+        <a class="chip chip-cta" href="#rejoindre" data-i18n="nav.chip.join">乗船する</a>
+        <a class="chip" href="#faq" data-i18n="nav.chip.faq">FAQ</a>
+      </div>
+    </nav>
+  </header>
+  <main id="contenu">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow"><span aria-hidden="true">⚓</span> <span data-i18n="hero.eyebrow">針路はTours — 独立系レストラン＆フードトラックへ</span></p>
+          <h1 class="hero-title" data-i18n-html="hero.title">注文の100%を、あなたの手に。<br>手数料は0%。本当に、ゼロ。</h1>
+          <p class="hero-sub" data-i18n-html="hero.sub">あなたの料理をあなたの価格で、お客様はあなたのもの。<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>は、大手プラットフォームに奪われたものをあなたに返します。</p>
+          <p class="hero-note" data-i18n-html="hero.note">非営利団体が運営する、地域密着のオンライン注文プラットフォーム。<strong>決して</strong>「通行料所」に変われない仕組みで作られています。Toursの独立系店舗のために。まだ始まったばかり：何も完成していない今こそ、一緒に描くときです。</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#rejoindre" data-i18n="hero.cta_join">自由な店主たちの仲間になる</a>
+            <a class="btn btn-ghost" href="https://wa.me/message/LTDD42WUFXINA1" target="_blank" rel="noopener" data-i18n="hero.cta_explain">詳しく見る</a>
+          </div>
+          <p class="hero-reassure" data-i18n="hero.reassure">縛りなし・料理への手数料0・お客様はあなたのもの — 今のプラットフォームもそのままでOK。</p>
+          <p class="hero-langs"><span aria-hidden="true">🌍</span> <span data-i18n="hero.langs">このページは17の言語を話します — プロダクトも同じです：Captain.Foodはお客様の言語で語りかけます。</span></p>
+        </div>
+        <figure class="hero-portrait">
+          <img src="/assets/captain.png" alt="コック帽と白い大きな口ひげのキャプテン・フード。金色のフォークを高く掲げている" data-i18n-alt="hero.portrait_alt" width="520" height="725">
+          <figcaption id="capitaine-quote" data-i18n="hero.quote.1">「あなたの料理、あなたの価格、あなたのお客様。」</figcaption>
+        </figure>
+      </div>
+      <ul class="hero-stats" aria-label="Captain.Foodがあなたに返すもの" data-i18n-aria-label="hero.stats_aria">
+        <li class="hero-stat"><b>0 %</b><span data-i18n="hero.stat.commission">料理にかかる手数料</span></li>
+        <li class="hero-stat"><b>100 %</b><span data-i18n="hero.stat.clients">のお客様が、あなたのもの</span></li>
+        <li class="hero-stat"><b data-i18n="hero.stat.prices_b">あなたの価格</b><span data-i18n="hero.stat.prices">店内とまったく同じ</span></li>
+        <li class="hero-stat"><b>0 €</b><span data-i18n="hero.stat.signup">で登録、縛りなし</span></li>
+      </ul>
+      <!-- wave divider -->
+      <div class="wave" aria-hidden="true">
+        <svg viewbox="0 0 1440 90" preserveaspectratio="none" focusable="false">
+          <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,45 L1440,90 L0,90 Z"></path>
+        </svg>
+      </div>
+    </section>
+    <!-- ============ PROBLÈME ============ -->
+    <section id="probleme" class="section" aria-labelledby="probleme-titre">
+      <div class="container">
+        <p class="eyebrow eyebrow-center"><span aria-hidden="true">📊</span> <span data-i18n="problem.eyebrow">現状</span></p>
+        <h2 id="probleme-titre" class="section-title" data-i18n="problem.title">取りすぎだ！</h2>
+        <p class="section-intro" data-i18n="problem.intro">大手プラットフォームでは、注文1件ごとに、あなたが思う以上のお金が消えています。</p>
+        <!-- Simulateur dynamique : combien la commission te coûte -->
+        <h3 class="calc-lead-title" data-i18n="calc.lead_title">手数料が、あなたの利益をむしばむ。</h3>
+        <p class="section-intro" data-i18n="calc.intro">プラットフォームを選んで、月の売上を入力してみてください。毎月、毎年、1ユーロ1ユーロがどこへ消えるかが見えます。</p>
+        <div class="calc" data-calc>
+          <div class="calc-plats" role="group" aria-label="プラットフォームを選択" data-i18n-aria-label="calc.platforms_aria">
+            <button type="button" class="calc-plat is-active" data-rate="30" aria-pressed="true" style="--plat: #06C167;">
+              <svg class="calc-plat-logo" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 2.8645v4.9972c0 1.8834 1.3315 3.1297 3.0835 3.1297a2.9652 2.9652 0 0 0 2.1502-.876v.7425H6.445V2.8645H5.223v4.9339c0 1.2642-.8696 2.1198-1.9954 2.122-1.1386-.0023-1.997-.834-1.997-2.122V2.8645zm7.3625 0v7.9934h1.163v-.7318a2.9915 2.9915 0 0 0 2.1177.876c1.714.048 3.1295-1.3283 3.1295-3.0429s-1.4155-3.091-3.1295-3.0429a2.9674 2.9674 0 0 0-2.107.876V2.8645zm9.8857 2.0561c-1.6752-.0074-3.0369 1.3492-3.0356 3.0245 0 1.7366 1.3732 3.0373 3.1537 3.0373a3.123 3.123 0 0 0 2.5578-1.2438l-.8495-.6177a2.0498 2.0498 0 0 1-1.7083.8585c-.9763.0126-1.8147-.6915-1.971-1.6553h4.818v-.379c0-1.734-1.254-3.0238-2.9638-3.0245zm6.1632.0667a1.5943 1.5943 0 0 0-1.376.7657v-.7186h-1.163v5.8235h1.1741V7.5465c0-.9023.5581-1.4847 1.3268-1.4847h.4949V4.9886c-.1576.0013-.3186-.0009-.4568-.0013zm-6.2034.944a1.844 1.844 0 0 1 1.8337 1.486H15.424a1.844 1.844 0 0 1 1.784-1.486zm-6.6589.0056c1.1223-.0084 2.0365.8992 2.0364 2.0215-.0026 1.1203-.914 2.0258-2.0343 2.021a2.0151 2.0151 0 0 1-1.4159-.5987A2.0152 2.0152 0 0 1 8.55 7.9592a2.0152 2.0152 0 0 1 .5838-1.422 2.0152 2.0152 0 0 1 1.4153-.6003zM0 12.9864v7.9716h5.7222v-1.3666H1.5458v-1.971h4.0647v-1.314H1.5458v-1.9556h4.1764v-1.3644zm14.5608.4097v1.6861h-1.1519v1.338h1.1545v3.143c0 .7927.5712 1.4209 1.6005 1.4209h1.6425L17.8 19.646h-1.1412c-.3482 0-.5714-.1509-.5714-.464v-2.7683H17.8v-1.3316h-1.7062v-1.686zm-5.2974 1.5275c-1.7348-.0103-3.141 1.4035-3.1214 3.1382.0196 1.7346 1.4575 3.1163 3.1915 3.0668a2.9915 2.9915 0 0 0 1.912-.6655v.532h1.5175v-5.9129h-1.509v.5257a3.0047 3.0047 0 0 0-1.9205-.6835c-.0244-.0007-.0492-.0006-.0701-.0008zm11.771.0077c-1.5855 0-2.7002.6437-2.7002 1.8854 0 .8607.6132 1.4213 1.936 1.695l1.4478.3286c.5694.1095.7224.2585.7224.4906 0 .3701-.438.6022-1.1279.6022-.876 0-1.3774-.1907-1.5723-.8477h-1.533c.219 1.2307 1.1563 2.05 3.0484 2.05h.0022c1.752 0 2.7422-.819 2.7422-1.9534 0-.8059-.5847-1.4084-1.8089-1.6668l-1.2943-.2605c-.7511-.1358-.988-.2738-.988-.5454 0-.357.3616-.5757 1.0295-.5757.7227 0 1.2527.1925 1.406.8473h1.5175c-.0854-1.2286-.9899-2.0497-2.8273-2.0497zM9.467 16.1815c1.0092.0096 1.8188.8369 1.8067 1.8461.0014 1.0046-.8198 1.816-1.8243 1.8025-1.0075-.0048-1.8203-.8256-1.8155-1.833.0048-1.0076.8255-1.8204 1.833-1.8156z"></path></svg>
+              <span class="calc-plat-name">Uber Eats</span>
+              <span class="calc-plat-rate">25-35 %</span>
+            </button>
+            <button type="button" class="calc-plat" data-rate="28" aria-pressed="false" style="--plat: #00CCBC;">
+              <svg class="calc-plat-logo" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.861 0l-1.127 10.584L13.81 1.66 7.777 2.926l1.924 8.922-8.695 1.822 1.535 7.127L17.832 24l3.498-7.744L22.994.636 16.861 0zM11.39 13.61a.755.755 0 01.322.066c.208.093.56.29.63.592.103.434.004.799-.312 1.084v.002c-.315.284-.732.258-1.174.113-.441-.145-.637-.672-.47-1.309.124-.473.71-.544 1.004-.549zm4.142.548c.447-.012.832.186 1.05.543.217.357.107.75-.122 1.143h-.002c-.229.392-.83.445-1.422.16-.399-.193-.397-.684-.353-.983a.922.922 0 01.193-.447c.142-.177.381-.408.656-.416Z"></path></svg>
+              <span class="calc-plat-name">Deliveroo</span>
+              <span class="calc-plat-rate">25-30 %</span>
+            </button>
+          </div>
+          <div class="calc-field calc-field-rate">
+            <label for="calc-rate"><span data-i18n="calc.rate_label">手数料率</span> <span class="calc-rate-hint" data-i18n="calc.rate_hint">（変更可）</span></label>
+            <div class="calc-input-wrap">
+              <input type="number" id="calc-rate" inputmode="decimal" min="0" max="60" step="1" value="30">
+              <span class="calc-unit" aria-hidden="true">%</span>
+            </div>
+          </div>
+          <div class="calc-field calc-field-ca">
+            <label for="calc-ca" data-i18n="calc.ca_label">そのプラットフォームでの月間売上</label>
+            <div class="calc-input-wrap">
+              <input type="number" id="calc-ca" inputmode="numeric" min="0" step="100" value="5000">
+              <span class="calc-unit" aria-hidden="true" data-i18n="calc.ca_unit">€ / 月</span>
+            </div>
+          </div>
+          <div class="calc-loss" data-punch aria-live="polite"></div>
+          <p class="calc-smic" data-smic aria-live="polite"></p>
+          <p class="calc-habitues" data-i18n-html="calc.habitues">常連のお客様なら、直接注文で<strong>手数料なし</strong>。</p>
+          <a class="btn btn-primary btn-block calc-cta" href="#rejoindre" data-calc-cta data-i18n="calc.cta">注文の舵を取り戻す</a>
+          <p class="calc-reassure" data-i18n-html="calc.reassure">どんな場合でも、あなたの負担は0€ — <strong>支えるのはお客様の応援であって、あなたではありません。</strong> <a href="financement.html">運営資金の仕組み →</a></p>
+          <p class="calc-fine" data-i18n-html="calc.fine">手数料の計算は単純な事実です：あなたの売上 × 手数料率。料率は目安で変更できます：Uber Eats 約25〜35%、Deliveroo 約25〜30%（公開情報に基づく目安レンジ、2024年）。「SMIC雇用主負担額」：フルタイム1人分のSMIC（フランスの法定最低賃金）にかかる月間雇用コスト — 2026年1月1日時点のSMIC総支給額1,867.02€（<a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2300" target="_blank" rel="noopener">service-public.gouv.fr</a>）、残余の雇用主社会保険料込みで約1,933€。あくまで規模感の目安で、明細ではありません。</p>
+        </div>
+        <p class="ratio-punch" data-i18n-html="problem.ratio_punch">配達1件あたり、手数料（約30%）はあなたの純利益（約3%）の<b>最大10倍</b>。働くのはあなた、集金するのは彼ら。</p>
+        <div class="stat-tiles">
+          <div class="stat-tile">
+            <span class="stat-num">~3 %</span>
+            <span class="stat-lbl" data-i18n-html="problem.stat_margin">— レストランの<strong>平均純利益率</strong>です。配達注文のたびに引かれる手数料（約30%）より、はるかに小さい数字。</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-num">~8 000</span>
+            <span class="stat-lbl" data-i18n-html="problem.stat_failures">2024年にフランスで<strong>経営破綻した飲食店</strong>の数。2年間で<strong>+80%</strong>です。</span>
+          </div>
+        </div>
+        <p class="fine-print" data-i18n="problem.sources">出典：平均純利益率 約3%（Observatoire Fiducial、UMIH/GHR/SNARRプレスリリース、2025年6月）。2024年の破綻件数と2年間で+80%（Altares 2024、L'Hôtellerie-Restauration/GHR経由）。破綻＝保全・更生・清算のいずれかの手続き。約3件に2件は清算に至ります。</p>
+        <blockquote class="pull-quote">
+          <p class="pull-quote-lead" data-i18n="quote.lead">「関係ないね。手数料は価格に上乗せするだけだから。」</p>
+          <p data-i18n="quote.body">多くの店主がそう考えます。でも価格が膨らめば、お客様は注文を減らすか、よそへ行く。その失われた注文は、あなたの目には決して映りません。</p>
+          <p class="pull-quote-kicker" data-i18n="quote.kicker">手数料の上乗せは、手数料の帳消しではありません。あなたの売上に払わせているだけです。</p>
+          <div class="repercuss-inline">
+            <p class="repercuss-q" data-i18n="repercuss.q">上乗せしたらどうなる？見てみましょう：</p>
+            <div class="repercuss-btns" role="group" aria-label="価格に上乗せする手数料の割合" data-i18n-aria-label="repercuss.aria">
+              <label>
+                <input type="radio" name="rep" value="100" checked>
+                <span data-i18n="repercuss.opt100">100%上乗せする</span>
+              </label>
+              <label>
+                <input type="radio" name="rep" value="50">
+                <span data-i18n="repercuss.opt50">50%上乗せする</span>
+              </label>
+            </div>
+            <p class="rep-msg rep-100" data-i18n="repercuss.msg100">オンライン価格が大きく膨らみます。お客様は比較して「高い」と感じ、注文を減らすか、よそへ。帳簿の上では利益は無事でも、失われた売上は決して見えません。</p>
+            <p class="rep-msg rep-50" data-i18n-html="repercuss.msg50">二重に損をします：価格はそれでも上がり（＝売上が減る）、<strong>そのうえ</strong>残り半分は自腹（＝利益が減る）。</p>
+          </div>
+        </blockquote>
+        <div class="grid grid-2">
+          <article class="card problem-card">
+            <h3 data-i18n="problem.card1_title">あなたのお客様は、あなたのお客様じゃない。</h3>
+            <p data-i18n="problem.card1_body">常連づくりができません：使えるポイントカードもなく、注文を得るためにプラットフォーム頼みになっていきます。</p>
+          </article>
+          <article class="card problem-card">
+            <h3 data-i18n="problem.card2_title">価格を決めるのは、あなたじゃない。</h3>
+            <p data-i18n="problem.card2_body">手数料を吸収するために、オンライン価格を水増しする。さらに強制プロモーションや、表示順位を左右するアルゴリズム変更に振り回されます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ============ BANDEAU COMBAT — on écrase la commission ============ -->
+    <section id="combat" class="combat-band" aria-label="Captain.Foodが手数料を打ち倒す" data-i18n-aria-label="combat.aria">
+      <div class="container combat-inner">
+        <div class="combat-text">
+          <p class="combat-title" data-i18n="combat.title">手数料？打ち倒しましょう。</p>
+          <p class="combat-sub" data-i18n="combat.sub">料理への手数料は、いつでも0%。利益はあなたのポケットに — プラットフォームのポケットではなく。</p>
+          <a class="combat-cue" href="#rejoindre" data-i18n="combat.cue">注文の舵を取り戻す →</a>
+        </div>
+        <figure class="combat-figure">
+          <img src="/assets/captain-commission.webp" alt="キャプテン・フードが金色のフォークで寄生虫「手数料」を突き刺し、地面に打ち付けている" data-i18n-alt="combat.img_alt" width="800" height="1354" loading="lazy">
+        </figure>
+      </div>
+    </section>
+    <!-- ============ DEUX MODÈLES (comparaison générique) ============ -->
+    <section id="modeles" class="section" aria-labelledby="modeles-titre">
+      <div class="container">
+        <div class="section-split">
+          <div class="split-text">
+            <p class="eyebrow eyebrow-center"><span aria-hidden="true">⚖️</span> <span data-i18n="models.eyebrow">2つの論理、1つの選択</span></p>
+            <h2 id="modeles-titre" class="section-title" data-i18n="models.title">2つのモデル、2つの論理</h2>
+            <p class="section-intro" data-i18n="models.intro">一方には、あなたをむしばむ手数料。もう一方には、0%と商売の主導権。針路を選ぶのはあなたです。</p>
+          </div>
+          <figure class="section-split-figure">
+            <img src="/assets/captain-pills.webp" alt="キャプテン・フードが2つのピル — オレンジと青 — を差し出す。2つのモデルの選択" data-i18n-alt="models.img_alt" width="900" height="1116" loading="lazy">
+          </figure>
+        </div>
+        <div class="table-scroll">
+          <table class="compare-table">
+            <caption class="sr-only" data-i18n-html="models.caption">手数料型プラットフォームと<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>の比較。</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only" data-i18n="models.col_criteria">項目</span></th>
+                <th scope="col" data-i18n="models.col_platform">手数料型プラットフォーム</th>
+                <th scope="col" class="col-us"><span class="th-brand"><img src="/assets/logo.png" alt="" width="22" height="22"> Captain<span class="brand-dot">.</span>Food</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="models.row1_h">料理への手数料</th>
+                <td data-i18n="models.row1_them">注文ごとに25〜35%</td>
+                <td class="col-us"><strong class="us-zero">0 %</strong></td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row2_h">あなたの価格</th>
+                <td data-i18n="models.row2_them">手数料を吸収するため水増し</td>
+                <td class="col-us" data-i18n="models.row2_us">店内と同じ</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row3_h">あなたの顧客</th>
+                <td data-i18n="models.row3_them">没収 — 誰が注文したかも分からない</td>
+                <td class="col-us" data-i18n="models.row3_us">最初の直接注文から、あなたのもの</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row4_h">あなたの販売チャネル</th>
+                <td data-i18n="models.row4_them">彼らのもの。彼らのルールに従う</td>
+                <td class="col-us" data-i18n="models.row4_us">あなたのもの。あなたの名前で</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="models.row5_h">ゲームのルール</th>
+                <td data-i18n="models.row5_them">一方的に変わり、従うしかない</td>
+                <td class="col-us" data-i18n="models.row5_us">連帯経済の法的枠組みが歯止めに（フランスのESUS認定／協同組合SCICを目指す）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine-print" data-i18n="models.fine">特定の事業者ではなく、ビジネスモデル同士の比較です。</p>
+      </div>
+    </section>
+    <!-- ============ SOLUTION ============ -->
+    <section id="solution" class="section section-alt" aria-labelledby="solution-titre">
+      <div class="container">
+        <div class="section-split">
+          <div class="split-text">
+            <p class="eyebrow eyebrow-center"><span aria-hidden="true">⚓</span> <span data-i18n="solution.eyebrow">あなたの旗、あなたのルール</span></p>
+            <h2 id="solution-titre" class="section-title" data-i18n-html="solution.title"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>：あなたのチャネル、あなたのルール</h2>
+            <p class="section-intro" data-i18n-html="solution.intro"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>は、あなたに主導権を返す地域密着のオンライン注文プラットフォーム。オンラインでもテーブルでも、あなたの名前で。</p>
+          </div>
+          <figure class="section-split-figure">
+            <img src="/assets/captain-dish.webp" alt="キャプテン・フードが輝く一皿 — ステーキ、サラダ、トマト — を差し出す。あなたの手に残る価値" data-i18n-alt="solution.img_alt" width="900" height="1124" loading="lazy">
+            <figcaption class="dish-caption" data-i18n="solution.dish_caption">テーブルに並ぶのは？</figcaption>
+          </figure>
+        </div>
+        <div class="grid grid-2">
+          <article class="card feature-card">
+            <h3 data-i18n="feature.commission_title">料理への手数料は0%。</h3>
+            <p data-i18n="feature.commission_body">売った金額の100%が、あなたのもの。いつでも。</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="feature.site_title">あなたの名前のサイト。</h3>
+            <p data-i18n-html="feature.site_body">誰かのディレクトリに埋もれた1ページではなく、あなた専用の本物の注文サイト、<code>anatanomise.captain.food</code>。あなたのオンラインの顔です。料金に込み。（独自ドメイン<code>anatanomise.fr</code>が欲しい？オプションで設定をお手伝いします。）</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="feature.clients_title">顧客はあなたのもの。</h3>
+            <p data-i18n="feature.clients_body">最初の直接注文から、顧客リストにアクセスできます。リピートにつなげ、常連にする — あなたのものだから。</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n="feature.prices_title">二重価格のない、あなたの価格。</h3>
+            <p data-i18n="feature.prices_body">店内とまったく同じ価格。水増しも、隠しごともなし。</p>
+          </article>
+        </div>
+        <!-- Financement — zone cliquable vers la page dédiée -->
+        <div class="finance-box">
+          <h3 data-i18n="finance.title">「手数料0%？じゃあ、何で食べているの？」</h3>
+          <p data-i18n="finance.p1">もっともな疑問です。答えを、はっきりお伝えします。</p>
+          <p data-i18n-html="finance.p2">まず大事なこと：<strong>店主のあなたは、料理への手数料を一切払いません — どんな場合でも0€です。</strong>このサービスは、あなたの負担の上には成り立っていません。</p>
+          <p data-i18n-html="finance.p3">運営費は、注文に添えられる<strong>お客様の応援金</strong>（<strong>金額自由</strong>）でまかないます。公正な選択肢を生かし続けるために、それぞれが出したい分だけ。ひとつの賭けです — 事情を知ったお客様は、多国籍企業より地元のお店を支えたいはず、という賭け。</p>
+          <p data-i18n-html="finance.p4">今回は応援しないお客様がいたら？それでOK：その注文に応援金はつかず、あなたの手数料はやはり0。カード決済手数料は、あらゆるオンライン決済に共通の標準的なものだけ — <strong>料理への割合課金でも、お客様への上乗せ請求でも、決してありません。</strong></p>
+          <a class="card-cue" href="/ja/funding.html" data-i18n="finance.cue">運営資金の仕組み、はっきりと →</a>
+        </div>
+        <!-- Exemple chiffré -->
+        <div class="finance-example">
+          <p class="finance-example-tag">
+            <span aria-hidden="true">🧾</span> <span data-i18n="example.tag">説明用の一例 — 30€の注文</span>
+          </p>
+          <ul class="finance-example-rows">
+            <li>
+              <span class="fe-label" data-i18n="example.row1_label">あなたが受け取る額</span>
+              <span class="fe-value" data-i18n-html="example.row1_value">30€ <em>手数料0</em></span>
+            </li>
+            <li>
+              <span class="fe-label" data-i18n="example.row2_label">お客様が払う額</span>
+              <span class="fe-value">32,99 €</span>
+            </li>
+            <li class="fe-detail" data-i18n="example.detail">料理代30€ ＋ お客様の任意の応援金2.99€（一例）</li>
+          </ul>
+          <p class="finance-example-note" data-i18n-html="example.note">お客様が応援しない？それでOK、詮索なし：その注文に応援金はつきません。<strong>あなたは、どんな場合でも料理への手数料を一切払いません。</strong></p>
+          <p class="finance-example-compare" data-i18n-html="example.compare">手数料約30%のプラットフォームなら、同じ注文で手元に残るのは約<strong>21€</strong>です。</p>
+          <p class="finance-example-note" data-i18n-html="example.delivery"><strong>配達</strong>注文の場合（今後追加予定のチャネル）は、配達員にまっとうな報酬を払うためのサービス料が加わります。お客様と分担し、あなたが決める利益幅が上限 — 手数料には決してなりません。<a href="livraison.html">配達費の考え方を見る →</a></p>
+          <p class="finance-example-fine" data-i18n="example.fine">金額は仕組みを説明するための一例で、料金表ではありません。</p>
+        </div>
+        <!-- Trois canaux -->
+        <div class="channels">
+          <figure class="channels-captain" aria-hidden="true">
+            <img src="/assets/captain-channels.webp" alt="" width="1100" height="642" loading="lazy">
+          </figure>
+          <h3 class="channels-title" data-i18n="channels.title">司令塔はひとつ、注文の受け方は3通り</h3>
+          <p class="channels-intro" data-i18n-html="channels.intro">あなた専用のサイト：<code>anatanomise.captain.food</code>（または独自の<code>anatanomise.fr</code>）。注文はあなたのサイトから直接届きます — 3つの方法すべて、料理への手数料なしで。ゆくゆくは、ディレクトリ<strong>captain.food</strong>が地元の独立系店舗との出会いを後押しします（将来のみんなのメリットで、今はまだ動いていません）。</p>
+          <div class="grid grid-3">
+            <a class="card channel-card channel-link" href="/ja/delivery.html">
+              <p class="channel-icon" aria-hidden="true">🛵</p>
+              <h4 data-i18n="channel.delivery_title">配達で</h4>
+              <p data-i18n="channel.delivery_body">お客様はあなたのサイトで、あなたの名前でオンライン注文。途中で抜き取る仲介者はいません。</p>
+              <span class="card-cue" data-i18n="channel.delivery_cue">配達費の仕組み →</span>
+            </a>
+            <article class="card channel-card">
+              <p class="channel-icon" aria-hidden="true">🥡</p>
+              <h4 data-i18n="channel.pickup_title">テイクアウト（クリック＆コレクト）</h4>
+              <p data-i18n="channel.pickup_body">お客様が事前に注文して、お店で受け取り。シンプルで直接、追加の機材も不要。</p>
+            </article>
+            <article class="card channel-card channel-highlight">
+              <p class="channel-icon" aria-hidden="true">📱</p>
+              <h4 data-i18n="channel.qr_title">テーブルから、QRコードで</h4>
+              <p data-i18n-html="channel.qr_body">お客様が席からスキャンして注文。注文はキッチンへ直行し、<strong>支払いはいつものレジのまま</strong> — あなたの会計には手を触れません。手数料なし、料金に込みです。</p>
+            </article>
+          </div>
+          <p class="channels-note" data-i18n="channels.note">管理するチャネルをひとつ増やすのではなく、営業全体をひとつのツールで。</p>
+        </div>
+      </div>
+    </section>
+    <!-- ============ MAQUETTES / CO-CONSTRUCTION ============ -->
+    <section id="maquettes" class="section section-alt" aria-labelledby="maquettes-titre">
+      <div class="container narrow">
+        <p class="eyebrow eyebrow-center">⚓ <span data-i18n="mockups.eyebrow">モックアップ・コミュニティ開発</span></p>
+        <h2 id="maquettes-titre" class="section-title" data-i18n="mockups.title">完成イメージを見て — そして一緒に作ろう</h2>
+        <p class="section-intro" data-i18n-html="mockups.intro">これが、私たちが作ろうとしているプロダクトのモックアップです。<strong>まだ何も完成していません</strong> — だからこそ、あなたの力が必要です。お客様・店主・配達員それぞれの画面を試して、コミュニティのWhatsAppか各モックアップ下のフォームから感想を聞かせてください。</p>
+        <div class="mockup-cards">
+          <a class="mockup-card" href="/demo/client.html">
+            <span class="mc-emo" aria-hidden="true">🍽️</span>
+            <span class="mc-role" data-i18n="mockups.client_role">お客様</span>
+            <span class="mc-desc" data-i18n="mockups.client_desc">お店に注文、任意の応援金、手数料0。</span>
+          </a>
+          <a class="mockup-card" href="/demo/resto.html">
+            <span class="mc-emo" aria-hidden="true">👨‍🍳</span>
+            <span class="mc-role" data-i18n="mockups.resto_role">店主</span>
+            <span class="mc-desc" data-i18n="mockups.resto_desc">注文を受け、メニューを管理し、一日の流れを見る。</span>
+          </a>
+          <a class="mockup-card" href="/demo/livreur.html">
+            <span class="mc-badge" data-i18n="mockups.rider_badge">近日公開</span>
+            <span class="mc-emo" aria-hidden="true">🛵</span>
+            <span class="mc-role" data-i18n="mockups.rider_role">配達員</span>
+            <span class="mc-desc" data-i18n="mockups.rider_desc">公正に支払われる配達 — その考え方を、はっきりと。</span>
+          </a>
+        </div>
+        <div class="mockup-actions">
+          <a class="btn btn-primary" href="/demo/" data-i18n="mockups.cta_view">モックアップを見る →</a>
+          <a class="btn btn-wa" href="https://community.captain.food" target="_blank" rel="noopener">
+            <svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path>
+            </svg>
+            <span data-i18n="mockups.cta_community">コミュニティに参加する</span>
+          </a>
+        </div>
+        <p class="mockup-note" data-i18n="mockups.note">各モックアップの下に、感想を残せるフォームがあります。一緒に進みましょう。⚓</p>
+      </div>
+    </section>
+    <!-- ============ ESUS / ANTI-PÉAGE ============ -->
+    <section id="esus" class="section" aria-labelledby="esus-titre">
+      <div class="container narrow">
+        <p class="eyebrow eyebrow-center"><span aria-hidden="true">🛟</span> <span data-i18n="esus.eyebrow">ぶれない針路</span></p>
+        <h2 id="esus-titre" class="section-title" data-i18n="esus.title">「通行料所」に変わりようのない選択肢</h2>
+        <p class="lead" data-i18n-html="esus.p1"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>の出発点は、シンプルな信念です：デジタルは<strong>公共の役に立つ道具</strong>であるべきで、一握りのテック大手が握る通行料所であってはならない。問題は彼らが稼ぐことではありません — 一度依存してしまえば搾り取られ、それを止めるものが何もないことです。</p>
+        <p class="lead" data-i18n-html="esus.p2">だから私たちは、効き続ける歯止めを自らに課します。目指すのは、フランスの<strong>社会的有用性連帯企業（ESUS）認定</strong> — 営利性と存在意義を法的に枠づける制度 — そして針路の先には、店主・配達員・市民が発言権を持つ<strong>協同組合（SCIC）</strong>。目標は、構造そのものによって、私たちが闘う相手には決してなれないこと。</p>
+        <p class="lead" data-i18n-html="esus.p3">そして、言葉だけを信じてもらう必要はありません：会計は<a href="https://opencollective.com/captain-food" target="_blank" rel="noopener">Open Collective</a>で公開します — 受け取った1ユーロも使った1ユーロも、誰でも見られるように。スローガンではなく、徹底した透明性を。</p>
+        <p class="lead" data-i18n-html="esus.p4">私たちの地平：<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>を私有の資産ではなく、<strong>デジタルの共有財</strong>にすること。<strong>コードはオープン</strong>です — <a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">GitHubで公開中</a> — ライセンスは<strong><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> Coopyleft</strong>（AGPL v3ベースのコピーレフト、CoopCycleの精神にならって）。商用利用は<strong>社会連帯経済</strong>の組織 — 協同組合と非営利団体 — に限られます。針路の先にあるのは、<strong>デジタル公共財</strong><em>（digital public good）</em>としての認定。検証可能で、なにより<strong>複製可能</strong>にするためです：ほかの街、ほかの協同組合が引き継げるように。公共の利益のための道具は、分かち合うもの — 売り払うものではありません。<a href="manifeste.html">マニフェストを読む →</a></p>
+        <!-- Problème sociétal n°2 : le livreur précarisé — notre choix : payer mieux, viser le salariat -->
+        <aside class="rider-note">
+          <p class="rider-note-title" data-i18n="esus.rider_title">もうひとつの闘い：配達員に、まっとうな報酬を</p>
+          <p data-i18n-html="esus.rider_body">ウーバー化の世界では、配達員は搾られる調整弁 — 不安定で、守られていません。私たちは逆を選びました：ここToursで、<strong>どこよりも良い報酬を配達員に払う</strong>。そしてゆくゆくは<strong>直接雇用</strong>を目指します。公正なサービスは、きちんと扱われる人から始まります。</p>
+          <p style="margin-top:0.7rem;">
+            <a href="/ja/delivery.html" data-i18n="esus.rider_link">→ 配達費の仕組み、はっきりと（実例つき）</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+    <!-- ============ POUR QUI ============ -->
+    <section id="pour-qui" class="section section-alt" aria-labelledby="pourqui-titre">
+      <div class="container">
+        <h2 id="pourqui-titre" class="section-title" data-i18n="who.title">誰のため？</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3 data-i18n="who.card1_title">独立系レストラン</h3>
+            <p data-i18n="who.card1_body">他人の手数料のために働くのは、もううんざりという方。</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="who.card2_title">フードトラック</h3>
+            <p data-i18n="who.card2_body">重い機材なしで、自分の名前のシンプルな注文チャネルが欲しい方。</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="who.card3_title">食の職人たち</h3>
+            <p data-i18n="who.card3_body">自分の街と、常連さんと、自分の仕事に愛着のある方。</p>
+          </article>
+        </div>
+        <p class="pour-qui-close" data-i18n-html="who.close">最小コストで最大ボリュームを追う大手チェーンなら、私たちはたぶん合いません。商売の舵を取り戻したいなら、<strong>乗船しよう</strong>。</p>
+      </div>
+    </section>
+    <!-- ============ POURQUOI TOURS ============ -->
+    <section id="tours" class="section" aria-labelledby="tours-titre">
+      <div class="container narrow">
+        <p class="eyebrow eyebrow-center"><span aria-hidden="true">📍</span> <span data-i18n="tours.eyebrow">母港</span></p>
+        <h2 id="tours-titre" class="section-title" data-i18n="tours.title">始まりはTours</h2>
+        <p class="lead" data-i18n-html="tours.p1"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>はここToursで、最初の店主グループとともに出航します。どこでも今すぐ、ではなく：ひとつの土地で、丁寧に、顔の見える独立系同士で。</p>
+        <p class="lead" data-i18n-html="tours.p2">プラットフォームは、最初に乗船する店とともに作ります — その声がツールを形づくる。今参加することは、<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>の未来に重みを持つということです。</p>
+      </div>
+    </section>
+    <!-- ============ CE QUE ÇA DEMANDE ============ -->
+    <section id="demande" class="section section-alt" aria-labelledby="demande-titre">
+      <div class="container narrow">
+        <h2 id="demande-titre" class="section-title" data-i18n="ask.title">で、実際、私は何をすればいい？</h2>
+        <p class="section-intro" data-i18n="ask.intro">思っているより、ずっと少しです。</p>
+        <ul class="check-list">
+          <li data-i18n-html="ask.item1"><strong>登録は無料で、縛りはありません。</strong>今のプラットフォームもそのまま使えます。</li>
+          <li data-i18n-html="ask.item2"><strong>導入は私たちが担当します。</strong>メニューの同期、ページの公開：伴走します。同期ツール（HubRiseなど）がまだなくても、導入をお手伝いします — あなたの手元に残る標準的なサービスです。</li>
+          <li data-i18n-html="ask.item3"><strong>急いで覚えなきゃいけない新しい機械はありません。</strong>あなたのペースで進みます。</li>
+        </ul>
+      </div>
+    </section>
+    <!-- ============ FORMULAIRE / CTA ============ -->
+    <section id="rejoindre" class="section section-cta" aria-labelledby="rejoindre-titre">
+      <div class="container cta-layout">
+        <div class="cta-body">
+          <figure class="cta-captain" aria-hidden="true">
+            <img src="/assets/captain-contact.webp" alt="新しい店主たちを迎える準備万端のキャプテン・フード" data-i18n-alt="join.captain_alt" width="900" height="1132" loading="lazy">
+          </figure>
+        <h2 id="rejoindre-titre" class="section-title" data-i18n="join.title">自由な店主たちの仲間になろう</h2>
+        <p class="section-intro" data-i18n-html="join.intro">連絡先を残してください：<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>のご紹介にこちらから連絡します。縛りは一切なし。</p>
+        <ul class="pre-embark">
+          <li>
+            <strong data-i18n="join.point1_title">あなたの負担は0€</strong>
+            <p data-i18n="join.point1_body">料理への手数料0、登録無料。あなたは何も払いません。</p>
+          </li>
+          <li>
+            <strong data-i18n="join.point2_title">Uber EatsもDeliverooもそのまま</strong>
+            <p data-i18n-html="join.point2_body"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>は追加の選択肢。独占契約は一切ありません。</p>
+          </li>
+          <li>
+            <strong data-i18n="join.point3_title">急いで設置するものはなし</strong>
+            <p data-i18n="join.point3_body">導入は私たちが、あなたのペースで。</p>
+          </li>
+        </ul>
+        </div>
+        <!-- /.cta-body (stick zone) — the form is a sibling so the Captain stops here -->
+        <form id="pilot-form" class="form" action="https://formspree.io/f/xqevrjwp" method="POST">
+          <div class="field">
+            <label for="resto">
+              <span data-i18n="form.resto_label">レストラン／フードトラック名</span> <span class="req" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="resto" name="resto" autocomplete="organization" required>
+            <p class="field-error" id="resto-error" hidden></p>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="contact"><span data-i18n="form.contact_label">お名前</span> <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="contact" name="contact" autocomplete="name" required>
+              <p class="field-error" id="contact-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email"><span data-i18n="form.email_label">メールアドレス</span> <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <p class="field-error" id="email-error" hidden></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="telephone"><span data-i18n="form.phone_label">電話番号／WhatsApp</span> <span class="opt" data-i18n="form.optional">（任意）</span></label>
+            <input type="tel" id="telephone" name="telephone" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="mot"><span data-i18n="form.message_label">ひとことメッセージ</span> <span class="opt" data-i18n="form.optional">（任意）</span></label>
+            <textarea id="mot" name="mot" rows="4" placeholder="お店の料理、注文量、気になることなど…" data-i18n-placeholder="form.message_placeholder"></textarea>
+          </div>
+          <div class="field field-consent">
+            <label class="consent">
+              <input type="checkbox" id="consentement" name="consentement" required>
+              <span data-i18n-html="form.consent">この計画について連絡を受け取るため、<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>が私の連絡先を使用することに同意します。連絡先が転売・共有されることはありません。削除はいつでも依頼できます。<a href="confidentialite.html">プライバシーポリシーを見る</a>。<span class="req" aria-hidden="true">*</span></span>
+            </label>
+            <p class="field-error" id="consentement-error" hidden></p>
+          </div>
+          <!-- Provenance du lead : passe à "calculateur" via le CTA du calculateur -->
+          <input type="hidden" id="lead-source" name="source" value="site">
+          <!-- Honeypot anti-spam (invisible pour les humains) -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <p class="form-reassure-inline" data-i18n="form.reassure_inline">0€・縛りなし・Uber Eats &amp; Deliverooはそのまま・急いで設置するものなし</p>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">自由な店主たちの仲間になる</button>
+          <p class="form-note" data-i18n="form.note">あなたのデータは決して転売されません。こちらから連絡する、それだけです。</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+        <!-- Panneau de succès : remplace le formulaire un moment, puis le formulaire revient -->
+        <div class="form-success" id="form-success" tabindex="-1" hidden>
+          <figure class="form-success-captain" aria-hidden="true">
+            <img src="/assets/captain-thumbsup.png" alt="キャプテン・フードが親指を立てて、あなたの登録を祝っている" data-i18n-alt="success.img_alt" width="200" height="295">
+          </figure>
+          <p class="form-success-title" role="status" data-i18n="success.title">受け取りました⚓ ようこそ船へ！</p>
+          <p class="form-success-text" data-i18n="success.text">近いうちにご連絡します。今すぐ話したいですか？</p>
+          <div class="form-success-actions">
+            <a class="btn btn-wa" href="https://wa.me/message/LTDD42WUFXINA1" target="_blank" rel="noopener" aria-label="WhatsAppでCaptain.Foodと話す" data-i18n-aria-label="wa.fab_aria">
+              <svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path>
+              </svg>
+              <span data-i18n-html="success.chat_cta"><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>とチャットする</span>
+            </a>
+          </div>
+          <p class="form-success-text" data-i18n-html="success.or_email">またはメールで：<a href="mailto:miam@captain.food">miam@captain.food</a>。</p>
+        </div>
+      </div>
+    </section>
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section" aria-labelledby="faq-titre">
+      <div class="container faq-layout">
+        <figure class="faq-figure" aria-hidden="true">
+          <img src="/assets/captain-explain.webp" alt="こめかみに人差し指を当てて、質問を考えるよう誘うキャプテン・フード" data-i18n-alt="faq.img_alt" width="900" height="1123" loading="lazy">
+        </figure>
+        <div class="faq-body">
+          <h2 id="faq-titre" class="section-title" data-i18n="faq.title">よく聞かれる質問</h2>
+          <p class="section-intro" data-i18n="faq.intro">店主のみなさんから届く質問のすべてに — 遠回しなし、はっきりと。</p>
+          <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">私は無料 — で、あなたたちは何で食べていくの？</summary>
+            <p data-i18n-html="faq.a1">あなたにとっては：料理への手数料0%、登録無料。どんな場合でも。サービスの運営費は、注文に透明性をもって添えられる<strong>お客様の任意の応援金</strong>でまかないます（0€でもOK、詮索なし） — あなたが払うことは決してありません。カード決済手数料は、あらゆるオンライン決済に共通の標準的な銀行手数料で、お客様への上乗せ請求ではありません。<a href="financement.html">実例つきの詳細を見る。</a></p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">レジで支払われる分は？</summary>
+            <p data-i18n-html="faq.a2">いつものレジで支払われる分（店内・カウンター）には手を触れません：<strong>無料、以上</strong>。私たちの決済フローの外です。応援金がつくのは、<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>経由で<strong>オンライン決済</strong>された注文だけ。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">配達コストは、誰が払うの？</summary>
+            <p data-i18n-html="faq.a3">配達は<strong>今後追加予定のチャネル</strong>で、まだ動いていません。考え方はこうです：配達員にきちんと払う（1配達あたり最低7€を目指します）。あなたが負担するのは自分の配達注文の分だけで、利益幅が許す範囲まで — 下限はあなたが決め、それを下回ることはありません。差額はお客様が、透明性をもって負担します。料理への手数料には決してなりません。<a href="livraison.html">実例つきの計算を見る。</a></p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Uber Eats / Deliverooをやめないといけない？</summary>
+            <p data-i18n-html="faq.a4">いいえ。<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>は追加の選択肢で、独占契約はありません。多くの店は両方を続けながら、<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>を自分でコントロールできる直接チャネルと位置づけています。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">まだお客がいないのに、なぜ今登録するの？</summary>
+            <p data-i18n="faq.a5">コストがゼロで、独占契約を差し出す必要もないからです。掲載され、最初の直接注文から顧客リストが手に入り、立ち上げ期のツールをあなたが形づくれます。最初に乗船した人こそ、いちばん重みを持つのです。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">顧客はどうやって取り戻せる？</summary>
+            <p data-i18n="faq.a6">あなたのページで直接された注文はすべてあなたのもの：お客様の連絡先に（本人の同意のもと）アクセスして、自分の手で常連にできます。大手プラットフォームと違い、私たちは顧客を没収しません。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q7">ESUS企業って何？</summary>
+            <p data-i18n-html="faq.a7">「社会的有用性連帯企業」 — 営利性を法的に枠づけ、社会的目的を義務づけるフランスの認定です。私たちが目指す針路であり、ゆくゆくは<span class="cf-name">Captain<span class="cf-dot">.</span>Food</span>が自ら告発する存在に堕ちられない保証になります。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q8">テーブル注文（QRコード）は？</summary>
+            <p data-i18n-html="faq.a8">2つのケースがあります。お客様が<strong>レジで払う</strong>か店内で払うなら、<strong>私たちの決済フローの外</strong>：100%無料で、手を触れません。QR経由で<strong>オンライン決済</strong>するなら、オンライン注文と同じく任意の応援金がつくことがあります。どちらの場合も、あなたの名前で、料理への手数料は0です。</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q9">いくつの言語を話せるの — 私のお客様に、私に、配達員に？</summary>
+            <p data-i18n-html="faq.a9"><strong>まずは17言語</strong> — 私たちの身の回りで話されている言語です。このページはすでにその全部を話します（上の言語切り替えを試してみて）。そしてプロダクトも同じ針路を進みます：お客様の注文サイト、あなたの店主用スペース、そしてゆくゆくは配達員アプリ。それぞれが自分の言語で — あなたのお客様はタイ語やアラビア語で注文し、あなたは自分の言語で仕事ができます。</p>
+            <!-- Flag row filled by i18n.js from its language registry (single
+                 source of truth) — one chip per language, tooltip on hover. -->
+            <p class="faq-flags" data-lang-flags></p>
+          </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" data-shared-footer>
+    <noscript>
+      <div class="container footer-bottom">
+        <p><a href="/ja/">Accueil</a> · <a href="/ja/manifesto.html">Le manifeste</a> · <a href="/ja/funding.html">Comment on se finance ?</a> · <a href="/ja/delivery.html">La livraison, payée juste</a> · <a href="/ja/#faq">Questions fréquentes</a> · <a href="/ja/legal-notice.html">Mentions légales</a> · <a href="/ja/privacy.html">Politique de confidentialité</a><br>© 2026 <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> — Projet indépendant en construction à Tours.</p>
+      </div>
+    </noscript>
+  </footer>
+  <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>

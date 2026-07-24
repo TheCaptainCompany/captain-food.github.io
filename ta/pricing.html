@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ta" dir="ltr" data-static-lang="ta">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="pricing.meta_title">கட்டணங்கள்: உணவகங்களுக்கு இலவசம் — Captain.Food</title>
+  <meta name="description" data-i18n-content="pricing.meta_description" content="உணவகங்கள் மற்றும் ஃபுட் டிரக்குகளுக்கான Captain.Food கட்டணம்: இலவசம். 0 % கமிஷன், 0 € சந்தா, மறைமுகக் கட்டணம் இல்லை. வாடிக்கையாளர்களின் விருப்பப் பங்களிப்பால் தளம் இயங்குகிறது.">
+  <meta name="theme-color" content="#0e3a5f">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="canonical" href="https://join.captain.food/ta/pricing.html">
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/tarifs.html" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/en/pricing.html" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/tarifs.html" />
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-content="pricing.og_title" content="கட்டணங்கள்: உணவகங்களுக்கு இலவசம்">
+  <meta property="og:description" data-i18n-content="pricing.og_description" content="0 % கமிஷன், 0 € சந்தா, மறைமுகக் கட்டணம் இல்லை. Captain.Food உணவகங்களுக்கு இலவசம்; வாடிக்கையாளர்களின் விருப்பப் பங்களிப்பால் தளம் இயங்குகிறது.">
+  <meta property="og:url" content="https://join.captain.food/ta/pricing.html">
+  <meta property="og:site_name" content="Captain.Food">
+  <meta property="og:locale" content="ta_IN">
+  <meta property="og:image" content="https://join.captain.food/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" data-i18n-content="meta.og.image_alt" content="Captain.Food — சுக்கானை மீண்டும் கையில் எடுப்போம்! 0% கமிஷன், Tours-ல்.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-content="pricing.og_title" content="கட்டணங்கள்: உணவகங்களுக்கு இலவசம்">
+  <meta name="twitter:description" data-i18n-content="pricing.twitter_description" content="0 % கமிஷன், 0 € சந்தா, மறைமுகக் கட்டணம் இல்லை. வாடிக்கையாளர்களின் விருப்பப் பங்களிப்பால் தளம் இயங்குகிறது.">
+  <meta name="twitter:image" content="https://join.captain.food/assets/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .tarif-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--good);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1.6rem, 4vw, 2.8rem);
+      text-align: center;
+      max-width: 540px;
+      margin: 2.2rem auto 0;
+    }
+    .tarif-for {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+    .tarif-price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(4.5rem, 17vw, 7.5rem);
+      color: var(--good);
+      line-height: 0.95;
+      margin: 0.5rem 0 0.2rem;
+    }
+    .tarif-price-sub {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+    .tarif-list {
+      list-style: none;
+      margin: 1.8rem 0 0;
+      padding: 0;
+      text-align: left;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .tarif-list li {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      color: var(--ink);
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+    .tarif-list li::before {
+      content: "✓";
+      color: var(--good);
+      font-weight: 800;
+      flex: none;
+      font-size: 1.1rem;
+    }
+    .tarif-list strong { color: var(--navy); }
+    .tarif-cta { margin-top: 1.9rem; }
+    .tarif-catch {
+      max-width: 640px;
+      margin: 2.6rem auto 0;
+      background: var(--parchment-alt);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+    }
+    .tarif-catch h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+    .tarif-catch p { color: var(--ink-soft); }
+    .tarif-catch p + p { margin-top: 0.7rem; }
+    .tarif-bet-list { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .tarif-bet-list li { color: var(--ink-soft); margin-bottom: 0.55rem; line-height: 1.5; }
+    .tarif-bet-list strong { color: var(--navy); }
+    .tarif-note {
+      background: rgba(232, 97, 58, 0.1);
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin: 1.4rem 0 0;
+      color: var(--ink);
+    }
+    .tarif-faq { max-width: 640px; margin: 2.6rem auto 0; }
+    .tarif-actions { text-align: center; margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    /* Le Capitaine casse la grille tarifaire (illustration) */
+    .killwall { max-width: 620px; margin: 2.2rem auto 0; text-align: center; }
+    .killwall img { width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: 0 10px 30px rgba(10, 30, 50, 0.14); }
+    .killwall figcaption { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-top: 1.1rem; }
+    .killwall figcaption strong { color: var(--navy); }
+  </style>
+  <!-- Cloudflare Web Analytics (cookieless) -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;a9fe368f9d994cf6b874cf584aada144&quot;}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">உள்ளடக்கத்திற்குச் செல்ல</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/ta/" aria-label="Captain.Food, முகப்பு" data-i18n-aria-label="nav.brand_aria">
+        <img src="/assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark">
+        <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
+      </a>
+      <a class="btn btn-primary btn-sm nav-cta" href="/ta/#rejoindre" data-i18n="nav.join">நான் இணைகிறேன்</a>
+    </div>
+      <nav class="chip-nav" aria-label="மெனு" data-i18n-aria-label="nav.menu_aria">
+      <div class="container chip-nav-inner">
+        <a class="chip" href="/ta/#solution" data-i18n="nav.chip.how">எப்படி வேலை செய்கிறது</a>
+        <a class="chip" href="/ta/pricing.html" data-i18n="nav.chip.pricing">கட்டணங்கள்</a>
+        <a class="chip" href="/demo/" data-i18n="nav.chip.mockups">மாதிரிகள்</a>
+        <a class="chip" href="#faq" data-i18n="nav.chip.faq">கேள்வி-பதில்</a>
+      </div>
+    </nav>
+  </header>
+  <main id="contenu" class="section">
+    <div class="container narrow">
+      <p class="eyebrow eyebrow-center"><span aria-hidden="true">🏷️</span> <span data-i18n="nav.chip.pricing">கட்டணங்கள்</span></p>
+      <h1 class="section-title" data-i18n="pricing.h1">இது இலவசம். அவ்வளவுதான்.</h1>
+      <p class="section-intro" data-i18n-html="pricing.intro">விலையைத் தேடுகிறீர்களா? அப்படி ஒன்றே இல்லை. உணவகங்களுக்கும் ஃபுட் டிரக்குகளுக்கும் <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> <strong>இலவசம்</strong> — கமிஷன் இல்லை, சந்தா இல்லை, மறைமுகக் கட்டணம் இல்லை.</p>
+      <p class="section-intro" style="margin-top:0.6rem;" data-i18n-html="pricing.intro2">மேலும் <strong>கட்டண அட்டவணை என்பதே இருக்காது</strong>: இது வணிகப் பொருள் அல்ல, <strong>திறந்த மூல (open source) டிஜிட்டல் பொதுச் சொத்து</strong> — எல்லோருக்கும் பயனுள்ளது, எல்லோராலும் கட்டப்படுவது. <a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">கோட் திறந்தது</a> (<strong><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> Coopyleft</strong> உரிமம் — AGPL அடிப்படையிலான copyleft, வணிகப் பயன்பாடு சமூக ஒற்றுமைப் பொருளாதார அமைப்புகளுக்கு மட்டும்).</p>
+      <!-- Le Capitaine casse la grille tarifaire -->
+      <figure class="killwall">
+        <img src="/assets/captain-killgrid.webp" alt="மூன்று கட்டணத் திட்டங்கள் (Starter, Pro, Premium) கொண்ட கட்டண அட்டவணையை கேப்டன் ஃபுட் ஒரு முள்கரண்டி வீச்சில் உடைத்து நொறுக்குகிறார்." data-i18n-alt="pricing.killwall_alt" width="1402" height="1122" loading="lazy">
+        <figcaption data-i18n-html="pricing.killwall_caption">வேறு இடங்களில் ஒரு கட்டணத் திட்டத்தைத் தேர்வு செய்கிறீர்கள் (அதோடு கமிஷனும் கட்டுகிறீர்கள்). <strong>இங்கே கட்டண அட்டவணையே இல்லை.</strong> விளக்க உதாரணம் — வணிக மாடல்களை ஒப்பிடுகிறோம், யாரையும் குறிவைக்கவில்லை.</figcaption>
+      </figure>
+      <!-- La carte "tarif" : la réponse, tout de suite -->
+      <div class="tarif-card">
+        <p class="tarif-for" data-i18n="pricing.card_for">சுயாதீன உணவகங்கள் &amp; ஃபுட் டிரக்குகள்</p>
+        <p class="tarif-price">0 €<span class="tarif-price-sub" data-i18n="pricing.price_sub">உங்களுக்கு, இன்று — இது தொடர்ந்து நிலைக்க நாங்கள் போராடுகிறோம்</span></p>
+        <ul class="tarif-list">
+          <li data-i18n-html="pricing.card_li1">உங்கள் உணவுகளில் <strong>0 % கமிஷன்</strong> — உங்கள் லாபத்தில் ஒருபோதும் சதவீதம் இல்லை.</li>
+          <li data-i18n-html="pricing.card_li2"><strong>0 € சந்தா</strong>, மாதாந்திரக் கட்டணத் திட்டம் இல்லை, கட்டண நிலைகள் இல்லை.</li>
+          <li data-i18n-html="pricing.card_li3"><strong>0 € பதிவுக் கட்டணம்</strong>, நிறுவல் கட்டணமும் 0.</li>
+          <li data-i18n-html="pricing.card_li4"><strong>0 கட்டுப்பாடு</strong> — Uber Eats &amp; Deliveroo-வை இணையாக வைத்துக்கொள்ளலாம்.</li>
+          <li data-i18n-html="pricing.card_li5"><strong>உங்கள் வாடிக்கையாளர்கள் உங்களுக்கே</strong> — முதல் நேரடி ஆர்டரிலிருந்தே.</li>
+        </ul>
+        <div class="tarif-cta">
+          <a class="btn btn-primary btn-block" href="/ta/#rejoindre" data-i18n="hero.cta_join">சுதந்திர உணவக உரிமையாளர்களுடன் இணைகிறேன்</a>
+        </div>
+      </div>
+      <p class="tarif-note" data-i18n-html="pricing.note">⚓ <strong>இன்னும் எதுவும் கட்டப்படவில்லை.</strong> <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> Tours-ல், தன் முதல் உணவக உரிமையாளர்களுடன் தொடங்குகிறது. மாடல் தொடக்கத்திலிருந்தே தெளிவு: உங்களுக்கு இலவசம், உண்மையாகவே.</p>
+      <!-- Le "piège" : il n'y en a pas -->
+      <div class="tarif-catch">
+        <h2 data-i18n="pricing.catch_title">« இலவசமா… சூட்சுமம் என்ன? »</h2>
+        <p data-i18n-html="pricing.catch_p1">எதுவும் இல்லை. தளம் அதன் <strong>பயனர்களின் விருப்பப் பங்களிப்பால்</strong> இயங்குகிறது: ஆர்டர் செய்யும் போது, வாடிக்கையாளர் விரும்பினால் தன் கூடையில் ஒரு விருப்பப் பங்களிப்பைச் சேர்க்கலாம் — <strong>0 € என்பதும் சாத்தியம், எந்தக் குறையும் இல்லை</strong>. இது ஒரு பந்தயம்: விவரம் அறிந்த வாடிக்கையாளர்கள் ஒரு பன்னாட்டு நிறுவனத்தை விட தங்கள் உள்ளூர் கடையை ஆதரிக்கவே விரும்புவார்கள் என்ற நம்பிக்கை.</p>
+        <p data-i18n-html="pricing.catch_p2">நீங்கள் எதுவும் செலுத்துவதில்லை: உங்கள் லாபத்தில் ஒருபோதும் சதவீதம் இல்லை, உங்களுக்குப் பதிலாகச் சேர்க்கப்படும் கூடுதல் சுமையும் ஒருபோதும் இல்லை. இத்திட்டம் ஒரு <strong>இலாப நோக்கமற்ற அமைப்பால்</strong> நடத்தப்படுகிறது — ஒருபோதும் சுங்கச்சாவடியாக மாற முடியாதபடி கட்டமைக்கப்பட்டது. <a href="financement.html">நாங்கள் எப்படி நிதி திரட்டுகிறோம், தெளிவாக →</a></p>
+      </div>
+      <!-- Le pari + le plan B, en toute transparence -->
+      <div class="tarif-catch">
+        <h2 data-i18n="pricing.bet_title">எங்கள் பந்தயம், முழு வெளிப்படைத்தன்மையுடன்</h2>
+        <p data-i18n-html="pricing.bet_p1">இலவசம் என்பது ஒரு <strong>பந்தயத்தின்</strong> மேல் நிற்கிறது: இந்தப் பொதுச் சொத்தை இயக்க விருப்பப் பங்களிப்பே போதும் என்பது. நாங்கள் அதை நம்புகிறோம் — இல்லையென்றால் என்ன நடக்கும் என்பதையும் சுற்றி வளைக்காமல் சொல்கிறோம்.</p>
+        <p data-i18n-html="pricing.bet_p2">அது <strong>ஒருபோதும் கட்டண அட்டவணையாகவோ லாப மார்ஜினாகவோ மாறாது</strong>. மோசமான நிலையிலும், இயக்கச் செலவைச் சரிசெய்யத் தேவையான குறைந்தபட்சத்தை மட்டும் <strong>அசல் செலவில்</strong> பகிர்வோம்:</p>
+        <ul class="tarif-bet-list">
+          <li data-i18n-html="pricing.bet_li1"><strong>வாடிக்கையாளர் பக்கம்</strong> — ஆர்டரில் இயக்கச் செலவுகளுக்கான ஒரு சிறு பங்கு. அதற்கு மேல் தரப்படுவது எல்லாம் பங்களிப்பாகவே இருக்கும்.</li>
+          <li data-i18n-html="pricing.bet_li2"><strong>உணவக உரிமையாளர் பக்கம்</strong> — உண்மையான செலவுகளின் ஒரு பங்கு, கப்பலில் ஏறிய உணவக உரிமையாளர்களின் எண்ணிக்கையில் பகிரப்படும்: <strong>நாம் அதிகமாக இருந்தால், அது குறைவாக இருக்கும்</strong>. ஒருபோதும் கமிஷன் இல்லை, உங்கள் உணவுகளில் ஒருபோதும் சதவீதம் இல்லை.</li>
+        </ul>
+        <p data-i18n-html="pricing.bet_p3"><strong>மாடல் அனுமதித்த உடனேயே</strong>, இவை எல்லாம் <strong>மறைந்துவிடும்</strong>: மீண்டும் இலவசம். நோக்கம் ஒரு பொருளை விற்பது அல்ல, எல்லோருக்கும் திறந்த ஒரு பொதுச் சொத்தைத் தக்கவைப்பது.</p>
+      </div>
+      <!-- Ancrage : pendant ce temps, une plateforme te prend combien ? -->
+      <p class="ratio-punch" style="margin-top:2.6rem;" data-i18n-html="pricing.ratio_punch">ஒரு தளம் உங்கள் லாபத்தை விட <b>10×</b> வரை பிடுங்கும் போது, இங்கே அது <b>0 €</b>. <a href="index.html#probleme">உங்கள் தற்போதைய இழப்பைக் கணக்கிடுங்கள் →</a></p>
+      <!-- FAQ -->
+      <div class="tarif-faq">
+        <figure class="faq-topper" aria-hidden="true">
+          <img src="/assets/captain-explain.webp" alt="" width="900" height="1123" loading="lazy">
+        </figure>
+        <h2 id="faq" class="section-title" style="font-size:1.5rem;" data-i18n="faq.title">எங்களிடம் கேட்கப்படும் கேள்விகள்</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="pricing.faq1_q">என் உணவகத்திற்கு உண்மையாகவே 100 % இலவசமா?</summary>
+            <p data-i18n="pricing.faq1_a">ஆம். உங்கள் உணவுகளில் 0 % கமிஷன், 0 € சந்தா, பதிவு அல்லது நிறுவல் கட்டணம் 0, எந்தக் கட்டுப்பாடும் இல்லை. கட்டணம் எல்லோருக்கும் ஒன்றே: இலவசம்.</p>
+          </details>
+          <details>
+            <summary data-i18n="pricing.faq2_q">சந்தா அல்லது மறைமுகக் கட்டணத் திட்டம் ஏதும் உண்டா?</summary>
+            <p data-i18n="pricing.faq2_a">இல்லை. சந்தா இல்லை, கட்டணத் திட்டம் இல்லை, « பிரீமியம் » கட்டண நிலை இல்லை. உங்கள் வழக்கமான கல்லாவில் (கடையில், கவுண்டரில்) செலுத்தப்படுவதிலும் நாங்கள் கை வைப்பதில்லை.</p>
+          </details>
+          <details>
+            <summary data-i18n="pricing.faq3_q">அப்படியென்றால், நீங்கள் எதில் வாழ்கிறீர்கள்?</summary>
+            <p data-i18n-html="pricing.faq3_a">வாடிக்கையாளர்களின் விருப்பப் பங்களிப்பில் (0 € என்பதும் சாத்தியம்). இது ஒரு பந்தயம்: அது போதவில்லை என்றாலும், ஒருபோதும் கமிஷனோ கட்டண அட்டவணையோ இல்லை — மோசமான நிலையில், அசல் செலவில் ஒரு பகிர்வு மட்டும் (வாடிக்கையாளர் பக்கம் செலவுகளில் சிறு பங்கு, உணவக உரிமையாளர் பக்கம் உண்மையான செலவுகளின் பங்கு), மாடல் அனுமதித்த உடன் மறைந்துவிடக்கூடியது. ஒருபோதும் உங்கள் முதுகில் அல்ல. <a href="financement.html">முழு விவரத்தைப் பார்க்க.</a></p>
+          </details>
+        </div>
+      </div>
+      <div class="tarif-actions">
+        <a class="btn btn-primary" href="/ta/#rejoindre" data-i18n="hero.cta_join">சுதந்திர உணவக உரிமையாளர்களுடன் இணைகிறேன்</a>
+        <a class="btn btn-wa" href="https://community.captain.food" target="_blank" rel="noopener"><svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path></svg><span data-i18n="mockups.cta_community">நான் சமூகத்தில் இணைகிறேன்</span></a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" data-shared-footer>
+    <noscript>
+      <div class="container footer-bottom">
+        <p><a href="/ta/">Accueil</a> · <a href="/ta/pricing.html">Tarifs</a> · <a href="/ta/funding.html">Comment on se finance ?</a> · <a href="/ta/manifesto.html">Le manifeste</a> · <a href="/ta/#faq">Questions fréquentes</a> · <a href="/ta/legal-notice.html">Mentions légales</a><br>© 2026 <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> — Projet indépendant en construction à Tours.</p>
+      </div>
+    </noscript>
+  </footer>
+  <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
+</body>
+</html>
