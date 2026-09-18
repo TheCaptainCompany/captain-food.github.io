@@ -108,14 +108,14 @@ aren't held for verification.
 ## Internationalization (i18n)
 
 **Every page of the site** + the shared chrome (`partials.js` footer,
-WhatsApp bubble) are translated into **17 languages**: French (source) + English, Spanish,
-Italian, Portuguese, German, Turkish, Greek, Romanian, Chinese (Mandarin),
+WhatsApp bubble) are translated into **18 languages**: French (source) + English, Spanish,
+Italian, Portuguese, German, Dutch, Turkish, Greek, Romanian, Chinese (Mandarin),
 Japanese, Thai, Hindi, Tamil (widely spoken languages in France) and
 **Arabic, Lebanese Arabic + Hebrew (rendered RTL)**. Multi-country languages
 show several flags in the picker (Arabic: Algeria/Tunisia/Morocco — one
-written MSA; Tamil: India/Sri Lanka). The language picker (flags +
+written MSA; Tamil: India/Sri Lanka; Dutch: Netherlands/Belgium — Flanders). The language picker (flags +
 selected state) appears in the header AND in the footer (drop-up); the page
-states that the future product itself will speak these 17 languages
+states that the future product itself will speak these 18 languages
 (hero.langs / footer.langs keys). How it works:
 
 - **Single source of truth**: [`i18n/translations.yaml`](../i18n/translations.yaml)
@@ -150,7 +150,7 @@ states that the future product itself will speak these 17 languages
   is annotated and translated (legal pages carry a translated "the French
   version prevails" notice; `demo/` mockups are excluded on purpose:
   noindex throwaways). To translate a NEW page: annotate it with `data-i18n`
-  keys, add it to `HTML_SOURCES`, add the keys + 17 translations to
+  keys, add it to `HTML_SOURCES`, add the keys + 18 translations to
   `translations.yaml`, include `/i18n.js`, add hreflang alternates to its
   head + `sitemap.xml`, run `build`.
 

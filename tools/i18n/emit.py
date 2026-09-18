@@ -47,7 +47,8 @@ RAW_TEXT_TAGS = {"script", "style"}
 # lang -> (dir, og:locale). Mirrors LANGS in i18n.js.
 LANG_META = {
     "en": ("ltr", "en_GB"), "es": ("ltr", "es_ES"), "it": ("ltr", "it_IT"),
-    "pt": ("ltr", "pt_PT"), "de": ("ltr", "de_DE"), "tr": ("ltr", "tr_TR"),
+    "pt": ("ltr", "pt_PT"), "de": ("ltr", "de_DE"), "nl": ("ltr", "nl_NL"),
+    "tr": ("ltr", "tr_TR"),
     "el": ("ltr", "el_GR"), "ro": ("ltr", "ro_RO"), "zh": ("ltr", "zh_CN"),
     "ja": ("ltr", "ja_JP"), "th": ("ltr", "th_TH"), "hi": ("ltr", "hi_IN"),
     "ta": ("ltr", "ta_IN"), "ar": ("rtl", "ar_MA"), "ar-lb": ("rtl", "ar_LB"),

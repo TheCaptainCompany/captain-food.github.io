@@ -14,7 +14,7 @@ description: >
 # its root URLs). Product-owner decision 2026-07-24: publish ALL languages —
 # every translated page displays an honest machine-translation notice
 # (i18n.helpnote) with an invitation to help improve the copy.
-indexable: [en, es, it, pt, de, tr, el, ro, zh, ja, th, hi, ta, ar, ar-lb, he]
+indexable: [en, es, it, pt, de, nl, tr, el, ro, zh, ja, th, hi, ta, ar, ar-lb, he]
 
 # Per-page slugs. Key = the French source file; `en` doubles as the slug for
 # every non-Latin-script language. index.html maps to the language root /xx/.
@@ -27,6 +27,7 @@ slugs:
     it: prezzi
     pt: precos
     de: preise
+    nl: tarieven
     tr: fiyatlar
     ro: preturi
   manifeste.html:
@@ -35,6 +36,7 @@ slugs:
     it: manifesto
     pt: manifesto
     de: manifest
+    nl: manifest
     tr: manifesto
     ro: manifest
   financement.html:
@@ -43,6 +45,7 @@ slugs:
     it: finanziamento
     pt: financiamento
     de: finanzierung
+    nl: financiering
     tr: finansman
     ro: finantare
   livraison.html:
@@ -51,6 +54,7 @@ slugs:
     it: consegna
     pt: entrega
     de: lieferung
+    nl: levering
     tr: teslimat
     ro: livrare
   alternative-uber-eats-tours.html:
@@ -59,6 +63,7 @@ slugs:
     it: alternativa-uber-eats-tours
     pt: alternativa-uber-eats-tours
     de: uber-eats-alternative-tours
+    nl: uber-eats-alternatief-tours
     tr: uber-eats-alternatifi-tours
     ro: alternativa-uber-eats-tours
   alternative-deliveroo-tours.html:
@@ -67,6 +72,7 @@ slugs:
     it: alternativa-deliveroo-tours
     pt: alternativa-deliveroo-tours
     de: deliveroo-alternative-tours
+    nl: deliveroo-alternatief-tours
     tr: deliveroo-alternatifi-tours
     ro: alternativa-deliveroo-tours
   restaurant-sans-commission-tours.html:
@@ -75,6 +81,7 @@ slugs:
     it: ristorante-senza-commissioni-tours
     pt: restaurante-sem-comissao-tours
     de: restaurant-ohne-provision-tours
+    nl: restaurant-zonder-commissie-tours
     tr: komisyonsuz-restoran-tours
     ro: restaurant-fara-comision-tours
   commande-en-ligne-restaurant-tours.html:
@@ -83,6 +90,7 @@ slugs:
     it: ordini-online-ristorante-tours
     pt: encomendas-online-restaurante-tours
     de: online-bestellung-restaurant-tours
+    nl: online-bestellen-restaurant-tours
     tr: online-siparis-restoran-tours
     ro: comenzi-online-restaurant-tours
   click-and-collect-tours.html:
@@ -93,6 +101,7 @@ slugs:
     it: consegna-etica-tours
     pt: entrega-etica-tours
     de: faire-lieferung-tours
+    nl: eerlijke-levering-tours
     tr: etik-teslimat-tours
     ro: livrare-etica-tours
   restaurants-tours-indre-et-loire.html:
@@ -103,6 +112,7 @@ slugs:
     it: privacy
     pt: privacidade
     de: datenschutz
+    nl: privacy
     tr: gizlilik
     ro: confidentialitate
   mentions-legales.html:
@@ -111,5 +121,6 @@ slugs:
     it: note-legali
     pt: aviso-legal
     de: impressum
+    nl: juridische-vermeldingen
     tr: yasal-bildirim
     ro: mentiuni-legale

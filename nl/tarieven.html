@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="nl" dir="ltr" data-static-lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="pricing.meta_title">Tarieven: gratis voor restaurants — Captain.Food</title>
+  <meta name="description" data-i18n-content="pricing.meta_description" content="Het tarief van Captain.Food voor restaurants en foodtrucks: gratis. 0 % commissie, 0 € abonnement, 0 verborgen kosten. Het platform leeft van de vrijwillige bijdrage van de klanten.">
+  <meta name="theme-color" content="#0e3a5f">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="canonical" href="https://join.captain.food/nl/tarieven.html">
+  <link rel="alternate" hreflang="fr" href="https://join.captain.food/tarifs.html" />
+  <link rel="alternate" hreflang="en" href="https://join.captain.food/en/pricing.html" />
+  <link rel="alternate" hreflang="es" href="https://join.captain.food/es/precios.html" />
+  <link rel="alternate" hreflang="it" href="https://join.captain.food/it/prezzi.html" />
+  <link rel="alternate" hreflang="pt" href="https://join.captain.food/pt/precos.html" />
+  <link rel="alternate" hreflang="de" href="https://join.captain.food/de/preise.html" />
+  <link rel="alternate" hreflang="nl" href="https://join.captain.food/nl/tarieven.html" />
+  <link rel="alternate" hreflang="tr" href="https://join.captain.food/tr/fiyatlar.html" />
+  <link rel="alternate" hreflang="el" href="https://join.captain.food/el/pricing.html" />
+  <link rel="alternate" hreflang="ro" href="https://join.captain.food/ro/preturi.html" />
+  <link rel="alternate" hreflang="zh" href="https://join.captain.food/zh/pricing.html" />
+  <link rel="alternate" hreflang="ja" href="https://join.captain.food/ja/pricing.html" />
+  <link rel="alternate" hreflang="th" href="https://join.captain.food/th/pricing.html" />
+  <link rel="alternate" hreflang="hi" href="https://join.captain.food/hi/pricing.html" />
+  <link rel="alternate" hreflang="ta" href="https://join.captain.food/ta/pricing.html" />
+  <link rel="alternate" hreflang="ar" href="https://join.captain.food/ar/pricing.html" />
+  <link rel="alternate" hreflang="ar-LB" href="https://join.captain.food/ar-lb/pricing.html" />
+  <link rel="alternate" hreflang="he" href="https://join.captain.food/he/pricing.html" />
+  <link rel="alternate" hreflang="x-default" href="https://join.captain.food/tarifs.html" />
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-content="pricing.og_title" content="Tarieven: gratis voor restaurants">
+  <meta property="og:description" data-i18n-content="pricing.og_description" content="0 % commissie, 0 € abonnement, 0 verborgen kosten. Captain.Food is gratis voor restaurants; het platform leeft van de vrijwillige bijdrage van de klanten.">
+  <meta property="og:url" content="https://join.captain.food/nl/tarieven.html">
+  <meta property="og:site_name" content="Captain.Food">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:image" content="https://join.captain.food/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" data-i18n-content="meta.og.image_alt" content="Captain.Food — Neem je bestellingen weer in eigen handen! 0 % commissie, in Tours.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-content="pricing.og_title" content="Tarieven: gratis voor restaurants">
+  <meta name="twitter:description" data-i18n-content="pricing.twitter_description" content="0 % commissie, 0 € abonnement, 0 verborgen kosten. Het platform leeft van de vrijwillige bijdrage van de klanten.">
+  <meta name="twitter:image" content="https://join.captain.food/assets/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .tarif-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--good);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1.6rem, 4vw, 2.8rem);
+      text-align: center;
+      max-width: 540px;
+      margin: 2.2rem auto 0;
+    }
+    .tarif-for {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+    .tarif-price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(4.5rem, 17vw, 7.5rem);
+      color: var(--good);
+      line-height: 0.95;
+      margin: 0.5rem 0 0.2rem;
+    }
+    .tarif-price-sub {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+    .tarif-list {
+      list-style: none;
+      margin: 1.8rem 0 0;
+      padding: 0;
+      text-align: left;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .tarif-list li {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      color: var(--ink);
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+    .tarif-list li::before {
+      content: "✓";
+      color: var(--good);
+      font-weight: 800;
+      flex: none;
+      font-size: 1.1rem;
+    }
+    .tarif-list strong { color: var(--navy); }
+    .tarif-cta { margin-top: 1.9rem; }
+    .tarif-catch {
+      max-width: 640px;
+      margin: 2.6rem auto 0;
+      background: var(--parchment-alt);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+    }
+    .tarif-catch h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+    .tarif-catch p { color: var(--ink-soft); }
+    .tarif-catch p + p { margin-top: 0.7rem; }
+    .tarif-bet-list { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .tarif-bet-list li { color: var(--ink-soft); margin-bottom: 0.55rem; line-height: 1.5; }
+    .tarif-bet-list strong { color: var(--navy); }
+    .tarif-note {
+      background: rgba(232, 97, 58, 0.1);
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin: 1.4rem 0 0;
+      color: var(--ink);
+    }
+    .tarif-faq { max-width: 640px; margin: 2.6rem auto 0; }
+    .tarif-actions { text-align: center; margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    /* Le Capitaine casse la grille tarifaire (illustration) */
+    .killwall { max-width: 620px; margin: 2.2rem auto 0; text-align: center; }
+    .killwall img { width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: 0 10px 30px rgba(10, 30, 50, 0.14); }
+    .killwall figcaption { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-top: 1.1rem; }
+    .killwall figcaption strong { color: var(--navy); }
+  </style>
+  <!-- Cloudflare Web Analytics (cookieless) -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;a9fe368f9d994cf6b874cf584aada144&quot;}"></script>
+</head>
+<body>
+  <p class="translation-note" data-i18n-html="i18n.helpnote">Deze pagina is automatisch vertaald uit het Frans — sorry als sommige zinnen wat vreemd klinken! Help ons de vertaling te verbeteren: <a href="mailto:miam@captain.food">miam@captain.food</a> ⚓</p>
+  <a class="skip-link" href="#contenu" data-i18n="a11y.skip_link">Ga naar de inhoud</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/nl/" aria-label="Captain.Food, startpagina" data-i18n-aria-label="nav.brand_aria">
+        <img src="/assets/logo.png" alt="Captain.Food" width="40" height="40" class="brand-mark">
+        <span class="brand-name">Captain<span class="brand-dot">.</span>Food</span>
+      </a>
+      <a class="btn btn-primary btn-sm nav-cta" href="/nl/#rejoindre" data-i18n="nav.join">Ik doe mee</a>
+    </div>
+      <nav class="chip-nav" aria-label="Menu" data-i18n-aria-label="nav.menu_aria">
+      <div class="container chip-nav-inner">
+        <a class="chip" href="/nl/#solution" data-i18n="nav.chip.how">Hoe het werkt</a>
+        <a class="chip" href="/nl/tarieven.html" data-i18n="nav.chip.pricing">Tarieven</a>
+        <a class="chip" href="/demo/" data-i18n="nav.chip.mockups">Mockups</a>
+        <a class="chip" href="#faq" data-i18n="nav.chip.faq">FAQ</a>
+      </div>
+    </nav>
+  </header>
+  <main id="contenu" class="section">
+    <div class="container narrow">
+      <p class="eyebrow eyebrow-center"><span aria-hidden="true">🏷️</span> <span data-i18n="nav.chip.pricing">Tarieven</span></p>
+      <h1 class="section-title" data-i18n="pricing.h1">Het is gratis. Punt.</h1>
+      <p class="section-intro" data-i18n-html="pricing.intro">Zoek je de prijs? Die is er niet. <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> is <strong>gratis</strong> voor restaurants en foodtrucks — geen commissie, geen abonnement, geen verborgen kosten.</p>
+      <p class="section-intro" style="margin-top:0.6rem;" data-i18n-html="pricing.intro2">En er komt <strong>geen prijslijst</strong>: dit is geen commercieel product, het is een <strong>digitaal gemeengoed, open source</strong> — nuttig voor iedereen, gebouwd door iedereen. <a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">De code is open</a> (licentie <strong><span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> Coopyleft</strong> — copyleft gebaseerd op de AGPL, commercieel gebruik voorbehouden aan de sociale en solidaire economie).</p>
+      <!-- Le Capitaine casse la grille tarifaire -->
+      <figure class="killwall">
+        <img src="/assets/captain-killgrid.webp" alt="Kapitein Food slaat met één klap van zijn vork een prijslijst met drie betaalde pakketten (Starter, Pro, Premium) aan diggelen." data-i18n-alt="pricing.killwall_alt" width="1402" height="1122" loading="lazy">
+        <figcaption data-i18n-html="pricing.killwall_caption">Elders kies je een pakket (en betaal je toch nog een commissie). <strong>Hier is er geen prijslijst.</strong> Illustratief voorbeeld — we vergelijken modellen, we hebben het op niemand gemunt.</figcaption>
+      </figure>
+      <!-- La carte "tarif" : la réponse, tout de suite -->
+      <div class="tarif-card">
+        <p class="tarif-for" data-i18n="pricing.card_for">Onafhankelijke restaurants &amp; foodtrucks</p>
+        <p class="tarif-price">0 €<span class="tarif-price-sub" data-i18n="pricing.price_sub">voor jou, vandaag — en we vechten om dat zo te houden</span></p>
+        <ul class="tarif-list">
+          <li data-i18n-html="pricing.card_li1"><strong>0 % commissie</strong> op je gerechten — nooit een percentage op je marge.</li>
+          <li data-i18n-html="pricing.card_li2"><strong>0 € abonnement</strong>, geen maandelijks pakket, geen betaald niveau.</li>
+          <li data-i18n-html="pricing.card_li3"><strong>0 € inschrijving</strong> en 0 installatiekosten.</li>
+          <li data-i18n-html="pricing.card_li4"><strong>0 verplichtingen</strong> — je houdt Uber Eats &amp; Deliveroo er gewoon naast.</li>
+          <li data-i18n-html="pricing.card_li5"><strong>Je klanten blijven van jou</strong>, vanaf de allereerste directe bestelling.</li>
+        </ul>
+        <div class="tarif-cta">
+          <a class="btn btn-primary btn-block" href="/nl/#rejoindre" data-i18n="hero.cta_join">Ik sluit me aan bij de vrije restauranthouders</a>
+        </div>
+      </div>
+      <p class="tarif-note" data-i18n-html="pricing.note">⚓ <strong>Er is nog niets gebouwd.</strong> <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> gaat van start in Tours, met zijn eerste restauranthouders. Het model is vanaf dag één duidelijk: gratis voor jou, echt waar.</p>
+      <!-- Le "piège" : il n'y en a pas -->
+      <div class="tarif-catch">
+        <h2 data-i18n="pricing.catch_title">„Gratis… waar zit het addertje?”</h2>
+        <p data-i18n-html="pricing.catch_p1">Geen. Het platform leeft van de <strong>vrijwillige bijdrage van zijn gebruikers</strong>: bij het bestellen kan de klant, als hij dat wil, een vrije bijdrage aan zijn winkelmandje toevoegen — <strong>0 € mag ook, zonder oordeel</strong>. Het is een gok: dat goed geïnformeerde klanten liever hun lokale zaak steunen dan een multinational.</p>
+        <p data-i18n-html="pricing.catch_p2">Jij betaalt niets: nooit een percentage op je marge, nooit een toeslag die we in jouw plaats zouden aanrekenen. Het project wordt gedragen door een <strong>vereniging zonder winstoogmerk</strong>, zo opgebouwd dat het nooit in een tolpoort kan veranderen. <a href="financement.html">Hoe we ons financieren, in klare taal →</a></p>
+      </div>
+      <!-- Le pari + le plan B, en toute transparence -->
+      <div class="tarif-catch">
+        <h2 data-i18n="pricing.bet_title">Onze gok, in alle transparantie</h2>
+        <p data-i18n-html="pricing.bet_p1">Gratis, dat berust op een <strong>gok</strong>: dat de vrijwillige bijdrage volstaat om dit gemeengoed draaiende te houden. Wij geloven erin — en we zeggen je zonder omwegen wat er anders zou gebeuren.</p>
+        <p data-i18n-html="pricing.bet_p2">Het wordt <strong>nooit een prijslijst, en ook geen marge</strong>. In het slechtste geval delen we <strong>tegen kostprijs</strong> het strikt noodzakelijke om de lopende kosten te dekken:</p>
+        <ul class="tarif-bet-list">
+          <li data-i18n-html="pricing.bet_li1"><strong>Aan de kant van de klant</strong> — een kleine bijdrage in de lopende kosten, per bestelling. Alles wat daarbovenop wordt gegeven, blijft een bijdrage.</li>
+          <li data-i18n-html="pricing.bet_li2"><strong>Aan de kant van de restauranthouder</strong> — een deel van de werkelijke kosten, verdeeld over het aantal restauranthouders aan boord: <strong>hoe meer we zijn, hoe lager het wordt</strong>. Nooit een commissie, nooit een percentage op je gerechten.</li>
+        </ul>
+        <p data-i18n-html="pricing.bet_p3"><strong>En zodra het model het toelaat</strong>, <strong>verdwijnt</strong> dat allemaal: terug naar gratis. Het doel is niet om een product te verkopen, maar om een gemeengoed open te houden voor iedereen.</p>
+      </div>
+      <!-- Ancrage : pendant ce temps, une plateforme te prend combien ? -->
+      <p class="ratio-punch" style="margin-top:2.6rem;" data-i18n-html="pricing.ratio_punch">Terwijl een platform tot <b>10×</b> je marge afroomt, is het hier <b>0 €</b>. <a href="index.html#probleme">Bereken wat je nu verliest →</a></p>
+      <!-- FAQ -->
+      <div class="tarif-faq">
+        <figure class="faq-topper" aria-hidden="true">
+          <img src="/assets/captain-explain.webp" alt="" width="900" height="1123" loading="lazy">
+        </figure>
+        <h2 id="faq" class="section-title" style="font-size:1.5rem;" data-i18n="faq.title">De vragen die we krijgen</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="pricing.faq1_q">Is het echt 100 % gratis voor mijn restaurant?</summary>
+            <p data-i18n="pricing.faq1_a">Ja. 0 % commissie op je gerechten, 0 € abonnement, 0 inschrijvings- of installatiekosten, zonder verplichtingen. Het tarief is voor iedereen hetzelfde: gratis.</p>
+          </details>
+          <details>
+            <summary data-i18n="pricing.faq2_q">Is er een verborgen abonnement of pakket?</summary>
+            <p data-i18n="pricing.faq2_a">Nee. Geen abonnement, geen pakket, geen betaald „premium”-niveau. Wat er via je gewone kassa binnenkomt (ter plaatse, aan de toonbank), daar blijven we ook af.</p>
+          </details>
+          <details>
+            <summary data-i18n="pricing.faq3_q">Waar leven jullie dan van?</summary>
+            <p data-i18n-html="pricing.faq3_a">Van de vrijwillige bijdrage van de klanten (0 € mag ook). Het is een gok: als die niet volstaat, dan nog nooit een commissie of een prijslijst — in het slechtste geval een verdeling tegen kostprijs (kleine bijdrage in de kosten aan klantzijde, deel van de werkelijke kosten aan de kant van de restauranthouder), die verdwijnt zodra het model het toelaat. Nooit op jouw kosten. <a href="financement.html">Bekijk alle details.</a></p>
+          </details>
+        </div>
+      </div>
+      <div class="tarif-actions">
+        <a class="btn btn-primary" href="/nl/#rejoindre" data-i18n="hero.cta_join">Ik sluit me aan bij de vrije restauranthouders</a>
+        <a class="btn btn-wa" href="https://community.captain.food" target="_blank" rel="noopener"><svg class="wa-ico" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 18.15h-.003c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"></path></svg><span data-i18n="mockups.cta_community">Ik sluit me aan bij de community</span></a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" data-shared-footer>
+    <noscript>
+      <div class="container footer-bottom">
+        <p><a href="/nl/">Accueil</a> · <a href="/nl/tarieven.html">Tarifs</a> · <a href="/nl/financiering.html">Comment on se finance ?</a> · <a href="/nl/manifest.html">Le manifeste</a> · <a href="/nl/#faq">Questions fréquentes</a> · <a href="/nl/juridische-vermeldingen.html">Mentions légales</a><br>© 2026 <span class="cf-name">Captain<span class="cf-dot">.</span>Food</span> — Projet indépendant en construction à Tours.</p>
+      </div>
+    </noscript>
+  </footer>
+  <script src="/partials.js"></script>
+  <script src="/i18n.js"></script>
+</body>
+</html>

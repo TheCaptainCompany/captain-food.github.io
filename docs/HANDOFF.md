@@ -53,11 +53,11 @@
 
 - **i18n de l'accueil (session 2026-07-23)** : la page d'accueil + le chrome partagé
   (footer `partials.js`, bulle WhatsApp, chaînes dynamiques de `script.js`) se traduisent
-  côté client en **17 langues** (fr source + en, es, it, pt, de, tr, el, ro, zh, ja, th, hi, ta, ar, ar-lb, he — ar/ar-lb/he en **RTL**). Sélecteur de langue (drapeaux SVG + langue active cochée) dans le header ET le footer (menu vers le haut) ; la page annonce que le produit parlera, à terme, ces 17 langues (`hero.langs`, `footer.langs`).
+  côté client en **18 langues** (fr source + en, es, it, pt, de, nl, tr, el, ro, zh, ja, th, hi, ta, ar, ar-lb, he — ar/ar-lb/he en **RTL**). Sélecteur de langue (drapeaux SVG + langue active cochée) dans le header ET le footer (menu vers le haut) ; la page annonce que le produit parlera, à terme, ces 18 langues (`hero.langs`, `footer.langs`).
   Ajouts neuromarketing (2026-07-23) : FAQ « Vous parlez combien de langues ? » (`faq.q9`/`faq.a9` + rangée de
   drapeaux `[data-lang-flags]` remplie par `i18n.js`, aussi dans le JSON-LD FAQPage) ; **infobulle** au
   survol de chaque langue (sélecteurs + drapeaux FAQ) = nom en français · anglais · langue courante,
-  via `Intl.DisplayNames` (aucune matrice 17×17 dans le catalogue). Langues multi-pays = plusieurs drapeaux (arabe : Algérie/Tunisie/Maroc ; tamoul : Inde/Sri Lanka).
+  via `Intl.DisplayNames` (aucune matrice 17×17 dans le catalogue). Langues multi-pays = plusieurs drapeaux (arabe : Algérie/Tunisie/Maroc ; tamoul : Inde/Sri Lanka ; néerlandais : Pays-Bas/Belgique).
   Source de vérité : `i18n/translations.yaml` (mêmes conventions que
   `specs/translations.yaml` du repo produit) ; validation + génération :
   `python3 tools/i18n/i18n.py check|build` (CI : `.github/workflows/i18n.yml` —

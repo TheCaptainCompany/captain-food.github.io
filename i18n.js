@@ -32,6 +32,7 @@
     it: { label: "Italiano", dir: "ltr", locale: "it-IT", og: "it_IT" },
     pt: { label: "Português", dir: "ltr", locale: "pt-PT", og: "pt_PT" },
     de: { label: "Deutsch", dir: "ltr", locale: "de-DE", og: "de_DE" },
+    nl: { label: "Nederlands", dir: "ltr", locale: "nl", og: "nl_NL" },
     tr: { label: "Türkçe", dir: "ltr", locale: "tr-TR", og: "tr_TR" },
     el: { label: "Ελληνικά", dir: "ltr", locale: "el-GR", og: "el_GR" },
     ro: { label: "Română", dir: "ltr", locale: "ro-RO", og: "ro_RO" },
@@ -109,7 +110,9 @@
   // don't render on Windows). Simplified civil flags. Languages spanning
   // several countries show several flags: standard Arabic groups the Maghreb
   // (Algeria + Tunisia + Morocco — same written MSA), Tamil shows India +
-  // Sri Lanka. Lebanese Arabic is its own entry with the Lebanese flag.
+  // Sri Lanka, Dutch shows the Netherlands + Belgium (Flanders). Lebanese
+  // Arabic is its own entry with the Lebanese flag. Crescent-and-star flags
+  // follow the official construction sheets (scaled to the 3x2 viewBox).
   function flagSvg(body) {
     return (
       '<svg class="lang-flag" viewBox="0 0 3 2" aria-hidden="true" focusable="false">' +
@@ -124,12 +127,16 @@
     it: flagSvg('<rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#009246"/><rect x="2" width="1" height="2" fill="#CE2B37"/>'),
     pt: flagSvg('<rect width="3" height="2" fill="#DA291C"/><rect width="1.2" height="2" fill="#046A38"/><circle cx="1.2" cy="1" r=".38" fill="#FFE900"/><circle cx="1.2" cy="1" r=".22" fill="#DA291C"/>'),
     de: flagSvg('<rect width="3" height="2" fill="#000"/><rect y=".667" width="3" height="1.333" fill="#D00"/><rect y="1.333" width="3" height=".667" fill="#FFCE00"/>'),
+    nl:
+      // Dutch spans the Netherlands and Flanders (Belgium).
+      flagSvg('<rect width="3" height="2" fill="#21468B"/><rect width="3" height="1.333" fill="#fff"/><rect width="3" height=".667" fill="#AE1C28"/>') +
+      flagSvg('<rect width="3" height="2" fill="#000"/><rect x="1" width="1" height="2" fill="#FDDA24"/><rect x="2" width="1" height="2" fill="#EF3340"/>'),
     tr: flagSvg('<rect width="3" height="2" fill="#E30A17"/><circle cx="1.2" cy="1" r=".5" fill="#fff"/><circle cx="1.32" cy="1" r=".4" fill="#E30A17"/><polygon fill="#fff" points="2.1,1 1.893,.932 1.893,.715 1.764,.891 1.557,.824 1.685,1 1.557,1.176 1.764,1.109 1.893,1.285 1.893,1.068"/>'),
     el: flagSvg('<rect width="3" height="2" fill="#0D5EAF"/><path d="M0,.333H3M0,.778H3M0,1.222H3M0,1.667H3" stroke="#fff" stroke-width=".222"/><rect width="1" height="1.111" fill="#0D5EAF"/><path d="M.5,0 V1.111 M0,.556 H1" stroke="#fff" stroke-width=".222"/>'),
     ar:
       // Algeria + Tunisia + Morocco — one written Arabic, three flags.
-      flagSvg('<rect width="3" height="2" fill="#fff"/><rect width="1.5" height="2" fill="#006233"/><path fill="#D21034" d="M1.62,.45 A.55,.55 0 1,0 1.62,1.55 A.68,.68 0 1,1 1.62,.45 Z"/><polygon fill="#D21034" points="1.98,1 1.75,1.08 1.8,.85 1.62,.7 1.86,.68 1.95,.45 2.04,.68 2.28,.7 2.1,.85 2.15,1.08"/>') +
-      flagSvg('<rect width="3" height="2" fill="#E70013"/><circle cx="1.5" cy="1" r=".62" fill="#fff"/><path fill="#E70013" d="M1.62,.52 A.5,.5 0 1,0 1.62,1.48 A.6,.6 0 1,1 1.62,.52 Z"/><polygon fill="#E70013" points="1.92,1 1.7,1.08 1.75,.86 1.58,.72 1.8,.7 1.89,.48 1.98,.7 2.2,.72 2.03,.86 2.08,1.08"/>') +
+      flagSvg('<rect width="3" height="2" fill="#fff"/><rect width="1.5" height="2" fill="#006233"/><path fill="#D21034" d="M1.933,.75 a.5,.5 0 1,0 0,.5 a.4,.4 0 1,1 0,-.5 Z M1.952,1 L1.5,.853 L1.78,1.238 V.762 L1.5,1.147 Z"/>') +
+      flagSvg('<rect width="3" height="2" fill="#E70013"/><circle cx="1.5" cy="1" r=".5" fill="#fff"/><circle cx="1.5" cy="1" r=".375" fill="#E70013"/><circle cx="1.6" cy="1" r=".3" fill="#fff"/><path fill="#E70013" d="M1.375,1 L1.782,.868 L1.531,1.214 V.786 L1.782,1.132 Z"/>') +
       flagSvg('<rect width="3" height="2" fill="#C1272D"/><path fill="none" stroke="#006233" stroke-width=".1" d="M1.5,.55 1.236,1.364 1.928,.861 1.072,.861 1.764,1.364 Z"/>'),
     ta:
       // Tamil spans India and Sri Lanka.

@@ -1,7 +1,7 @@
 name: i18n check
 
 # Gate for the translation catalog (i18n/translations.yaml):
-#   - every key exists in EVERY declared language (fr en es it pt ar he)
+#   - every key exists in EVERY declared language (18: fr en es it pt de nl tr el ro zh ja th hi ta ar ar-lb he)
 #   - {placeholder} tokens are consistent across languages
 #   - every data-i18n key used in HTML/JS exists in the catalog (and vice versa)
 #   - the French messages match the French copy authored in index.html (no drift)

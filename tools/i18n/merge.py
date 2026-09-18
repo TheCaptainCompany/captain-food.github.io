@@ -28,6 +28,7 @@ LANGUAGES = {
     "it": {"label": "Italiano", "dir": "ltr"},
     "pt": {"label": "Português", "dir": "ltr"},
     "de": {"label": "Deutsch", "dir": "ltr"},
+    "nl": {"label": "Nederlands", "dir": "ltr"},
     "tr": {"label": "Türkçe", "dir": "ltr"},
     "el": {"label": "Ελληνικά", "dir": "ltr"},
     "ro": {"label": "Română", "dir": "ltr"},
@@ -51,7 +52,8 @@ description: >
   declared under `languages` (the validator, tools/i18n/i18n.py, fails
   otherwise). French is the SOURCE language: for keys annotated in index.html
   the fr message must match the page copy exactly (drift-checked); the other
-  languages are the most spoken in France (INSEE) + Arabic and Hebrew (RTL).
+  languages are the most spoken in France (INSEE) + Arabic and Hebrew (RTL)
+  + Dutch (Flanders / the Netherlands).
   Generated artifacts: i18n/generated/<lang>.json (run `make`-less:
   python3 tools/i18n/i18n.py build) — consumed at runtime by /i18n.js.
   NEVER hand-edit the generated JSON; edit THIS file and rebuild.
