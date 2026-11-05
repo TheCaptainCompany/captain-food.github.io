@@ -5,12 +5,9 @@ name: IndexNow ping
 # Add/rename a page -> update sitemap.xml -> it gets submitted automatically.
 # (Google does not use IndexNow — use Search Console for Google.)
 
+# captain.food is not renewed (expires 2026-11-05): no automatic pings for a host we no longer
+# own. Manual runs only, after HOST below points at a domain we control again.
 on:
-  push:
-    branches: [main]
-    paths:
-      - "**/*.html"
-      - "sitemap.xml"
   workflow_dispatch: {} # allow manual runs from the Actions tab
 
 permissions:
